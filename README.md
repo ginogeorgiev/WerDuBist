@@ -52,6 +52,9 @@ This Game has been distributed with Unity.
 ## Resources //TODO
 #### "Asset Store" contents 
 1. [LeanTween](https://assetstore.unity.com/packages/tools/animation/leantween-3595)
+2. [Cinemachine](https://unity.com/unity/features/editor/art-and-design/cinemachine)
+3. [Universal RP](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@11.0/manual/)
+4. [InputSystem](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/manual/Interactions.html#default-interaction)
 
 #### Other Music & Sound contents //TODO
 1. 
