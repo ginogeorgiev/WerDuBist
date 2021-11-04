@@ -4,6 +4,6 @@ namespace Features.Quests.Logic
 {
     public class QuestManager : MonoBehaviour
     {
-        [SerializeField] private GameEvent_SO yo;
+        [SerializeField] private GameEvent_SO yo2;
     }
 }
