@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace DataStructures.Variables
 {
-    [CreateAssetMenu(fileName = "NewStringVariable", menuName = "Utils/Variables/StringVariable")]
+    [CreateAssetMenu(fileName = "NewStringVariable", menuName = "DataStructures/Variables/StringVariable")]
     public class StringVariable : AbstractVariable<string>
     {
         public void Append(string value)

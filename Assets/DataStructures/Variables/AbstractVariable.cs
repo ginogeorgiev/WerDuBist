@@ -7,7 +7,7 @@ namespace DataStructures.Variables
     {
         protected T runtimeValue;
         [SerializeField] private T storedValue;
-        [SerializeField] protected GameEvent onValueChanged;
+        [SerializeField] protected GameEvent_SO onValueChanged;
 
         private void OnEnable()
         {

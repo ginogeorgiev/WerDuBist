@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace DataStructures.Variables
 {
-    [CreateAssetMenu(fileName = "NewDoubleVariable", menuName = "Utils/Variables/DoubleVariable")]
+    [CreateAssetMenu(fileName = "NewDoubleVariable", menuName = "DataStructures/Variables/DoubleVariable")]
     public class DoubleVariable : AbstractVariable<double>
     {
         public void Add(double value)

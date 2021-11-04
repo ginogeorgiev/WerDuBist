@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace DataStructures.Variables
 {
-    [CreateAssetMenu(fileName = "NewBoolVariable", menuName = "Utils/Variables/BoolVariable")]
+    [CreateAssetMenu(fileName = "NewBoolVariable", menuName = "DataStructures/Variables/BoolVariable")]
     public class BoolVariable : AbstractVariable<bool>
     {
         public void SetTrue()

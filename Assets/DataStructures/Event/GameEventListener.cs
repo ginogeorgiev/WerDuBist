@@ -5,7 +5,7 @@ namespace DataStructures.Event
 {
     public class GameEventListener : MonoBehaviour
     {
-        [SerializeField] private GameEvent @event;
+        [SerializeField] private GameEvent_SO @event;
         [SerializeField] private UnityEvent response;
 
         private void OnEnable()

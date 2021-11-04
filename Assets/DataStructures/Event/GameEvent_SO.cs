@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace DataStructures.Event
 {
-    [CreateAssetMenu(fileName = "new GameEvent", menuName = "Utils/Event")]
-    public class GameEvent : ScriptableObject
+    [CreateAssetMenu(fileName = "NewGameEvent", menuName = "DataStructures/Event/GameEvent")]
+    public class GameEvent_SO : ScriptableObject
     {
         private List<GameEventListener> listeners = new List<GameEventListener>();
 

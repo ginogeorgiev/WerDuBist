@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace DataStructures.Event.Editor
 {
-    [CustomEditor(typeof(GameEvent), editorForChildClasses: true)]
+    [CustomEditor(typeof(GameEvent_SO), editorForChildClasses: true)]
     public class GameEventEditor : UnityEditor.Editor
     {
         public override void OnInspectorGUI()
@@ -12,7 +12,7 @@ namespace DataStructures.Event.Editor
 
             GUI.enabled = Application.isPlaying;
 
-            GameEvent e = target as GameEvent;
+            GameEvent_SO e = target as GameEvent_SO;
             if (GUILayout.Button("Raise"))
             {
                 e.Raise();
