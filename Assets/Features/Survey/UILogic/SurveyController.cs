@@ -11,37 +11,33 @@ namespace Features.Survey.UILogic
 {
     public class SurveyController : MonoBehaviour
     {
-        [Header("For UI QuestItem generation")] [Tooltip("SO")] [SerializeField]
-        private Questions_SO questionsData;
+        [Header("For UI QuestItem generation")]
+        [Tooltip("SO")] [SerializeField] private Questions_SO questionsData;
 
         private IEnumerable<Question_SO> questions;
         [Tooltip("Prefab")] [SerializeField] private GameObject questionItem;
         [Tooltip("Ref")] [SerializeField] private RectTransform content;
 
-        [Header("For calculating the Result")] [SerializeField]
-        private bool autoUpdateResult;
-
+        [Header("For calculating the Result")]
+        [SerializeField] private bool autoUpdateResult;
         [Tooltip("SO")] [SerializeField] private QuestionItemRuntimeSet questionItemRuntimeSet;
 
-        [Header("The 5 Aspects")] [Tooltip("SO")] [SerializeField]
-        private IntVariable extraversion;
-
+        [Header("The 5 Aspects")]
+        [Tooltip("SO")] [SerializeField] private IntVariable extraversion;
         [Tooltip("SO")] [SerializeField] private IntVariable agreeableness;
         [Tooltip("SO")] [SerializeField] private IntVariable conscientiousness;
         [Tooltip("SO")] [SerializeField] private IntVariable neuroticism;
         [Tooltip("SO")] [SerializeField] private IntVariable openness;
 
-        [Header("The 5 Results for each Aspects")] [Tooltip("Ref")] [SerializeField]
-        private TMP_Text extraversionText;
-
+        [Header("The 5 Results for each Aspects")]
+        [Tooltip("Ref")] [SerializeField] private TMP_Text extraversionText;
         [Tooltip("Ref")] [SerializeField] private TMP_Text agreeablenessText;
         [Tooltip("Ref")] [SerializeField] private TMP_Text conscientiousnessText;
         [Tooltip("Ref")] [SerializeField] private TMP_Text neuroticismText;
         [Tooltip("Ref")] [SerializeField] private TMP_Text opennessText;
 
-        [Header("The 5 Results for each Aspects in percent")] [Tooltip("Ref")] [SerializeField]
-        private TMP_Text extraversionPercentage;
-
+        [Header("The 5 Results for each Aspects in percent")]
+        [Tooltip("Ref")] [SerializeField] private TMP_Text extraversionPercentage;
         [Tooltip("Ref")] [SerializeField] private TMP_Text agreeablenessPercentage;
         [Tooltip("Ref")] [SerializeField] private TMP_Text conscientiousnessPercentage;
         [Tooltip("Ref")] [SerializeField] private TMP_Text neuroticismPercentage;
