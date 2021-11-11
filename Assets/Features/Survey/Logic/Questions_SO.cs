@@ -1,0 +1,13 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace Features.Survey.Logic
+{
+    [CreateAssetMenu(fileName = "NewQuestionSet", menuName = "Feature/Survey/QuestionSet")]
+    public class Questions_SO : ScriptableObject
+    {
+        [SerializeField] private List<Question_SO> items;
+
+        public IEnumerable<Question_SO> Items => items;
+    }
+}
