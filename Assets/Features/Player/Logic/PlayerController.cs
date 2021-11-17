@@ -6,6 +6,8 @@ namespace Features.Player.Logic
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private float movementSpeed;
+
+        [SerializeField] private Animator animator;
         
         private PlayerControls playerControls;
         
@@ -31,27 +33,36 @@ namespace Features.Player.Logic
             HandleKeyboardInput();
         }
 
+        private void isWalking(){
+            animator.SetBool("isWalking", true);
+        }
+
         private void HandleKeyboardInput()
         {
+            animator.SetBool("isWalking", false);
             movementInput = playerControls.Player.Movement.ReadValue<Vector2>();
             
             if (movementInput.x < 0)
             {
+                isWalking();
                 transform.position += (transform.right * Time.deltaTime * -movementSpeed);
             }
 
             if (movementInput.x > 0)
             {
+                isWalking();
                 transform.position += (transform.right * Time.deltaTime * movementSpeed);
             }
 
             if (movementInput.y < 0)
             {
+                isWalking();
                 transform.position += (transform.up * Time.deltaTime * -movementSpeed);
             }
 
             if (movementInput.y > 0)
             {
+                isWalking();
                 transform.position += (transform.up * Time.deltaTime * movementSpeed);
             }
         }
