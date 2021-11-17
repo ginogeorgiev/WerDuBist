@@ -27,6 +27,7 @@
 .idea/
 
 # Visual Studio cache directory
+.vscode/
 .vs/
 .vsconfig
 
