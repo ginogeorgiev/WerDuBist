@@ -20,7 +20,7 @@ Operating system //TODO
 
 ***Feature-Branch-Workflow***  
 1. Before starting your work on a new feature, always pull the newest version of [main](https://github.com/ginogeorgiev/WerDuBist) branch.
-2. Create a new branch from master and give it a Name
+2. Create a new branch from master and give it a Name (See [Trello](https://trello.com/b/ECeNuXrO/taskboard) Card) (eg.: 42-add-art-to-player)
 3. You can now work on your feature, commit and push changes inside of your Feature Branch. Make sure to always choose **descriptive** commit messages.
 4. Once you have pushed all your changes for the feature, create a pull request to master branch in GitHub and assign a team member for code review.
 5. If your pull request has been approved, the pull request can be merged into master.
