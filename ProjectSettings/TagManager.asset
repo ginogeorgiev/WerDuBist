@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Water
+    uniqueID: 1840642749
+    locked: 0
+  - name: Enviroment
+    uniqueID: 2029698573
+    locked: 0
+  - name: Player
+    uniqueID: 3363447473
+    locked: 0
