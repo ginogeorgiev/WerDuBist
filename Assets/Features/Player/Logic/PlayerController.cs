@@ -41,29 +41,16 @@ namespace Features.Player.Logic
         {
             animator.SetBool("isWalking", false);
             movementInput = playerControls.Player.Movement.ReadValue<Vector2>();
-            
-            if (movementInput.x < 0)
-            {
-                isWalking();
-                transform.position += (transform.right * Time.deltaTime * -movementSpeed);
-            }
 
-            if (movementInput.x > 0)
+            if (movementInput.x != 0 || movementInput.y != 0)
             {
+                // Change the player's x-Scale to flip the animation
+                // May be solved using the SpriteRenderer or Animator
+                if(movementInput.x !=0) transform.localScale = new Vector3(Mathf.Sign(movementInput.x) * -1, 1, 1);
                 isWalking();
-                transform.position += (transform.right * Time.deltaTime * movementSpeed);
-            }
-
-            if (movementInput.y < 0)
-            {
-                isWalking();
-                transform.position += (transform.up * Time.deltaTime * -movementSpeed);
-            }
-
-            if (movementInput.y > 0)
-            {
-                isWalking();
-                transform.position += (transform.up * Time.deltaTime * movementSpeed);
+                var xMovement = (transform.right * Time.deltaTime * movementInput.x * movementSpeed);
+                var yMovement = (transform.up * Time.deltaTime * movementInput.y * movementSpeed);
+                transform.position += xMovement + yMovement;
             }
         }
     }
