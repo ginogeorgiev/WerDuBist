@@ -1,6 +1,6 @@
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Features.Quests.Logic
+namespace Features.QuestSystem.Logic
 {
     public class QuestManager : MonoBehaviour
     {
