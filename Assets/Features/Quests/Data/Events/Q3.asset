@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d60f261b718a448d960f65fcea8d2f82, type: 3}
-  m_Name: Wood
+  m_Script: {fileID: 11500000, guid: b61bf13e647c7e742a936c7d0bd7ee3f, type: 3}
+  m_Name: Q3
   m_EditorClassIdentifier: 
-  storedValue: 0
-  onValueChanged: {fileID: 11400000, guid: 3565539147b618d47afa900299b19195, type: 2}

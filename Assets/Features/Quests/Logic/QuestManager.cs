@@ -9,40 +9,44 @@ namespace Features.Quests.Logic
     public class QuestManager : MonoBehaviour
     {
         public QuestSet_SO questSet;
-        public List<Quest_SO> activeQuests;
+        public QuestSetActive_SO activeQuests;
 
         private void Start()
         {
+            // reset all quests
             foreach (var quest in questSet.Items)
             {
                 quest.IsActive = false;
                 quest.IsCompleted = false;
+                activeQuests.Items.Clear();
             }
         }
 
         public void ItemCollected(IntVariable item)
         {
-            if (activeQuests.Count > 0)
+            // Items only get collected if there is a active Quest
+            if (activeQuests.Items.Any())
             {
                 item.Set(item.Get() + 1);
                 
-                foreach (var quest in activeQuests)
+                foreach (var quest in activeQuests.Items)
                 {
                     quest.CheckGoals();
                 }
-                activeQuests.RemoveAll(quest => quest.IsCompleted);
+                activeQuests.Items.RemoveAll(quest => quest.IsCompleted);
             }
         }
 
         public void SetQuestActive(Quest_SO quest)
         {
-            if (!quest.IsActive)
+            if (!quest.IsActive) 
+                // if not already active
             {
-                activeQuests.Add(quest);
+                activeQuests.Items.Add(quest);
                 quest.IsActive = true;
                 Debug.Log("'" + quest.QuestName + "' activated");
-            }
                 
+            }
         }
         
     }

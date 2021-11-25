@@ -5,13 +5,15 @@ using UnityEngine;
 
 namespace Features.Quests.Logic
 {
-    [CreateAssetMenu(fileName = "NewQuest", menuName = "Feature/Quests/Quest")]
+    [CreateAssetMenu(fileName = "Quest", menuName = "Feature/Quests/Quest")]
     public class Quest_SO : ScriptableObject
     {
+        [SerializeField] private string questID;
         [SerializeField] private string questName;
         [SerializeField] private string description;
         [SerializeField] private List<Goal> goals;
         
+        public string QuestID => questID;
         public string QuestName => questName;
         public string Description => description;
         public List<Goal> Goals => goals;
@@ -30,6 +32,7 @@ namespace Features.Quests.Logic
             {
                 goal.Evaluate();
             }
+            // quest completed if all goals are completed
             if (Goals.All(goal => goal.Completed))
             {
                 IsActive = false;

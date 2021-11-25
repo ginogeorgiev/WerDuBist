@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a54c835cd434817add4d3fdde868665, type: 3}
   m_Name: Quest3
   m_EditorClassIdentifier: 
-  questName: Moore
-  description: This Quest, I like it. ANOTHER!
+  questID: T03
+  questName: MORE
+  description: This Quest, I like it. ANOTHER
   goals:
-  - description: get stone
-    itemID: 2
-    currentAmount: {fileID: 11400000, guid: 8f1021f9996055647bfffffbabb57a18, type: 2}
-    requiredAmount: 4
+  - currentAmount: {fileID: 11400000, guid: 8f1021f9996055647bfffffbabb57a18, type: 2}
+    requiredAmount: 5
+    goalSprite: {fileID: 21300000, guid: 5565af51b5e204d51a9e8151bcdf9d06, type: 3}
