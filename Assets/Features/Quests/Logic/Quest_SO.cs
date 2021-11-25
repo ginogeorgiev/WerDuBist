@@ -2,9 +2,9 @@
 using System.Linq;
 using UnityEngine;
 
-namespace Features.QuestSystem.Logic
+namespace Features.Quests.Logic
 {
-    [CreateAssetMenu(fileName = "NewQuest", menuName = "Feature/QuestSystem/Quests")]
+    [CreateAssetMenu(fileName = "NewQuest", menuName = "Feature/Quests/Quest")]
     public class Quest_SO : ScriptableObject
     {
         [SerializeField] private string questName;

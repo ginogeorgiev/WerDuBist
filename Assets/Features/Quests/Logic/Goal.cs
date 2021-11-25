@@ -2,7 +2,7 @@
 using DataStructures.Variables;
 using UnityEngine;
 
-namespace Features.QuestSystem.Logic
+namespace Features.Quests.Logic
 {
     [Serializable] public class Goal
     {
