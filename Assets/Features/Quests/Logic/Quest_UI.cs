@@ -12,16 +12,13 @@ namespace Features.Quests.Logic
         public TMP_Text nameText;
         public TMP_Text descriptionText;
         public TMP_Text goal1;
-        public TMP_Text goal2;
         
         public Sprite img;
-        // public TMP_Text goal2;
 
         // Start is called before the first frame update
         void Start()
         {
             goal1.text = "";
-            // goal2.text = "";
             nameText.text = quest.QuestName;
             descriptionText.text = quest.Description;
             for (int i = 0; i < quest.Goals.Count(); i++)
