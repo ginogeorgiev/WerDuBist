@@ -19,27 +19,30 @@ namespace Features.Player.Logic
 
         [SerializeField] private FloatVariable playerMovementSpeed;
 
-        [SerializeField] private bool rigidbodyTestBool = false;
-
         private new Rigidbody2D rigidbody2D;
 
         private PlayerControls playerControls;
         
-        private Vector2 movementInput;
-
-        private float sprintInput;
+        private InputAction movementInputAction, sprintInputAction;
 
         private StateMachine stateMachine;
 
-        private IdleState idleState = new IdleState();
-        private WalkingState walkingState = new WalkingState();
-        private SprintingState sprintingState = new SprintingState();
+        private IdleState idleState;
+        private WalkingState walkingState;
+        private SprintingState sprintingState;
         
         private void Awake()
         {
             playerControls = new PlayerControls();
             stateMachine = new StateMachine();
             rigidbody2D = this.GetComponent<Rigidbody2D>();
+            
+            movementInputAction = playerControls.Player.Movement;
+            sprintInputAction = playerControls.Player.Sprint;
+
+            idleState = new IdleState(animator, playerMovementSpeed, rigidbody2D);
+            walkingState = new WalkingState(animator, playerMovementSpeed, movementInputAction, transform, rigidbody2D);
+            sprintingState = new SprintingState(animator, playerMovementSpeed, movementInputAction, transform, rigidbody2D);
         }
         
         private void OnEnable()
@@ -52,20 +55,16 @@ namespace Features.Player.Logic
             playerControls.Disable();
         }
         
-        private void Update()
+        private void FixedUpdate()
         {
+            stateMachine.Update();
             HandleKeyboardInput();
-        }
-
-        private void isWalking(){
-            animator.SetBool("isWalking", true);
         }
 
         private void HandleKeyboardInput()
         {
-            animator.SetBool("isWalking", false);
-            movementInput = playerControls.Player.Movement.ReadValue<Vector2>();
-            sprintInput = playerControls.Player.Sprint.ReadValue<float>();
+            Vector2 movementInput = movementInputAction.ReadValue<Vector2>();
+            float sprintInput = sprintInputAction.ReadValue<float>();
 
             if (movementInput.x != 0 || movementInput.y != 0)
             {
@@ -76,7 +75,6 @@ namespace Features.Player.Logic
                 // Change the player's x-Scale to flip the animation
                 // May be solved using the SpriteRenderer or Animator
                 if(movementInput.x !=0) transform.localScale = new Vector3(Mathf.Sign(movementInput.x) * -1, 1, 1);
-                isWalking();
 
                 // Check for sprinting (holding down LSHIFT)
                 var movementSpeed = sprintInput > 0 ? sprintSpeed : walkingSpeed;
@@ -84,22 +82,6 @@ namespace Features.Player.Logic
                 {
                     playerMovementSpeed.Set(movementSpeed);
                 }
-
-                if (rigidbodyTestBool)
-                {
-                    var xMovement = (transform.right * movementInput.x * playerMovementSpeed.Get());
-                    var yMovement = (transform.up  * movementInput.y * playerMovementSpeed.Get());
-                    // Temporary solution, objects with rigidbodies should use it's rigidbody
-                    rigidbody2D.velocity = xMovement + yMovement;
-                }
-                else
-                {
-                    var xMovement = (transform.right * Time.deltaTime * movementInput.x * playerMovementSpeed.Get());
-                    var yMovement = (transform.up * Time.deltaTime * movementInput.y * playerMovementSpeed.Get());
-                    // Temporary solution, objects with rigidbodies should use it's rigidbody
-                    transform.position += xMovement + yMovement;
-                }
-                
             }
             else
             {
@@ -107,12 +89,6 @@ namespace Features.Player.Logic
                 if ( stateMachine.CurrentState != idleState)
                 {
                     stateMachine.ChangeState(idleState);
-                    playerMovementSpeed.Set(0f);
-                }
-
-                if (rigidbodyTestBool)
-                {
-                    rigidbody2D.velocity = Vector2.zero;
                 }
             }
         }
