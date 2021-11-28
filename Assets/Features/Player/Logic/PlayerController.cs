@@ -43,6 +43,8 @@ namespace Features.Player.Logic
             idleState = new IdleState(animator, playerMovementSpeed, rigidbody2D);
             walkingState = new WalkingState(animator, playerMovementSpeed, movementInputAction, transform, rigidbody2D);
             sprintingState = new SprintingState(animator, playerMovementSpeed, movementInputAction, transform, rigidbody2D);
+            
+            stateMachine.Initialize(idleState);
         }
         
         private void OnEnable()
@@ -57,8 +59,8 @@ namespace Features.Player.Logic
         
         private void FixedUpdate()
         {
-            stateMachine.Update();
             HandleKeyboardInput();
+            stateMachine.Update();
         }
 
         private void HandleKeyboardInput()
@@ -96,7 +98,6 @@ namespace Features.Player.Logic
         private void OnTriggerEnter2D(Collider2D other)
         {
             // TODO: Pick up algorithm (depends on the item)
-            Debug.Log(other);
             
             other.gameObject.SetActive(false);
         }
