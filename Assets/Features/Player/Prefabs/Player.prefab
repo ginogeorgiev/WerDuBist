@@ -178,6 +178,7 @@ MonoBehaviour:
   walkingSpeed: 5
   animator: {fileID: 1444786951}
   playerMovementSpeed: {fileID: 11400000, guid: a2cffe57136c33146baa72577ed8f290, type: 2}
+  rigidbodyTestBool: 1
 --- !u!212 &6592273595326390539
 SpriteRenderer:
   m_ObjectHideFlags: 0

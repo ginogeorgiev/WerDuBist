@@ -142,13 +142,8 @@ namespace Features.Player.Logic
         }
 
         // Teleport function
-        public void TeleportPlayer(Vector2 targetCoords, string targetSceneName=null)
+        public void TeleportPlayer(Vector2 targetCoords)
         {
-            if (targetSceneName != null)
-            {
-                SceneManager.SetActiveScene(SceneManager.GetSceneByName(targetSceneName));
-            }
-
             transform.position = targetCoords;
         }
     }
