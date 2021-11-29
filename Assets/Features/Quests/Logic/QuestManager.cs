@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DataStructures.Event;
 using DataStructures.Variables;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ namespace Features.Quests.Logic
     {
         public QuestSet_SO questSet;
         public QuestSetActive_SO activeQuests;
+        public GameEvent_SO removeQuest;
 
         private void Start()
         {
@@ -28,12 +30,25 @@ namespace Features.Quests.Logic
             if (activeQuests.Items.Any())
             {
                 item.Set(item.Get() + 1);
-                
-                foreach (var quest in activeQuests.Items)
+            }
+        }
+
+        public void CompleteQuest(Quest_SO quest)
+        {
+            quest.CheckGoals();
+            if (quest.IsCompleted && activeQuests.Items.Contains(quest))
+            {
+                removeQuest.Raise();
+                activeQuests.Items.Remove(quest);
+                foreach (var goal in quest.Goals)
                 {
-                    quest.CheckGoals();
+                    var item = goal.CurrentAmount;
+                    item.Set(item.Get() - goal.RequiredAmount);
                 }
-                activeQuests.Items.RemoveAll(quest => quest.IsCompleted);
+            }
+            else
+            {
+                Debug.Log("NO!");
             }
         }
 

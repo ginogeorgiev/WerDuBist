@@ -12,11 +12,13 @@ namespace Features.Quests.Logic
         [SerializeField] private string questName;
         [SerializeField] private string description;
         [SerializeField] private List<Goal> goals;
+        [SerializeField] private Vector2 position;
         
         public string QuestID => questID;
         public string QuestName => questName;
         public string Description => description;
         public List<Goal> Goals => goals;
+        public Vector2 Position => position;
         public bool IsActive { get; set; }
         public bool IsCompleted { get; set; }
 
@@ -39,7 +41,6 @@ namespace Features.Quests.Logic
                 IsCompleted = true;
                 Debug.Log("'" + QuestName + "' Completed");
             }
-            
         }
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using DataStructures.Focus;
 using Features.Quests.Logic;
 using TMPro;
 using UnityEngine;
@@ -9,6 +10,7 @@ namespace Features.Quests.UI.Logic
 {
     public class Quest_UI : MonoBehaviour
     {
+        public Focus_SO<Quest_SO> QuestFocus;
         public GameObject uiContent;
         public GameObject QuestPrefab;
         public GameObject GoalPrefab;
@@ -30,6 +32,7 @@ namespace Features.Quests.UI.Logic
             // save the Text Slots from within the Prefab, to access them easier
             var q = new TextSlots
             (
+                qObj,
                 quest.QuestID,
                 qObj.transform.GetChild (0).gameObject.transform.GetChild(0).GetComponent<TMP_Text>(),
                 qObj.transform.GetChild (1).gameObject.transform.GetChild(0).GetComponent<TMP_Text>()
@@ -77,14 +80,28 @@ namespace Features.Quests.UI.Logic
                     g[i].Text.text  += "/";
                     g[i].Text.text  += quest.Goals[i].RequiredAmount.ToString();
                 }
-
             }
+        }
+        
+        public void RemoveQuest(Quest_SO quest)
+        {
+            // get Goal Slots of correct questID
+            // var g = textSlots.(slot => slot.QuestID == quest.QuestID);
+            var obj = textSlots.First(slot => slot.QuestID == quest.QuestID).QuestObj;
+            Destroy(obj);
+        }
+
+        
+        public void setFocus(Quest_SO quest)
+        {
+            QuestFocus.focus = quest;
         }
     }
 }
 
 public class TextSlots
 {
+    public GameObject QuestObj;
     public string QuestID;
     public TMP_Text QuestName;
     public TMP_Text Descriptions;
@@ -102,8 +119,9 @@ public class TextSlots
         }
     }
 
-    public TextSlots(string id, TMP_Text name, TMP_Text desc )
+    public TextSlots(GameObject obj, string id, TMP_Text name, TMP_Text desc )
     {
+        QuestObj = obj;
         QuestID = id;
         QuestName = name;
         Descriptions = desc;
