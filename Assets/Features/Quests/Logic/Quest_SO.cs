@@ -21,13 +21,7 @@ namespace Features.Quests.Logic
         public Vector2 Position => position;
         public bool IsActive { get; set; }
         public bool IsCompleted { get; set; }
-
-        private void Reset()
-        {
-            IsActive = false;
-            IsCompleted = false;
-        }
-
+        
         public void CheckGoals()
         {
             foreach (var goal in Goals)
@@ -41,6 +35,12 @@ namespace Features.Quests.Logic
                 IsCompleted = true;
                 Debug.Log("'" + QuestName + "' Completed");
             }
+        }
+
+        public void reset()
+        {
+            IsActive = false;
+            IsCompleted = false;
         }
     }
 }

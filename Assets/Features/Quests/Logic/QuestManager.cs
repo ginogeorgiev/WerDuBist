@@ -12,16 +12,29 @@ namespace Features.Quests.Logic
         public QuestSet_SO questSet;
         public QuestSetActive_SO activeQuests;
         public GameEvent_SO removeQuest;
+        public QuestFocus_SO focus;
 
         private void Start()
         {
             // reset all quests
             foreach (var quest in questSet.Items)
             {
-                quest.IsActive = false;
-                quest.IsCompleted = false;
-                activeQuests.Items.Clear();
+                quest.reset();
             }
+            activeQuests.Items.Clear();
+            focus.reset();
+        }
+        
+        public void SetQuestActive(Quest_SO quest)
+        {
+           // check if not already active
+            if (quest.IsActive)
+            { 
+                return;
+            }
+            
+            activeQuests.Items.Add(quest);
+            quest.IsActive = true;
         }
 
         public void ItemCollected(IntVariable item)
@@ -33,36 +46,31 @@ namespace Features.Quests.Logic
             }
         }
 
-        public void CompleteQuest(Quest_SO quest)
+        public void CompleteQuest()
         {
-            quest.CheckGoals();
-            if (quest.IsCompleted && activeQuests.Items.Contains(quest))
+            if (focus.focus==null)
+            {
+                Debug.Log("no Quest Focus");
+                return;
+            }
+            
+            focus.focus.CheckGoals();
+            if (focus.focus.IsCompleted && activeQuests.Items.Contains(focus.focus))
             {
                 removeQuest.Raise();
-                activeQuests.Items.Remove(quest);
-                foreach (var goal in quest.Goals)
+                activeQuests.Items.Remove(focus.focus);
+                foreach (var goal in focus.focus.Goals)
                 {
                     var item = goal.CurrentAmount;
                     item.Set(item.Get() - goal.RequiredAmount);
                 }
+                focus.reset();
             }
             else
             {
                 Debug.Log("NO!");
-            }
+            } 
         }
 
-        public void SetQuestActive(Quest_SO quest)
-        {
-            if (!quest.IsActive) 
-                // if not already active
-            {
-                activeQuests.Items.Add(quest);
-                quest.IsActive = true;
-                Debug.Log("'" + quest.QuestName + "' activated");
-                
-            }
-        }
-        
     }
 }
