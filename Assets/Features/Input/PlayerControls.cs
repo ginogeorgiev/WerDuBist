@@ -35,6 +35,14 @@ namespace Features.Input
                     ""expectedControlType"": ""Double"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""SkipDialog"",
+                    ""type"": ""Button"",
+                    ""id"": ""e3e31600-b6b1-452d-8dd8-fe0fc01ae79f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -158,6 +166,17 @@ namespace Features.Input
                     ""action"": ""Sprint"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0405e5ef-d747-45c1-b479-a97bc3a59bd6"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SkipDialog"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -168,6 +187,7 @@ namespace Features.Input
             m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
             m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
             m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
+            m_Player_SkipDialog = m_Player.FindAction("SkipDialog", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -219,12 +239,14 @@ namespace Features.Input
         private IPlayerActions m_PlayerActionsCallbackInterface;
         private readonly InputAction m_Player_Movement;
         private readonly InputAction m_Player_Sprint;
+        private readonly InputAction m_Player_SkipDialog;
         public struct PlayerActions
         {
             private @PlayerControls m_Wrapper;
             public PlayerActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
             public InputAction @Movement => m_Wrapper.m_Player_Movement;
             public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
+            public InputAction @SkipDialog => m_Wrapper.m_Player_SkipDialog;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -240,6 +262,9 @@ namespace Features.Input
                     @Sprint.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
                     @Sprint.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
                     @Sprint.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
+                    @SkipDialog.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkipDialog;
+                    @SkipDialog.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkipDialog;
+                    @SkipDialog.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkipDialog;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -250,6 +275,9 @@ namespace Features.Input
                     @Sprint.started += instance.OnSprint;
                     @Sprint.performed += instance.OnSprint;
                     @Sprint.canceled += instance.OnSprint;
+                    @SkipDialog.started += instance.OnSkipDialog;
+                    @SkipDialog.performed += instance.OnSkipDialog;
+                    @SkipDialog.canceled += instance.OnSkipDialog;
                 }
             }
         }
@@ -258,6 +286,7 @@ namespace Features.Input
         {
             void OnMovement(InputAction.CallbackContext context);
             void OnSprint(InputAction.CallbackContext context);
+            void OnSkipDialog(InputAction.CallbackContext context);
         }
     }
 }
