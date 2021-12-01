@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace DataStructures.Event
 {
-    [CreateAssetMenu(fileName = "new ActionEvent", menuName = "DataStructures/Event/Action Event")]
+    [CreateAssetMenu(fileName = "newActionEvent", menuName = "DataStructures/Event/ActionEvent")]
     public class ActionEvent : ScriptableObject
     {
         private Action listeners;
