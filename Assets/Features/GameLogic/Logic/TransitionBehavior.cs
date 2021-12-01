@@ -17,25 +17,15 @@ namespace Features.GameLogic.Logic
             gameObject.SetActive(true);
             LeanTween.alpha(image.rectTransform, TransitionAlpha, transitionData.FadeInTime)
                 .setEase(transitionData.FadeInEaseType)
-                .setOnComplete(OnTransitionStartCompleted);
-        }
-
-        private void OnTransitionStartCompleted()
-        {
-            transitionData.OnStartCompleted.Raise();
+                .setOnComplete(transitionData.OnStartCompleted.Raise);
         }
 
         public void OnEndTransition()
         {
             LeanTween.alpha(image.rectTransform, StartAlpha, transitionData.FadeOutTime)
                 .setEase(transitionData.FadeOutEaseType)
-                .setOnComplete(OnTransitionEndCompleted)
+                .setOnComplete(transitionData.OnEndCompleted.Raise)
                 .setOnComplete(Deactivate);
-        }
-
-        private void OnTransitionEndCompleted()
-        {
-            transitionData.OnEndCompleted.Raise();
         }
 
         private void Deactivate()
