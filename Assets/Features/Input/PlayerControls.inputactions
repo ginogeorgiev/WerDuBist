@@ -14,6 +14,14 @@
                     "interactions": ""
                 },
                 {
+                    "name": "Sprint",
+                    "type": "PassThrough",
+                    "id": "6a782bd7-2558-4636-a66d-08382f862313",
+                    "expectedControlType": "Double",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
                     "name": "SkipDialog",
                     "type": "Button",
                     "id": "e3e31600-b6b1-452d-8dd8-fe0fc01ae79f",
@@ -132,6 +140,17 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "8761e753-5295-42ac-8ad1-a6c65df61f54",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 },
                 {
                     "name": "",
