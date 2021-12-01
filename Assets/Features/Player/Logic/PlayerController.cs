@@ -1,13 +1,11 @@
-using System;
-using System.Collections.Generic;
+using System.Collections;
 using DataStructures.StateMachineLogic;
 using DataStructures.Variables;
+using Features.GameLogic.Logic;
 using Features.Input;
 using Features.Player.Logic.States;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 namespace Features.Player.Logic
 {
@@ -18,6 +16,8 @@ namespace Features.Player.Logic
         [SerializeField] private Animator animator;
 
         [SerializeField] private FloatVariable playerMovementSpeed;
+
+        [SerializeField] private TransitionData transitionData;
 
         private new Rigidbody2D rigidbody2D;
 
@@ -117,11 +117,21 @@ namespace Features.Player.Logic
                 stateMachine.ChangeState(sprintingState);
             }
         }
-
-        // Teleport function
-        public void TeleportPlayer(Vector2 targetCoords)
+        
+        public void TeleportPlayer(PlayerTeleportFocus_SO teleportFocus)
         {
-            transform.position = targetCoords;
+            StartCoroutine(TeleportPlayerSequence(teleportFocus));
+        }
+
+        private IEnumerator TeleportPlayerSequence(PlayerTeleportFocus_SO teleportFocus)
+        {
+            transitionData.OnStart.Raise();
+            yield return new WaitForSeconds(transitionData.FadeInTime);
+            
+            transform.position = teleportFocus.focus.position;
+            yield return new WaitForSeconds(1f);
+            
+            transitionData.OnEnd.Raise();
         }
     }
 }
