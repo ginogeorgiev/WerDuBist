@@ -16,6 +16,8 @@ namespace Features.Dialog.Logic
     {
         public Character speakerLeft;
         public Character speakerRight;
+        public Question question;
+        public Conversation nextConversation;
         public Line[] lines;
     }
 }
