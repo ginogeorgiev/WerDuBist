@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Collectable
   layers:
   - Default
   - TransparentFX
@@ -52,4 +53,10 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3363447473
+    locked: 0
+  - name: PalmtreeFront
+    uniqueID: 3265521107
+    locked: 0
+  - name: smallRockFront
+    uniqueID: 3086352005
     locked: 0
