@@ -26,7 +26,7 @@ namespace Features.GameLogic.Logic
         {
             loadingScreen.gameObject.SetActive(true);
 
-            if (!SceneManager.GetSceneByBuildIndex(1).isLoaded);
+            if (!SceneManager.GetSceneByBuildIndex(1).isLoaded)
             {
                 scenesToLoad.Add(SceneManager.LoadSceneAsync("Game_Scene", LoadSceneMode.Additive));
             }
