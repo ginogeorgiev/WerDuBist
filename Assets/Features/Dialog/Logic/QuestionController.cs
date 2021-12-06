@@ -8,12 +8,13 @@ namespace Features.Dialog.Logic
 {
     public class QuestionController : MonoBehaviour
     {
-        public Question question; //change to private later
-        public TMP_Text questionText;
-        public Button choiceButton;
+        [SerializeField] private Question question; 
+        [SerializeField] private TMP_Text questionText;
+        [SerializeField] private Button choiceButton;
 
         private List<ChoiceController> choiceControllers = new List<ChoiceController>();
 
+        //changes to new conversation on button click
         public void Change(Question _question)
         {
             RemoveChoices();
@@ -22,12 +23,14 @@ namespace Features.Dialog.Logic
             Initialize();
         }
 
+        //Hide Conversation on button click
         public void Hide(Conversation conversation)
         {
             RemoveChoices();
             gameObject.SetActive(false);
         }
 
+        //destroys choise buttons
         public void RemoveChoices()
         {
             foreach (ChoiceController c in choiceControllers)
@@ -36,6 +39,7 @@ namespace Features.Dialog.Logic
             choiceControllers.Clear();
         }
 
+        //initalize choicebuttons
         private void Initialize()
         {
             questionText.text = question.text; //changes standard text to question text

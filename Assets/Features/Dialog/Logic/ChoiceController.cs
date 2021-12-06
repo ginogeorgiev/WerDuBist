@@ -15,7 +15,7 @@ namespace Features.Dialog.Logic
         //Adds a gameobject (choice button) for every choice there is
         public static ChoiceController AddChoiceButton(Button choiceButtonTemplate, Choice choice, int index)
         {
-            int buttonSpacing = -44;
+            int buttonSpacing = -60;
             Button button = Instantiate(choiceButtonTemplate);
             
             button.transform.SetParent(choiceButtonTemplate.transform.parent);

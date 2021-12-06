@@ -35,7 +35,7 @@ namespace Features.Dialog.Logic
             speakerUILeft = speakerLeft.GetComponent<SpeakerUI>();
             speakerUIRight = speakerRight.GetComponent<SpeakerUI>();
 
-            playerControls.Player.SkipDialog.started += _ => AdvanceConversation();
+            playerControls.Player.SkipDialog.started += _ => AdvanceLine();
         }
         
         private void AdvanceConversation()

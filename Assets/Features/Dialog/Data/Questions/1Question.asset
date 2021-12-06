@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "Test \xFCberschrift"
   choices:
-  - text: test question
+  - text: question leads to test conversation
     conversation: {fileID: 11400000, guid: 7fc2097966d5dba45915a84da01b6a07, type: 2}
+  - text: question leads to new conversation
+    conversation: {fileID: 11400000, guid: 89211c168590d704881c3c2d9c216d07, type: 2}
