@@ -356,6 +356,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 5657984875722222072, guid: 68d48affb23506e4191c779d941ff4e8, type: 3}
+      propertyPath: dialogConversation
+      value: 
+      objectReference: {fileID: 11400000, guid: 89211c168590d704881c3c2d9c216d07, type: 2}
     - target: {fileID: 5657984875810317302, guid: 68d48affb23506e4191c779d941ff4e8, type: 3}
       propertyPath: m_RootOrder
       value: 1

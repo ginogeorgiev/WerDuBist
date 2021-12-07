@@ -4,27 +4,27 @@ using UnityEngine.UI;
 
 namespace Features.Dialog.Logic
 {
-    public class SpeakerUI : MonoBehaviour
+    public class SpeakerUIController : MonoBehaviour
     {
         [SerializeField] private Image portrait;
         [SerializeField] private TMP_Text fullName;
         [SerializeField] private TMP_Text dialog;
 
-        private Character speaker;
-        public Character Speaker
+        private NPCData_SO speaker;
+        public NPCData_SO Speaker
         {
-            get { return speaker; }
+            get => speaker;
             set
             {
                 speaker = value;
-                portrait.sprite = speaker.portrait;
-                fullName.text = speaker.fullName;
+                portrait.sprite = speaker.Portrait;
+                fullName.text = speaker.FullName;
             }
         }
 
         public string Dialog
         {
-            set { dialog.text = value; }
+            set => dialog.text = value;
         }
 
         public bool HasSpeaker()
@@ -32,9 +32,9 @@ namespace Features.Dialog.Logic
             return speaker != null;
         }
 
-        public bool SpeakerIs(Character character)
+        public bool SpeakerIs(NPCData_SO npcData)
         {
-            return speaker == character;
+            return speaker == npcData;
         }
 
         public void Show()

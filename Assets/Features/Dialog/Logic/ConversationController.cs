@@ -1,4 +1,3 @@
-using System;
 using Features.Input;
 using UnityEngine;
 using UnityEngine.Events;
@@ -6,47 +5,47 @@ using UnityEngine.Events;
 namespace Features.Dialog.Logic
 {
     [System.Serializable]
-    public class QuestionEvent : UnityEvent<Question> {}
+    public class QuestionEvent : UnityEvent<DialogQuestion_SO> {}
 
     public class ConversationController : MonoBehaviour
     {
-        public Conversation conversation;
-        public QuestionEvent questionEvent;
+        [SerializeField] private DialogConversation_SO dialogConversation;
+        [SerializeField] private QuestionEvent questionEvent;
         
         private PlayerControls playerControls;
 
-        public GameObject speakerLeft;
-        public GameObject speakerRight;
+        [SerializeField] private GameObject speakerLeft;
+        [SerializeField] private GameObject speakerRight;
 
-        private SpeakerUI speakerUILeft;
-        private SpeakerUI speakerUIRight;
+        private SpeakerUIController speakerUIControllerLeft;
+        private SpeakerUIController speakerUIControllerRight;
 
         private int activeLineIndex = 0;
         private bool conversationStarted = false;
 
-        public void ChangeConversation(Conversation nextConversation)
+        public void ChangeConversation(DialogConversation_SO nextDialogConversation)
         {
             conversationStarted = false;
-            conversation = nextConversation;
+            dialogConversation = nextDialogConversation;
             AdvanceLine();
         }
         private void Start()
         {
-            speakerUILeft = speakerLeft.GetComponent<SpeakerUI>();
-            speakerUIRight = speakerRight.GetComponent<SpeakerUI>();
+            speakerUIControllerLeft = speakerLeft.GetComponent<SpeakerUIController>();
+            speakerUIControllerRight = speakerRight.GetComponent<SpeakerUIController>();
 
             playerControls.Player.SkipDialog.started += _ => AdvanceLine();
         }
         
         private void AdvanceConversation()
         {
-            if (conversation.question != null)
+            if (dialogConversation.DialogQuestion != null)
             {
-                questionEvent.Invoke(conversation.question);
+                questionEvent.Invoke(dialogConversation.DialogQuestion);
             }
-            else if (conversation.nextConversation != null)
+            else if (dialogConversation.NextDialogConversation != null)
             {
-                ChangeConversation(conversation.nextConversation);
+                ChangeConversation(dialogConversation.NextDialogConversation);
             }
             else
             {
@@ -55,26 +54,26 @@ namespace Features.Dialog.Logic
         }
         private void EndConversation()
         {
-            conversation = null;
+            dialogConversation = null;
             conversationStarted = false;
-            speakerUILeft.Hide();
-            speakerUIRight.Hide();
+            speakerUIControllerLeft.Hide();
+            speakerUIControllerRight.Hide();
         }
 
         private void Initialize()
         {
             conversationStarted = true;
             activeLineIndex = 0;
-            speakerUILeft.Speaker = conversation.speakerLeft;
-            speakerUIRight.Speaker = conversation.speakerRight;
+            speakerUIControllerLeft.Speaker = dialogConversation.SpeakerLeft;
+            speakerUIControllerRight.Speaker = dialogConversation.SpeakerRight;
         }
 
         private void AdvanceLine()
         {
-            if (conversation == null) return;
+            if (dialogConversation == null) return;
             if (!conversationStarted) Initialize();
 
-            if (activeLineIndex < conversation.lines.Length)
+            if (activeLineIndex < dialogConversation.Lines.Length)
             {
                 DisplayLine();
             }
@@ -86,16 +85,16 @@ namespace Features.Dialog.Logic
 
         private void DisplayLine()
         {
-            Line line = conversation.lines[activeLineIndex];
-            Character character = line.character;
+            Line line = dialogConversation.Lines[activeLineIndex];
+            NPCData_SO npcDataSo = line.NpcData;
 
-            if (speakerUILeft.SpeakerIs(character))
+            if (speakerUIControllerLeft.SpeakerIs(npcDataSo))
             {
-                SetDialog(speakerUILeft, speakerUIRight, line.text);
+                SetDialog(speakerUIControllerLeft, speakerUIControllerRight, line.Text);
             }
             else
             {
-                SetDialog(speakerUIRight, speakerUILeft, line.text);
+                SetDialog(speakerUIControllerRight, speakerUIControllerLeft, line.Text);
             }
 
             activeLineIndex += 1;
@@ -104,13 +103,13 @@ namespace Features.Dialog.Logic
         
 
         private void SetDialog(
-            SpeakerUI activeSpeakerUI,
-            SpeakerUI inactiveSpeakerUI,
+            SpeakerUIController activeSpeakerUIController,
+            SpeakerUIController inactiveSpeakerUIController,
             string text)
         {
-            activeSpeakerUI.Dialog = text;
-            activeSpeakerUI.Show();
-            inactiveSpeakerUI.Hide();
+            activeSpeakerUIController.Dialog = text;
+            activeSpeakerUIController.Show();
+            inactiveSpeakerUIController.Hide();
         }
         
         private void Awake()
