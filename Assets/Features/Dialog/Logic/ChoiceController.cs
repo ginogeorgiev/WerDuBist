@@ -5,17 +5,17 @@ using UnityEngine.UI;
 namespace Features.Dialog.Logic
 {
     [System.Serializable]
-    public class ConversationChangeEvent : UnityEvent<Conversation> {}
+    public class ConversationChangeEvent : UnityEvent<DialogConversation_SO> {}
     
     public class ChoiceController : MonoBehaviour
     {
-        public Choice choice;
-        public ConversationChangeEvent conversationChangeEvent;
+        [SerializeField] private Choice choice;
+        [SerializeField] private ConversationChangeEvent conversationChangeEvent;
 
-        //Adds a gameobject (choice button) for every choice there is
+        //Adds a gameObject (choice button) for every choice there is
         public static ChoiceController AddChoiceButton(Button choiceButtonTemplate, Choice choice, int index)
         {
-            int buttonSpacing = -44;
+            const int buttonSpacing = -60;
             Button button = Instantiate(choiceButtonTemplate);
             
             button.transform.SetParent(choiceButtonTemplate.transform.parent);
@@ -34,12 +34,12 @@ namespace Features.Dialog.Logic
         {
             if (conversationChangeEvent == null)
                 conversationChangeEvent = new ConversationChangeEvent();
-            GetComponent<Button>().GetComponentInChildren<Text>().text = choice.text;
+            GetComponent<Button>().GetComponentInChildren<Text>().text = choice.Text;
         }
 
         public void MakeChoice()
         {
-            conversationChangeEvent.Invoke(choice.conversation);
+            conversationChangeEvent.Invoke(choice.DialogConversation);
         }
     }
 }

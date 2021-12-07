@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,27 +7,30 @@ namespace Features.Dialog.Logic
 {
     public class QuestionController : MonoBehaviour
     {
-        public Question question; //change to private later
-        public TMP_Text questionText;
-        public Button choiceButton;
+        [SerializeField] private DialogQuestion_SO dialogQuestion; 
+        [SerializeField] private TMP_Text questionText;
+        [SerializeField] private Button choiceButton;
 
         private List<ChoiceController> choiceControllers = new List<ChoiceController>();
 
-        public void Change(Question _question)
+        //changes to new conversation on button click
+        public void Change(DialogQuestion_SO dialogQuestion)
         {
             RemoveChoices();
-            question = _question;
+            this.dialogQuestion = dialogQuestion;
             gameObject.SetActive(true);
             Initialize();
         }
 
-        public void Hide(Conversation conversation)
+        //Hide Conversation on button click
+        public void Hide(DialogConversation_SO dialogConversation)
         {
             RemoveChoices();
             gameObject.SetActive(false);
         }
 
-        public void RemoveChoices()
+        //destroys choise buttons
+        private void RemoveChoices()
         {
             foreach (ChoiceController c in choiceControllers)
                 Destroy(c.gameObject);
@@ -36,13 +38,14 @@ namespace Features.Dialog.Logic
             choiceControllers.Clear();
         }
 
+        //initalize choicebuttons
         private void Initialize()
         {
-            questionText.text = question.text; //changes standard text to question text
+            questionText.text = dialogQuestion.Text; //changes standard text to question text
 
-            for (int index = 0; index < question.choices.Length; index++)
+            for (int index = 0; index < dialogQuestion.Choices.Length; index++)
             {
-                ChoiceController c = ChoiceController.AddChoiceButton(choiceButton, question.choices[index], index);
+                ChoiceController c = ChoiceController.AddChoiceButton(choiceButton, dialogQuestion.Choices[index], index);
                 choiceControllers.Add(c);
             }
             choiceButton.gameObject.SetActive(false);
