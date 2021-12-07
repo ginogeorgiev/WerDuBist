@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63183df4d72ad34389ab0b100febe25, type: 3}
   m_Name: QC5+
   m_EditorClassIdentifier: 
-  question: 
-  aspect: {fileID: 0}
-  key: 0
+  question: Ich folge einem Plan.
+  aspect: {fileID: 11400000, guid: 6160081856212984bb5691604221317f, type: 2}
+  key: 1

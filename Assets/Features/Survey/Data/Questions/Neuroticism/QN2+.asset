@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63183df4d72ad34389ab0b100febe25, type: 3}
   m_Name: QN2+
   m_EditorClassIdentifier: 
-  question: 
+  question: "Ich f\xFChle mich selten deprimiert."
   aspect: {fileID: 11400000, guid: e1f7793b5f5bb0247a0e26c30508cb58, type: 2}
   key: 0

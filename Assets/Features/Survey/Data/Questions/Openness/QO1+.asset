@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63183df4d72ad34389ab0b100febe25, type: 3}
   m_Name: QO1+
   m_EditorClassIdentifier: 
-  question: 
+  question: "Ich besitze einen gro\xDFen Wortschatz."
   aspect: {fileID: 11400000, guid: 6b1a307e876bc8d4fa25810b6db81e4e, type: 2}
-  key: 0
+  key: 1
