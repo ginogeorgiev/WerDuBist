@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63183df4d72ad34389ab0b100febe25, type: 3}
   m_Name: QC4-
   m_EditorClassIdentifier: 
-  question: "Ich dr\xFCcke mich vor meinen Pflichtend."
+  question: "Ich dr\xFCcke mich vor meinen Pflichten."
   aspect: {fileID: 11400000, guid: 6160081856212984bb5691604221317f, type: 2}
   key: 0
