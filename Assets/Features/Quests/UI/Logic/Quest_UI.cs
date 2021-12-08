@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using Features.Quests.Logic;
 using TMPro;
@@ -9,6 +10,7 @@ namespace Features.Quests.UI.Logic
     public class Quest_UI : MonoBehaviour
     {
         public QuestFocus_SO focus;
+        public List<RectTransform> QuestUI;
         public GameObject ContentUI;
         public GameObject QuestPrefab;
         public GameObject GoalPrefab;
@@ -47,6 +49,11 @@ namespace Features.Quests.UI.Logic
             }
             
             questUI.GetComponent<QuestFocusController>().quest = quest;
+            foreach (var rec in QuestUI)
+            {
+                LayoutRebuilder.ForceRebuildLayoutImmediate(rec);
+            }
+            
         }
 
         public void UpdateQuests()
@@ -64,6 +71,10 @@ namespace Features.Quests.UI.Logic
                     goalUI.text  += "/";
                     goalUI.text  += quest.Goals[i].RequiredAmount.ToString();
                 }
+                foreach (var rec in QuestUI)
+                {
+                    LayoutRebuilder.ForceRebuildLayoutImmediate(rec);
+                }
             }
         }
 
@@ -71,6 +82,11 @@ namespace Features.Quests.UI.Logic
         {
             // destroy UI Prefab of completed Quest
             Destroy(findQuestUI(focus.focus.QuestID).gameObject);
+            
+            foreach (var rec in QuestUI)
+            {
+                LayoutRebuilder.ForceRebuildLayoutImmediate(rec);
+            }
         }
 
         private Transform findQuestUI(string id)
