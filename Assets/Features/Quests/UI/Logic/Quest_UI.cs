@@ -18,8 +18,9 @@ namespace Features.Quests.UI.Logic
 
         public void DisplayQuest(Quest_SO quest)
         {
+
             // check if not already displayed
-            if (findQuestUI(quest.QuestID) != null)
+            if (activeQuests.Items.Contains(quest))
             {
                 return;
             }
@@ -49,48 +50,90 @@ namespace Features.Quests.UI.Logic
             }
             
             questUI.GetComponent<QuestFocusController>().quest = quest;
-            foreach (var rec in QuestUI)
+            
+            // if only active quest, set it as focus
+            if (!activeQuests.Items.Any())
             {
-                LayoutRebuilder.ForceRebuildLayoutImmediate(rec);
+                focus.focus = quest;
+                Debug.Log("Focus on: " + quest.QuestID);
+            }
+            else
+            {
+                setQuestUI(quest, false);
+            }
+
+            rebuildLayout();
+        }
+        
+        public void UpdateQuests()
+        { 
+            // find QuestUI with correct questID
+            var questUI = findQuestUI(focus.focus.QuestID);
+
+            // update all goal texts
+            for (int i = 0; i < focus.focus.Goals.Count(); i++)
+            {
+                var goalUI = questUI.GetChild(2 + i).GetChild(0).gameObject.transform.GetChild(1).GetComponent<TMP_Text>();
+                goalUI.text = focus.focus.Goals[i].CurrentAmount.Get().ToString();
+                goalUI.text  += "/";
+                goalUI.text  += focus.focus.Goals[i].RequiredAmount.ToString();
             }
             
+            
+            rebuildLayout();
         }
-
-        public void UpdateQuests()
+        
+        public void UpdateQuestsFocus()
         {
             foreach (var quest in activeQuests.Items)
             {
-                // find QuestUI with correct questID
-                var questUI = findQuestUI(quest.QuestID);
+                // hide all Quest info
+                setQuestUI(quest, false);
+            }  
+            
+            // display only info of the Focus Quest
+            setQuestUI(focus.focus, true);
 
-                // update all goal texts
-                for (int i = 0; i < quest.Goals.Count(); i++)
-                {
-                    var goalUI = questUI.GetChild(2 + i).GetChild(0).gameObject.transform.GetChild(1).GetComponent<TMP_Text>();
-                    goalUI.text = quest.Goals[i].CurrentAmount.Get().ToString();
-                    goalUI.text  += "/";
-                    goalUI.text  += quest.Goals[i].RequiredAmount.ToString();
-                }
-                foreach (var rec in QuestUI)
-                {
-                    LayoutRebuilder.ForceRebuildLayoutImmediate(rec);
-                }
+            UpdateQuests();
+        }
+        
+        private void setQuestUI(Quest_SO quest, bool boo)
+        {
+            // find QuestUI with correct questID
+            var questUI = findQuestUI(quest.QuestID);
+            
+            questUI.transform.GetChild(1).GetChild(0).gameObject.SetActive(boo);
+                
+            // update all goal texts
+            for (int i = 0; i < quest.Goals.Count(); i++)
+            {
+                questUI.GetChild(2 + i).GetChild(0).gameObject.transform.GetChild(1).gameObject.SetActive(boo);
+                questUI.GetChild(2 + i).GetChild(0).gameObject.transform.GetChild(0).gameObject.SetActive(boo);
             }
         }
-
+        
         public void RemoveQuest()
         {
             // destroy UI Prefab of completed Quest
             Destroy(findQuestUI(focus.focus.QuestID).gameObject);
             
-            foreach (var rec in QuestUI)
-            {
-                LayoutRebuilder.ForceRebuildLayoutImmediate(rec);
+            // remove from active quests
+            activeQuests.Items.Remove(focus.focus);
+
+            // if any more active quests, focus on the first one
+            if (activeQuests.Items.Any())
+            { 
+                focus.focus = activeQuests.Items[0];
+                Debug.Log("Focus on: " + activeQuests.Items[0].QuestID);
+                UpdateQuestsFocus();
             }
+
+            rebuildLayout();
         }
 
         private Transform findQuestUI(string id)
         {
+            
             for (int i = 0; i < ContentUI.transform.childCount; i++)
             {
                 var questUI = ContentUI.transform.GetChild(i);
@@ -101,6 +144,14 @@ namespace Features.Quests.UI.Logic
             }
 
             return null;
+        }
+        
+        public void rebuildLayout()
+        {
+            foreach (var rec in QuestUI)
+            {
+                LayoutRebuilder.ForceRebuildLayoutImmediate(rec);
+            }
         }
     }
 }

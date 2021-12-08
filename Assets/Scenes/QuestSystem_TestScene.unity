@@ -833,6 +833,39 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &958677448 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4802871112802404793, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+  m_PrefabInstance: {fileID: 501730983716160095}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &958677459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958677448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: a7bf6c6ddac907947bc6586f6e2b0de7, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1289009848}
+        m_TargetAssemblyTypeName: Features.Quests.UI.Logic.Quest_UI, Assembly-CSharp
+        m_MethodName: UpdateQuestsFocus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &981644942
 GameObject:
   m_ObjectHideFlags: 0
@@ -1348,6 +1381,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3019604515560443490, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
   m_PrefabInstance: {fileID: 501730983716160095}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1289009848 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5314688510526871457, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+  m_PrefabInstance: {fileID: 501730983716160095}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9405ef6d9d8658447a428bb4bbcda387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1299673763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2222,6 +2266,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866582558}
   m_CullTransparentMesh: 1
+--- !u!114 &2058562629 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1524817012585307856, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+  m_PrefabInstance: {fileID: 501730983716160095}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06c8b10fe24dfab489995cccddb2c137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2087119086
 GameObject:
   m_ObjectHideFlags: 0
@@ -2274,6 +2329,230 @@ PrefabInstance:
     - target: {fileID: 1524817012585307857, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_Name
       value: QuestSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404785, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404785, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404785, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1289009848}
+    - target: {fileID: 4802871112802404785, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2058562629}
+    - target: {fileID: 4802871112802404785, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2058562629}
+    - target: {fileID: 4802871112802404785, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404785, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisplayQuest
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404785, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetQuestActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404785, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetQuestActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404785, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Features.Quests.Logic.Quest_UI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404785, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Features.Quests.Logic.QuestManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404785, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Features.Quests.Logic.QuestManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404785, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 9ec1ef8e3ab31a840bb549d99dc183af, type: 2}
+    - target: {fileID: 4802871112802404785, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Features.Quests.Logic.Quest_SO, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1289009848}
+    - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2058562629}
+    - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2058562629}
+    - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisplayQuest
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetQuestActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetQuestActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Features.Quests.Logic.Quest_UI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Features.Quests.Logic.QuestManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Features.Quests.Logic.QuestManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: f4446098ef7acc147a45a2fcb0556346, type: 2}
+    - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Features.Quests.Logic.Quest_SO, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404787, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404787, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404787, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1289009848}
+    - target: {fileID: 4802871112802404787, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2058562629}
+    - target: {fileID: 4802871112802404787, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2058562629}
+    - target: {fileID: 4802871112802404787, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404787, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisplayQuest
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404787, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetQuestActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404787, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetQuestActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404787, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Features.Quests.Logic.Quest_UI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404787, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Features.Quests.Logic.QuestManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404787, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Features.Quests.Logic.QuestManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404787, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: fe397199f3a2844449334c71c2f32d75, type: 2}
+    - target: {fileID: 4802871112802404787, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Features.Quests.Logic.Quest_SO, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404788, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404788, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404788, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1289009848}
+    - target: {fileID: 4802871112802404788, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2058562629}
+    - target: {fileID: 4802871112802404788, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2058562629}
+    - target: {fileID: 4802871112802404788, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404788, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisplayQuest
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404788, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetQuestActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404788, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetQuestActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404788, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Features.Quests.Logic.Quest_UI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404788, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Features.Quests.Logic.QuestManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404788, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Features.Quests.Logic.QuestManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404788, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 64d67580bff265e41ae674871fb00f8b, type: 2}
+    - target: {fileID: 4802871112802404788, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Features.Quests.Logic.Quest_SO, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5314688510526871457, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: GoalPrefab
@@ -2341,7 +2620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5506266131864378915, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 823
+      value: 852
       objectReference: {fileID: 0}
     - target: {fileID: 5506266131864378915, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2390,6 +2669,34 @@ PrefabInstance:
     - target: {fileID: 6528920872105082744, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410527967910931091, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410527967910931091, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410527967910931091, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410527967910931091, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410527967910931091, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410527967910931091, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Features.Quests.UI.Logic.Quest_UI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410527967910931091, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8432286848697763842, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_Pivot.x

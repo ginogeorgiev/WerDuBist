@@ -57,14 +57,13 @@ namespace Features.Quests.Logic
             focus.focus.CheckGoals();
             if (focus.focus.IsCompleted && activeQuests.Items.Contains(focus.focus))
             {
-                removeQuest.Raise();
-                activeQuests.Items.Remove(focus.focus);
+                
                 foreach (var goal in focus.focus.Goals)
                 {
                     var item = goal.CurrentAmount;
                     item.Set(item.Get() - goal.RequiredAmount);
                 }
-                focus.reset();
+                removeQuest.Raise();
             }
             else
             {
