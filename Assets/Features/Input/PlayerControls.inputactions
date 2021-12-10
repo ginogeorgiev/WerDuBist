@@ -20,6 +20,14 @@
                     "expectedControlType": "Double",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "SkipDialog",
+                    "type": "Button",
+                    "id": "e3e31600-b6b1-452d-8dd8-fe0fc01ae79f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -141,6 +149,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0405e5ef-d747-45c1-b479-a97bc3a59bd6",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SkipDialog",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

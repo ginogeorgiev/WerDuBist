@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca733828a6564021ae6bf4555f5c909d, type: 3}
+  m_Name: TransitionData
+  m_EditorClassIdentifier: 
+  fadeInTime: 1
+  fadeOutTime: 1
+  fadeInEaseType: 13
+  fadeOutEaseType: 13
+  onStart: {fileID: 11400000, guid: 282b474c47840ac4cba94211528efebe, type: 2}
+  onEnd: {fileID: 11400000, guid: 0ab4643a52310884985bfc3c11ef9903, type: 2}
+  onStartCompleted: {fileID: 11400000, guid: 329abac923f88464c8214badf610c70a, type: 2}
+  onEndCompleted: {fileID: 11400000, guid: e949d9176554e4f42910c6c8a7cbde50, type: 2}

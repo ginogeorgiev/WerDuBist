@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6161680045255850262}
   - component: {fileID: 6420049169826359673}
+  - component: {fileID: 614103739}
   m_Layer: 0
   m_Name: GameEventListener
   m_TagString: Untagged
@@ -54,6 +55,35 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &614103739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5739149380080691983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: d882be4c82286df4b94ba25cbe00c803, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6592273595326390541}
+        m_TargetAssemblyTypeName: Features.Player.Logic.PlayerController, Assembly-CSharp
+        m_MethodName: TeleportPlayer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: c2ea0f8c43f777649a245790e1a64367, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Features.Player.Logic.PlayerTeleportFocus_SO,
+            Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -178,7 +208,7 @@ MonoBehaviour:
   walkingSpeed: 5
   animator: {fileID: 1444786951}
   playerMovementSpeed: {fileID: 11400000, guid: a2cffe57136c33146baa72577ed8f290, type: 2}
-  rigidbodyTestBool: 1
+  transitionData: {fileID: 11400000, guid: 73c969799c95a9c4e8b7fad43380a837, type: 2}
 --- !u!212 &6592273595326390539
 SpriteRenderer:
   m_ObjectHideFlags: 0
