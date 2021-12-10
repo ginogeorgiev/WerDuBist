@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Features.Quests.Logic;
@@ -15,16 +16,15 @@ namespace Features.Quests.UI.Logic
         public GameObject QuestPrefab;
         public GameObject GoalPrefab;
         public QuestSetActive_SO activeQuests;
+        public QuestEvent onDisplayQuest;
+
+        private void Start()
+        {
+            onDisplayQuest.RegisterListener(DisplayQuest);
+        }
 
         public void DisplayQuest(Quest_SO quest)
         {
-
-            // check if not already displayed
-            if (activeQuests.Items.Contains(quest))
-            {
-                return;
-            }
-            
             // Instantiate Quest UI Prefab
             var questUI= Instantiate(QuestPrefab, new Vector3 (0,0,0), Quaternion.identity);
             questUI.transform.SetParent(ContentUI.transform);
@@ -49,14 +49,16 @@ namespace Features.Quests.UI.Logic
                 goalImg.sprite = goal.GoalSprite;
             }
             
+            // connect correct Quest_SO to UI Element
             questUI.GetComponent<QuestFocusController>().quest = quest;
             
             // if only active quest, set it as focus
-            if (!activeQuests.Items.Any())
+            if (activeQuests.Items.Count() == 1)
             {
                 focus.focus = quest;
                 Debug.Log("Focus on: " + quest.QuestID);
             }
+            // else collapse UI
             else
             {
                 setQuestUI(quest, false);
@@ -68,7 +70,7 @@ namespace Features.Quests.UI.Logic
         public void UpdateQuests()
         { 
             // find QuestUI with correct questID
-            var questUI = findQuestUI(focus.focus.QuestID);
+            var questUI = getQuestUI(focus.focus.QuestID);
 
             // update all goal texts
             for (int i = 0; i < focus.focus.Goals.Count(); i++)
@@ -93,18 +95,18 @@ namespace Features.Quests.UI.Logic
             
             // display only info of the Focus Quest
             setQuestUI(focus.focus, true);
-
+            
             UpdateQuests();
         }
-        
+
         private void setQuestUI(Quest_SO quest, bool boo)
         {
-            // find QuestUI with correct questID
-            var questUI = findQuestUI(quest.QuestID);
+             //sets all Quest Info active/inactive i.e. collapses unfocused Quests
+             
+             var questUI = getQuestUI(quest.QuestID);
             
             questUI.transform.GetChild(1).GetChild(0).gameObject.SetActive(boo);
-                
-            // update all goal texts
+            
             for (int i = 0; i < quest.Goals.Count(); i++)
             {
                 questUI.GetChild(2 + i).GetChild(0).gameObject.transform.GetChild(1).gameObject.SetActive(boo);
@@ -115,7 +117,7 @@ namespace Features.Quests.UI.Logic
         public void RemoveQuest()
         {
             // destroy UI Prefab of completed Quest
-            Destroy(findQuestUI(focus.focus.QuestID).gameObject);
+            Destroy(getQuestUI(focus.focus.QuestID).gameObject);
             
             // remove from active quests
             activeQuests.Items.Remove(focus.focus);
@@ -131,8 +133,9 @@ namespace Features.Quests.UI.Logic
             rebuildLayout();
         }
 
-        private Transform findQuestUI(string id)
+        private Transform getQuestUI(string id)
         {
+            // gets the UI Elements of the given Quest
             
             for (int i = 0; i < ContentUI.transform.childCount; i++)
             {
@@ -148,6 +151,8 @@ namespace Features.Quests.UI.Logic
         
         public void rebuildLayout()
         {
+            // updates the Layout Elements; else they update themselves to late causing visual glitches
+            
             foreach (var rec in QuestUI)
             {
                 LayoutRebuilder.ForceRebuildLayoutImmediate(rec);

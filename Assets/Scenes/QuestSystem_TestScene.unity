@@ -490,13 +490,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: f7b291d5e75996641845ec1be92ba004, type: 2}
-        m_TargetAssemblyTypeName: DataStructures.Event.GameEvent_SO, Assembly-CSharp
+      - m_Target: {fileID: 11400000, guid: d3ded01f8c8bb7b43ab7640a65b29a4a, type: 2}
+        m_TargetAssemblyTypeName: DataStructures.Event.ActionEventWithParameter`1[[Features.Quests.Logic.Quest_SO,
+          Assembly-CSharp
         m_MethodName: Raise
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 9ec1ef8e3ab31a840bb549d99dc183af, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Features.Quests.Logic.Quest_SO, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1245,13 +1246,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: dfa5a7559d354a6448dcfdf50169e5ab, type: 2}
-        m_TargetAssemblyTypeName: DataStructures.Event.GameEvent_SO, Assembly-CSharp
+      - m_Target: {fileID: 11400000, guid: d3ded01f8c8bb7b43ab7640a65b29a4a, type: 2}
+        m_TargetAssemblyTypeName: DataStructures.Event.ActionEventWithParameter`1[[Features.Quests.Logic.Quest_SO,
+          Assembly-CSharp
         m_MethodName: Raise
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: f4446098ef7acc147a45a2fcb0556346, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Features.Quests.Logic.Quest_SO, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1555,13 +1557,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 1c38920ae074ad04abc74495733f481b, type: 2}
-        m_TargetAssemblyTypeName: DataStructures.Event.GameEvent_SO, Assembly-CSharp
+      - m_Target: {fileID: 11400000, guid: d3ded01f8c8bb7b43ab7640a65b29a4a, type: 2}
+        m_TargetAssemblyTypeName: DataStructures.Event.ActionEventWithParameter`1[[Features.Quests.Logic.Quest_SO,
+          Assembly-CSharp
         m_MethodName: Raise
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: fe397199f3a2844449334c71c2f32d75, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Features.Quests.Logic.Quest_SO, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1768,13 +1771,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 39c2e939c56324249b252feb9e96e0ce, type: 2}
-        m_TargetAssemblyTypeName: DataStructures.Event.GameEvent_SO, Assembly-CSharp
+      - m_Target: {fileID: 11400000, guid: d3ded01f8c8bb7b43ab7640a65b29a4a, type: 2}
+        m_TargetAssemblyTypeName: DataStructures.Event.ActionEventWithParameter`1[[Features.Quests.Logic.Quest_SO,
+          Assembly-CSharp
         m_MethodName: Raise
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 64d67580bff265e41ae674871fb00f8b, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Features.Quests.Logic.Quest_SO, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2326,6 +2330,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1524817012585307856, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: displayQuest
+      value: 
+      objectReference: {fileID: 11400000, guid: 8498b43859c2d57479baaad9cab97123, type: 2}
+    - target: {fileID: 1524817012585307856, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: questAccepted
+      value: 
+      objectReference: {fileID: 11400000, guid: d3ded01f8c8bb7b43ab7640a65b29a4a, type: 2}
+    - target: {fileID: 1524817012585307856, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: onDisplayQuest
+      value: 
+      objectReference: {fileID: 11400000, guid: 8498b43859c2d57479baaad9cab97123, type: 2}
+    - target: {fileID: 1524817012585307856, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: onQuestAccepted
+      value: 
+      objectReference: {fileID: 11400000, guid: d3ded01f8c8bb7b43ab7640a65b29a4a, type: 2}
     - target: {fileID: 1524817012585307857, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_Name
       value: QuestSystem
@@ -2388,7 +2408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
@@ -2397,7 +2417,7 @@ PrefabInstance:
     - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1289009848}
+      objectReference: {fileID: 2058562629}
     - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -2412,7 +2432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DisplayQuest
+      value: SetQuestActive
       objectReference: {fileID: 0}
     - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -2424,7 +2444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Features.Quests.Logic.Quest_UI, Assembly-CSharp
+      value: Features.Quests.Logic.QuestManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -2499,8 +2519,12 @@ PrefabInstance:
       value: Features.Quests.Logic.Quest_SO, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4802871112802404788, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: event
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802871112802404788, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4802871112802404788, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
@@ -2563,6 +2587,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8817309391474720074, guid: b62be481b3d939245ab57f11a4dd54eb, type: 3}
     - target: {fileID: 5314688510526871457, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: displayQuest
+      value: 
+      objectReference: {fileID: 11400000, guid: 8498b43859c2d57479baaad9cab97123, type: 2}
+    - target: {fileID: 5314688510526871457, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+      propertyPath: onDisplayQuest
+      value: 
+      objectReference: {fileID: 11400000, guid: 8498b43859c2d57479baaad9cab97123, type: 2}
+    - target: {fileID: 5314688510526871457, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: QuestUI.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -2620,7 +2652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5506266131864378915, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 852
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5506266131864378915, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2716,7 +2748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8432286848697763842, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8432286848697763842, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2724,7 +2756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8432286848697763842, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 207
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8432286848697763842, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2750,5 +2782,9 @@ PrefabInstance:
       propertyPath: m_ChildForceExpandWidth
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4802871112802404788, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+    - {fileID: 4802871112802404786, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+    - {fileID: 4802871112802404787, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
+    - {fileID: 4802871112802404785, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: db1f19836d7d24d408c3143503e305bf, type: 3}

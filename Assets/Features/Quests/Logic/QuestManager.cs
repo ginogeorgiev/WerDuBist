@@ -12,6 +12,8 @@ namespace Features.Quests.Logic
         public QuestSet_SO questSet;
         public QuestSetActive_SO activeQuests;
         public GameEvent_SO removeQuest;
+        public QuestEvent onQuestAccepted;
+        [SerializeField] private QuestEvent onDisplayQuest;
         public QuestFocus_SO focus;
 
         private void Start()
@@ -23,18 +25,20 @@ namespace Features.Quests.Logic
             }
             activeQuests.Items.Clear();
             focus.reset();
+            onQuestAccepted.RegisterListener(SetQuestActive);
         }
-        
+
         public void SetQuestActive(Quest_SO quest)
         {
            // check if not already active
-            if (quest.IsActive)
-            { 
-                return;
-            }
-            
-            activeQuests.Items.Add(quest);
-            quest.IsActive = true;
+           if (quest.IsActive || quest.IsCompleted)
+           {
+               return;
+           }
+           
+           activeQuests.Items.Add(quest);
+           quest.IsActive = true;
+           onDisplayQuest.Raise(quest);
         }
 
         public void ItemCollected(IntVariable item)
@@ -55,9 +59,10 @@ namespace Features.Quests.Logic
             }
             
             focus.focus.CheckGoals();
+            // if completed
             if (focus.focus.IsCompleted && activeQuests.Items.Contains(focus.focus))
             {
-                
+                // remove all Quest Items from Iventory
                 foreach (var goal in focus.focus.Goals)
                 {
                     var item = goal.CurrentAmount;
@@ -67,7 +72,7 @@ namespace Features.Quests.Logic
             }
             else
             {
-                Debug.Log("NO!");
+                Debug.Log("not all Quest Goals have been completed yet");
             } 
         }
 
