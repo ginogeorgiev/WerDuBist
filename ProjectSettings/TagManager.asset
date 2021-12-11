@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Collectable
   - GridElement
+  - Wood
+  - Stone
   layers:
   - Default
   - TransparentFX

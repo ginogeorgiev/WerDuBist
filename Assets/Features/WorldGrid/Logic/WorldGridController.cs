@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using DataStructures.Variables;
 using UnityEngine;
 
 namespace Features.WorldGrid.Logic
@@ -8,16 +9,25 @@ namespace Features.WorldGrid.Logic
         private List<GridElementBehavior> gridElementBehaviors;
 
         [SerializeField] private GridElementEnteredEvent onGridElementEntered;
+        [SerializeField] private IntVariable selectedGridIndex;
+        
+        
+
+        [Tooltip("The Grid is a square")]
+        [SerializeField] private IntVariable gridLengthVariable;
+        [SerializeField] private IntVariable gridSizeVariable;
+
+        private int lastIndex;
 
         private void Awake()
         {
             onGridElementEntered.RegisterListener(OnEnterGridElement);
+            gridSizeVariable.Set(gridLengthVariable.Get() * gridLengthVariable.Get() - 1);
+            gridElementBehaviors = new List<GridElementBehavior>();
         }
 
         private void Start()
         {
-            gridElementBehaviors = new List<GridElementBehavior>();
-            
             foreach (Transform child in gameObject.transform)
             {
                 gridElementBehaviors.Add(child.GetComponent<GridElementBehavior>());
@@ -26,7 +36,12 @@ namespace Features.WorldGrid.Logic
 
         private void OnEnterGridElement(int index)
         {
+            gridElementBehaviors[lastIndex].Content.SetActive(false);
             
+            selectedGridIndex.Set(index);
+            gridElementBehaviors[index].Content.SetActive(true);
+
+            lastIndex = index;
         }
         
         private void OnExitGridElement()

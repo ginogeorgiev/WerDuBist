@@ -7,61 +7,75 @@ namespace Features.WorldGrid.Logic
     public class GridElementBehavior : MonoBehaviour
     {
         [SerializeField] private GameObject content;
-        [SerializeField] private List<Vector2> gridNeighbourPosition;
+        public GameObject Content => content;
+
+        [SerializeField] private List<int> gridNeighbourIndices;
+        public List<int> GridNeighbourIndices => gridNeighbourIndices;
+
+        [SerializeField] private int gridIndex;
+        public int GridIndex => gridIndex;
+
         [Tooltip("The Grid is a square")]
+        [SerializeField] private IntVariable gridLengthVariable;
         [SerializeField] private IntVariable gridSizeVariable;
+        private int gridLength;
         private int gridSize;
-        [SerializeField] private Vector2 gridPosition;
 
-        private void Awake()
+        private void Start()
         {
-            content.SetActive(false);
+            //content.SetActive(false);
 
+            gridLength = gridLengthVariable.Get();
             gridSize = gridSizeVariable.Get();
 
-            gridPosition.x = (int)(transform.position.x / 10);
-            gridPosition.y = (int)(transform.position.y / 10);
+            gridNeighbourIndices = new List<int>();
+
+            DetermineNeighbours();
+        }
+
+        private void DetermineNeighbours()
+        {
+            // Bottom line edge case
+            if (gridIndex - gridLength - 1 >= 0 && (gridIndex - gridLength - 1) % gridLength != gridLength - 1)
+            {
+                gridNeighbourIndices.Add(gridIndex - gridLength - 1);
+            }
             
-            gridNeighbourPosition = new List<Vector2>();
-
-            if (gridPosition.x - 1 >= 1 && gridPosition.y + 1 <= gridSize)
+            if (gridIndex - gridLength >= 0)
             {
-                gridNeighbourPosition.Add(new Vector2(gridPosition.x - 1, gridPosition.y + 1));
+                gridNeighbourIndices.Add(gridIndex - gridLength);
             }
-
-            if (gridPosition.y + 1 <= gridSize)
+            
+            if (gridIndex - gridLength - 1 >= 0 && (gridIndex - gridLength + 1) % gridLength != 0)
             {
-                gridNeighbourPosition.Add(new Vector2(gridPosition.x, gridPosition.y + 1));
+                gridNeighbourIndices.Add(gridIndex - gridLength + 1);
             }
-
-            if (gridPosition.x + 1 <= gridSize && gridPosition.y + 1 <= gridSize)
+            
+            // Middle line edge case
+            if (gridIndex - 1 >= 0 && (gridIndex - 1) % gridLength != gridLength - 1)
             {
-                gridNeighbourPosition.Add(new Vector2(gridPosition.x + 1, gridPosition.y + 1));
+                gridNeighbourIndices.Add(gridIndex - 1);
             }
-
-            if (gridPosition.x - 1 >= 1)
+            
+            if (gridIndex + 1 <= gridSize && (gridIndex + 1) % gridLength != 0)
             {
-                gridNeighbourPosition.Add(new Vector2(gridPosition.x - 1, gridPosition.y));
+                gridNeighbourIndices.Add(gridIndex + 1);
             }
-
-            if (gridPosition.x + 1 <= gridSize)
+            
+            // Top line edge case
+            if (gridIndex + gridLength - 1 <= gridSize && (gridIndex + gridLength - 1) % gridLength != gridLength - 1)
             {
-                gridNeighbourPosition.Add(new Vector2(gridPosition.x + 1, gridPosition.y));
+                gridNeighbourIndices.Add(gridIndex + gridLength - 1);
             }
-
-            if (gridPosition.x - 1 >= 1 && gridPosition.y - 1 >= 1 )
+            
+            if (gridIndex + gridLength <= gridSize)
             {
-                gridNeighbourPosition.Add(new Vector2(gridPosition.x - 1, gridPosition.y - 1));  
+                gridNeighbourIndices.Add(gridIndex + gridLength);
             }
-
-            if (gridPosition.y - 1 >= 1)
+            
+            if (gridIndex + gridLength + 1 <= gridSize && (gridIndex + gridLength + 1) % gridLength != 0)
             {
-                gridNeighbourPosition.Add(new Vector2(gridPosition.x, gridPosition.y - 1));
-            }
-
-            if (gridPosition.x + 1 <= gridSize && gridPosition.y - 1 >= 1 )
-            {
-                gridNeighbourPosition.Add(new Vector2(gridPosition.x + 1, gridPosition.y - 1)); 
+                gridNeighbourIndices.Add(gridIndex + gridLength + 1);
             }
         }
     }

@@ -113,7 +113,7 @@ namespace Features.Player.Logic
             
             if (other.CompareTag($"GridElement"))
             {
-                onGridElementEntered.Raise(int.Parse(other.name));
+                onGridElementEntered.Raise(other.GetComponent<GridElementBehavior>().GridIndex);
             }
             
         }

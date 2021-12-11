@@ -236,9 +236,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 24621800}
-  gridNeighbourPosition: []
-  gridSizeVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
-  gridPosition: {x: 0, y: 0}
+  gridNeighbourIndices: 
+  gridIndex: 4
+  gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
+  gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &26810405
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -263,7 +264,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.95, y: 0.95}
   m_EdgeRadius: 0
 --- !u!4 &26810406
 Transform:
@@ -311,9 +312,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 717702811}
-  gridNeighbourPosition: []
-  gridSizeVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
-  gridPosition: {x: 0, y: 0}
+  gridNeighbourIndices: 
+  gridIndex: 11
+  gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
+  gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &31406605
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -338,7 +340,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.95, y: 0.95}
   m_EdgeRadius: 0
 --- !u!4 &31406606
 Transform:
@@ -386,9 +388,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 1093339651}
-  gridNeighbourPosition: []
-  gridSizeVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
-  gridPosition: {x: 0, y: 0}
+  gridNeighbourIndices: 
+  gridIndex: 7
+  gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
+  gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &59320206
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -413,7 +416,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.95, y: 0.95}
   m_EdgeRadius: 0
 --- !u!4 &59320207
 Transform:
@@ -686,9 +689,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 343621701}
-  gridNeighbourPosition: []
-  gridSizeVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
-  gridPosition: {x: 0, y: 0}
+  gridNeighbourIndices: 
+  gridIndex: 5
+  gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
+  gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &311930170
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -713,7 +717,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.95, y: 0.95}
   m_EdgeRadius: 0
 --- !u!4 &311930171
 Transform:
@@ -843,9 +847,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 1654815307}
-  gridNeighbourPosition: []
-  gridSizeVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
-  gridPosition: {x: 0, y: 0}
+  gridNeighbourIndices: 
+  gridIndex: 14
+  gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
+  gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &353357223
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -870,7 +875,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.95, y: 0.95}
   m_EdgeRadius: 0
 --- !u!4 &353357224
 Transform:
@@ -1151,9 +1156,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 1372927634}
-  gridNeighbourPosition: []
-  gridSizeVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
-  gridPosition: {x: 0, y: 0}
+  gridNeighbourIndices: 
+  gridIndex: 10
+  gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
+  gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &645305968
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1178,7 +1184,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.95, y: 0.95}
   m_EdgeRadius: 0
 --- !u!4 &645305969
 Transform:
@@ -1226,9 +1232,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 2005891944}
-  gridNeighbourPosition: []
-  gridSizeVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
-  gridPosition: {x: 0, y: 0}
+  gridNeighbourIndices: 
+  gridIndex: 6
+  gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
+  gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &675020002
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1253,7 +1260,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.95, y: 0.95}
   m_EdgeRadius: 0
 --- !u!4 &675020003
 Transform:
@@ -1547,9 +1554,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 1144654462}
-  gridNeighbourPosition: []
-  gridSizeVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
-  gridPosition: {x: 0, y: 0}
+  gridNeighbourIndices: 
+  gridIndex: 2
+  gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
+  gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &856964937
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1574,7 +1582,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.95, y: 0.95}
   m_EdgeRadius: 0
 --- !u!4 &856964938
 Transform:
@@ -1622,9 +1630,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 198898977}
-  gridNeighbourPosition: []
-  gridSizeVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
-  gridPosition: {x: 0, y: 0}
+  gridNeighbourIndices: 
+  gridIndex: 3
+  gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
+  gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &882729832
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1649,7 +1658,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.95, y: 0.95}
   m_EdgeRadius: 0
 --- !u!4 &882729833
 Transform:
@@ -1697,9 +1706,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 1860140426}
-  gridNeighbourPosition: []
-  gridSizeVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
-  gridPosition: {x: 0, y: 0}
+  gridNeighbourIndices: 
+  gridIndex: 0
+  gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
+  gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &962750834
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1724,7 +1734,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.95, y: 0.95}
   m_EdgeRadius: 0
 --- !u!4 &962750835
 Transform:
@@ -1854,9 +1864,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 1242922304}
-  gridNeighbourPosition: []
-  gridSizeVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
-  gridPosition: {x: 0, y: 0}
+  gridNeighbourIndices: 
+  gridIndex: 8
+  gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
+  gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &1081515998
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1881,7 +1892,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.95, y: 0.95}
   m_EdgeRadius: 0
 --- !u!4 &1081515999
 Transform:
@@ -2122,6 +2133,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onGridElementEntered: {fileID: 11400000, guid: 7aaffad7639e4d34f889889dd724f31e, type: 2}
+  selectedGridIndex: {fileID: 11400000, guid: 8173691f928c968408ed816f82150ac5, type: 2}
+  gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
+  gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!1 &1242922304
 GameObject:
   m_ObjectHideFlags: 0
@@ -2317,9 +2331,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 168997967}
-  gridNeighbourPosition: []
-  gridSizeVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
-  gridPosition: {x: 0, y: 0}
+  gridNeighbourIndices: 
+  gridIndex: 12
+  gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
+  gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &1453627259
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2344,7 +2359,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.95, y: 0.95}
   m_EdgeRadius: 0
 --- !u!4 &1453627260
 Transform:
@@ -2392,9 +2407,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 787807766}
-  gridNeighbourPosition: []
-  gridSizeVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
-  gridPosition: {x: 0, y: 0}
+  gridNeighbourIndices: 
+  gridIndex: 9
+  gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
+  gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &1490441415
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2419,7 +2435,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.95, y: 0.95}
   m_EdgeRadius: 0
 --- !u!4 &1490441416
 Transform:
@@ -2467,9 +2483,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 359463932}
-  gridNeighbourPosition: []
-  gridSizeVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
-  gridPosition: {x: 0, y: 0}
+  gridNeighbourIndices: 
+  gridIndex: 13
+  gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
+  gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &1643808457
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2494,7 +2511,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.95, y: 0.95}
   m_EdgeRadius: 0
 --- !u!4 &1643808458
 Transform:
@@ -2624,9 +2641,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 842493219}
-  gridNeighbourPosition: []
-  gridSizeVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
-  gridPosition: {x: 0, y: 0}
+  gridNeighbourIndices: 
+  gridIndex: 1
+  gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
+  gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &1668515762
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2651,7 +2669,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.95, y: 0.95}
   m_EdgeRadius: 0
 --- !u!4 &1668515763
 Transform:
@@ -2781,9 +2799,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   content: {fileID: 1023303088}
-  gridNeighbourPosition: []
-  gridSizeVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
-  gridPosition: {x: 0, y: 0}
+  gridNeighbourIndices: 
+  gridIndex: 15
+  gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
+  gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &1986118541
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2808,7 +2827,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.95, y: 0.95}
   m_EdgeRadius: 0
 --- !u!4 &1986118542
 Transform:
