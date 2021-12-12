@@ -6,14 +6,19 @@ namespace Features.WorldGrid.Logic
 {
     public class GridElementBehavior : MonoBehaviour
     {
+        // The Content gameObject will be the Container for all the gameObjects which will represent the World
+        // eg.: NPCs, Collectables and landscapes such as Foliage or GroundTextures
+        
         [SerializeField] private GameObject content;
         public GameObject Content => content;
 
         [SerializeField] private List<int> gridNeighbourIndices;
-        public List<int> GridNeighbourIndices => gridNeighbourIndices;
+        public IEnumerable<int> GridNeighbourIndices => gridNeighbourIndices;
 
         [SerializeField] private int gridIndex;
         public int GridIndex => gridIndex;
+
+        [SerializeField] private bool isStartGrid;
 
         [Tooltip("The Grid is a square")]
         [SerializeField] private IntVariable gridLengthVariable;
@@ -23,7 +28,10 @@ namespace Features.WorldGrid.Logic
 
         private void Start()
         {
-            //content.SetActive(false);
+            if (!isStartGrid)
+            {
+                content.SetActive(false);
+            }
 
             gridLength = gridLengthVariable.Get();
             gridSize = gridSizeVariable.Get();
@@ -35,6 +43,11 @@ namespace Features.WorldGrid.Logic
 
         private void DetermineNeighbours()
         {
+            // Edge case handling for each specific Edge and Corner of the worldGrid:
+            // Since the System is index based and not Vec2/Position based the '%' operator is used frequently
+            // to determine if a specific gridElement is on the Edge and therefore does not assign the neighbour from a
+            // different line
+            
             // Bottom line edge case
             if (gridIndex - gridLength - 1 >= 0 && (gridIndex - gridLength - 1) % gridLength != gridLength - 1)
             {
@@ -46,7 +59,7 @@ namespace Features.WorldGrid.Logic
                 gridNeighbourIndices.Add(gridIndex - gridLength);
             }
             
-            if (gridIndex - gridLength - 1 >= 0 && (gridIndex - gridLength + 1) % gridLength != 0)
+            if (gridIndex - gridLength + 1 >= 0 && (gridIndex - gridLength + 1) % gridLength != 0)
             {
                 gridNeighbourIndices.Add(gridIndex - gridLength + 1);
             }

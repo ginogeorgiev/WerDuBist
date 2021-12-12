@@ -238,6 +238,7 @@ MonoBehaviour:
   content: {fileID: 24621800}
   gridNeighbourIndices: 
   gridIndex: 4
+  isStartGrid: 1
   gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
   gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &26810405
@@ -314,6 +315,7 @@ MonoBehaviour:
   content: {fileID: 717702811}
   gridNeighbourIndices: 
   gridIndex: 11
+  isStartGrid: 0
   gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
   gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &31406605
@@ -390,6 +392,7 @@ MonoBehaviour:
   content: {fileID: 1093339651}
   gridNeighbourIndices: 
   gridIndex: 7
+  isStartGrid: 0
   gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
   gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &59320206
@@ -691,6 +694,7 @@ MonoBehaviour:
   content: {fileID: 343621701}
   gridNeighbourIndices: 
   gridIndex: 5
+  isStartGrid: 1
   gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
   gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &311930170
@@ -849,6 +853,7 @@ MonoBehaviour:
   content: {fileID: 1654815307}
   gridNeighbourIndices: 
   gridIndex: 14
+  isStartGrid: 0
   gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
   gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &353357223
@@ -1158,6 +1163,7 @@ MonoBehaviour:
   content: {fileID: 1372927634}
   gridNeighbourIndices: 
   gridIndex: 10
+  isStartGrid: 0
   gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
   gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &645305968
@@ -1234,6 +1240,7 @@ MonoBehaviour:
   content: {fileID: 2005891944}
   gridNeighbourIndices: 
   gridIndex: 6
+  isStartGrid: 0
   gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
   gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &675020002
@@ -1556,6 +1563,7 @@ MonoBehaviour:
   content: {fileID: 1144654462}
   gridNeighbourIndices: 
   gridIndex: 2
+  isStartGrid: 0
   gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
   gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &856964937
@@ -1632,6 +1640,7 @@ MonoBehaviour:
   content: {fileID: 198898977}
   gridNeighbourIndices: 
   gridIndex: 3
+  isStartGrid: 0
   gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
   gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &882729832
@@ -1708,6 +1717,7 @@ MonoBehaviour:
   content: {fileID: 1860140426}
   gridNeighbourIndices: 
   gridIndex: 0
+  isStartGrid: 1
   gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
   gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &962750834
@@ -1866,6 +1876,7 @@ MonoBehaviour:
   content: {fileID: 1242922304}
   gridNeighbourIndices: 
   gridIndex: 8
+  isStartGrid: 0
   gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
   gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &1081515998
@@ -2333,6 +2344,7 @@ MonoBehaviour:
   content: {fileID: 168997967}
   gridNeighbourIndices: 
   gridIndex: 12
+  isStartGrid: 0
   gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
   gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &1453627259
@@ -2409,6 +2421,7 @@ MonoBehaviour:
   content: {fileID: 787807766}
   gridNeighbourIndices: 
   gridIndex: 9
+  isStartGrid: 0
   gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
   gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &1490441415
@@ -2485,6 +2498,7 @@ MonoBehaviour:
   content: {fileID: 359463932}
   gridNeighbourIndices: 
   gridIndex: 13
+  isStartGrid: 0
   gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
   gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &1643808457
@@ -2643,6 +2657,7 @@ MonoBehaviour:
   content: {fileID: 842493219}
   gridNeighbourIndices: 
   gridIndex: 1
+  isStartGrid: 1
   gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
   gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &1668515762
@@ -2801,6 +2816,7 @@ MonoBehaviour:
   content: {fileID: 1023303088}
   gridNeighbourIndices: 
   gridIndex: 15
+  isStartGrid: 0
   gridLengthVariable: {fileID: 11400000, guid: b6246122b5737e943b67977938821eab, type: 2}
   gridSizeVariable: {fileID: 11400000, guid: 12ef8934837c05d44bab8a7b01307dd9, type: 2}
 --- !u!61 &1986118541
