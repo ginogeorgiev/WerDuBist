@@ -15,6 +15,7 @@ namespace Features.Survey.UILogic
         [Tooltip("SO")] [SerializeField] private Questions_SO questionsData;
 
         private IEnumerable<Question_SO> questions;
+        [SerializeField] private bool randomizeQuestions;
         [Tooltip("Prefab")] [SerializeField] private GameObject questionItem;
         [Tooltip("Ref")] [SerializeField] private RectTransform content;
 
@@ -30,23 +31,23 @@ namespace Features.Survey.UILogic
         [Tooltip("SO")] [SerializeField] private IntVariable openness;
 
         [Header("The 5 Results for each Aspects")]
-        [Tooltip("Ref")] [SerializeField] private TMP_Text extraversionText;
-        [Tooltip("Ref")] [SerializeField] private TMP_Text agreeablenessText;
-        [Tooltip("Ref")] [SerializeField] private TMP_Text conscientiousnessText;
-        [Tooltip("Ref")] [SerializeField] private TMP_Text neuroticismText;
-        [Tooltip("Ref")] [SerializeField] private TMP_Text opennessText;
+        [Tooltip("GameObjectRef")] [SerializeField] private TMP_Text extraversionText;
+        [Tooltip("GameObjectRef")] [SerializeField] private TMP_Text agreeablenessText;
+        [Tooltip("GameObjectRef")] [SerializeField] private TMP_Text conscientiousnessText;
+        [Tooltip("GameObjectRef")] [SerializeField] private TMP_Text neuroticismText;
+        [Tooltip("GameObjectRef")] [SerializeField] private TMP_Text opennessText;
 
         [Header("The 5 Results for each Aspects in percent")]
-        [Tooltip("Ref")] [SerializeField] private TMP_Text extraversionPercentage;
-        [Tooltip("Ref")] [SerializeField] private TMP_Text agreeablenessPercentage;
-        [Tooltip("Ref")] [SerializeField] private TMP_Text conscientiousnessPercentage;
-        [Tooltip("Ref")] [SerializeField] private TMP_Text neuroticismPercentage;
-        [Tooltip("Ref")] [SerializeField] private TMP_Text opennessPercentage;
+        [Tooltip("GameObjectRef")] [SerializeField] private TMP_Text extraversionPercentage;
+        [Tooltip("GameObjectRef")] [SerializeField] private TMP_Text agreeablenessPercentage;
+        [Tooltip("GameObjectRef")] [SerializeField] private TMP_Text conscientiousnessPercentage;
+        [Tooltip("GameObjectRef")] [SerializeField] private TMP_Text neuroticismPercentage;
+        [Tooltip("GameObjectRef")] [SerializeField] private TMP_Text opennessPercentage;
 
         private void Awake()
         {
-            // Cache Question List
-            questions = questionsData.Items.OrderBy(x => Guid.NewGuid());
+            // Cache questionList and randomize if necessary
+            questions = randomizeQuestions ? questionsData.Items.OrderBy(x => Guid.NewGuid()) : questionsData.Items;
 
             // Fill Scroll-View with Question Items and assign questions to those Items
             foreach (Question_SO question in questions)
