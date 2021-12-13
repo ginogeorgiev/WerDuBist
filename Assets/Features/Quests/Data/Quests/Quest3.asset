@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a54c835cd434817add4d3fdde868665, type: 3}
   m_Name: Quest3
   m_EditorClassIdentifier: 
-  id: T03
+  id: 3
   title: 'MORE '
   description: This Quest, I like it. ANOTHER
   goals:
