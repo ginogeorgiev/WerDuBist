@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Features.Quests.Logic;
@@ -6,108 +5,108 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Features.Quests.UI.Logic
+namespace Features.Quests.UILogic
 {
-    public class Quest_UI : MonoBehaviour
+    public class QuestUIController : MonoBehaviour
     {
-        public QuestFocus_SO focus;
-        public List<RectTransform> QuestUI;
-        public GameObject ContentUI;
-        public GameObject QuestPrefab;
-        public GameObject GoalPrefab;
-        public QuestSetActive_SO activeQuests;
-        public QuestEvent onDisplayQuest;
+        [SerializeField] private QuestFocus_SO focus;
+        [SerializeField] private List<RectTransform> uiLayoutElements;
+        [SerializeField] private GameObject contentUI;
+        [SerializeField] private GameObject questPrefab;
+        [SerializeField] private GameObject goalPrefab;
+        [SerializeField] private QuestSetActive_SO activeQuests;
+        [SerializeField] private QuestEvent onDisplayQuest;
 
         private void Start()
         {
             onDisplayQuest.RegisterListener(DisplayQuest);
         }
 
-        public void DisplayQuest(Quest_SO quest)
+        private void DisplayQuest(Quest_SO quest)
         {
             // Instantiate Quest UI Prefab
-            var questUI= Instantiate(QuestPrefab, new Vector3 (0,0,0), Quaternion.identity);
-            questUI.transform.SetParent(ContentUI.transform);
+            var questUI= Instantiate(questPrefab, new Vector3 (0,0,0), Quaternion.identity);
+            questUI.transform.SetParent(contentUI.transform);
 
             // write Quest Info
-            questUI.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = quest.QuestName;
-            questUI.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = quest.Description;
+            questUI.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = quest.questTitle;
+            questUI.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = quest.questDescription;
 
-            foreach (var goal in quest.Goals)
+            foreach (var goal in quest.goalList)
             {
                 // Instantiate new Goal UI Prefab
-                var goalUI = Instantiate(GoalPrefab, new Vector3 (0,0,0), Quaternion.identity);
+                var goalUI = Instantiate(goalPrefab, new Vector3 (0,0,0), Quaternion.identity);
                 goalUI.transform.SetParent(questUI.transform);
 
                 // write Goal Info
                 var goalText = goalUI.transform.GetChild(0).gameObject.transform.GetChild(1).GetComponent<TMP_Text>();
-                goalText.text = goal.CurrentAmount.Get().ToString();
+                goalText.text = goal.currentAmount.Get().ToString();
                 goalText.text += "/";
-                goalText.text += goal.RequiredAmount.ToString();
+                goalText.text += goal.requiredAmount.ToString();
                 
                 var goalImg = goalUI.transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<Image>();
-                goalImg.sprite = goal.GoalSprite;
+                goalImg.sprite = goal.goalSprite;
             }
             
             // connect correct Quest_SO to UI Element
             questUI.GetComponent<QuestFocusController>().quest = quest;
             
             // if only active quest, set it as focus
-            if (activeQuests.Items.Count() == 1)
+            if (activeQuests.items.Count() == 1)
             {
                 focus.focus = quest;
-                Debug.Log("Focus on: " + quest.QuestID);
+                Debug.Log("Focus on: " + quest.questID);
             }
             // else collapse UI
             else
             {
-                setQuestUI(quest, false);
+                SetQuestUI(quest, false);
             }
 
-            rebuildLayout();
+            RebuildLayout();
         }
         
         public void UpdateQuests()
         { 
             // find QuestUI with correct questID
-            var questUI = getQuestUI(focus.focus.QuestID);
+            var questUI = GetQuestUI(focus.focus.questID);
 
             // update all goal texts
-            for (int i = 0; i < focus.focus.Goals.Count(); i++)
+            for (var i = 0; i < focus.focus.goalList.Count(); i++)
             {
                 var goalUI = questUI.GetChild(2 + i).GetChild(0).gameObject.transform.GetChild(1).GetComponent<TMP_Text>();
-                goalUI.text = focus.focus.Goals[i].CurrentAmount.Get().ToString();
+                goalUI.text = focus.focus.goalList[i].currentAmount.Get().ToString();
                 goalUI.text  += "/";
-                goalUI.text  += focus.focus.Goals[i].RequiredAmount.ToString();
+                goalUI.text  += focus.focus.goalList[i].requiredAmount.ToString();
             }
             
             
-            rebuildLayout();
+            RebuildLayout();
         }
         
         public void UpdateQuestsFocus()
         {
-            foreach (var quest in activeQuests.Items)
+            foreach (var quest in activeQuests.items)
             {
                 // hide all Quest info
-                setQuestUI(quest, false);
+                SetQuestUI(quest, false);
             }  
             
             // display only info of the Focus Quest
-            setQuestUI(focus.focus, true);
+            SetQuestUI(focus.focus, true);
             
             UpdateQuests();
         }
 
-        private void setQuestUI(Quest_SO quest, bool boo)
+        private void SetQuestUI(Quest_SO quest, bool boo)
         {
              //sets all Quest Info active/inactive i.e. collapses unfocused Quests
              
-             var questUI = getQuestUI(quest.QuestID);
+             var questUI = GetQuestUI(quest.questID);
             
             questUI.transform.GetChild(1).GetChild(0).gameObject.SetActive(boo);
             
-            for (int i = 0; i < quest.Goals.Count(); i++)
+            for (var i = 0; i < quest.goalList.Count(); i++)
             {
                 questUI.GetChild(2 + i).GetChild(0).gameObject.transform.GetChild(1).gameObject.SetActive(boo);
                 questUI.GetChild(2 + i).GetChild(0).gameObject.transform.GetChild(0).gameObject.SetActive(boo);
@@ -117,30 +116,30 @@ namespace Features.Quests.UI.Logic
         public void RemoveQuest()
         {
             // destroy UI Prefab of completed Quest
-            Destroy(getQuestUI(focus.focus.QuestID).gameObject);
+            Destroy(GetQuestUI(focus.focus.questID).gameObject);
             
             // remove from active quests
-            activeQuests.Items.Remove(focus.focus);
+            activeQuests.items.Remove(focus.focus);
 
             // if any more active quests, focus on the first one
-            if (activeQuests.Items.Any())
+            if (activeQuests.items.Any())
             { 
-                focus.focus = activeQuests.Items[0];
-                Debug.Log("Focus on: " + activeQuests.Items[0].QuestID);
+                focus.focus = activeQuests.items[0];
+                Debug.Log("Focus on: " + activeQuests.items[0].questID);
                 UpdateQuestsFocus();
             }
 
-            rebuildLayout();
+            RebuildLayout();
         }
 
-        private Transform getQuestUI(string id)
+        private Transform GetQuestUI(int id)
         {
             // gets the UI Elements of the given Quest
             
-            for (int i = 0; i < ContentUI.transform.childCount; i++)
+            for (var i = 0; i < contentUI.transform.childCount; i++)
             {
-                var questUI = ContentUI.transform.GetChild(i);
-                if (questUI.GetComponent<QuestFocusController>().quest.QuestID == id)
+                var questUI = contentUI.transform.GetChild(i);
+                if (questUI.GetComponent<QuestFocusController>().quest.questID == id)
                 {
                     return questUI;
                 }
@@ -148,12 +147,12 @@ namespace Features.Quests.UI.Logic
 
             return null;
         }
-        
-        public void rebuildLayout()
+
+        private void RebuildLayout()
         {
             // updates the Layout Elements; else they update themselves to late causing visual glitches
             
-            foreach (var rec in QuestUI)
+            foreach (var rec in uiLayoutElements)
             {
                 LayoutRebuilder.ForceRebuildLayoutImmediate(rec);
             }

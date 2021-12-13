@@ -7,8 +7,8 @@ namespace Features.Quests.Logic
    public class QuestSet_SO : ScriptableObject
    {
        // class holds all existing quests
-       [SerializeField] private List<Quest_SO> items;
+       [SerializeField] private List<Quest_SO> existingQuests;
       
-       public IEnumerable<Quest_SO> Items => items;
+       public IEnumerable<Quest_SO> items => existingQuests;
    }       
 }
