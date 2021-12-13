@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Collectable
+  - GridElement
+  - Wood
+  - Stone
   layers:
   - Default
   - TransparentFX

@@ -4,6 +4,7 @@ using DataStructures.Variables;
 using Features.GameLogic.Logic;
 using Features.Input;
 using Features.Player.Logic.States;
+using Features.WorldGrid.Logic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,6 +19,8 @@ namespace Features.Player.Logic
         [SerializeField] private FloatVariable playerMovementSpeed;
 
         [SerializeField] private TransitionData transitionData;
+
+        [SerializeField] private GridElementEnteredEvent onGridElementEntered;
 
         private new Rigidbody2D rigidbody2D;
 
@@ -99,7 +102,20 @@ namespace Features.Player.Logic
         {
             // TODO: Pick up algorithm (depends on the item)
             
-            other.gameObject.SetActive(false);
+            if (other.CompareTag($"Wood"))
+            {
+                other.gameObject.SetActive(false);
+            }
+            if (other.CompareTag($"Stone"))
+            {
+                other.gameObject.SetActive(false);
+            }
+            
+            if (other.CompareTag($"GridElement"))
+            {
+                onGridElementEntered.Raise(other.GetComponent<GridElementBehavior>().GridIndex);
+            }
+            
         }
 
 
