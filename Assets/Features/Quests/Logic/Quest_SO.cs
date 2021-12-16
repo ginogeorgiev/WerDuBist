@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -8,39 +7,37 @@ namespace Features.Quests.Logic
     [CreateAssetMenu(fileName = "Quest", menuName = "Feature/Quests/Quest")]
     public class Quest_SO : ScriptableObject
     {
-        [SerializeField] private string questID;
-        [SerializeField] private string questName;
+        [SerializeField] private int id;
+        [SerializeField] private string title;
         [SerializeField] private string description;
         [SerializeField] private List<Goal> goals;
         [SerializeField] private Vector2 position;
         
-        public string QuestID => questID;
-        public string QuestName => questName;
-        public string Description => description;
-        public List<Goal> Goals => goals;
-        public Vector2 Position => position;
-        public bool IsActive { get; set; }
-        public bool IsCompleted { get; set; }
+        public int questID => id;
+        public string questTitle => title;
+        public string questDescription => description;
+        public List<Goal> goalList => goals;
+        public Vector2 questPosition => position;
+        public bool isActive { get; set; }
+        public bool isCompleted { get; private set; }
         
         public void CheckGoals()
         {
-            foreach (var goal in Goals)
+            foreach (var goal in goalList)
             {
                 goal.Evaluate();
             }
             // quest completed if all goals are completed
-            if (Goals.All(goal => goal.Completed))
-            {
-                IsActive = false;
-                IsCompleted = true;
-                Debug.Log("'" + QuestName + "' Completed");
-            }
+            if (!goalList.All(goal => goal.completed)) return;
+            isActive = false;
+            isCompleted = true;
+            Debug.Log("'" + questTitle + "' Completed");
         }
 
-        public void reset()
+        public void Restore()
         {
-            IsActive = false;
-            IsCompleted = false;
+            isActive = false;
+            isCompleted = false;
         }
     }
 }

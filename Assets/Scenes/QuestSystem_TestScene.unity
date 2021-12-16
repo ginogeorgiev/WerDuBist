@@ -490,13 +490,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: f7b291d5e75996641845ec1be92ba004, type: 2}
-        m_TargetAssemblyTypeName: DataStructures.Event.GameEvent_SO, Assembly-CSharp
+      - m_Target: {fileID: 11400000, guid: d3ded01f8c8bb7b43ab7640a65b29a4a, type: 2}
+        m_TargetAssemblyTypeName: DataStructures.Event.ActionEventWithParameter`1[[Features.Quests.Logic.Quest_SO,
+          Assembly-CSharp
         m_MethodName: Raise
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 9ec1ef8e3ab31a840bb549d99dc183af, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Features.Quests.Logic.Quest_SO, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1188,13 +1189,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: dfa5a7559d354a6448dcfdf50169e5ab, type: 2}
-        m_TargetAssemblyTypeName: DataStructures.Event.GameEvent_SO, Assembly-CSharp
+      - m_Target: {fileID: 11400000, guid: d3ded01f8c8bb7b43ab7640a65b29a4a, type: 2}
+        m_TargetAssemblyTypeName: DataStructures.Event.ActionEventWithParameter`1[[Features.Quests.Logic.Quest_SO,
+          Assembly-CSharp
         m_MethodName: Raise
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: f4446098ef7acc147a45a2fcb0556346, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Features.Quests.Logic.Quest_SO, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1482,13 +1484,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 1c38920ae074ad04abc74495733f481b, type: 2}
-        m_TargetAssemblyTypeName: DataStructures.Event.GameEvent_SO, Assembly-CSharp
+      - m_Target: {fileID: 11400000, guid: d3ded01f8c8bb7b43ab7640a65b29a4a, type: 2}
+        m_TargetAssemblyTypeName: DataStructures.Event.ActionEventWithParameter`1[[Features.Quests.Logic.Quest_SO,
+          Assembly-CSharp
         m_MethodName: Raise
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: fe397199f3a2844449334c71c2f32d75, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Features.Quests.Logic.Quest_SO, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1695,13 +1698,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 39c2e939c56324249b252feb9e96e0ce, type: 2}
-        m_TargetAssemblyTypeName: DataStructures.Event.GameEvent_SO, Assembly-CSharp
+      - m_Target: {fileID: 11400000, guid: d3ded01f8c8bb7b43ab7640a65b29a4a, type: 2}
+        m_TargetAssemblyTypeName: DataStructures.Event.ActionEventWithParameter`1[[Features.Quests.Logic.Quest_SO,
+          Assembly-CSharp
         m_MethodName: Raise
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 64d67580bff265e41ae674871fb00f8b, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Features.Quests.Logic.Quest_SO, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2264,22 +2268,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6528920872105082744, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8432286848697763842, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8432286848697763842, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8432286848697763842, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8432286848697763842, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
-      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -7,7 +7,7 @@ namespace Features.Quests.Logic
    public class QuestSetActive_SO : ScriptableObject
    {
        // class holds all Quests which are currently active
-       [SerializeField] private List<Quest_SO> items;
-       public List<Quest_SO> Items => items;
+       [SerializeField] private List<Quest_SO> activeQuests;
+       public List<Quest_SO> items => activeQuests;
    }                                     
 }
