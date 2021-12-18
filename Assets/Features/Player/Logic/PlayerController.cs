@@ -19,6 +19,8 @@ namespace Features.Player.Logic
         [SerializeField] private Animator animator;
 
         [SerializeField] private FloatVariable playerMovementSpeed;
+        
+        [SerializeField] private BoolVariable isPlayerInConversation;
 
         [SerializeField] private ConversationFocus_SO conversationFocus;
 
@@ -37,6 +39,7 @@ namespace Features.Player.Logic
         private IdleState idleState;
         private WalkingState walkingState;
         private SprintingState sprintingState;
+        private ConversationState conversationState;
         
         private void Awake()
         {
@@ -50,6 +53,7 @@ namespace Features.Player.Logic
             idleState = new IdleState(animator, playerMovementSpeed, rigidbody2D);
             walkingState = new WalkingState(animator, playerMovementSpeed, movementInputAction, transform, rigidbody2D);
             sprintingState = new SprintingState(animator, playerMovementSpeed, movementInputAction, transform, rigidbody2D);
+            conversationState = new ConversationState(animator, playerMovementSpeed, rigidbody2D);
             
             stateMachine.Initialize(idleState);
         }
@@ -72,6 +76,9 @@ namespace Features.Player.Logic
 
         private void HandleKeyboardInput()
         {
+            // If the player is in a conversation, the keyboard inputs for walking should be ignored
+            if(isPlayerInConversation.Get()) return;
+
             Vector2 movementInput = movementInputAction.ReadValue<Vector2>();
             float sprintInput = sprintInputAction.ReadValue<float>();
 
@@ -87,7 +94,7 @@ namespace Features.Player.Logic
 
                 // Check for sprinting (holding down LSHIFT)
                 var movementSpeed = sprintInput > 0 ? sprintSpeed : walkingSpeed;
-                if (playerMovementSpeed.Get() != movementSpeed)
+                if (Math.Abs(playerMovementSpeed.Get() - movementSpeed) > 0.01f)
                 {
                     playerMovementSpeed.Set(movementSpeed);
                 }
@@ -139,14 +146,26 @@ namespace Features.Player.Logic
         public void ChangePlayerMovementSpeed()
         {
             // Check the movement speed and adjust the state accordingly
-            if (playerMovementSpeed.Get() == walkingSpeed)
+            if (Math.Abs(playerMovementSpeed.Get() - walkingSpeed) < 0.01f)
             {
                 stateMachine.ChangeState(walkingState);
             }
             
-            if (playerMovementSpeed.Get() == sprintSpeed)
+            if (Math.Abs(playerMovementSpeed.Get() - sprintSpeed) < 0.01f)
             {
                 stateMachine.ChangeState(sprintingState);
+            }
+        }
+
+        public void ChangePlayerConversationState()
+        {
+            if (isPlayerInConversation.Get())
+            {
+                stateMachine.ChangeState(conversationState);
+            }
+            else
+            {
+                stateMachine.ChangeState(idleState);
             }
         }
         
