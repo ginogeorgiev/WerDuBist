@@ -8,7 +8,7 @@ namespace Features.Quests.Logic
     {
         public void Restore()
         {
-            focus = null;
+            Set(null);
         }
     }
 }

@@ -50,18 +50,18 @@ namespace Features.Quests.Logic
 
         public void CompleteQuest()
         {
-            if (focus.focus==null)
+            if (focus.Get() == null)
             {
                 Debug.Log("no Quest Focus");
                 return;
             }
             
-            focus.focus.CheckGoals();
+            focus.Get().CheckGoals();
             // if completed
-            if (focus.focus.isCompleted && activeQuests.items.Contains(focus.focus))
+            if (focus.Get().isCompleted && activeQuests.items.Contains(focus.Get()))
             {
                 // remove all Quest Items from Inventory
-                foreach (var goal in focus.focus.goalList)
+                foreach (var goal in focus.Get().goalList)
                 {
                     var item = goal.currentAmount;
                     item.Set(item.Get() - goal.requiredAmount);

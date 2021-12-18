@@ -12,7 +12,7 @@ namespace Features.Quests.Logic
 
         public void FocusOnQuest()
         {
-            focus.focus = quest;
+            focus.Set(quest);
             Debug.Log("Focus on: " + quest.questID);
             onQuestFocusUpdated.Raise();
         }

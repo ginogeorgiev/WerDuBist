@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using DataStructures.StateMachineLogic;
 using DataStructures.Variables;
+using Features.Dialog.Logic;
 using Features.GameLogic.Logic;
 using Features.Input;
 using Features.Player.Logic.States;
@@ -17,6 +19,8 @@ namespace Features.Player.Logic
         [SerializeField] private Animator animator;
 
         [SerializeField] private FloatVariable playerMovementSpeed;
+
+        [SerializeField] private ConversationFocus_SO conversationFocus;
 
         [SerializeField] private TransitionData transitionData;
 
@@ -115,7 +119,19 @@ namespace Features.Player.Logic
             {
                 onGridElementEntered.Raise(other.GetComponent<GridElementBehavior>().GridIndex);
             }
-            
+
+            if (other.CompareTag($"NPC"))
+            {
+                conversationFocus.Set(other.GetComponent<NpcBehaviour>().Conversation);
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.CompareTag($"NPC"))
+            {
+                conversationFocus.Set(null);
+            }
         }
 
 
@@ -144,7 +160,7 @@ namespace Features.Player.Logic
             transitionData.OnStart.Raise();
             yield return new WaitForSeconds(transitionData.FadeInTime);
             
-            transform.position = teleportFocus.focus.position;
+            transform.position = teleportFocus.Get().position;
             yield return new WaitForSeconds(1f);
             
             transitionData.OnEnd.Raise();

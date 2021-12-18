@@ -9,7 +9,7 @@ namespace Features.Dialog.Logic
 
     public class ConversationController : MonoBehaviour
     {
-        [SerializeField] private DialogConversation_SO dialogConversation;
+        [SerializeField] private ConversationFocus_SO dialogConversationFocus;
         [SerializeField] private QuestionEvent questionEvent;
         
         private PlayerControls playerControls;
@@ -26,7 +26,8 @@ namespace Features.Dialog.Logic
         public void ChangeConversation(DialogConversation_SO nextDialogConversation)
         {
             conversationStarted = false;
-            dialogConversation = nextDialogConversation;
+            //dirty but for MVP ok
+            dialogConversationFocus.Set(dialogConversationFocus.Get().NextDialogConversation);
             AdvanceLine();
         }
         private void Start()
@@ -39,13 +40,13 @@ namespace Features.Dialog.Logic
         
         private void AdvanceConversation()
         {
-            if (dialogConversation.DialogQuestion != null)
+            if (dialogConversationFocus.Get().DialogQuestion != null)
             {
-                questionEvent.Invoke(dialogConversation.DialogQuestion);
+                questionEvent.Invoke(dialogConversationFocus.Get().DialogQuestion);
             }
-            else if (dialogConversation.NextDialogConversation != null)
+            else if (dialogConversationFocus.Get().NextDialogConversation != null)
             {
-                ChangeConversation(dialogConversation.NextDialogConversation);
+                ChangeConversation(dialogConversationFocus.Get().NextDialogConversation);
             }
             else
             {
@@ -54,7 +55,7 @@ namespace Features.Dialog.Logic
         }
         private void EndConversation()
         {
-            dialogConversation = null;
+            dialogConversationFocus.Set(null);
             conversationStarted = false;
             speakerUIControllerLeft.Hide();
             speakerUIControllerRight.Hide();
@@ -64,16 +65,17 @@ namespace Features.Dialog.Logic
         {
             conversationStarted = true;
             activeLineIndex = 0;
-            speakerUIControllerLeft.Speaker = dialogConversation.SpeakerLeft;
-            speakerUIControllerRight.Speaker = dialogConversation.SpeakerRight;
+            speakerUIControllerLeft.Speaker = dialogConversationFocus.Get().SpeakerLeft;
+            speakerUIControllerRight.Speaker = dialogConversationFocus.Get().SpeakerRight;
         }
 
         private void AdvanceLine()
         {
-            if (dialogConversation == null) return;
+            if (dialogConversationFocus.Get() == null) return;
+            //TODO set PlayerState
             if (!conversationStarted) Initialize();
 
-            if (activeLineIndex < dialogConversation.Lines.Length)
+            if (activeLineIndex < dialogConversationFocus.Get().Lines.Length)
             {
                 DisplayLine();
             }
@@ -85,7 +87,7 @@ namespace Features.Dialog.Logic
 
         private void DisplayLine()
         {
-            Line line = dialogConversation.Lines[activeLineIndex];
+            Line line = dialogConversationFocus.Get().Lines[activeLineIndex];
             NPCData_SO npcDataSo = line.NpcData;
 
             if (speakerUIControllerLeft.SpeakerIs(npcDataSo))

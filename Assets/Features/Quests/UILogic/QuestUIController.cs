@@ -54,7 +54,7 @@ namespace Features.Quests.UILogic
             // if only active quest, set it as focus
             if (activeQuests.items.Count() == 1)
             {
-                focus.focus = quest;
+                focus.Set(quest);
                 Debug.Log("Focus on: " + quest.questID);
             }
             // else collapse UI
@@ -69,15 +69,15 @@ namespace Features.Quests.UILogic
         public void UpdateQuests()
         { 
             // find QuestUI with correct questID
-            var questUI = GetQuestUI(focus.focus.questID);
+            var questUI = GetQuestUI(focus.Get().questID);
 
             // update all goal texts
-            for (var i = 0; i < focus.focus.goalList.Count(); i++)
+            for (var i = 0; i < focus.Get().goalList.Count(); i++)
             {
                 var goalUI = questUI.GetChild(2 + i).GetChild(0).gameObject.transform.GetChild(1).GetComponent<TMP_Text>();
-                goalUI.text = focus.focus.goalList[i].currentAmount.Get().ToString();
+                goalUI.text = focus.Get().goalList[i].currentAmount.Get().ToString();
                 goalUI.text  += "/";
-                goalUI.text  += focus.focus.goalList[i].requiredAmount.ToString();
+                goalUI.text  += focus.Get().goalList[i].requiredAmount.ToString();
             }
             
             
@@ -93,7 +93,7 @@ namespace Features.Quests.UILogic
             }  
             
             // display only info of the Focus Quest
-            SetQuestUI(focus.focus, true);
+            SetQuestUI(focus.Get(), true);
             
             UpdateQuests();
         }
@@ -116,15 +116,15 @@ namespace Features.Quests.UILogic
         public void RemoveQuest()
         {
             // destroy UI Prefab of completed Quest
-            Destroy(GetQuestUI(focus.focus.questID).gameObject);
+            Destroy(GetQuestUI(focus.Get().questID).gameObject);
             
             // remove from active quests
-            activeQuests.items.Remove(focus.focus);
+            activeQuests.items.Remove(focus.Get());
 
             // if any more active quests, focus on the first one
             if (activeQuests.items.Any())
             { 
-                focus.focus = activeQuests.items[0];
+                focus.Set(activeQuests.items[0]);
                 Debug.Log("Focus on: " + activeQuests.items[0].questID);
                 UpdateQuestsFocus();
             }

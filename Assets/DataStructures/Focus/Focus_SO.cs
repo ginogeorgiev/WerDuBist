@@ -4,7 +4,16 @@ namespace DataStructures.Focus
 {
     public abstract class Focus_SO<T> : ScriptableObject
     {
-        public T focus;
-        
+        [SerializeField] private T focus;
+
+        public T Get()
+        {
+            return focus;
+        }
+
+        public void Set(T value)
+        {
+            focus = value;
+        }
     }
 }

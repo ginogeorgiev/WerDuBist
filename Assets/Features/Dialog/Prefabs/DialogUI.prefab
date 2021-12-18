@@ -1592,7 +1592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8bd57cc1186a994a929ff7225926043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogConversation: {fileID: 11400000, guid: 89211c168590d704881c3c2d9c216d07, type: 2}
+  dialogConversationFocus: {fileID: 11400000, guid: f9e5abd30ea25554db73b774940c9c7a, type: 2}
   questionEvent:
     m_PersistentCalls:
       m_Calls:

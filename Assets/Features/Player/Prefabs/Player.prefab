@@ -208,7 +208,9 @@ MonoBehaviour:
   walkingSpeed: 5
   animator: {fileID: 1444786951}
   playerMovementSpeed: {fileID: 11400000, guid: a2cffe57136c33146baa72577ed8f290, type: 2}
+  conversationFocus: {fileID: 11400000, guid: f9e5abd30ea25554db73b774940c9c7a, type: 2}
   transitionData: {fileID: 11400000, guid: 73c969799c95a9c4e8b7fad43380a837, type: 2}
+  onGridElementEntered: {fileID: 11400000, guid: 7aaffad7639e4d34f889889dd724f31e, type: 2}
 --- !u!212 &6592273595326390539
 SpriteRenderer:
   m_ObjectHideFlags: 0
