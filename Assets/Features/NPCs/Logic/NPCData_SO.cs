@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Features.Dialog.Logic
+namespace Features.NPCs.Logic
 {
     [CreateAssetMenu(fileName = "NewNPCData", menuName = "Feature/Dialog/NPCData")]
     public class NPCData_SO : ScriptableObject

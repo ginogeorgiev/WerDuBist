@@ -5,6 +5,7 @@ using DataStructures.Variables;
 using Features.Dialog.Logic;
 using Features.GameLogic.Logic;
 using Features.Input;
+using Features.NPCs.Logic;
 using Features.Player.Logic.States;
 using Features.WorldGrid.Logic;
 using UnityEngine;

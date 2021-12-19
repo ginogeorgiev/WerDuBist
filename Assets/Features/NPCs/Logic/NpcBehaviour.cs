@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using DataStructures.Event;
+using Features.Dialog.Logic;
 using Features.Input;
 using Features.Quests.Logic;
 using UnityEngine;
 
-namespace Features.Dialog.Logic
+namespace Features.NPCs.Logic
 {
     [System.Serializable]
     public struct ConversationElement

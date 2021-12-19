@@ -223,8 +223,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 710, y: -19}
-  m_SizeDelta: {x: 500, y: 500}
+  m_AnchoredPosition: {x: 707, y: 130}
+  m_SizeDelta: {x: 456, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5657984874344544549
 CanvasRenderer:
@@ -489,6 +489,7 @@ MonoBehaviour:
   choice:
     text: Button Choice Text
     dialogConversation: {fileID: 11400000, guid: 89211c168590d704881c3c2d9c216d07, type: 2}
+    choiceEvent: {fileID: 0}
     questEvent: {fileID: 0}
     quest: {fileID: 0}
   conversationChangeEvent:
@@ -897,8 +898,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -710, y: -19}
-  m_SizeDelta: {x: 500, y: 500}
+  m_AnchoredPosition: {x: -707, y: 130}
+  m_SizeDelta: {x: 456, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5657984874976432811
 CanvasRenderer:
@@ -1485,7 +1486,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3

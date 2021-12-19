@@ -1,3 +1,4 @@
+using Features.NPCs.Logic;
 using UnityEngine;
 
 namespace Features.Dialog.Logic
