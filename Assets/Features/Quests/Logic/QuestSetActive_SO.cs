@@ -8,6 +8,6 @@ namespace Features.Quests.Logic
    {
        // class holds all Quests which are currently active
        [SerializeField] private List<Quest_SO> activeQuests;
-       public List<Quest_SO> items => activeQuests;
+       public List<Quest_SO> Items => activeQuests;
    }                                     
 }

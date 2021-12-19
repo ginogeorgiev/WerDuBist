@@ -1,4 +1,5 @@
-using Features.Input;
+using DataStructures.Event;
+using DataStructures.Variables;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,10 +10,11 @@ namespace Features.Dialog.Logic
 
     public class ConversationController : MonoBehaviour
     {
-        [SerializeField] private ConversationFocus_SO dialogConversationFocus;
+        [SerializeField] private GameEvent_SO onCheckForNextConversationPart;
+        [SerializeField] private NpcFocus_So npcFocus;
+        [SerializeField] private DialogConversation_SO dialogConversation;
+        [SerializeField] private BoolVariable isPlayerInConversation;
         [SerializeField] private QuestionEvent questionEvent;
-        
-        private PlayerControls playerControls;
 
         [SerializeField] private GameObject speakerLeft;
         [SerializeField] private GameObject speakerRight;
@@ -20,62 +22,76 @@ namespace Features.Dialog.Logic
         private SpeakerUIController speakerUIControllerLeft;
         private SpeakerUIController speakerUIControllerRight;
 
-        private int activeLineIndex = 0;
-        private bool conversationStarted = false;
+        private int activeLineIndex;
+        private bool conversationStarted;
 
-        public void ChangeConversation(DialogConversation_SO nextDialogConversation)
+        public void OnNpcFocusChanged()
         {
-            conversationStarted = false;
-            //dirty but for MVP ok
-            dialogConversationFocus.Set(dialogConversationFocus.Get().NextDialogConversation);
-            AdvanceLine();
+            if (npcFocus.Get() != null)
+            {
+                dialogConversation = npcFocus.Get().ActiveConversation;
+            }
         }
         private void Start()
         {
             speakerUIControllerLeft = speakerLeft.GetComponent<SpeakerUIController>();
             speakerUIControllerRight = speakerRight.GetComponent<SpeakerUIController>();
-
-            playerControls.Player.SkipDialog.started += _ => AdvanceLine();
         }
         
         private void AdvanceConversation()
         {
-            if (dialogConversationFocus.Get().DialogQuestion != null)
+            if (dialogConversation.DialogQuestion != null)
             {
-                questionEvent.Invoke(dialogConversationFocus.Get().DialogQuestion);
+                isPlayerInConversation.SetFalse();
+                questionEvent.Invoke(dialogConversation.DialogQuestion);
+                EndConversation();
             }
-            else if (dialogConversationFocus.Get().NextDialogConversation != null)
+            else if (dialogConversation.NextDialogConversationStep != null)
             {
-                ChangeConversation(dialogConversationFocus.Get().NextDialogConversation);
+                ChangeConversation(dialogConversation.NextDialogConversationStep);
             }
             else
             {
                 EndConversation();
+                isPlayerInConversation.SetFalse();
             }
         }
+
+        public void ChangeConversation(DialogConversation_SO nextDialogConversation)
+        {
+            conversationStarted = false;
+            
+            if (nextDialogConversation == null) return;
+            dialogConversation = nextDialogConversation;
+            AdvanceLine();
+        }
+        
         private void EndConversation()
         {
-            dialogConversationFocus.Set(null);
+            dialogConversation = null;
             conversationStarted = false;
             speakerUIControllerLeft.Hide();
             speakerUIControllerRight.Hide();
+            onCheckForNextConversationPart.Raise();
         }
 
         private void Initialize()
         {
+            onCheckForNextConversationPart.Raise();
             conversationStarted = true;
             activeLineIndex = 0;
-            speakerUIControllerLeft.Speaker = dialogConversationFocus.Get().SpeakerLeft;
-            speakerUIControllerRight.Speaker = dialogConversationFocus.Get().SpeakerRight;
+            speakerUIControllerLeft.Speaker = dialogConversation.SpeakerLeft;
+            speakerUIControllerRight.Speaker = dialogConversation.SpeakerRight;
         }
 
-        private void AdvanceLine()
+        public void AdvanceLine()
         {
-            if (dialogConversationFocus.Get() == null) return;
-            //TODO set PlayerState
+            if (dialogConversation == null) return;
+            isPlayerInConversation.SetTrue();
+            
             if (!conversationStarted) Initialize();
 
-            if (activeLineIndex < dialogConversationFocus.Get().Lines.Length)
+            if (activeLineIndex < dialogConversation.Lines.Length)
             {
                 DisplayLine();
             }
@@ -87,7 +103,7 @@ namespace Features.Dialog.Logic
 
         private void DisplayLine()
         {
-            Line line = dialogConversationFocus.Get().Lines[activeLineIndex];
+            Line line = dialogConversation.Lines[activeLineIndex];
             NPCData_SO npcDataSo = line.NpcData;
 
             if (speakerUIControllerLeft.SpeakerIs(npcDataSo))
@@ -102,8 +118,6 @@ namespace Features.Dialog.Logic
             activeLineIndex += 1;
         }
 
-        
-
         private void SetDialog(
             SpeakerUIController activeSpeakerUIController,
             SpeakerUIController inactiveSpeakerUIController,
@@ -112,21 +126,6 @@ namespace Features.Dialog.Logic
             activeSpeakerUIController.Dialog = text;
             activeSpeakerUIController.Show();
             inactiveSpeakerUIController.Hide();
-        }
-        
-        private void Awake()
-        {
-            playerControls = new PlayerControls();
-        }
-        
-        private void OnEnable()
-        {
-            playerControls.Enable();
-        }
-
-        private void OnDisable()
-        {
-            playerControls.Disable();
         }
     }
 }

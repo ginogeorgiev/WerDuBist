@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Features.Quests.Logic
 {
-    [CreateAssetMenu(fileName = "Quest", menuName = "Feature/Quests/Quest")]
+    [CreateAssetMenu(fileName = "newQuest", menuName = "Feature/Quests/Quest")]
     public class Quest_SO : ScriptableObject
     {
         [SerializeField] private int id;
@@ -13,31 +13,30 @@ namespace Features.Quests.Logic
         [SerializeField] private List<Goal> goals;
         [SerializeField] private Vector2 position;
         
-        public int questID => id;
-        public string questTitle => title;
-        public string questDescription => description;
-        public List<Goal> goalList => goals;
-        public Vector2 questPosition => position;
-        public bool isActive { get; set; }
-        public bool isCompleted { get; private set; }
+        public int QuestID => id;
+        public string QuestTitle => title;
+        public string QuestDescription => description;
+        public List<Goal> GoalList => goals;
+        public Vector2 QuestPosition => position;
+        public bool IsActive { get; set; }
+        public bool IsCompleted { get; private set; }
         
         public void CheckGoals()
         {
-            foreach (var goal in goalList)
+            foreach (Goal goal in GoalList)
             {
                 goal.Evaluate();
             }
             // quest completed if all goals are completed
-            if (!goalList.All(goal => goal.completed)) return;
-            isActive = false;
-            isCompleted = true;
-            Debug.Log("'" + questTitle + "' Completed");
+            if (!GoalList.All(goal => goal.Completed)) return;
+            IsActive = false;
+            IsCompleted = true;
         }
 
         public void Restore()
         {
-            isActive = false;
-            isCompleted = false;
+            IsActive = false;
+            IsCompleted = false;
         }
     }
 }

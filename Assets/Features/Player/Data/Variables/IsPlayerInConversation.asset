@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98e7f27c19fc272448e63ff558302a5c, type: 3}
   m_Name: IsPlayerInConversation
   m_EditorClassIdentifier: 
+  runtimeValue: 0
   storedValue: 0
-  onValueChanged: {fileID: 0}
+  onValueChanged: {fileID: 11400000, guid: 4a437490879a84641b7a38d47b4dc696, type: 2}

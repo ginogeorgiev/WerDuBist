@@ -88,8 +88,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -100, y: 0}
-  m_SizeDelta: {x: 900, y: 200}
+  m_AnchoredPosition: {x: 239.106, y: -10.059}
+  m_SizeDelta: {x: 1336.814, y: 300.582}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5657984874314972756
 CanvasRenderer:
@@ -223,8 +223,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 710, y: 130}
-  m_SizeDelta: {x: 500, y: 800}
+  m_AnchoredPosition: {x: 710, y: -19}
+  m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5657984874344544549
 CanvasRenderer:
@@ -299,8 +299,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -600, y: -200}
+  m_AnchoredPosition: {x: 0, y: -50.00004}
+  m_SizeDelta: {x: 0, y: -100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5657984874566244966
 CanvasRenderer:
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.94117653, g: 0.7686275, b: 0.3647059, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -378,7 +378,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 50}
+  m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5657984874786717428
 CanvasRenderer:
@@ -489,12 +489,14 @@ MonoBehaviour:
   choice:
     text: Button Choice Text
     dialogConversation: {fileID: 11400000, guid: 89211c168590d704881c3c2d9c216d07, type: 2}
+    questEvent: {fileID: 0}
+    quest: {fileID: 0}
   conversationChangeEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5657984875722222072}
-        m_TargetAssemblyTypeName: Features.Dialog.Logic.ConversationController, Assembly-CSharp
-        m_MethodName: ChangeConversation
+      - m_Target: {fileID: 5657984875310201833}
+        m_TargetAssemblyTypeName: Features.Dialog.Logic.QuestionController, Assembly-CSharp
+        m_MethodName: Hide
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -504,9 +506,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5657984875310201833}
-        m_TargetAssemblyTypeName: Features.Dialog.Logic.QuestionController, Assembly-CSharp
-        m_MethodName: Hide
+      - m_Target: {fileID: 5657984875722222072}
+        m_TargetAssemblyTypeName: Features.Dialog.Logic.ConversationController, Assembly-CSharp
+        m_MethodName: ChangeConversation
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -551,7 +553,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 495, y: 200}
+  m_AnchoredPosition: {x: 304.99994, y: 200}
   m_SizeDelta: {x: -1610, y: -400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5657984874835876523
@@ -575,7 +577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4431373, g: 0.5254902, b: 0.7490196, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -626,8 +628,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: 0}
-  m_SizeDelta: {x: 900, y: 200}
+  m_AnchoredPosition: {x: -19.447, y: -14.602}
+  m_SizeDelta: {x: 943.106, y: 309.203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5657984874884919625
 CanvasRenderer:
@@ -721,7 +723,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -413.82355, y: -14.368866, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -801,7 +803,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -895,8 +897,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -710, y: 130}
-  m_SizeDelta: {x: 500, y: 800}
+  m_AnchoredPosition: {x: -710, y: -19}
+  m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5657984874976432811
 CanvasRenderer:
@@ -971,7 +973,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -495, y: 200}
+  m_AnchoredPosition: {x: -305.00003, y: 200}
   m_SizeDelta: {x: -1610, y: -400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5657984875082988046
@@ -995,7 +997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4431373, g: 0.5254902, b: 0.7490196, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1047,8 +1049,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -600, y: -200}
+  m_AnchoredPosition: {x: 0, y: -50.00003}
+  m_SizeDelta: {x: 0, y: -100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5657984875229462514
 CanvasRenderer:
@@ -1070,16 +1072,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 0.94117653, g: 0.7686275, b: 0.3647059, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1196,6 +1198,7 @@ MonoBehaviour:
   dialogQuestion: {fileID: 0}
   questionText: {fileID: 5657984876156181374}
   choiceButton: {fileID: 5657984874786717430}
+  isPlayerInConversation: {fileID: 11400000, guid: 6ee1d4b71ec0ddc4b90a223589dd8f27, type: 2}
 --- !u!1 &5657984875353436031
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,7 +1257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.94117653, g: 0.7686275, b: 0.3647059, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1552,6 +1555,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5657984875722222073}
   - component: {fileID: 5657984875722222072}
+  - component: {fileID: 1068685717584000858}
+  - component: {fileID: 936271367}
+  - component: {fileID: 274692569240303976}
   m_Layer: 5
   m_Name: Conversation
   m_TagString: Untagged
@@ -1592,7 +1598,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8bd57cc1186a994a929ff7225926043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogConversationFocus: {fileID: 11400000, guid: f9e5abd30ea25554db73b774940c9c7a, type: 2}
+  onCheckForNextConversationPart: {fileID: 11400000, guid: 3a84e130d011c6a4387ff5167823cbdf, type: 2}
+  npcFocus: {fileID: 11400000, guid: e1b8dc06bac9c86478b1a76b4ce599c6, type: 2}
+  dialogConversation: {fileID: 0}
+  isPlayerInConversation: {fileID: 11400000, guid: 6ee1d4b71ec0ddc4b90a223589dd8f27, type: 2}
   questionEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1610,6 +1619,90 @@ MonoBehaviour:
         m_CallState: 2
   speakerLeft: {fileID: 5657984874109734534}
   speakerRight: {fileID: 5657984875276584541}
+--- !u!114 &1068685717584000858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5657984875722222074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: b0641603d3237834bbd7360905f269bf, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5657984875722222072}
+        m_TargetAssemblyTypeName: Features.Dialog.Logic.ConversationController, Assembly-CSharp
+        m_MethodName: OnNpcFocusChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &936271367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5657984875722222074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: a7b19cf6b77365f4b814396b0fab5fde, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5657984875722222072}
+        m_TargetAssemblyTypeName: Features.Dialog.Logic.ConversationController, Assembly-CSharp
+        m_MethodName: AdvanceLine
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &274692569240303976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5657984875722222074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: a98456addc653ad4fa3f69cbe444cb67, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5657984875722222072}
+        m_TargetAssemblyTypeName: Features.Dialog.Logic.ConversationController, Assembly-CSharp
+        m_MethodName: OnNpcFocusChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5657984875810317303
 GameObject:
   m_ObjectHideFlags: 0

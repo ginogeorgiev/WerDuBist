@@ -6,15 +6,13 @@ namespace Features.Quests.Logic
     public class QuestFocusController : MonoBehaviour
     {
         [SerializeField] private QuestFocus_SO focus;
-        [SerializeField] private GameEvent_SO onQuestFocusUpdated;
 
-        public Quest_SO quest { get; set; }
+        public Quest_SO Quest { get; set; }
 
         public void FocusOnQuest()
         {
-            focus.Set(quest);
-            Debug.Log("Focus on: " + quest.questID);
-            onQuestFocusUpdated.Raise();
+            focus.Set(Quest);
+            Debug.Log("Focus on: " + Quest.QuestID);
         }
     }
 }

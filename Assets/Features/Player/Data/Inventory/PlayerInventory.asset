@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e711ddbd25bc9c49b06d67793c25348, type: 3}
+  m_Name: PlayerInventory
+  m_EditorClassIdentifier: 
+  wood: {fileID: 11400000, guid: 15be0257408b7f545868f4fa436c151e, type: 2}
+  stone: {fileID: 11400000, guid: 8f1021f9996055647bfffffbabb57a18, type: 2}
+  starfish: {fileID: 11400000, guid: 8ce660b6c02272749980efc2e80a79f6, type: 2}

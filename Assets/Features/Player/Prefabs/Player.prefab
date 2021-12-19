@@ -236,6 +236,7 @@ MonoBehaviour:
   sprintSpeed: 10
   walkingSpeed: 5
   animator: {fileID: 1444786951}
+  playerInventory: {fileID: 11400000, guid: 721fa7d72435aad499c399070584d507, type: 2}
   playerMovementSpeed: {fileID: 11400000, guid: a2cffe57136c33146baa72577ed8f290, type: 2}
   isPlayerInConversation: {fileID: 11400000, guid: 6ee1d4b71ec0ddc4b90a223589dd8f27, type: 2}
   conversationFocus: {fileID: 11400000, guid: f9e5abd30ea25554db73b774940c9c7a, type: 2}

@@ -9,6 +9,6 @@ namespace Features.Quests.Logic
        // class holds all existing quests
        [SerializeField] private List<Quest_SO> existingQuests;
       
-       public IEnumerable<Quest_SO> items => existingQuests;
+       public IEnumerable<Quest_SO> Items => existingQuests;
    }       
 }

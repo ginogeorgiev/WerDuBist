@@ -9,6 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b61bf13e647c7e742a936c7d0bd7ee3f, type: 3}
-  m_Name: onQuestFocusUpdated
+  m_Script: {fileID: 11500000, guid: 851512243b6640c1ae08862b4931e807, type: 3}
+  m_Name: NpcFocus
   m_EditorClassIdentifier: 
+  focus: {fileID: 0}
+  onFocusChanged: {fileID: 11400000, guid: b0641603d3237834bbd7360905f269bf, type: 2}

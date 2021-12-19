@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using DataStructures.Variables;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,8 +11,10 @@ namespace Features.Dialog.Logic
         [SerializeField] private DialogQuestion_SO dialogQuestion; 
         [SerializeField] private TMP_Text questionText;
         [SerializeField] private Button choiceButton;
+        [SerializeField] private BoolVariable isPlayerInConversation;
 
-        private List<ChoiceController> choiceControllers = new List<ChoiceController>();
+
+        private readonly List<ChoiceController> choiceControllers = new List<ChoiceController>();
 
         //changes to new conversation on button click
         public void Change(DialogQuestion_SO dialogQuestion)
@@ -19,6 +22,7 @@ namespace Features.Dialog.Logic
             RemoveChoices();
             this.dialogQuestion = dialogQuestion;
             gameObject.SetActive(true);
+            isPlayerInConversation.SetTrue();
             Initialize();
         }
 
@@ -27,9 +31,10 @@ namespace Features.Dialog.Logic
         {
             RemoveChoices();
             gameObject.SetActive(false);
+            isPlayerInConversation.SetFalse();
         }
 
-        //destroys choise buttons
+        //destroys choices buttons
         private void RemoveChoices()
         {
             foreach (ChoiceController c in choiceControllers)
@@ -38,7 +43,7 @@ namespace Features.Dialog.Logic
             choiceControllers.Clear();
         }
 
-        //initalize choicebuttons
+        //initialize choiceButtons
         private void Initialize()
         {
             questionText.text = dialogQuestion.Text; //changes standard text to question text

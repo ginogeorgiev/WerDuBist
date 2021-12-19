@@ -18,11 +18,11 @@ namespace Features.Player.Logic
 
         [SerializeField] private Animator animator;
 
+        [SerializeField] private PlayerInventory_SO playerInventory;
+
         [SerializeField] private FloatVariable playerMovementSpeed;
         
         [SerializeField] private BoolVariable isPlayerInConversation;
-
-        [SerializeField] private ConversationFocus_SO conversationFocus;
 
         [SerializeField] private TransitionData transitionData;
 
@@ -111,15 +111,20 @@ namespace Features.Player.Logic
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            // TODO: Pick up algorithm (depends on the item)
-            
             if (other.CompareTag($"Wood"))
             {
                 other.gameObject.SetActive(false);
+                playerInventory.Wood.Add(1);
             }
             if (other.CompareTag($"Stone"))
             {
                 other.gameObject.SetActive(false);
+                playerInventory.Stone.Add(1);
+            }
+            if (other.CompareTag($"Starfish"))
+            {
+                other.gameObject.SetActive(false);
+                playerInventory.Starfish.Add(1);
             }
             
             if (other.CompareTag($"GridElement"))
@@ -129,7 +134,7 @@ namespace Features.Player.Logic
 
             if (other.CompareTag($"NPC"))
             {
-                conversationFocus.Set(other.GetComponent<NpcBehaviour>().Conversation);
+                other.GetComponent<NpcBehaviour>().SetNpcFocus();
             }
         }
 
@@ -137,7 +142,7 @@ namespace Features.Player.Logic
         {
             if (other.CompareTag($"NPC"))
             {
-                conversationFocus.Set(null);
+                other.GetComponent<NpcBehaviour>().RemoveNpcFocus();
             }
         }
 

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
-  m_Name: 1Question
+  m_Name: Q1-GatherWood
   m_EditorClassIdentifier: 
-  text: "Test \xFCberschrift"
+  text: 'Deine erste Aufgabe:'
   choices:
-  - text: question leads to test conversation
-    conversation: {fileID: 11400000, guid: 7fc2097966d5dba45915a84da01b6a07, type: 2}
-  - text: question leads to new conversation
-    conversation: {fileID: 11400000, guid: 89211c168590d704881c3c2d9c216d07, type: 2}
+  - text: Ich mach mich sofort auf die Suche.
+    dialogConversation: {fileID: 0}
+    questEvent: {fileID: 11400000, guid: d3ded01f8c8bb7b43ab7640a65b29a4a, type: 2}
+    quest: {fileID: 11400000, guid: fe397199f3a2844449334c71c2f32d75, type: 2}

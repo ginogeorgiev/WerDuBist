@@ -12,7 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52380acf1f8d46ce80c0f8dd8cc35aa6, type: 3}
   m_Name: _QuestSetActive
   m_EditorClassIdentifier: 
-  items:
-  - {fileID: 11400000, guid: f4446098ef7acc147a45a2fcb0556346, type: 2}
-  - {fileID: 11400000, guid: fe397199f3a2844449334c71c2f32d75, type: 2}
-  - {fileID: 11400000, guid: 64d67580bff265e41ae674871fb00f8b, type: 2}
+  activeQuests: []

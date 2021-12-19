@@ -14,6 +14,7 @@ namespace DataStructures.Event
             {
                 listeners[i].OnEventRaised();
             }
+            // Debug.Log("<color=#2A5BA7><b> " + name + " was raised.</b></color>");
         }
 
         public void RegisterListener(GameEventListener listener)

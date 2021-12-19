@@ -9,6 +9,7 @@ TagManager:
   - Wood
   - Stone
   - NPC
+  - Starfish
   layers:
   - Default
   - TransparentFX

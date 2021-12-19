@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Melody
   m_EditorClassIdentifier: 
   fullName: Melody
-  portrait: {fileID: 21300000, guid: 98b97935863e58a4e88943f04255aef2, type: 3}
+  portrait: {fileID: 21300000, guid: b218e2a2b2e76884ea7a75c6380a368c, type: 3}
