@@ -1,4 +1,7 @@
+using DataStructures.Event;
+using DataStructures.Variables;
 using Features.Input;
+using Features.NPCs.Logic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,59 +12,95 @@ namespace Features.Dialog.Logic
 
     public class ConversationController : MonoBehaviour
     {
+        [SerializeField] private GameEvent_SO onCheckForNextConversationPart;
+        [SerializeField] private NpcFocus_So npcFocus;
         [SerializeField] private DialogConversation_SO dialogConversation;
+        [SerializeField] private BoolVariable isPlayerInConversation;
         [SerializeField] private QuestionEvent questionEvent;
-        
-        private PlayerControls playerControls;
 
+        [SerializeField] private GameObject questionUI;
+        
         [SerializeField] private GameObject speakerLeft;
         [SerializeField] private GameObject speakerRight;
 
         private SpeakerUIController speakerUIControllerLeft;
         private SpeakerUIController speakerUIControllerRight;
 
-        private int activeLineIndex = 0;
-        private bool conversationStarted = false;
+        private int activeLineIndex;
+        private bool conversationStarted;
 
-        public void ChangeConversation(DialogConversation_SO nextDialogConversation)
+        public void OnNpcFocusChanged()
         {
-            conversationStarted = false;
-            dialogConversation = nextDialogConversation;
-            AdvanceLine();
+            dialogConversation = npcFocus.Get() != null ? npcFocus.Get().ActiveConversation : null;
         }
         private void Start()
         {
             speakerUIControllerLeft = speakerLeft.GetComponent<SpeakerUIController>();
             speakerUIControllerRight = speakerRight.GetComponent<SpeakerUIController>();
-
-            playerControls.Player.SkipDialog.started += _ => AdvanceLine();
+            
+            playerControls.Player.Interact.started += _ => AdvanceLine();
         }
+        
+        #region Input related
+        
+        private PlayerControls playerControls;
+        private void Awake()
+        {
+            playerControls = new PlayerControls();
+        }
+        
+        private void OnEnable()
+        {
+            playerControls.Enable();
+        }
+
+        private void OnDisable()
+        {
+            playerControls.Disable();
+        }
+        
+        #endregion
         
         private void AdvanceConversation()
         {
             if (dialogConversation.DialogQuestion != null)
             {
+                isPlayerInConversation.SetFalse();
                 questionEvent.Invoke(dialogConversation.DialogQuestion);
+                EndConversation();
             }
-            else if (dialogConversation.NextDialogConversation != null)
+            else if (dialogConversation.NextDialogConversationStep != null)
             {
-                ChangeConversation(dialogConversation.NextDialogConversation);
+                ChangeConversation(dialogConversation.NextDialogConversationStep);
             }
             else
             {
                 EndConversation();
+                isPlayerInConversation.SetFalse();
             }
         }
+
+        public void ChangeConversation(DialogConversation_SO nextDialogConversation)
+        {
+            conversationStarted = false;
+            
+            if (nextDialogConversation == null) return;
+            dialogConversation = nextDialogConversation;
+            AdvanceLine();
+        }
+        
         private void EndConversation()
         {
             dialogConversation = null;
             conversationStarted = false;
             speakerUIControllerLeft.Hide();
             speakerUIControllerRight.Hide();
+            onCheckForNextConversationPart.Raise();
         }
 
         private void Initialize()
         {
+            onCheckForNextConversationPart.Raise();
             conversationStarted = true;
             activeLineIndex = 0;
             speakerUIControllerLeft.Speaker = dialogConversation.SpeakerLeft;
@@ -70,7 +109,14 @@ namespace Features.Dialog.Logic
 
         private void AdvanceLine()
         {
+            Debug.Log("Space");
+            
+            if (questionUI.activeSelf) return;
+            
             if (dialogConversation == null) return;
+            
+            isPlayerInConversation.SetTrue();
+            
             if (!conversationStarted) Initialize();
 
             if (activeLineIndex < dialogConversation.Lines.Length)
@@ -100,8 +146,6 @@ namespace Features.Dialog.Logic
             activeLineIndex += 1;
         }
 
-        
-
         private void SetDialog(
             SpeakerUIController activeSpeakerUIController,
             SpeakerUIController inactiveSpeakerUIController,
@@ -110,21 +154,6 @@ namespace Features.Dialog.Logic
             activeSpeakerUIController.Dialog = text;
             activeSpeakerUIController.Show();
             inactiveSpeakerUIController.Hide();
-        }
-        
-        private void Awake()
-        {
-            playerControls = new PlayerControls();
-        }
-        
-        private void OnEnable()
-        {
-            playerControls.Enable();
-        }
-
-        private void OnDisable()
-        {
-            playerControls.Disable();
         }
     }
 }

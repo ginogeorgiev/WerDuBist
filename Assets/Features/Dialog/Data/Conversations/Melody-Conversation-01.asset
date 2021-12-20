@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 266c97da10218e94ab464a1f7e833e73, type: 3}
+  m_Name: Melody-Conversation-01
+  m_EditorClassIdentifier: 
+  speakerLeft: {fileID: 11400000, guid: a5d20b15f28ea8143b6531e8889a2eaf, type: 2}
+  speakerRight: {fileID: 11400000, guid: 3286d80512a5b6c49a0946274b3abb63, type: 2}
+  lines:
+  - npcData: {fileID: 11400000, guid: 3286d80512a5b6c49a0946274b3abb63, type: 2}
+    text: Oh mein Gott, wo kommst du denn her und warum siehst du so abgerissen aus.
+  - npcData: {fileID: 11400000, guid: a5d20b15f28ea8143b6531e8889a2eaf, type: 2}
+    text: "Ich glaub ich bin schiffbr\xFCchig."
+  - npcData: {fileID: 11400000, guid: 3286d80512a5b6c49a0946274b3abb63, type: 2}
+    text: 'Du brauchst auf jeden Fall Hilfe. Auf der anderen Insel ist eine kleine
+      Stadt. Aber da kommen wir nicht so leicht hin ohne Boot. '
+  - npcData: {fileID: 11400000, guid: 3286d80512a5b6c49a0946274b3abb63, type: 2}
+    text: "Ich bin mit meinem Surfbrett hier, aber da passen wir nicht beide drauf.
+      Bring mir doch ein paar Planken die hier rumliegen, dann bauen wir zusammen
+      ein Floss f\xFCr dich."
+  dialogQuestion: {fileID: 11400000, guid: f50dde9de95cfff4caa836ee185d2cd3, type: 2}
+  nextDialogConversation: {fileID: 0}

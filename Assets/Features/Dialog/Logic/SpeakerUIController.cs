@@ -1,3 +1,4 @@
+using Features.NPCs.Logic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;

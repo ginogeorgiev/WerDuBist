@@ -22,7 +22,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "SkipDialog",
+                    "name": "Interact",
                     "type": "Button",
                     "id": "e3e31600-b6b1-452d-8dd8-fe0fc01ae79f",
                     "expectedControlType": "Button",
@@ -159,7 +159,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "SkipDialog",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9ae8c111-0704-4cbf-bcff-4ac57881d490",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

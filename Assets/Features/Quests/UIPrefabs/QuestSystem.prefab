@@ -60,8 +60,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4802871112802404792}
-  - component: {fileID: 4802871112802404791}
-  - component: {fileID: 4802871112802404790}
   - component: {fileID: 4802871112802404789}
   - component: {fileID: 6546915936861982521}
   - component: {fileID: 8410527967910931091}
@@ -87,64 +85,6 @@ Transform:
   m_Father: {fileID: 6528920872105082744}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4802871112802404791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4802871112802404793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  event: {fileID: 11400000, guid: b4ec28bc9af6e3d4188a6bac7d37ee2c, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1524817012585307856}
-        m_TargetAssemblyTypeName: Features.Quests.Logic.QuestManager, Assembly-CSharp
-        m_MethodName: ItemCollected
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 15be0257408b7f545868f4fa436c151e, type: 2}
-          m_ObjectArgumentAssemblyTypeName: DataStructures.Variables.IntVariable,
-            Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &4802871112802404790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4802871112802404793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  event: {fileID: 11400000, guid: 994c33e274c02084287f92d45f71ade9, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1524817012585307856}
-        m_TargetAssemblyTypeName: Features.Quests.Logic.QuestManager, Assembly-CSharp
-        m_MethodName: ItemCollected
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 8f1021f9996055647bfffffbabb57a18, type: 2}
-          m_ObjectArgumentAssemblyTypeName: DataStructures.Variables.IntVariable,
-            Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &4802871112802404789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  event: {fileID: 11400000, guid: a7bf6c6ddac907947bc6586f6e2b0de7, type: 2}
+  event: {fileID: 11400000, guid: 1cffd408b0cfd4f46a200d540daa363f, type: 2}
   response:
     m_PersistentCalls:
       m_Calls:
@@ -443,7 +383,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 854, y: 0}
+  m_AnchoredPosition: {x: 714, y: 0}
   m_SizeDelta: {x: 214, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &5861041857713194565

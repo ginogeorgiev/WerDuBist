@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: PlayerTeleportFocus
   m_EditorClassIdentifier: 
   focus: {fileID: 516767723770760240, guid: e96347ce6302d914fb4dd3d2a54d940d, type: 3}
+  onFocusChanged: {fileID: 11400000, guid: 38b7d6240edb192469b465d8df58c791, type: 2}

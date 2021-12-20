@@ -8,6 +8,8 @@ TagManager:
   - GridElement
   - Wood
   - Stone
+  - NPC
+  - Starfish
   layers:
   - Default
   - TransparentFX

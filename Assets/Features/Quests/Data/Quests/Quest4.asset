@@ -16,7 +16,7 @@ MonoBehaviour:
   title: Quest 4
   description: Das ist die 4. Quest
   goals:
-  - current: {fileID: 11400000, guid: 8f1021f9996055647bfffffbabb57a18, type: 2}
+  - current: {fileID: 11400000, guid: 8ce660b6c02272749980efc2e80a79f6, type: 2}
     required: 7
     sprite: {fileID: 21300000, guid: 43e221860d46c42abab1fea3b4b3e7e9, type: 3}
   position: {x: 0, y: 0}

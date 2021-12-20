@@ -10,15 +10,15 @@ namespace Features.Quests.Logic
         [SerializeField] private int required;
         [SerializeField] private Sprite sprite;
         
-        public IntVariable currentAmount => current;
-        public int requiredAmount => required;
+        public IntVariable CurrentAmount => current;
+        public int RequiredAmount => required;
         
-        public Sprite goalSprite => sprite;
-        public bool completed { get; set; }
+        public Sprite GoalSprite => sprite;
+        public bool Completed { get; set; }
 
         public void Evaluate()
         {
-            completed = currentAmount.Get() >= requiredAmount;
+            Completed = CurrentAmount.Get() >= RequiredAmount;
         }
     }
 }

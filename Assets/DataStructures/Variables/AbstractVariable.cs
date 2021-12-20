@@ -5,7 +5,7 @@ namespace DataStructures.Variables
 {
     public abstract class AbstractVariable<T> : ScriptableObject
     {
-        protected T runtimeValue;
+        [SerializeField] protected T runtimeValue;
         [SerializeField] private T storedValue;
         [SerializeField] protected GameEvent_SO onValueChanged;
 

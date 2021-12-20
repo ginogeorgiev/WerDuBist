@@ -1,3 +1,4 @@
+using Features.NPCs.Logic;
 using UnityEngine;
 
 namespace Features.Dialog.Logic
@@ -7,19 +8,19 @@ namespace Features.Dialog.Logic
     {
         [SerializeField] private NPCData_SO speakerLeft;
         [SerializeField] private NPCData_SO speakerRight;
-        [SerializeField] private DialogQuestion_SO dialogQuestion;
-        [SerializeField] private DialogConversation_SO nextDialogConversation;
         [SerializeField] private Line[] lines;
+        [SerializeField] private DialogQuestion_SO dialogQuestion;
+        [SerializeField] private DialogConversation_SO nextDialogConversationStep;
 
         public NPCData_SO SpeakerLeft => speakerLeft;
 
         public NPCData_SO SpeakerRight => speakerRight;
 
+        public Line[] Lines => lines;
+
         public DialogQuestion_SO DialogQuestion => dialogQuestion;
 
-        public DialogConversation_SO NextDialogConversation => nextDialogConversation;
-
-        public Line[] Lines => lines;
+        public DialogConversation_SO NextDialogConversationStep => nextDialogConversationStep;
     }
     
     [System.Serializable]

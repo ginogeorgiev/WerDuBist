@@ -24,16 +24,24 @@ namespace Features.Dialog.Logic
             button.name = "Choice " + (index + 1);
             button.gameObject.SetActive(true);
 
+            if (choice.QuestEvent != null)
+            {
+                button.onClick.AddListener(choice.OnQuestAccepted);
+            }
+
+            if (choice.ChoiceEvent != null)
+            {
+                button.onClick.AddListener(choice.OnChoiceEvent);
+            }
+
             ChoiceController choiceController = button.GetComponent<ChoiceController>();
             choiceController.choice = choice;
             return choiceController;
-            
         }
 
         private void Start()
         {
-            if (conversationChangeEvent == null)
-                conversationChangeEvent = new ConversationChangeEvent();
+            if (conversationChangeEvent == null) conversationChangeEvent = new ConversationChangeEvent();
             GetComponent<Button>().GetComponentInChildren<Text>().text = choice.Text;
         }
 

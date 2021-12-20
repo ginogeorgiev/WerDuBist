@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using DataStructures.StateMachineLogic;
 using DataStructures.Variables;
+using Features.Dialog.Logic;
 using Features.GameLogic.Logic;
 using Features.Input;
+using Features.NPCs.Logic;
 using Features.Player.Logic.States;
 using Features.WorldGrid.Logic;
 using UnityEngine;
@@ -16,7 +19,11 @@ namespace Features.Player.Logic
 
         [SerializeField] private Animator animator;
 
+        [SerializeField] private PlayerInventory_SO playerInventory;
+
         [SerializeField] private FloatVariable playerMovementSpeed;
+        
+        [SerializeField] private BoolVariable isPlayerInConversation;
 
         [SerializeField] private TransitionData transitionData;
 
@@ -33,6 +40,7 @@ namespace Features.Player.Logic
         private IdleState idleState;
         private WalkingState walkingState;
         private SprintingState sprintingState;
+        private ConversationState conversationState;
         
         private void Awake()
         {
@@ -46,6 +54,7 @@ namespace Features.Player.Logic
             idleState = new IdleState(animator, playerMovementSpeed, rigidbody2D);
             walkingState = new WalkingState(animator, playerMovementSpeed, movementInputAction, transform, rigidbody2D);
             sprintingState = new SprintingState(animator, playerMovementSpeed, movementInputAction, transform, rigidbody2D);
+            conversationState = new ConversationState(animator, playerMovementSpeed, rigidbody2D);
             
             stateMachine.Initialize(idleState);
         }
@@ -68,6 +77,9 @@ namespace Features.Player.Logic
 
         private void HandleKeyboardInput()
         {
+            // If the player is in a conversation, the keyboard inputs for walking should be ignored
+            if(isPlayerInConversation.Get()) return;
+
             Vector2 movementInput = movementInputAction.ReadValue<Vector2>();
             float sprintInput = sprintInputAction.ReadValue<float>();
 
@@ -83,7 +95,7 @@ namespace Features.Player.Logic
 
                 // Check for sprinting (holding down LSHIFT)
                 var movementSpeed = sprintInput > 0 ? sprintSpeed : walkingSpeed;
-                if (playerMovementSpeed.Get() != movementSpeed)
+                if (Math.Abs(playerMovementSpeed.Get() - movementSpeed) > 0.01f)
                 {
                     playerMovementSpeed.Set(movementSpeed);
                 }
@@ -100,22 +112,39 @@ namespace Features.Player.Logic
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            // TODO: Pick up algorithm (depends on the item)
-            
-            if (other.CompareTag($"Wood"))
+            if (other.CompareTag("Wood"))
             {
                 other.gameObject.SetActive(false);
+                playerInventory.Wood.Add(1);
             }
-            if (other.CompareTag($"Stone"))
+            if (other.CompareTag("Stone"))
             {
                 other.gameObject.SetActive(false);
+                playerInventory.Stone.Add(1);
+            }
+            if (other.CompareTag("Starfish"))
+            {
+                other.gameObject.SetActive(false);
+                playerInventory.Starfish.Add(1);
             }
             
-            if (other.CompareTag($"GridElement"))
+            if (other.CompareTag("GridElement"))
             {
                 onGridElementEntered.Raise(other.GetComponent<GridElementBehavior>().GridIndex);
             }
-            
+
+            if (other.CompareTag("NPC"))
+            {
+                other.GetComponent<NpcBehaviour>().SetNpcFocus();
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.CompareTag("NPC"))
+            {
+                other.GetComponent<NpcBehaviour>().RemoveNpcFocus();
+            }
         }
 
 
@@ -123,14 +152,26 @@ namespace Features.Player.Logic
         public void ChangePlayerMovementSpeed()
         {
             // Check the movement speed and adjust the state accordingly
-            if (playerMovementSpeed.Get() == walkingSpeed)
+            if (Math.Abs(playerMovementSpeed.Get() - walkingSpeed) < 0.01f)
             {
                 stateMachine.ChangeState(walkingState);
             }
             
-            if (playerMovementSpeed.Get() == sprintSpeed)
+            if (Math.Abs(playerMovementSpeed.Get() - sprintSpeed) < 0.01f)
             {
                 stateMachine.ChangeState(sprintingState);
+            }
+        }
+
+        public void ChangePlayerConversationState()
+        {
+            if (isPlayerInConversation.Get())
+            {
+                stateMachine.ChangeState(conversationState);
+            }
+            else
+            {
+                stateMachine.ChangeState(idleState);
             }
         }
         
@@ -144,7 +185,7 @@ namespace Features.Player.Logic
             transitionData.OnStart.Raise();
             yield return new WaitForSeconds(transitionData.FadeInTime);
             
-            transform.position = teleportFocus.focus.position;
+            transform.position = teleportFocus.Get().position;
             yield return new WaitForSeconds(1f);
             
             transitionData.OnEnd.Raise();
