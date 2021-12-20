@@ -17,6 +17,8 @@ namespace Features.Dialog.Logic
         [SerializeField] private BoolVariable isPlayerInConversation;
         [SerializeField] private QuestionEvent questionEvent;
 
+        [SerializeField] private GameObject questionUI;
+        
         [SerializeField] private GameObject speakerLeft;
         [SerializeField] private GameObject speakerRight;
 
@@ -28,10 +30,7 @@ namespace Features.Dialog.Logic
 
         public void OnNpcFocusChanged()
         {
-            if (npcFocus.Get() != null)
-            {
-                dialogConversation = npcFocus.Get().ActiveConversation;
-            }
+            dialogConversation = npcFocus.Get() != null ? npcFocus.Get().ActiveConversation : null;
         }
         private void Start()
         {
@@ -87,7 +86,10 @@ namespace Features.Dialog.Logic
 
         public void AdvanceLine()
         {
+            if (questionUI.activeSelf) return;
+            
             if (dialogConversation == null) return;
+            
             isPlayerInConversation.SetTrue();
             
             if (!conversationStarted) Initialize();

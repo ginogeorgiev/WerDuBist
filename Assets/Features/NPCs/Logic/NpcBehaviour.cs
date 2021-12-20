@@ -67,8 +67,11 @@ namespace Features.NPCs.Logic
             else
             {
                 activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
-                conversationIndex++;
                 onActiveConversationChanged.Raise();
+                if (conversationIndex + 1 < conversationElements.Count)
+                {
+                    conversationIndex++;
+                }
             }
         }
 
@@ -84,7 +87,8 @@ namespace Features.NPCs.Logic
 
         private void Start()
         {
-            playerControls.Player.SkipDialog.started += _ => onAdvanceConversationLine.Raise();
+            //TODO prevent double raising, causes a lot of trouble!!
+            playerControls.Player.Interact.performed += _ => onAdvanceConversationLine.Raise();
             activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
         }
         

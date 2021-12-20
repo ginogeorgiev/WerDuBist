@@ -37,12 +37,12 @@ namespace Features.Input
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""SkipDialog"",
-                    ""type"": ""Button"",
+                    ""name"": ""Interact"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""e3e31600-b6b1-452d-8dd8-fe0fc01ae79f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [
@@ -174,7 +174,18 @@ namespace Features.Input
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""SkipDialog"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9ae8c111-0704-4cbf-bcff-4ac57881d490"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -187,7 +198,7 @@ namespace Features.Input
             m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
             m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
             m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
-            m_Player_SkipDialog = m_Player.FindAction("SkipDialog", throwIfNotFound: true);
+            m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -239,14 +250,14 @@ namespace Features.Input
         private IPlayerActions m_PlayerActionsCallbackInterface;
         private readonly InputAction m_Player_Movement;
         private readonly InputAction m_Player_Sprint;
-        private readonly InputAction m_Player_SkipDialog;
+        private readonly InputAction m_Player_Interact;
         public struct PlayerActions
         {
             private @PlayerControls m_Wrapper;
             public PlayerActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
             public InputAction @Movement => m_Wrapper.m_Player_Movement;
             public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
-            public InputAction @SkipDialog => m_Wrapper.m_Player_SkipDialog;
+            public InputAction @Interact => m_Wrapper.m_Player_Interact;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -262,9 +273,9 @@ namespace Features.Input
                     @Sprint.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
                     @Sprint.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
                     @Sprint.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
-                    @SkipDialog.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkipDialog;
-                    @SkipDialog.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkipDialog;
-                    @SkipDialog.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkipDialog;
+                    @Interact.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                    @Interact.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                    @Interact.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -275,9 +286,9 @@ namespace Features.Input
                     @Sprint.started += instance.OnSprint;
                     @Sprint.performed += instance.OnSprint;
                     @Sprint.canceled += instance.OnSprint;
-                    @SkipDialog.started += instance.OnSkipDialog;
-                    @SkipDialog.performed += instance.OnSkipDialog;
-                    @SkipDialog.canceled += instance.OnSkipDialog;
+                    @Interact.started += instance.OnInteract;
+                    @Interact.performed += instance.OnInteract;
+                    @Interact.canceled += instance.OnInteract;
                 }
             }
         }
@@ -286,7 +297,7 @@ namespace Features.Input
         {
             void OnMovement(InputAction.CallbackContext context);
             void OnSprint(InputAction.CallbackContext context);
-            void OnSkipDialog(InputAction.CallbackContext context);
+            void OnInteract(InputAction.CallbackContext context);
         }
     }
 }

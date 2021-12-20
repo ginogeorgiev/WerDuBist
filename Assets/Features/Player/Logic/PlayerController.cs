@@ -112,28 +112,28 @@ namespace Features.Player.Logic
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag($"Wood"))
+            if (other.CompareTag("Wood"))
             {
                 other.gameObject.SetActive(false);
                 playerInventory.Wood.Add(1);
             }
-            if (other.CompareTag($"Stone"))
+            if (other.CompareTag("Stone"))
             {
                 other.gameObject.SetActive(false);
                 playerInventory.Stone.Add(1);
             }
-            if (other.CompareTag($"Starfish"))
+            if (other.CompareTag("Starfish"))
             {
                 other.gameObject.SetActive(false);
                 playerInventory.Starfish.Add(1);
             }
             
-            if (other.CompareTag($"GridElement"))
+            if (other.CompareTag("GridElement"))
             {
                 onGridElementEntered.Raise(other.GetComponent<GridElementBehavior>().GridIndex);
             }
 
-            if (other.CompareTag($"NPC"))
+            if (other.CompareTag("NPC"))
             {
                 other.GetComponent<NpcBehaviour>().SetNpcFocus();
             }
@@ -141,7 +141,7 @@ namespace Features.Player.Logic
 
         private void OnTriggerExit2D(Collider2D other)
         {
-            if (other.CompareTag($"NPC"))
+            if (other.CompareTag("NPC"))
             {
                 other.GetComponent<NpcBehaviour>().RemoveNpcFocus();
             }
