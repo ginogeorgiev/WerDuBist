@@ -42,20 +42,22 @@ namespace Features.Quests.Logic
         {
             if (!activeQuests.Items.Contains(quest))
             {
-                Debug.Log("No Quest accepted yet");
+                Debug.Log("Quest not accepted yet");
                 return;
             }
             
             quest.CheckGoals();
             // if completed
-            if (quest.IsCompleted)
+            if (quest.CheckGoals())
             {
+                quest.IsActive = false;
+                quest.IsCompleted = true;
+                
                 // remove all Quest Items from Inventory
                 foreach (Goal goal in quest.GoalList)
                 {
                     var item = goal.CurrentAmount;
                     item.Add(-goal.RequiredAmount);
-                    // item.Set(item.Get() - goal.RequiredAmount);
                 }
                 
                 Debug.Log("'" + quest.QuestTitle + "' Completed");

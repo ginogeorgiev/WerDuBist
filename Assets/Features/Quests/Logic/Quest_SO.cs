@@ -19,18 +19,16 @@ namespace Features.Quests.Logic
         public List<Goal> GoalList => goals;
         public Vector2 QuestPosition => position;
         public bool IsActive { get; set; }
-        public bool IsCompleted { get; private set; }
+        public bool IsCompleted { get; set; }
         
-        public void CheckGoals()
+        public bool CheckGoals()
         {
-            foreach (Goal goal in GoalList)
+            foreach (var goal in GoalList)
             {
                 goal.Evaluate();
             }
             // quest completed if all goals are completed
-            if (!GoalList.All(goal => goal.Completed)) return;
-            IsActive = false;
-            IsCompleted = true;
+            return GoalList.All(goal => goal.Completed);
         }
 
         public void Restore()
