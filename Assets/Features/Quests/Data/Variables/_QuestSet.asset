@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: _QuestSet
   m_EditorClassIdentifier: 
   existingQuests:
-  - {fileID: 11400000, guid: fe397199f3a2844449334c71c2f32d75, type: 2}
-  - {fileID: 11400000, guid: f4446098ef7acc147a45a2fcb0556346, type: 2}
+  - {fileID: 11400000, guid: 176559f37d56ba74ca9fc4bf4febde95, type: 2}
+  - {fileID: 11400000, guid: 5b649c808943ac345a1f74bfa5d4056f, type: 2}
   - {fileID: 11400000, guid: 64d67580bff265e41ae674871fb00f8b, type: 2}
   - {fileID: 11400000, guid: 9ec1ef8e3ab31a840bb549d99dc183af, type: 2}

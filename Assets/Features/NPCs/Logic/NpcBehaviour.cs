@@ -29,8 +29,6 @@ namespace Features.NPCs.Logic
     {
         [SerializeField] private int id;
         [SerializeField] private NpcFocus_So npcFocus;
-        
-        [SerializeField] private GameEvent_SO onAdvanceConversationLine;
 
         [SerializeField] private NPCData_SO data;
         [SerializeField] private DialogConversation_SO activeConversation;
@@ -41,6 +39,11 @@ namespace Features.NPCs.Logic
         public NPCData_SO Data => data;
 
         public DialogConversation_SO ActiveConversation => activeConversation;
+        
+        private void Start()
+        {
+            activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
+        }
 
         public void OnNpcFocusChanged()
         {
@@ -85,13 +88,6 @@ namespace Features.NPCs.Logic
             npcFocus.Restore();
         }
 
-        private void Start()
-        {
-            //TODO prevent double raising, causes a lot of trouble!!
-            playerControls.Player.Interact.started += _ => onAdvanceConversationLine.Raise();
-            activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
-        }
-        
         #region Input related
         
         private PlayerControls playerControls;

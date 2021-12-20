@@ -38,11 +38,11 @@ namespace Features.Input
                 },
                 {
                     ""name"": ""Interact"",
-                    ""type"": ""PassThrough"",
+                    ""type"": ""Button"",
                     ""id"": ""e3e31600-b6b1-452d-8dd8-fe0fc01ae79f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press""
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [

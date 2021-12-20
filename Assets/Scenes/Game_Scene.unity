@@ -771,7 +771,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5506266131864378915, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 633
+      value: 740
       objectReference: {fileID: 0}
     - target: {fileID: 5506266131864378915, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1250,10 +1250,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
-      propertyPath: conversationElements.Array.data[1].quest
-      value: 
-      objectReference: {fileID: 11400000, guid: 176559f37d56ba74ca9fc4bf4febde95, type: 2}
     - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: m_RootOrder
       value: 8

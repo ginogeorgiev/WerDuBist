@@ -1,5 +1,6 @@
 using DataStructures.Event;
 using DataStructures.Variables;
+using Features.Input;
 using Features.NPCs.Logic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -36,7 +37,29 @@ namespace Features.Dialog.Logic
         {
             speakerUIControllerLeft = speakerLeft.GetComponent<SpeakerUIController>();
             speakerUIControllerRight = speakerRight.GetComponent<SpeakerUIController>();
+            
+            playerControls.Player.Interact.started += _ => AdvanceLine();
         }
+        
+        #region Input related
+        
+        private PlayerControls playerControls;
+        private void Awake()
+        {
+            playerControls = new PlayerControls();
+        }
+        
+        private void OnEnable()
+        {
+            playerControls.Enable();
+        }
+
+        private void OnDisable()
+        {
+            playerControls.Disable();
+        }
+        
+        #endregion
         
         private void AdvanceConversation()
         {
@@ -84,8 +107,10 @@ namespace Features.Dialog.Logic
             speakerUIControllerRight.Speaker = dialogConversation.SpeakerRight;
         }
 
-        public void AdvanceLine()
+        private void AdvanceLine()
         {
+            Debug.Log("Space");
+            
             if (questionUI.activeSelf) return;
             
             if (dialogConversation == null) return;
