@@ -88,7 +88,7 @@ namespace Features.NPCs.Logic
         private void Start()
         {
             //TODO prevent double raising, causes a lot of trouble!!
-            playerControls.Player.Interact.performed += _ => onAdvanceConversationLine.Raise();
+            playerControls.Player.Interact.started += _ => onAdvanceConversationLine.Raise();
             activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
         }
         
