@@ -1,6 +1,4 @@
-﻿using DataStructures.Event;
-using DataStructures.Variables;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Features.Quests.Logic
 {
@@ -8,9 +6,10 @@ namespace Features.Quests.Logic
     {
         [SerializeField] private QuestSet_SO questSet;
         [SerializeField] private QuestSetActive_SO activeQuests;
-        [SerializeField] private GameEvent_SO removeQuest;
         [SerializeField] private QuestEvent onQuestAccepted;
         [SerializeField] private QuestEvent onDisplayQuest;
+        [SerializeField] private QuestEvent onCompleteQuest;
+        [SerializeField] private QuestEvent onRemoveQuest;
         [SerializeField] private QuestFocus_SO focus;
 
         private void Start()
@@ -23,6 +22,7 @@ namespace Features.Quests.Logic
             activeQuests.Items.Clear();
             focus.Restore();
             onQuestAccepted.RegisterListener(SetQuestActive);
+            onCompleteQuest.RegisterListener(CompleteQuest);
         }
 
         private void SetQuestActive(Quest_SO quest)
@@ -38,27 +38,28 @@ namespace Features.Quests.Logic
            onDisplayQuest.Raise(quest);
         }
 
-        public void CompleteQuest()
+        public void CompleteQuest(Quest_SO quest)
         {
-            if (focus.Get() == null)
+            if (!activeQuests.Items.Contains(quest))
             {
-                Debug.Log("no Quest Focus");
+                Debug.Log("No Quest accepted yet");
                 return;
             }
             
-            focus.Get().CheckGoals();
+            quest.CheckGoals();
             // if completed
-            if (focus.Get().IsCompleted && activeQuests.Items.Contains(focus.Get()))
+            if (quest.IsCompleted)
             {
                 // remove all Quest Items from Inventory
-                foreach (Goal goal in focus.Get().GoalList)
+                foreach (Goal goal in quest.GoalList)
                 {
-                    IntVariable item = goal.CurrentAmount;
-                    item.Set(item.Get() - goal.RequiredAmount);
+                    var item = goal.CurrentAmount;
+                    item.Add(-goal.RequiredAmount);
+                    // item.Set(item.Get() - goal.RequiredAmount);
                 }
                 
-                Debug.Log("'" + focus.Get().QuestTitle + "' Completed");
-                removeQuest.Raise();
+                Debug.Log("'" + quest.QuestTitle + "' Completed");
+                onRemoveQuest.Raise(quest);
             }
             else
             {
