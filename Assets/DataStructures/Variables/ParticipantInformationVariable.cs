@@ -1,12 +1,14 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace DataStructures.Variables
 {
+    [Serializable]
     public struct ParticipantInfo
     {
         public string gender;
-        [Range(18,99)] public int age;
-        [Range(0,20)] public int gamingExperience;
+        public int age;
+        public int gamingExperience;
     }
     
     [CreateAssetMenu(fileName = "NewParticipantInformationVariable", menuName = "DataStructures/Variables/Participant Information Variable")]
