@@ -16,10 +16,12 @@ namespace Features.Quests.UILogic
         [SerializeField] private GameObject goalPrefab;
         [SerializeField] private QuestSetActive_SO activeQuests;
         [SerializeField] private QuestEvent onDisplayQuest;
+        [SerializeField] private QuestEvent onRemoveQuest;
 
         private void Start()
         {
             onDisplayQuest.RegisterListener(DisplayQuest);
+            onRemoveQuest.RegisterListener(RemoveQuest);
         }
 
         private void DisplayQuest(Quest_SO quest)
@@ -117,22 +119,26 @@ namespace Features.Quests.UILogic
             }
         }
         
-        public void RemoveQuest()
+        public void RemoveQuest(Quest_SO quest)
         {
             // destroy UI Prefab of completed Quest
-            Destroy(GetQuestUI(focus.Get().QuestID).gameObject);
+            Destroy(GetQuestUI(quest.QuestID).gameObject);
             
             // remove from active quests
-            activeQuests.Items.Remove(focus.Get());
+            activeQuests.Items.Remove(quest);
 
-            // if any more active quests, focus on the first one
-            if (activeQuests.Items.Any())
-            { 
-                focus.Set(activeQuests.Items[0]);
-                Debug.Log("Focus on: " + activeQuests.Items[0].QuestID);
-                UpdateQuestsFocus();
+            // if completed quest was in Focus
+            if (focus.Get() == quest)
+            {
+                // if any more active quests, focus on the first one
+                if (activeQuests.Items.Any())
+                { 
+                    focus.Set(activeQuests.Items[0]);
+                    Debug.Log("Focus on: " + activeQuests.Items[0].QuestID);
+                    UpdateQuestsFocus();
+                }           
             }
-
+            
             RebuildLayout();
         }
 

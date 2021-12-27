@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5ef1baf7517abf42915df00e5962f67, type: 3}
-  m_Name: QuestFocus
+  m_Script: {fileID: 11500000, guid: aec4def9e57b05f49ab1c476e5b8d9fc, type: 3}
+  m_Name: OnRemoveQuest
   m_EditorClassIdentifier: 
-  focus: {fileID: 11400000, guid: 176559f37d56ba74ca9fc4bf4febde95, type: 2}
-  onFocusChanged: {fileID: 11400000, guid: 1cffd408b0cfd4f46a200d540daa363f, type: 2}
