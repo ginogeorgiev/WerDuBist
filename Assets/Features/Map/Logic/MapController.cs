@@ -13,6 +13,7 @@ namespace Features.Map.Logic
         [SerializeField] private RectTransform playerIcon;
         
         [SerializeField] private Focus_SO<Quest_SO> questFocus;
+        [SerializeField] private GameObject questIcon;
         
         
         public void ToggleMapUI()
@@ -25,6 +26,16 @@ namespace Features.Map.Logic
             if (mapUI.activeSelf)
             {
                 playerIcon.position = WorldToMap(player.position);
+            }
+
+            if (questFocus.Get()!=null)
+            {
+                questIcon.SetActive(true);
+                questIcon.transform.position = WorldToMap(questFocus.Get().QuestPosition);
+            }
+            else
+            {
+                questIcon.SetActive(false);
             }
         }
 
