@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using DataStructures.Event;
 using DataStructures.Variables;
 using TMPro;
 using UnityEngine;
@@ -12,22 +13,22 @@ namespace Features.InformationGathering.Logic
         [SerializeField] private TMP_Text errorMessage;
         [SerializeField] private TMP_Dropdown genderDropdown;
         [SerializeField] private TMP_InputField ageField;
-        [SerializeField] private TMP_InputField gameExperienceField;
+        [SerializeField] private TMP_Dropdown gameExperienceDropdown;
 
         [Header("UIs")] 
         [SerializeField] private GameObject infoGatheringUI;
-        [SerializeField] private GameObject surveyUI;
+        [SerializeField] private GameEvent_SO switchFromInfoGatheringToSurvey;
         
         // Tracks if the error Coroutine (there no other) is running, to prevent the code to Start another
         private bool coroutineRunning = false;
 
         public void SetParticipantInformation()
         {
-            if (genderDropdown == null || ageField == null || gameExperienceField == null) { return; }
-            if (infoGatheringUI == null || surveyUI == null) { return; }
+            if (genderDropdown == null || ageField == null || gameExperienceDropdown == null) { return; }
+            if (infoGatheringUI == null || switchFromInfoGatheringToSurvey == null) { return; }
 
             // Trigger the error message upon no values, invalid values are just being corrected
-            if (ageField.text == "" || gameExperienceField.text == "")
+            if (ageField.text == "")
             {
                 if (!coroutineRunning)
                 {
@@ -39,19 +40,17 @@ namespace Features.InformationGathering.Logic
 
             // Save the age and game experience to show the clamped values in the information gathering window
             var age = 0;
-            var gameExp = 0;
             participantInformationVariable.Set(
                 genderDropdown.options[genderDropdown.value].text,
                 // keep the values for age and game experience in a certain range
                 age = Mathf.Clamp(int.Parse(ageField.text),18,99),
-                gameExp= Mathf.Clamp(int.Parse(gameExperienceField.text),0,30)
+                gameExperienceDropdown.options[gameExperienceDropdown.value].text
             );
 
             // Visual representation of the clamping
             ageField.text = age.ToString();
-            gameExperienceField.text = gameExp.ToString();
             
-            surveyUI.SetActive(true);
+            switchFromInfoGatheringToSurvey.Raise();
             infoGatheringUI.SetActive(false);
         }
 

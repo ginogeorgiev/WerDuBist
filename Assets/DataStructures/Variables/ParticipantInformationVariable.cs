@@ -8,13 +8,13 @@ namespace DataStructures.Variables
     {
         public string gender;
         public int age;
-        public int gamingExperience;
+        public string gamingExperience;
     }
     
     [CreateAssetMenu(fileName = "NewParticipantInformationVariable", menuName = "DataStructures/Variables/Participant Information Variable")]
     public class ParticipantInformationVariable : AbstractVariable<ParticipantInfo>
     {
-        public void Set(string gender, int age, int gamingExperience)
+        public void Set(string gender, int age, string gamingExperience)
         {
             runtimeValue = new ParticipantInfo()
             {
