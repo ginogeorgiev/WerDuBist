@@ -1600,6 +1600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onCheckForNextConversationPart: {fileID: 11400000, guid: 3a84e130d011c6a4387ff5167823cbdf, type: 2}
   npcFocus: {fileID: 11400000, guid: e1b8dc06bac9c86478b1a76b4ce599c6, type: 2}
+  tutorialData: {fileID: 11400000, guid: 2c11094f41d7ae04c9b54ff87bd93fc2, type: 2}
   dialogConversation: {fileID: 0}
   isPlayerInConversation: {fileID: 11400000, guid: 6ee1d4b71ec0ddc4b90a223589dd8f27, type: 2}
   questionEvent:
