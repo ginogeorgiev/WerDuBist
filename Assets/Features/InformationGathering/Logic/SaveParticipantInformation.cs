@@ -16,8 +16,8 @@ namespace Features.InformationGathering.Logic
         [SerializeField] private TMP_Dropdown gameExperienceDropdown;
 
         [Header("UIs")] 
-        [SerializeField] private GameObject infoGatheringUI;
-        [SerializeField] private GameEvent_SO switchFromInfoGatheringToSurvey;
+        [SerializeField] private GameEvent_SO activateInfoGathering;
+        [SerializeField] private GameEvent_SO activateSurvey;
         
         // Tracks if the error Coroutine (there no other) is running, to prevent the code to Start another
         private bool coroutineRunning = false;
@@ -25,7 +25,7 @@ namespace Features.InformationGathering.Logic
         public void SetParticipantInformation()
         {
             if (genderDropdown == null || ageField == null || gameExperienceDropdown == null) { return; }
-            if (infoGatheringUI == null || switchFromInfoGatheringToSurvey == null) { return; }
+            if (activateInfoGathering == null || activateSurvey == null) { return; }
 
             // Trigger the error message upon no values, invalid values are just being corrected
             if (ageField.text == "")
@@ -50,8 +50,8 @@ namespace Features.InformationGathering.Logic
             // Visual representation of the clamping
             ageField.text = age.ToString();
             
-            switchFromInfoGatheringToSurvey.Raise();
-            infoGatheringUI.SetActive(false);
+            activateSurvey.Raise();
+            activateInfoGathering.Raise();
         }
 
         /// <summary>
@@ -65,6 +65,22 @@ namespace Features.InformationGathering.Logic
             yield return new WaitForSeconds(5);
             errorMessage.gameObject.SetActive(false);
             coroutineRunning = false;
+        }
+
+        public void LimitAgeInput(string inputText)
+        {
+            var age = 0;
+            if (!string.IsNullOrEmpty(inputText))
+            {
+                age = int.Parse(inputText);
+            }
+            
+            if (age > 99)
+            {
+                age = 99;
+            }
+
+            ageField.text = age == 0 ? ageField.text: age.ToString();
         }
     }
 }

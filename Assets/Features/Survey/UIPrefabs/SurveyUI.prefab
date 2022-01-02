@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4085237871393717181}
-  - component: {fileID: 3027295635812325933}
-  - component: {fileID: 7088433216373171471}
   - component: {fileID: 2295010123935325437}
   m_Layer: 0
   m_Name: GameEventListener
@@ -33,62 +31,6 @@ Transform:
   m_Father: {fileID: 5558001453749558159}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3027295635812325933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 12341740469007277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  event: {fileID: 11400000, guid: ecb3d5dcd5557fc428e0c9360a20cabe, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1402495561054487020}
-        m_TargetAssemblyTypeName: Features.Survey.UILogic.SurveyController, Assembly-CSharp
-        m_MethodName: OnCalculateResult
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &7088433216373171471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 12341740469007277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  event: {fileID: 11400000, guid: ee65c12c897aa394d894c48de47eaf1b, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1402495561054487020}
-        m_TargetAssemblyTypeName: Features.Survey.UILogic.SurveyController, Assembly-CSharp
-        m_MethodName: OnAutoCalculateResult
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &2295010123935325437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +91,94 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4607412454525529314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1531524778474615217}
+  - component: {fileID: 5219742172422445385}
+  - component: {fileID: 3137894451490429721}
+  m_Layer: 0
+  m_Name: GameEventListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1531524778474615217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4607412454525529314}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 6223636772432124549}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5219742172422445385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4607412454525529314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: ecb3d5dcd5557fc428e0c9360a20cabe, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1402495561054487020}
+        m_TargetAssemblyTypeName: Features.Survey.UILogic.SurveyController, Assembly-CSharp
+        m_MethodName: OnCalculateResult
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3137894451490429721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4607412454525529314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: ee65c12c897aa394d894c48de47eaf1b, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1402495561054487020}
+        m_TargetAssemblyTypeName: Features.Survey.UILogic.SurveyController, Assembly-CSharp
+        m_MethodName: OnAutoCalculateResult
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6223636772111388508
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +394,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 6223636772111388511}
+  - {fileID: 1531524778474615217}
   m_Father: {fileID: 5558001453749558159}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1215,14 +1246,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &8270559226723821315 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7339233551689892876, guid: cde5c2166472efe4cb07c1f25481fc6d, type: 3}
-  m_PrefabInstance: {fileID: 1665452029061440271}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7244102110093204130 stripped
+--- !u!114 &986756952885976704 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8328536384523106733, guid: cde5c2166472efe4cb07c1f25481fc6d, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1922322305158184335, guid: cde5c2166472efe4cb07c1f25481fc6d, type: 3}
   m_PrefabInstance: {fileID: 1665452029061440271}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -1231,9 +1257,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &8270559226723821315 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7339233551689892876, guid: cde5c2166472efe4cb07c1f25481fc6d, type: 3}
+  m_PrefabInstance: {fileID: 1665452029061440271}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1427916061386820623 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 345692899542855424, guid: cde5c2166472efe4cb07c1f25481fc6d, type: 3}
+  m_PrefabInstance: {fileID: 1665452029061440271}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7244102110093204130 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8328536384523106733, guid: cde5c2166472efe4cb07c1f25481fc6d, type: 3}
   m_PrefabInstance: {fileID: 1665452029061440271}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -1289,17 +1331,6 @@ MonoBehaviour:
 --- !u!114 &7060545731622973830 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8566065452371972745, guid: cde5c2166472efe4cb07c1f25481fc6d, type: 3}
-  m_PrefabInstance: {fileID: 1665452029061440271}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &986756952885976704 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1922322305158184335, guid: cde5c2166472efe4cb07c1f25481fc6d, type: 3}
   m_PrefabInstance: {fileID: 1665452029061440271}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

@@ -445,7 +445,20 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7978590687352405713}
+        m_TargetAssemblyTypeName: Features.InformationGathering.Logic.SaveParticipantInformation,
+          Assembly-CSharp
+        m_MethodName: LimitAgeInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3857,8 +3870,8 @@ MonoBehaviour:
   genderDropdown: {fileID: 3472298841926621765}
   ageField: {fileID: 1945825307}
   gameExperienceDropdown: {fileID: 289234528166561726}
-  infoGatheringUI: {fileID: 8744320720805313779}
-  switchFromInfoGatheringToSurvey: {fileID: 11400000, guid: 36ddaac6ef9f59147861adf3b1516c75, type: 2}
+  activateInfoGathering: {fileID: 11400000, guid: f9a16438fd38767499774d76ac1adf7e, type: 2}
+  activateSurvey: {fileID: 11400000, guid: 36ddaac6ef9f59147861adf3b1516c75, type: 2}
 --- !u!1 &8810617393234602345
 GameObject:
   m_ObjectHideFlags: 0
@@ -3949,6 +3962,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1627691444804401374}
+  - component: {fileID: 4434975534778045406}
   m_Layer: 0
   m_Name: GameEventListener
   m_TagString: Untagged
@@ -3970,6 +3984,34 @@ Transform:
   m_Father: {fileID: 3136653099479293893}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4434975534778045406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8871564635056171944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: f9a16438fd38767499774d76ac1adf7e, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4282487991613886489}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9186006972139713600
 GameObject:
   m_ObjectHideFlags: 0

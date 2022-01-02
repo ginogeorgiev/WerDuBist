@@ -206,11 +206,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &900166661 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1826059079826608195, guid: b11357f47965e2b4aac2b880990b610e, type: 3}
-  m_PrefabInstance: {fileID: 6223636773004987453}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1624742477
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,50 +331,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7561482384153678987, guid: 93881ddebc99376478f8a2738d16bc3d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7561482384153678987, guid: 93881ddebc99376478f8a2738d16bc3d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7561482384153678987, guid: 93881ddebc99376478f8a2738d16bc3d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 900166661}
-    - target: {fileID: 7561482384153678987, guid: 93881ddebc99376478f8a2738d16bc3d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 11400000, guid: 97217606651063f4ca0b2b3321e371c8, type: 2}
-    - target: {fileID: 7561482384153678987, guid: 93881ddebc99376478f8a2738d16bc3d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7561482384153678987, guid: 93881ddebc99376478f8a2738d16bc3d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 7561482384153678987, guid: 93881ddebc99376478f8a2738d16bc3d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7561482384153678987, guid: 93881ddebc99376478f8a2738d16bc3d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: DataStructures.Variables.ParticipantInformationVariable, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7561482384153678987, guid: 93881ddebc99376478f8a2738d16bc3d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7561482384153678987, guid: 93881ddebc99376478f8a2738d16bc3d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: DataStructures.Variables.ParticipantInformationVariable, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7978590687352405713, guid: 93881ddebc99376478f8a2738d16bc3d, type: 3}
-      propertyPath: surveyUI
-      value: 
-      objectReference: {fileID: 900166661}
     - target: {fileID: 8744320720805313779, guid: 93881ddebc99376478f8a2738d16bc3d, type: 3}
       propertyPath: m_Name
       value: InformationGatheringUI
