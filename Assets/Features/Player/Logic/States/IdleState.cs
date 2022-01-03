@@ -1,5 +1,6 @@
 using DataStructures.StateMachineLogic;
 using DataStructures.Variables;
+using Features.NPCs.Logic;
 using Features.Tutorial.Logic;
 using UnityEngine;
 
@@ -39,6 +40,11 @@ namespace Features.Player.Logic.States
         public void Exit()
         {
             tutorialData.OnDelayedDeActivateAllInfos.Raise();
+            
+            if (tutorialData.NpcFocus.Get() != null)
+            {
+                tutorialData.OnActivateInteractInfo.Raise();
+            }
         }
     }
 }

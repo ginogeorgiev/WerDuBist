@@ -3,6 +3,7 @@ using DataStructures.Event;
 using Features.Dialog.Logic;
 using Features.Input;
 using Features.Quests.Logic;
+using Features.Survey.Logic;
 using UnityEngine;
 
 namespace Features.NPCs.Logic
@@ -36,9 +37,13 @@ namespace Features.NPCs.Logic
         [SerializeField] private List<ConversationElement> conversationElements;
         [SerializeField] private int conversationIndex;
 
+        [SerializeField] private QuestEvent onCompleteQuest;
+
         public NPCData_SO Data => data;
 
         public DialogConversation_SO ActiveConversation => activeConversation;
+
+        public ConversationElement GetActiveConversationElement => conversationElements[conversationIndex];
         
         private void Start()
         {
@@ -57,6 +62,7 @@ namespace Features.NPCs.Logic
             {
                 if (conversationElements[conversationIndex].Quest.CheckGoals())
                 {
+                    onCompleteQuest.Raise(conversationElements[conversationIndex].Quest);
                     activeConversation = conversationElements[conversationIndex].DialogConversationRight;
                     onActiveConversationChanged.Raise();
                 }
@@ -68,12 +74,12 @@ namespace Features.NPCs.Logic
             }
             else
             {
-                activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
-                onActiveConversationChanged.Raise();
                 if (conversationIndex + 1 < conversationElements.Count)
                 {
                     conversationIndex++;
                 }
+                activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
+                onActiveConversationChanged.Raise();
             }
         }
 

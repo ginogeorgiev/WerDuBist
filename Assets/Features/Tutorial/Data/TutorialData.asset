@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abac8c27252c43aca1f694c9694fe753, type: 3}
   m_Name: TutorialData
   m_EditorClassIdentifier: 
+  npcFocus: {fileID: 11400000, guid: e1b8dc06bac9c86478b1a76b4ce599c6, type: 2}
+  isPlayerInConversation: {fileID: 11400000, guid: 6ee1d4b71ec0ddc4b90a223589dd8f27, type: 2}
   onActivateAllInfos: {fileID: 11400000, guid: dc30945e64423ac489032c07482dcf9a, type: 2}
   onDeActivateAllInfos: {fileID: 11400000, guid: a314a27ade241a447948215a1e4d8679, type: 2}
   onDelayedActivateAllInfos: {fileID: 11400000, guid: b948dce4eb2468347bae9305016e50c8, type: 2}

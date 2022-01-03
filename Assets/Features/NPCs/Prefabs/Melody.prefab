@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4204690260697107188}
   - component: {fileID: 4204690260697107191}
   - component: {fileID: 5990918384910721265}
-  - component: {fileID: 7038371336968678669}
   - component: {fileID: 987336911311489786}
   m_Layer: 7
   m_Name: Melody
@@ -64,6 +63,7 @@ MonoBehaviour:
     dialogConversationRight: {fileID: 11400000, guid: 70052adffce0b1f448e264cdd3d87935, type: 2}
     quest: {fileID: 11400000, guid: 176559f37d56ba74ca9fc4bf4febde95, type: 2}
   conversationIndex: 0
+  onCompleteQuest: {fileID: 11400000, guid: a1a72b2b5c2b8f44f840edf2784f961e, type: 2}
 --- !u!212 &4204690260697107189
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -166,34 +166,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7038371336968678669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4204690260697107190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  event: {fileID: 11400000, guid: 3a84e130d011c6a4387ff5167823cbdf, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4204690260697107186}
-        m_TargetAssemblyTypeName: Features.Dialog.Logic.NpcBehaviour, Assembly-CSharp
-        m_MethodName: OnCheckForNextConversationPart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &987336911311489786
 MonoBehaviour:
   m_ObjectHideFlags: 0

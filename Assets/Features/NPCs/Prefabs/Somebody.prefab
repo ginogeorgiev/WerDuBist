@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4813800963781431913}
   - component: {fileID: 4813800963781431914}
   - component: {fileID: 3148022172622043244}
-  - component: {fileID: 1817572485697795472}
   - component: {fileID: 8441918660982805095}
   m_Layer: 7
   m_Name: Somebody
@@ -51,7 +50,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   npcFocus: {fileID: 11400000, guid: e1b8dc06bac9c86478b1a76b4ce599c6, type: 2}
-  onAdvanceConversationLine: {fileID: 11400000, guid: a7b19cf6b77365f4b814396b0fab5fde, type: 2}
   data: {fileID: 11400000, guid: a5d20b15f28ea8143b6531e8889a2eaf, type: 2}
   activeConversation: {fileID: 0}
   onActiveConversationChanged: {fileID: 11400000, guid: a98456addc653ad4fa3f69cbe444cb67, type: 2}
@@ -61,6 +59,7 @@ MonoBehaviour:
     dialogConversationRight: {fileID: 0}
     quest: {fileID: 0}
   conversationIndex: 0
+  onCompleteQuest: {fileID: 11400000, guid: a1a72b2b5c2b8f44f840edf2784f961e, type: 2}
 --- !u!212 &4813800963781431912
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -163,34 +162,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1817572485697795472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4813800963781431915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  event: {fileID: 11400000, guid: 3a84e130d011c6a4387ff5167823cbdf, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4813800963781431919}
-        m_TargetAssemblyTypeName: Features.Dialog.Logic.NpcBehaviour, Assembly-CSharp
-        m_MethodName: OnCheckForNextConversationPart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &8441918660982805095
 MonoBehaviour:
   m_ObjectHideFlags: 0
