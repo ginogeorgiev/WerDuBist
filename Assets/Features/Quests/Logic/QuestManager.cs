@@ -35,7 +35,7 @@ namespace Features.Quests.Logic
 
             foreach (var quest in firstQuests)
             {
-                 onQuestUnlocked.Raise(quest);
+                onQuestUnlocked.Raise(quest);
             }
         }
 
