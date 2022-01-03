@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DataStructures.Event;
 using UnityEngine;
 using Features.Quests.Logic;
@@ -10,12 +11,24 @@ namespace Features.Map.Logic
         [SerializeField] private GameObject mapUI;
 
         [SerializeField] private Focus_SO<Quest_SO> questFocus;
-        [SerializeField] private GameObject questIcon;
+
+        [SerializeField] private GameObject newQuest;
+        [SerializeField] private GameObject quest_Active;
+        [SerializeField] private GameObject quest_Ready;
+        [SerializeField] private GameObject questFocus_Active;
+        [SerializeField] private GameObject questFocus_Ready;
 
         [SerializeField] private GameEvent_SO onHideMiniMap;
         [SerializeField] private GameEvent_SO onShowMiniMap;
         
-        
+        [SerializeField] private QuestEvent onDisplayUnlockedQuest;
+        [SerializeField] private QuestEvent onDisplayActiveQuest;
+        [SerializeField] private QuestEvent onRemoveQuest;
+
+
+        private Dictionary<int, GameObject> newQuestMarkers = new Dictionary<int, GameObject>();
+        private Dictionary<int, GameObject> activeQuestMarkers = new Dictionary<int, GameObject>();
+
         public void ToggleMapUI()
         {
             if (mapUI.activeSelf)
@@ -30,17 +43,41 @@ namespace Features.Map.Logic
             }
         }
 
-        private void Update()
+        private void Start()
         {
-           if (questFocus.Get()!=null)
-           {
-               questIcon.SetActive(true);
-               questIcon.transform.position =  WorldToMap(questFocus.Get().QuestPosition);
-           }
-           else
-           {
-               questIcon.SetActive(false);
-           }
+            onDisplayUnlockedQuest.RegisterListener(DisplayUnlockedQuest);
+            onDisplayActiveQuest.RegisterListener(DisplayActiveQuest);
+           
+            
+            // if (questFocus.Get()!=null)
+            // {
+            //     questFocus_Active.SetActive(true);
+            //     questFocus_Active.transform.position =  WorldToMap(questFocus.Get().QuestPosition);
+            // }
+            // else
+            // {
+            //     questFocus_Active.SetActive(false);
+            // }
+        }
+
+        private void DisplayUnlockedQuest(Quest_SO quest)
+        {
+            
+            var obj= Instantiate(newQuest, WorldToMap(quest.QuestPosition), Quaternion.identity);
+            obj.transform.SetParent(mapUI.transform);
+
+            newQuestMarkers.Add(quest.QuestID, obj);
+        }
+        
+        private void DisplayActiveQuest(Quest_SO quest)
+        {
+            Destroy(newQuestMarkers[quest.QuestID]);
+            newQuestMarkers.Remove(quest.QuestID);
+            
+            // var obj= Instantiate(newQuest, WorldToMap(quest.QuestPosition), Quaternion.identity);
+            // obj.transform.SetParent(mapUI.transform);
+            //
+            activeQuestMarkers.Add(quest.QuestID, null);
         }
 
         private Vector3 WorldToMap(Vector3 worldCoordinates)
