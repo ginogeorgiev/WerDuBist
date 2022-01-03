@@ -94,7 +94,7 @@ namespace Features.Survey.UILogic
                             case "Neither" when toggle.isOn:
                                 question.Question.Aspect.Add(2);
                                 break;
-                            case "PartlyDisAgree" when toggle.isOn:
+                            case "PartlyDisagree" when toggle.isOn:
                                 question.Question.Aspect.Add(1);
                                 break;
                         }
