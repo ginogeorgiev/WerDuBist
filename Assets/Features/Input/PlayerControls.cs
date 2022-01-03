@@ -39,6 +39,14 @@ namespace Features.Input
                 {
                     ""name"": ""Interact"",
                     ""type"": ""Button"",
+                    ""id"": ""cd7ef38d-a610-446c-8d76-0f4a560e33b3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Map"",
+                    ""type"": ""Button"",
                     ""id"": ""e3e31600-b6b1-452d-8dd8-fe0fc01ae79f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
@@ -180,12 +188,23 @@ namespace Features.Input
                 },
                 {
                     ""name"": """",
-                    ""id"": ""9ae8c111-0704-4cbf-bcff-4ac57881d490"",
+                    ""id"": ""029f924d-123a-4464-85ec-137bcd294c09"",
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9ae8c111-0704-4cbf-bcff-4ac57881d490"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Map"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -199,6 +218,7 @@ namespace Features.Input
             m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
             m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
             m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
+            m_Player_Map = m_Player.FindAction("Map", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -251,6 +271,7 @@ namespace Features.Input
         private readonly InputAction m_Player_Movement;
         private readonly InputAction m_Player_Sprint;
         private readonly InputAction m_Player_Interact;
+        private readonly InputAction m_Player_Map;
         public struct PlayerActions
         {
             private @PlayerControls m_Wrapper;
@@ -258,6 +279,7 @@ namespace Features.Input
             public InputAction @Movement => m_Wrapper.m_Player_Movement;
             public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
             public InputAction @Interact => m_Wrapper.m_Player_Interact;
+            public InputAction @Map => m_Wrapper.m_Player_Map;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -276,6 +298,9 @@ namespace Features.Input
                     @Interact.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
                     @Interact.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
                     @Interact.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                    @Map.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMap;
+                    @Map.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMap;
+                    @Map.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMap;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -289,6 +314,9 @@ namespace Features.Input
                     @Interact.started += instance.OnInteract;
                     @Interact.performed += instance.OnInteract;
                     @Interact.canceled += instance.OnInteract;
+                    @Map.started += instance.OnMap;
+                    @Map.performed += instance.OnMap;
+                    @Map.canceled += instance.OnMap;
                 }
             }
         }
@@ -298,6 +326,7 @@ namespace Features.Input
             void OnMovement(InputAction.CallbackContext context);
             void OnSprint(InputAction.CallbackContext context);
             void OnInteract(InputAction.CallbackContext context);
+            void OnMap(InputAction.CallbackContext context);
         }
     }
 }

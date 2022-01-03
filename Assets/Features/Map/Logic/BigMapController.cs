@@ -1,8 +1,10 @@
+using System;
 using System.Collections.Generic;
 using DataStructures.Event;
 using UnityEngine;
 using Features.Quests.Logic;
 using DataStructures.Focus;
+using Features.Input;
 using UnityEngine.UI;
 
 namespace Features.Map.Logic
@@ -36,7 +38,30 @@ namespace Features.Map.Logic
             onDisplayUnlockedQuest.RegisterListener(DisplayUnlockedQuest);
             onDisplayActiveQuest.RegisterListener(DisplayActiveQuest);
             onRemoveQuest.RegisterListener(RemoveQuest);
+            
+            playerControls = new PlayerControls();
         }
+
+        public void Start()
+        {
+            playerControls.Player.Map.started += _ => ToggleMapUI();
+        }
+        
+        #region Input related
+        
+        private PlayerControls playerControls;
+
+        private void OnEnable()
+        {
+            playerControls.Enable();
+        }
+
+        private void OnDisable()
+        {
+            playerControls.Disable();
+        }
+        
+        #endregion
 
         public void ToggleMapUI()
         {
