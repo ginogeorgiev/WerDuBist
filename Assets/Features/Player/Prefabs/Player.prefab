@@ -239,8 +239,9 @@ MonoBehaviour:
   playerInventory: {fileID: 11400000, guid: 721fa7d72435aad499c399070584d507, type: 2}
   playerMovementSpeed: {fileID: 11400000, guid: a2cffe57136c33146baa72577ed8f290, type: 2}
   isPlayerInConversation: {fileID: 11400000, guid: 6ee1d4b71ec0ddc4b90a223589dd8f27, type: 2}
-  conversationFocus: {fileID: 11400000, guid: f9e5abd30ea25554db73b774940c9c7a, type: 2}
+  isPlayerIdle: {fileID: 11400000, guid: 730e1ff978f4c2f4f81d9627ae47622d, type: 2}
   transitionData: {fileID: 11400000, guid: 73c969799c95a9c4e8b7fad43380a837, type: 2}
+  tutorialData: {fileID: 11400000, guid: 2c11094f41d7ae04c9b54ff87bd93fc2, type: 2}
   onGridElementEntered: {fileID: 11400000, guid: 7aaffad7639e4d34f889889dd724f31e, type: 2}
 --- !u!212 &6592273595326390539
 SpriteRenderer:
@@ -350,7 +351,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 1.02, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

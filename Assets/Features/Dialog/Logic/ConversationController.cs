@@ -2,6 +2,7 @@ using DataStructures.Event;
 using DataStructures.Variables;
 using Features.Input;
 using Features.NPCs.Logic;
+using Features.Tutorial.Logic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,6 +15,7 @@ namespace Features.Dialog.Logic
     {
         [SerializeField] private GameEvent_SO onCheckForNextConversationPart;
         [SerializeField] private NpcFocus_So npcFocus;
+        [SerializeField] private TutorialData_SO tutorialData;
         [SerializeField] private DialogConversation_SO dialogConversation;
         [SerializeField] private BoolVariable isPlayerInConversation;
         [SerializeField] private QuestionEvent questionEvent;
@@ -109,7 +111,7 @@ namespace Features.Dialog.Logic
 
         private void AdvanceLine()
         {
-            Debug.Log("Space");
+            tutorialData.OnDeActivateInteractInfo.Raise();
             
             if (questionUI.activeSelf) return;
             
