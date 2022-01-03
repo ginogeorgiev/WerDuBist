@@ -14,11 +14,9 @@ namespace Features.Map.Logic
         [SerializeField] private Focus_SO<Quest_SO> questFocus;
 
         [SerializeField] private GameObject questMarker;
-        [SerializeField] private Sprite quest_New;
-        [SerializeField] private Sprite quest_Active;
-        [SerializeField] private Sprite quest_Ready;
-        [SerializeField] private Sprite questFocus_Active;
-        [SerializeField] private Sprite questFocus_Ready;
+        [SerializeField] private Sprite questNew;
+        [SerializeField] private Sprite questActive;
+        [SerializeField] private Sprite questFocusActive;
 
         [SerializeField] private GameEvent_SO onHideMiniMap;
         [SerializeField] private GameEvent_SO onShowMiniMap;
@@ -28,9 +26,17 @@ namespace Features.Map.Logic
         [SerializeField] private QuestEvent onRemoveQuest;
 
 
-        private Dictionary<int, GameObject> newQuestMarkers = new Dictionary<int, GameObject>();
-        private Dictionary<int, GameObject> activeQuestMarkers = new Dictionary<int, GameObject>();
+        private readonly Dictionary<int, GameObject> newQuestMarkers = new Dictionary<int, GameObject>();
+        private readonly Dictionary<int, GameObject> activeQuestMarkers = new Dictionary<int, GameObject>();
         private GameObject focusMarker;
+        
+
+        private void Awake()
+        {
+            onDisplayUnlockedQuest.RegisterListener(DisplayUnlockedQuest);
+            onDisplayActiveQuest.RegisterListener(DisplayActiveQuest);
+            onRemoveQuest.RegisterListener(RemoveQuest);
+        }
 
         public void ToggleMapUI()
         {
@@ -46,18 +52,11 @@ namespace Features.Map.Logic
             }
         }
 
-        private void Awake()
-        {
-            onDisplayUnlockedQuest.RegisterListener(DisplayUnlockedQuest);
-            onDisplayActiveQuest.RegisterListener(DisplayActiveQuest);
-            onRemoveQuest.RegisterListener(RemoveQuest);
-        }
-
         private void DisplayUnlockedQuest(Quest_SO quest)
         {
             var obj= Instantiate(questMarker, WorldToMap(quest.QuestPosition), Quaternion.identity);
             obj.transform.SetParent(mapUI.transform);
-            obj.GetComponent<Image>().sprite = quest_New;
+            obj.GetComponent<Image>().sprite = questNew;
 
             newQuestMarkers.Add(quest.QuestID, obj);
         }
@@ -65,7 +64,7 @@ namespace Features.Map.Logic
         private void DisplayActiveQuest(Quest_SO quest)
         {
             var obj = newQuestMarkers[quest.QuestID];
-            obj.GetComponent<Image>().sprite = quest_Active;
+            obj.GetComponent<Image>().sprite = questActive;
             
             newQuestMarkers.Remove(quest.QuestID);
             activeQuestMarkers.Add(quest.QuestID, obj);
@@ -77,11 +76,11 @@ namespace Features.Map.Logic
             
             if (focusMarker!=null)
             {
-                focusMarker.GetComponent<Image>().sprite = quest_Active;
+                focusMarker.GetComponent<Image>().sprite = questActive;
             }
             
             var obj = activeQuestMarkers[questFocus.Get().QuestID];
-            obj.GetComponent<Image>().sprite = questFocus_Active;
+            obj.GetComponent<Image>().sprite = questFocusActive;
             focusMarker = obj;
         }
         
@@ -91,7 +90,7 @@ namespace Features.Map.Logic
             activeQuestMarkers.Remove(quest.QuestID);
         }
 
-        private Vector3 WorldToMap(Vector3 worldCoordinates)
+        private static Vector3 WorldToMap(Vector3 worldCoordinates)
         {
             return new Vector3(
                 440 + (worldCoordinates.x / 30 * 530), 
