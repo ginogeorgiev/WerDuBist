@@ -14,9 +14,9 @@ namespace Features.Map.Logic
         [SerializeField] private Focus_SO<Quest_SO> questFocus;
 
         [SerializeField] private GameObject questMarker;
-        [SerializeField] private Sprite questNew;
         [SerializeField] private Sprite questActive;
         [SerializeField] private Sprite questFocusActive;
+        [SerializeField] private Sprite questNew;
 
         [SerializeField] private GameEvent_SO onHideMiniMap;
         [SerializeField] private GameEvent_SO onShowMiniMap;

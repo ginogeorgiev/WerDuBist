@@ -1518,11 +1518,9 @@ MonoBehaviour:
   mapUI: {fileID: 1988953952}
   questFocus: {fileID: 11400000, guid: 9a54019ef02478e4385862f29bec9568, type: 2}
   questMarker: {fileID: 7216352974033543576, guid: 49b865d6e55708e4583760924448f0f6, type: 3}
-  quest_New: {fileID: 21300000, guid: 82e5bbbf302f0ab49b867f0abd589430, type: 3}
-  quest_Active: {fileID: 21300000, guid: c49c9181f9f2d924ab721c777d4fdd16, type: 3}
-  quest_Ready: {fileID: 21300000, guid: 08317f5db2a3f2540b70ed070a3fb13c, type: 3}
-  questFocus_Active: {fileID: 21300000, guid: 32729cb94c5febe409ce978c581a42a9, type: 3}
-  questFocus_Ready: {fileID: 21300000, guid: 6d2fae89d4b549146bb01aad46e82f74, type: 3}
+  questActive: {fileID: 21300000, guid: c49c9181f9f2d924ab721c777d4fdd16, type: 3}
+  questFocusActive: {fileID: 21300000, guid: 32729cb94c5febe409ce978c581a42a9, type: 3}
+  questNew: {fileID: 21300000, guid: 82e5bbbf302f0ab49b867f0abd589430, type: 3}
   onHideMiniMap: {fileID: 11400000, guid: 7f3b270cb2892f7408b6f880d40069d2, type: 2}
   onShowMiniMap: {fileID: 11400000, guid: c5ed0d3423e4f244ebdc2acbf1e0b515, type: 2}
   onDisplayUnlockedQuest: {fileID: 11400000, guid: 7a0d7a9830ed7de4285ccafb1ad07a9f, type: 2}
@@ -3319,7 +3317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5506266131864378915, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 868
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5506266131864378915, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3379,11 +3377,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8432286848697763842, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8432286848697763842, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 207
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8432286848697763842, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.y
