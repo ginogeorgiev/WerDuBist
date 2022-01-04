@@ -843,7 +843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialData: {fileID: 11400000, guid: 2c11094f41d7ae04c9b54ff87bd93fc2, type: 2}
-  isPlayerIdle: {fileID: 11400000, guid: 730e1ff978f4c2f4f81d9627ae47622d, type: 2}
+  npcFocus: {fileID: 11400000, guid: e1b8dc06bac9c86478b1a76b4ce599c6, type: 2}
 --- !u!223 &8420188929599723182
 Canvas:
   m_ObjectHideFlags: 0

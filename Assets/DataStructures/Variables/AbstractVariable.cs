@@ -20,6 +20,8 @@ namespace DataStructures.Variables
 
         public void Set(T value)
         {
+            if (value.Equals(runtimeValue)) return;
+            
             runtimeValue = value;
             if(onValueChanged != null) onValueChanged.Raise();
         }
