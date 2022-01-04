@@ -16,6 +16,6 @@ MonoBehaviour:
   choices:
   - text: Na dann mal los.
     dialogConversation: {fileID: 0}
-    choiceEvent: {fileID: 11400000, guid: 282b474c47840ac4cba94211528efebe, type: 2}
+    choiceEvent: {fileID: 11400000, guid: d882be4c82286df4b94ba25cbe00c803, type: 2}
     questEvent: {fileID: 0}
     quest: {fileID: 0}
