@@ -79,9 +79,9 @@ namespace Features.Map.Logic
 
         private void DisplayUnlockedQuest(Quest_SO quest)
         {
-            var obj= Instantiate(questMarker, WorldToMap(quest.QuestPosition), Quaternion.identity);
+            var obj= Instantiate(questMarker, quest.QuestPosition, Quaternion.identity);
             obj.transform.SetParent(mapUI.transform);
-            obj.GetComponent<Image>().sprite = questNew;
+            obj.GetComponent<SpriteRenderer>().sprite = questNew;
 
             newQuestMarkers.Add(quest.QuestID, obj);
         }
@@ -89,7 +89,7 @@ namespace Features.Map.Logic
         private void DisplayActiveQuest(Quest_SO quest)
         {
             var obj = newQuestMarkers[quest.QuestID];
-            obj.GetComponent<Image>().sprite = questActive;
+            obj.GetComponent<SpriteRenderer>().sprite = questActive;
             
             newQuestMarkers.Remove(quest.QuestID);
             activeQuestMarkers.Add(quest.QuestID, obj);
@@ -101,11 +101,11 @@ namespace Features.Map.Logic
             
             if (focusMarker!=null)
             {
-                focusMarker.GetComponent<Image>().sprite = questActive;
+                focusMarker.GetComponent<SpriteRenderer>().sprite = questActive;
             }
             
             var obj = activeQuestMarkers[questFocus.Get().QuestID];
-            obj.GetComponent<Image>().sprite = questFocusActive;
+            obj.GetComponent<SpriteRenderer>().sprite = questFocusActive;
             focusMarker = obj;
         }
         
