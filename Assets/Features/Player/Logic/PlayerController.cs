@@ -1,12 +1,13 @@
 using System;
 using System.Collections;
+using DataStructures.Event;
 using DataStructures.StateMachineLogic;
 using DataStructures.Variables;
-using Features.Dialog.Logic;
 using Features.GameLogic.Logic;
 using Features.Input;
 using Features.NPCs.Logic;
 using Features.Player.Logic.States;
+using Features.Tutorial.Logic;
 using Features.WorldGrid.Logic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -26,6 +27,8 @@ namespace Features.Player.Logic
         [SerializeField] private BoolVariable isPlayerInConversation;
 
         [SerializeField] private TransitionData transitionData;
+
+        [SerializeField] private TutorialData_SO tutorialData;
 
         [SerializeField] private GridElementEnteredEvent onGridElementEntered;
 
@@ -51,7 +54,7 @@ namespace Features.Player.Logic
             movementInputAction = playerControls.Player.Movement;
             sprintInputAction = playerControls.Player.Sprint;
 
-            idleState = new IdleState(animator, playerMovementSpeed, rigidbody2D);
+            idleState = new IdleState(animator, playerMovementSpeed, rigidbody2D, tutorialData);
             walkingState = new WalkingState(animator, playerMovementSpeed, movementInputAction, transform, rigidbody2D);
             sprintingState = new SprintingState(animator, playerMovementSpeed, movementInputAction, transform, rigidbody2D);
             conversationState = new ConversationState(animator, playerMovementSpeed, rigidbody2D);
@@ -136,6 +139,7 @@ namespace Features.Player.Logic
             if (other.CompareTag("NPC"))
             {
                 other.GetComponent<NpcBehaviour>().SetNpcFocus();
+                tutorialData.OnActivateInteractInfo.Raise();
             }
         }
 
@@ -144,6 +148,7 @@ namespace Features.Player.Logic
             if (other.CompareTag("NPC"))
             {
                 other.GetComponent<NpcBehaviour>().RemoveNpcFocus();
+                tutorialData.OnDeActivateInteractInfo.Raise();
             }
         }
 

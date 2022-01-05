@@ -14,12 +14,20 @@ namespace DataStructures.RuntimeSet
 
         public void Add(T item)
         {
-            items.Add(item);
+            if
+                (!items.Contains(item))
+            {
+                items.Add(item);
+            }
         }
 
         public void Remove(T item)
         {
-            items.Remove(item);
+            if
+                (!items.Contains(item))
+            {
+                items.Remove(item);
+            }
         }
     }
 }

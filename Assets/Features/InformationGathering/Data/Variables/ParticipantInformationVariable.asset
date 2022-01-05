@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c7e72632c7541779b8b44285896315f, type: 3}
+  m_Name: ParticipantInformationVariable
+  m_EditorClassIdentifier: 
+  onValueChanged: {fileID: 11400000, guid: ee4b3a190a0f14840bfa6b0ad10f2868, type: 2}

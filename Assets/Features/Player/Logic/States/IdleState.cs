@@ -1,5 +1,7 @@
 using DataStructures.StateMachineLogic;
 using DataStructures.Variables;
+using Features.NPCs.Logic;
+using Features.Tutorial.Logic;
 using UnityEngine;
 
 namespace Features.Player.Logic.States
@@ -9,12 +11,15 @@ namespace Features.Player.Logic.States
         private Animator playerAnimator;
         private FloatVariable movementSpeed;
         private Rigidbody2D playerRigidbody;
-        
-        public IdleState(Animator animator, FloatVariable movementSpeed, Rigidbody2D playerRigidbody)
+
+        private TutorialData_SO tutorialData;
+
+        public IdleState(Animator animator, FloatVariable movementSpeed, Rigidbody2D playerRigidbody, TutorialData_SO tutorialData)
         {
             this.playerAnimator = animator;
             this.movementSpeed = movementSpeed;
             this.playerRigidbody = playerRigidbody;
+            this.tutorialData = tutorialData;
         }
         
         //initialization to the beginning
@@ -23,6 +28,7 @@ namespace Features.Player.Logic.States
             playerAnimator.SetBool("isWalking", false);
             movementSpeed.Set(0f);
             playerRigidbody.velocity = Vector2.zero;
+            tutorialData.OnDelayedActivateAllInfos.Raise();
         }
 
         // doing stuff continuously
@@ -33,6 +39,12 @@ namespace Features.Player.Logic.States
         // what to do if machine kicks it out
         public void Exit()
         {
+            tutorialData.OnDelayedDeActivateAllInfos.Raise();
+            
+            if (tutorialData.NpcFocus.Get() != null)
+            {
+                tutorialData.OnActivateInteractInfo.Raise();
+            }
         }
     }
 }

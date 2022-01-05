@@ -2,6 +2,7 @@ using DataStructures.Event;
 using DataStructures.Variables;
 using Features.Input;
 using Features.NPCs.Logic;
+using Features.Tutorial.Logic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,8 +13,8 @@ namespace Features.Dialog.Logic
 
     public class ConversationController : MonoBehaviour
     {
-        [SerializeField] private GameEvent_SO onCheckForNextConversationPart;
         [SerializeField] private NpcFocus_So npcFocus;
+        [SerializeField] private TutorialData_SO tutorialData;
         [SerializeField] private DialogConversation_SO dialogConversation;
         [SerializeField] private BoolVariable isPlayerInConversation;
         [SerializeField] private QuestionEvent questionEvent;
@@ -65,7 +66,6 @@ namespace Features.Dialog.Logic
         {
             if (dialogConversation.DialogQuestion != null)
             {
-                isPlayerInConversation.SetFalse();
                 questionEvent.Invoke(dialogConversation.DialogQuestion);
                 EndConversation();
             }
@@ -75,8 +75,10 @@ namespace Features.Dialog.Logic
             }
             else
             {
-                EndConversation();
                 isPlayerInConversation.SetFalse();
+                
+                EndConversation();
+                
             }
         }
 
@@ -95,27 +97,32 @@ namespace Features.Dialog.Logic
             conversationStarted = false;
             speakerUIControllerLeft.Hide();
             speakerUIControllerRight.Hide();
-            onCheckForNextConversationPart.Raise();
+            
+            
+            npcFocus.Get().OnCheckForNextConversationPart();
         }
 
         private void Initialize()
         {
-            onCheckForNextConversationPart.Raise();
             conversationStarted = true;
             activeLineIndex = 0;
             speakerUIControllerLeft.Speaker = dialogConversation.SpeakerLeft;
             speakerUIControllerRight.Speaker = dialogConversation.SpeakerRight;
+
+            if (npcFocus.Get().GetActiveConversationElement.CheckQuestCompletion)
+            {
+                npcFocus.Get().OnCheckForNextConversationPart();
+            }
         }
 
         private void AdvanceLine()
         {
-            Debug.Log("Space");
-            
             if (questionUI.activeSelf) return;
             
             if (dialogConversation == null) return;
             
             isPlayerInConversation.SetTrue();
+            tutorialData.OnDeActivateInteractInfo.Raise();
             
             if (!conversationStarted) Initialize();
 

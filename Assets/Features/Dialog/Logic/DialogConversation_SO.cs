@@ -11,7 +11,7 @@ namespace Features.Dialog.Logic
         [SerializeField] private Line[] lines;
         [SerializeField] private DialogQuestion_SO dialogQuestion;
         [SerializeField] private DialogConversation_SO nextDialogConversationStep;
-
+        
         public NPCData_SO SpeakerLeft => speakerLeft;
 
         public NPCData_SO SpeakerRight => speakerRight;
