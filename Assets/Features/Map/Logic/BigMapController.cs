@@ -19,15 +19,11 @@ namespace Features.Map.Logic
         [SerializeField] private Sprite questActive;
         [SerializeField] private Sprite questFocusActive;
         [SerializeField] private Sprite questNew;
-
-        [SerializeField] private GameEvent_SO onHideMiniMap;
-        [SerializeField] private GameEvent_SO onShowMiniMap;
         
         [SerializeField] private QuestEvent onDisplayUnlockedQuest;
         [SerializeField] private QuestEvent onDisplayActiveQuest;
         [SerializeField] private QuestEvent onRemoveQuest;
-
-
+        
         private readonly Dictionary<int, GameObject> newQuestMarkers = new Dictionary<int, GameObject>();
         private readonly Dictionary<int, GameObject> activeQuestMarkers = new Dictionary<int, GameObject>();
         private GameObject focusMarker;
@@ -65,16 +61,7 @@ namespace Features.Map.Logic
 
         public void ToggleMapUI()
         {
-            if (mapUI.activeSelf)
-            {
-                mapUI.SetActive(false);
-                onShowMiniMap.Raise();
-            }
-            else
-            {
-                mapUI.SetActive(true);
-                onHideMiniMap.Raise();
-            }
+            mapUI.SetActive(!mapUI.activeSelf);
         }
 
         private void DisplayUnlockedQuest(Quest_SO quest)
@@ -114,14 +101,5 @@ namespace Features.Map.Logic
             Destroy(newQuestMarkers[quest.QuestID]);
             activeQuestMarkers.Remove(quest.QuestID);
         }
-
-        private static Vector3 WorldToMap(Vector3 worldCoordinates)
-        {
-            return new Vector3(
-                440 + (worldCoordinates.x / 30 * 530), 
-                245 + worldCoordinates.y / 21 * 369, 
-                worldCoordinates.z);
-        }
-
     }
 }

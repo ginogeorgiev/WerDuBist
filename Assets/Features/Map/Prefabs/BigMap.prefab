@@ -150,8 +150,6 @@ MonoBehaviour:
   questActive: {fileID: 21300000, guid: c49c9181f9f2d924ab721c777d4fdd16, type: 3}
   questFocusActive: {fileID: 21300000, guid: 32729cb94c5febe409ce978c581a42a9, type: 3}
   questNew: {fileID: 21300000, guid: 82e5bbbf302f0ab49b867f0abd589430, type: 3}
-  onHideMiniMap: {fileID: 11400000, guid: 7f3b270cb2892f7408b6f880d40069d2, type: 2}
-  onShowMiniMap: {fileID: 11400000, guid: c5ed0d3423e4f244ebdc2acbf1e0b515, type: 2}
   onDisplayUnlockedQuest: {fileID: 11400000, guid: 7a0d7a9830ed7de4285ccafb1ad07a9f, type: 2}
   onDisplayActiveQuest: {fileID: 11400000, guid: 8498b43859c2d57479baaad9cab97123, type: 2}
   onRemoveQuest: {fileID: 11400000, guid: c1e0e9372ce86704ab957429fa6d10ec, type: 2}
@@ -411,8 +409,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2313675079365724620}
-  - component: {fileID: 2313675079365724622}
-  - component: {fileID: 2313675079365724621}
   - component: {fileID: 2313675079365724623}
   - component: {fileID: 2313675079365724616}
   m_Layer: 5
@@ -436,62 +432,6 @@ Transform:
   m_Father: {fileID: 2313675078621799913}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2313675079365724622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2313675079365724627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  event: {fileID: 11400000, guid: 7f3b270cb2892f7408b6f880d40069d2, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Features.Map.Logic.MiniMapController, Assembly-CSharp
-        m_MethodName: HideMapUI
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2313675079365724621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2313675079365724627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  event: {fileID: 11400000, guid: c5ed0d3423e4f244ebdc2acbf1e0b515, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Features.Map.Logic.MiniMapController, Assembly-CSharp
-        m_MethodName: ShowMapUI
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &2313675079365724623
 MonoBehaviour:
   m_ObjectHideFlags: 0
