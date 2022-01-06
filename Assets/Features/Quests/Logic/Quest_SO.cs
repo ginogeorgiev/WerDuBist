@@ -18,6 +18,8 @@ namespace Features.Quests.Logic
         public string QuestDescription => description;
         public List<Goal> GoalList => goals;
         public Vector2 QuestPosition => position;
+        
+        public bool IsUnlocked { get; set; }
         public bool IsActive { get; set; }
         public bool IsCompleted { get; set; }
         
@@ -33,6 +35,7 @@ namespace Features.Quests.Logic
 
         public void Restore()
         {
+            IsUnlocked = false;
             IsActive = false;
             IsCompleted = false;
         }

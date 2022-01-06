@@ -47,11 +47,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}
   activeQuests: {fileID: 11400000, guid: 2e87e53019d0da74b98d373e3a509430, type: 2}
+  onQuestUnlocked: {fileID: 11400000, guid: 8f5648f89cd5125409176c7fad3a91df, type: 2}
+  onDisplayUnlockedQuest: {fileID: 11400000, guid: 7a0d7a9830ed7de4285ccafb1ad07a9f, type: 2}
   onQuestAccepted: {fileID: 11400000, guid: d3ded01f8c8bb7b43ab7640a65b29a4a, type: 2}
   onDisplayQuest: {fileID: 11400000, guid: 8498b43859c2d57479baaad9cab97123, type: 2}
   onCompleteQuest: {fileID: 11400000, guid: a1a72b2b5c2b8f44f840edf2784f961e, type: 2}
   onRemoveQuest: {fileID: 11400000, guid: c1e0e9372ce86704ab957429fa6d10ec, type: 2}
   focus: {fileID: 11400000, guid: 9a54019ef02478e4385862f29bec9568, type: 2}
+  firstQuests:
+  - {fileID: 11400000, guid: 176559f37d56ba74ca9fc4bf4febde95, type: 2}
+  - {fileID: 11400000, guid: 5b649c808943ac345a1f74bfa5d4056f, type: 2}
 --- !u!1 &4802871112802404793
 GameObject:
   m_ObjectHideFlags: 0
