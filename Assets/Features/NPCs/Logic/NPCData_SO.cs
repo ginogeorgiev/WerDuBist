@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Features.NPCs.Logic
 {
-    [CreateAssetMenu(fileName = "NewNPCData", menuName = "Feature/Dialog/NPCData")]
+    [CreateAssetMenu(fileName = "NewNPCData", menuName = "Feature/NPCs/NPCData")]
     public class NPCData_SO : ScriptableObject
     {
         [SerializeField] private string fullName;
