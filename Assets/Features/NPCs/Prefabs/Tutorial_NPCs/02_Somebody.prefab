@@ -14,7 +14,7 @@ PrefabInstance:
     - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: data
       value: 
-      objectReference: {fileID: 11400000, guid: a5d20b15f28ea8143b6531e8889a2eaf, type: 2}
+      objectReference: {fileID: 11400000, guid: 5beffcf89b8346b47ab405e626342162, type: 2}
     - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: conversationElements.Array.size
       value: 1
