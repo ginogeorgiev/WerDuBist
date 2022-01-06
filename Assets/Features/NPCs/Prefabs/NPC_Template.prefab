@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4204690260697107190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.78, y: -5.35, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -53,15 +53,7 @@ MonoBehaviour:
   data: {fileID: 0}
   activeConversation: {fileID: 0}
   onActiveConversationChanged: {fileID: 11400000, guid: a98456addc653ad4fa3f69cbe444cb67, type: 2}
-  conversationElements:
-  - dialogConversationLeft: {fileID: 11400000, guid: 89211c168590d704881c3c2d9c216d07, type: 2}
-    checkQuestCompletion: 0
-    dialogConversationRight: {fileID: 0}
-    quest: {fileID: 0}
-  - dialogConversationLeft: {fileID: 11400000, guid: ede62085a257cae4b9e74f14efa6fce5, type: 2}
-    checkQuestCompletion: 1
-    dialogConversationRight: {fileID: 11400000, guid: 70052adffce0b1f448e264cdd3d87935, type: 2}
-    quest: {fileID: 11400000, guid: 176559f37d56ba74ca9fc4bf4febde95, type: 2}
+  conversationElements: []
   conversationIndex: 0
   onCompleteQuest: {fileID: 11400000, guid: a1a72b2b5c2b8f44f840edf2784f961e, type: 2}
 --- !u!114 &987336911311489786
