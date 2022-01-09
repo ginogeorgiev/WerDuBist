@@ -47,11 +47,15 @@ namespace Features.NPCs.Logic
         
         private void Start()
         {
-            activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
+            if (conversationElements == null || conversationElements.Count == 0) return;
+            
+            activeConversation = conversationElements[conversationIndex].DialogConversationLeft; 
         }
 
         public void OnNpcFocusChanged()
         {
+            if (conversationElements == null || conversationElements.Count == 0) return;
+            
             activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
         }
 
@@ -74,6 +78,8 @@ namespace Features.NPCs.Logic
             }
             else
             {
+                if (conversationElements == null || conversationElements.Count == 0) return;
+                
                 if (conversationIndex + 1 < conversationElements.Count)
                 {
                     conversationIndex++;
