@@ -1,3 +1,5 @@
+using System;
+using Features.Quests.Logic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -11,6 +13,10 @@ namespace Features.Dialog.Logic
     {
         [SerializeField] private Choice choice;
         [SerializeField] private ConversationChangeEvent conversationChangeEvent;
+        
+        [SerializeField] private QuestEvent serializedQuestEvent;
+
+        private static QuestEvent questEvent;
 
         //Adds a gameObject (choice button) for every choice there is
         public static ChoiceController AddChoiceButton(Button choiceButtonTemplate, Choice choice, int index)
@@ -24,8 +30,9 @@ namespace Features.Dialog.Logic
             button.name = "Choice " + (index + 1);
             button.gameObject.SetActive(true);
 
-            if (choice.QuestEvent != null)
+            if (choice.Quest != null)
             {
+                choice.QuestEvent = questEvent;
                 button.onClick.AddListener(choice.OnQuestAccepted);
             }
 
@@ -37,6 +44,11 @@ namespace Features.Dialog.Logic
             ChoiceController choiceController = button.GetComponent<ChoiceController>();
             choiceController.choice = choice;
             return choiceController;
+        }
+
+        private void Awake()
+        {
+            questEvent = serializedQuestEvent;
         }
 
         private void Start()

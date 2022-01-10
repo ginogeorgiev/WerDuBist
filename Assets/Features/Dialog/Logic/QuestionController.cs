@@ -13,7 +13,6 @@ namespace Features.Dialog.Logic
         [SerializeField] private Button choiceButton;
         [SerializeField] private BoolVariable isPlayerInConversation;
 
-
         private readonly List<ChoiceController> choiceControllers = new List<ChoiceController>();
 
         //changes to new conversation on button click
@@ -46,8 +45,6 @@ namespace Features.Dialog.Logic
         //initialize choiceButtons
         private void Initialize()
         {
-            questionText.text = dialogQuestion.Text; //changes standard text to question text
-
             for (int index = 0; index < dialogQuestion.Choices.Length; index++)
             {
                 ChoiceController c = ChoiceController.AddChoiceButton(choiceButton, dialogQuestion.Choices[index], index);

@@ -1,4 +1,3 @@
-using DataStructures.Event;
 using DataStructures.Variables;
 using Features.Input;
 using Features.NPCs.Logic;
@@ -69,10 +68,6 @@ namespace Features.Dialog.Logic
                 questionEvent.Invoke(dialogConversation.DialogQuestion);
                 EndConversation();
             }
-            else if (dialogConversation.NextDialogConversationStep != null)
-            {
-                ChangeConversation(dialogConversation.NextDialogConversationStep);
-            }
             else
             {
                 isPlayerInConversation.SetFalse();
@@ -109,7 +104,7 @@ namespace Features.Dialog.Logic
             speakerUIControllerLeft.Speaker = dialogConversation.SpeakerLeft;
             speakerUIControllerRight.Speaker = dialogConversation.SpeakerRight;
 
-            if (npcFocus.Get().GetActiveConversationElement.CheckQuestCompletion)
+            if (npcFocus.Get().GetActiveConversationElement.Quest != null)
             {
                 npcFocus.Get().OnCheckForNextConversationPart();
             }

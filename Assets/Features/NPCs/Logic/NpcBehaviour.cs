@@ -3,7 +3,6 @@ using DataStructures.Event;
 using Features.Dialog.Logic;
 using Features.Input;
 using Features.Quests.Logic;
-using Features.Survey.Logic;
 using UnityEngine;
 
 namespace Features.NPCs.Logic
@@ -11,15 +10,16 @@ namespace Features.NPCs.Logic
     [System.Serializable]
     public struct ConversationElement
     {
+        [Header("Hier kommt die weitere führende Conversation rein", order = 0)]
         [SerializeField] private DialogConversation_SO dialogConversationLeft;
         
-        [SerializeField] private bool checkQuestCompletion;
+        [Header("Hier kommt die weitere führende Conversation rein, wenn es gerade eine Aktive Quest zu erledigen gibt.", order = 1)]
+        [Space (-10, order = 2)]
+        [Header("Und die Quest muss mit übergeben werden, damit sie geprüft werden kann", order = 3)]
         [SerializeField] private DialogConversation_SO dialogConversationRight;
         [SerializeField] private Quest_SO quest;
 
         public DialogConversation_SO DialogConversationLeft => dialogConversationLeft;
-
-        public bool CheckQuestCompletion => checkQuestCompletion;
 
         public DialogConversation_SO DialogConversationRight => dialogConversationRight;
 
@@ -29,15 +29,21 @@ namespace Features.NPCs.Logic
     public class NpcBehaviour : MonoBehaviour
     {
         [SerializeField] private int id;
-        [SerializeField] private NpcFocus_So npcFocus;
 
+        [Header("Hier kommt das SO zum NPC rein (den Kreis rechts dafür benutzen)")]
         [SerializeField] private NPCData_SO data;
-        [SerializeField] private DialogConversation_SO activeConversation;
-        [SerializeField] private GameEvent_SO onActiveConversationChanged;
+        
+        [Header("Hier kommen alle Dialoge in Reihenfolge rein, die der NPC führen kann.")]
         [SerializeField] private List<ConversationElement> conversationElements;
-        [SerializeField] private int conversationIndex;
-
+        
+        [Header("Hier sollte bereits alles durch das Template ausgefüllt sein")]
+        [SerializeField] private NpcFocus_So npcFocus;
+        [SerializeField] private GameEvent_SO onActiveConversationChanged;
         [SerializeField] private QuestEvent onCompleteQuest;
+        
+        [Header("Nichts ausfüllen, das ist zum debuggen")]
+        [SerializeField] private int conversationIndex;
+        [SerializeField] private DialogConversation_SO activeConversation;
 
         public NPCData_SO Data => data;
 
@@ -49,7 +55,7 @@ namespace Features.NPCs.Logic
         {
             if (conversationElements == null || conversationElements.Count == 0) return;
             
-            activeConversation = conversationElements[conversationIndex].DialogConversationLeft; 
+            activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
         }
 
         public void OnNpcFocusChanged()
@@ -62,7 +68,7 @@ namespace Features.NPCs.Logic
         public void OnCheckForNextConversationPart()
         {
             // dunno if that works
-            if (conversationElements[conversationIndex].CheckQuestCompletion)
+            if (conversationElements[conversationIndex].Quest != null)
             {
                 if (conversationElements[conversationIndex].Quest.CheckGoals())
                 {
