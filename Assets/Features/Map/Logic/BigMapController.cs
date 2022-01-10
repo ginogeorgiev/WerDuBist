@@ -37,6 +37,7 @@ namespace Features.Map.Logic
 
         private void Awake()
         {
+            questMarker.transform.localScale = new Vector3(0.5f, 0.5f, 1);
             onDisplayUnlockedQuest.RegisterListener(DisplayUnlockedQuest);
             onDisplayActiveQuest.RegisterListener(DisplayActiveQuest);
             onRemoveQuest.RegisterListener(RemoveQuest);
@@ -46,7 +47,6 @@ namespace Features.Map.Logic
 
         public void Start()
         {
-            questMarker.transform.localScale = new Vector3(0.5f, 0.5f, 1);
             playerControls.Player.Map.started += _ => ToggleMapUI();
         }
         
