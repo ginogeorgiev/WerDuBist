@@ -6,11 +6,21 @@ namespace Features.Dialog.Logic
     [CreateAssetMenu(fileName = "NewDialogConversation", menuName = "Feature/Dialog/DialogConversation")]
     public class DialogConversation_SO : ScriptableObject
     {
+        [Header("Hier kommen die NPCs rein, die sprechen. ", order = 0)]
+        [Space (-10, order = 1)]
+        [Header("(Den Kreis rechts dafür benutzen)", order = 2)]
         [SerializeField] private NPCData_SO speakerLeft;
         [SerializeField] private NPCData_SO speakerRight;
+        [Header("Hier die Texte rein, die nacheinander Folgen sollen in einer Conversation", order = 3)]
+        [Space (-10, order = 4)]
+        
+        [Header("(Mit dem Plus können mehrere hinzugefügt werden", order = 5)]
         [SerializeField] private Line[] lines;
+        
+        [Header("Nur wenn nach der Conversation einen Frage mit ", order = 7)]
+        [Space (-10, order = 8)]
+        [Header("Antwortmögllichkeiten folgen soll muss hier was rein", order = 9)]
         [SerializeField] private DialogQuestion_SO dialogQuestion;
-        [SerializeField] private DialogConversation_SO nextDialogConversationStep;
         
         public NPCData_SO SpeakerLeft => speakerLeft;
 
@@ -19,8 +29,6 @@ namespace Features.Dialog.Logic
         public Line[] Lines => lines;
 
         public DialogQuestion_SO DialogQuestion => dialogQuestion;
-
-        public DialogConversation_SO NextDialogConversationStep => nextDialogConversationStep;
     }
     
     [System.Serializable]
