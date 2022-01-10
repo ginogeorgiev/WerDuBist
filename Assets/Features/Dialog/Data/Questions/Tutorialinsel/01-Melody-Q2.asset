@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
+  m_Name: 01-Melody-Q2
+  m_EditorClassIdentifier: 
+  text: 
+  choices:
+  - text: Na dann mal los.
+    dialogConversation: {fileID: 0}
+    choiceEvent: {fileID: 11400000, guid: d882be4c82286df4b94ba25cbe00c803, type: 2}
+    questEvent: {fileID: 0}
+    quest: {fileID: 0}

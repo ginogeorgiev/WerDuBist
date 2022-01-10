@@ -994,6 +994,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 164299969304360259, guid: 8344c52efb8ebad47abbd4f1b0ece8b6, type: 3}
+      propertyPath: conversationElements.Array.data[0].quest
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 164299969304360259, guid: 8344c52efb8ebad47abbd4f1b0ece8b6, type: 3}
+      propertyPath: conversationElements.Array.data[0].dialogConversationRight
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 164299969304360263, guid: 8344c52efb8ebad47abbd4f1b0ece8b6, type: 3}
       propertyPath: m_Name
       value: 04_Franklin
