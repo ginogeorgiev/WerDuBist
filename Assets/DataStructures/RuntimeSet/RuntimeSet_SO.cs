@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace DataStructures.RuntimeSet
 {
@@ -14,8 +15,7 @@ namespace DataStructures.RuntimeSet
 
         public void Add(T item)
         {
-            if
-                (!items.Contains(item))
+            if (!items.Contains(item))
             {
                 items.Add(item);
             }
@@ -23,11 +23,15 @@ namespace DataStructures.RuntimeSet
 
         public void Remove(T item)
         {
-            if
-                (!items.Contains(item))
+            if (!items.Contains(item))
             {
                 items.Remove(item);
             }
+        }
+
+        public void Restore()
+        {
+            items.Clear();
         }
     }
 }

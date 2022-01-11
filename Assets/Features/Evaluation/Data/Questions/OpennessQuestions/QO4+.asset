@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d63183df4d72ad34389ab0b100febe25, type: 3}
+  m_Name: QO4+
+  m_EditorClassIdentifier: 
+  question: Ich verstehe Dinge schnell.
+  aspect: {fileID: 11400000, guid: 28fa6f3740d236341b1e177b33fb17e0, type: 2}
+  ingameAspectValue: {fileID: 11400000, guid: bbafa928eba7a8440a25dc6995b4d445, type: 2}
+  surveyAspectValue: {fileID: 11400000, guid: 6b1a307e876bc8d4fa25810b6db81e4e, type: 2}
+  key: 1

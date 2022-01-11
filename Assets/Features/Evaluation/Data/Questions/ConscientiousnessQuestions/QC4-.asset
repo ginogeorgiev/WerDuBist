@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d63183df4d72ad34389ab0b100febe25, type: 3}
+  m_Name: QC4-
+  m_EditorClassIdentifier: 
+  question: "Ich dr\xFCcke mich vor meinen Pflichten."
+  aspect: {fileID: 11400000, guid: bb8b744a7412fa44daec95af207351a8, type: 2}
+  ingameAspectValue: {fileID: 11400000, guid: bd36ab91d9ff87049a63fdc3e58f27ce, type: 2}
+  surveyAspectValue: {fileID: 11400000, guid: 6160081856212984bb5691604221317f, type: 2}
+  key: 0

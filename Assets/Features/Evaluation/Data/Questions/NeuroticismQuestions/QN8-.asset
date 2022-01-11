@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d63183df4d72ad34389ab0b100febe25, type: 3}
+  m_Name: QN8-
+  m_EditorClassIdentifier: 
+  question: "Ich f\xFChle mich oft deprimiert."
+  aspect: {fileID: 11400000, guid: 24bc4d30fe5b3c443b9743114439a304, type: 2}
+  ingameAspectValue: {fileID: 11400000, guid: ef25e890f4d85824e94d1040b35aa741, type: 2}
+  surveyAspectValue: {fileID: 11400000, guid: e1f7793b5f5bb0247a0e26c30508cb58, type: 2}
+  key: 1

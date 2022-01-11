@@ -1,4 +1,4 @@
-using System;
+using Features.Evaluation.Logic;
 using Features.Quests.Logic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -13,10 +13,25 @@ namespace Features.Dialog.Logic
     {
         [SerializeField] private Choice choice;
         [SerializeField] private ConversationChangeEvent conversationChangeEvent;
+
+        [SerializeField] private EvaluationData serializedEvaluationData;
         
         [SerializeField] private QuestEvent serializedQuestEvent;
 
         private static QuestEvent questEvent;
+        private static EvaluationData evaluationData;
+        
+        private void Awake()
+        {
+            questEvent = serializedQuestEvent;
+            evaluationData = serializedEvaluationData;
+        }
+
+        private void Start()
+        {
+            if (conversationChangeEvent == null) conversationChangeEvent = new ConversationChangeEvent();
+            GetComponent<Button>().GetComponentInChildren<Text>().text = choice.Text;
+        }
 
         //Adds a gameObject (choice button) for every choice there is
         public static ChoiceController AddChoiceButton(Button choiceButtonTemplate, Choice choice, int index)
@@ -41,20 +56,21 @@ namespace Features.Dialog.Logic
                 button.onClick.AddListener(choice.OnChoiceEvent);
             }
 
+            if (choice.IngameQuestion != null)
+            {
+                //check if this is correct related to partly answered questions
+                if (choice.IngameQuestion.IngameRuntimeValue > 1)
+                {
+                    choice.IngameQuestion.IngameAspectValue.Add((int)choice.IngameQuestion.IngameRuntimeValue);
+                }
+                
+                choice.EvaluationData = evaluationData;
+                button.onClick.AddListener(choice.OnAddToEvaluation);
+            }
+
             ChoiceController choiceController = button.GetComponent<ChoiceController>();
             choiceController.choice = choice;
             return choiceController;
-        }
-
-        private void Awake()
-        {
-            questEvent = serializedQuestEvent;
-        }
-
-        private void Start()
-        {
-            if (conversationChangeEvent == null) conversationChangeEvent = new ConversationChangeEvent();
-            GetComponent<Button>().GetComponentInChildren<Text>().text = choice.Text;
         }
 
         public void MakeChoice()

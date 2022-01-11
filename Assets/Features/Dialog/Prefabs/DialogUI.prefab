@@ -488,6 +488,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choice:
     text: Button Choice Text
+    ingameQuestion: {fileID: 0}
+    value: 0
     dialogConversation: {fileID: 11400000, guid: 89211c168590d704881c3c2d9c216d07, type: 2}
     choiceEvent: {fileID: 0}
     quest: {fileID: 0}
@@ -518,6 +520,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  serializedEvaluationData: {fileID: 11400000, guid: a58b3433114e9ff4495382a1d69c02aa, type: 2}
   serializedQuestEvent: {fileID: 11400000, guid: d3ded01f8c8bb7b43ab7640a65b29a4a, type: 2}
 --- !u!1 &5657984874835876526
 GameObject:

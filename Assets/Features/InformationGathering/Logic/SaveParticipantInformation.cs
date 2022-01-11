@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using DataStructures.Event;
 using DataStructures.Variables;
+using Features.Evaluation.Logic;
 using TMPro;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ namespace Features.InformationGathering.Logic
 {
     public class SaveParticipantInformation : MonoBehaviour
     {
+        [SerializeField] private EvaluationData evaluationData;
+            
         [SerializeField] private ParticipantInformationVariable participantInformationVariable;
         [SerializeField] private TMP_Text errorMessage;
         [SerializeField] private TMP_Dropdown genderDropdown;
@@ -49,6 +52,10 @@ namespace Features.InformationGathering.Logic
 
             // Visual representation of the clamping
             ageField.text = age.ToString();
+            
+            evaluationData.Add("Alter", age.ToString());
+            evaluationData.Add("Geschlecht", genderDropdown.options[genderDropdown.value].text);
+            evaluationData.Add("Spielerfahrung", gameExperienceDropdown.options[gameExperienceDropdown.value].text);
             
             activateSurvey.Raise();
             activateInfoGathering.Raise();
