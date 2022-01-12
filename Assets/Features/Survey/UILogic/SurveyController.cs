@@ -22,7 +22,7 @@ namespace Features.Survey.UILogic
         [Tooltip("Ref")] [SerializeField] private RectTransform content;
 
         [Header("For calculating the Result")]
-        [SerializeField] private bool autoUpdateResult;
+        [SerializeField] private bool autoUpdateResult = true;
         [Tooltip("SO")] [SerializeField] private QuestionItemRuntimeSet questionItemRuntimeSet;
 
         [Header("The 5 Aspects")]
@@ -91,24 +91,24 @@ namespace Features.Survey.UILogic
                         switch (toggle.gameObject.name)
                         {
                             case "Agree" when toggle.isOn:
+                                question.Question.SurveyAspectValue.Add(5);
+                                value = 5;
+                                break;
+                            case "PartlyAgree" when toggle.isOn:
                                 question.Question.SurveyAspectValue.Add(4);
                                 value = 4;
                                 break;
-                            case "PartlyAgree" when toggle.isOn:
+                            case "Neither" when toggle.isOn:
                                 question.Question.SurveyAspectValue.Add(3);
                                 value = 3;
                                 break;
-                            case "Neither" when toggle.isOn:
+                            case "PartlyDisagree" when toggle.isOn:
                                 question.Question.SurveyAspectValue.Add(2);
                                 value = 2;
                                 break;
-                            case "PartlyDisagree" when toggle.isOn:
+                            case "Disagree" when toggle.isOn:
                                 question.Question.SurveyAspectValue.Add(1);
                                 value = 1;
-                                break;
-                            case "Disagree" when toggle.isOn:
-                                question.Question.SurveyAspectValue.Add(0);
-                                value = 0;
                                 break;
                         }
                     }
@@ -118,20 +118,20 @@ namespace Features.Survey.UILogic
                         switch (toggle.gameObject.name)
                         {
                             case "Disagree" when toggle.isOn:
+                                question.Question.SurveyAspectValue.Add(5);
+                                value = 5;
+                                break;
+                            case "PartlyDisagree" when toggle.isOn:
                                 question.Question.SurveyAspectValue.Add(4);
                                 value = 4;
                                 break;
-                            case "PartlyDisagree" when toggle.isOn:
+                            case "Neither" when toggle.isOn:
                                 question.Question.SurveyAspectValue.Add(3);
                                 value = 3;
                                 break;
-                            case "Neither" when toggle.isOn:
+                            case "PartlyAgree" when toggle.isOn:
                                 question.Question.SurveyAspectValue.Add(2);
                                 value = 2;
-                                break;
-                            case "PartlyAgree" when toggle.isOn:
-                                question.Question.SurveyAspectValue.Add(1);
-                                value = 1;
                                 break;
                             case "Agree" when toggle.isOn:
                                 question.Question.SurveyAspectValue.Add(1);

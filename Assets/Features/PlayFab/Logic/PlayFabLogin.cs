@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using Features.Evaluation.Logic;
 using PlayFab;
@@ -9,6 +11,11 @@ namespace Features.PlayFab.Logic
 {
     public class PlayFabLogin : MonoBehaviour
     {
+        [SerializeField] private EvaluationData evalData;
+        [SerializeField] private int throttleTime = 10;
+        
+        private bool coroutineRunning;
+
         public void Start()
         {
             if (string.IsNullOrEmpty(PlayFabSettings.staticSettings.TitleId)){
@@ -19,7 +26,7 @@ namespace Features.PlayFab.Logic
                 PlayFabSettings.staticSettings.TitleId = "5BE79";
             }
 
-            string id = (Random.Range(1000, 1000000)).ToString();
+            string id = Guid.NewGuid().ToString();
             var request = new LoginWithCustomIDRequest { CustomId = id, CreateAccount = true};
             PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnLoginFailure);
         }
@@ -32,17 +39,39 @@ namespace Features.PlayFab.Logic
             Debug.LogError(error.GenerateErrorReport());
         }
 
-        public void SetUserData(EvaluationData evalData) {
+        public void OnEvaluationDictionaryChanged()
+        {
+            if (!coroutineRunning)
+            {
+                StartCoroutine(RequestThrottle());
+            }
+        }
+        
+        public void SetUserData() {
+            if(evalData == null || evalData.EvaluationDictionary == null) { return; }
+            
             PlayFabClientAPI.UpdateUserData(
                 new UpdateUserDataRequest() {
                     Data = evalData.EvaluationDictionary
                 },
-                result => {},
+                result =>
+                {
+                    Debug.Log("Sending data.");
+                },
                 error =>
                 {
-                    Debug.Log("Error");
+                    Debug.LogError("Send User Data Error");
+                    Debug.LogError(error.GenerateErrorReport());
                 }
             );
+        }
+        
+        private IEnumerator RequestThrottle()
+        {
+            coroutineRunning = true;
+            yield return new WaitForSeconds(throttleTime);
+            SetUserData();
+            coroutineRunning = false;
         }
     }
 }

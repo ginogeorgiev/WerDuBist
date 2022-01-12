@@ -420,7 +420,7 @@ MonoBehaviour:
   randomizeQuestions: 0
   questionItem: {fileID: 7339233551689892877, guid: 38f622d3bf90ff64ba7efd525bc2b82b, type: 3}
   content: {fileID: 6223636773504306651}
-  autoUpdateResult: 0
+  autoUpdateResult: 1
   questionItemRuntimeSet: {fileID: 11400000, guid: a8c8ad224591a634c99b8aa09f210b33, type: 2}
   extraversion: {fileID: 11400000, guid: aabf314d0209c27499eb41f91dc89215, type: 2}
   agreeableness: {fileID: 11400000, guid: 0e384512a9e3e1b47b62759e9250fa64, type: 2}
