@@ -92,6 +92,11 @@ namespace Features.Map.Logic
 
         private void DisplayUnlockedQuest(Quest_SO quest)
         {
+            if (!quest.Visible)
+            {
+                return;
+            }
+            
             var obj= Instantiate(questMarker, quest.QuestPosition, Quaternion.identity);
             obj.transform.SetParent(mapUI.transform);
             obj.GetComponent<SpriteRenderer>().sprite = questNew;
@@ -101,6 +106,11 @@ namespace Features.Map.Logic
         
         private void DisplayActiveQuest(Quest_SO quest)
         {
+            if (!quest.Visible)
+            {
+                return;
+            }
+            
             var obj = newQuestMarkers[quest.QuestID];
             obj.GetComponent<SpriteRenderer>().sprite = questActive;
             
@@ -124,6 +134,10 @@ namespace Features.Map.Logic
         
         private void RemoveQuest(Quest_SO quest)
         {
+            if (!quest.Visible)
+            {
+                return;
+            }
             Destroy(activeQuestMarkers[quest.QuestID]);
             activeQuestMarkers.Remove(quest.QuestID);
         }

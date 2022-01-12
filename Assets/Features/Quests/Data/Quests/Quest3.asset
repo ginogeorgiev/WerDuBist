@@ -16,7 +16,10 @@ MonoBehaviour:
   title: 'MORE '
   description: This Quest, I like it. ANOTHER
   goals:
-  - current: {fileID: 11400000, guid: 8f1021f9996055647bfffffbabb57a18, type: 2}
-    required: 5
+  - goalType: 0
     sprite: {fileID: 21300000, guid: 5565af51b5e204d51a9e8151bcdf9d06, type: 3}
+    npcName: 
+    current: {fileID: 11400000, guid: 8f1021f9996055647bfffffbabb57a18, type: 2}
+    required: 5
   position: {x: 0, y: 0}
+  visible: 1

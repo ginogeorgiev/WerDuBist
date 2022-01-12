@@ -25,7 +25,7 @@ namespace Features.Quests.Logic
         private void Start()
         {
             // reset all quests
-            foreach (Quest_SO quest in questSet.Items)
+            foreach (var quest in questSet.Items)
             {
                 quest.Restore();
             }
@@ -69,32 +69,23 @@ namespace Features.Quests.Logic
 
         private void CompleteQuest(Quest_SO quest)
         {
-            if (!activeQuests.Items.Contains(quest))
-            {
-                Debug.Log("Quest not accepted yet");
-                return;
-            }
-            
-            quest.CheckGoals();
-            // if completed
-            if (quest.CheckGoals())
-            {
-                quest.IsActive = false;
-                quest.IsCompleted = true;
+            if (!activeQuests.Items.Contains(quest)) return;
 
-                // remove all Collect Quest Items from Inventory
-                foreach (var goal in quest.GoalList.Where(goal => goal.Type==Goal.GoalType.collect))
-                {
-                    goal.CurrentAmount.Add(-goal.RequiredAmount);
-                }
-                
-                Debug.Log("'" + quest.QuestTitle + "' Completed");
-                onRemoveQuest.Raise(quest);
-            }
-            else
+            quest.CheckGoals();
+            
+            if (!quest.CheckGoals()) return;
+            
+            quest.IsActive = false;
+            quest.IsCompleted = true;
+
+            // remove all Collect Quest Items from Inventory
+            foreach (var goal in quest.GoalList.Where(goal => goal.Type==Goal.GoalType.collect))
             {
-                Debug.Log("not all Quest Goals have been completed yet");
-            } 
+                goal.CurrentAmount.Add(-goal.RequiredAmount);
+            }
+                
+            Debug.Log("'" + quest.QuestTitle + "' Completed");
+            onRemoveQuest.Raise(quest);
         }
         
         public void UpdateTalkQuest()
