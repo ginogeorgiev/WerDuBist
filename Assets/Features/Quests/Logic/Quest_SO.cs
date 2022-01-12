@@ -38,6 +38,10 @@ namespace Features.Quests.Logic
             IsUnlocked = false;
             IsActive = false;
             IsCompleted = false;
+            foreach (var goal in goals)
+            {
+                goal.Restore();
+            }
         }
     }
 }

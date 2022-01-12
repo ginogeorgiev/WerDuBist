@@ -12,15 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
   m_Name: Somebody-Q1-confusion
   m_EditorClassIdentifier: 
-  text: 'Sag was:'
   choices:
   - text: Ich bin verwirrt.
-    dialogConversation: {fileID: 11400000, guid: 7d318ad92f1da484187ece621c761602, type: 2}
+    dialogConversation: {fileID: 0}
     choiceEvent: {fileID: 0}
-    questEvent: {fileID: 0}
-    quest: {fileID: 0}
-  - text: Bist du ich?
-    dialogConversation: {fileID: 11400000, guid: eeab043de567fb440b057c772fcb6d49, type: 2}
-    choiceEvent: {fileID: 0}
-    questEvent: {fileID: 0}
-    quest: {fileID: 0}
+    quest: {fileID: 11400000, guid: 9ec1ef8e3ab31a840bb549d99dc183af, type: 2}

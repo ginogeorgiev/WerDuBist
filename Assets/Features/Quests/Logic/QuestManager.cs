@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using Features.NPCs.Logic;
 using UnityEngine;
 
 namespace Features.Quests.Logic
@@ -15,7 +17,8 @@ namespace Features.Quests.Logic
         [SerializeField] private QuestEvent onCompleteQuest;
         [SerializeField] private QuestEvent onRemoveQuest;
         
-        [SerializeField] private QuestFocus_SO focus;
+        [SerializeField] private QuestFocus_SO questFocus;
+        [SerializeField] private NpcFocus_So npcFocus;
         
         [SerializeField] private List<Quest_SO> firstQuests;
 
@@ -28,7 +31,7 @@ namespace Features.Quests.Logic
             }
            
             activeQuests.Items.Clear();
-            focus.Restore();
+            questFocus.Restore();
             onQuestUnlocked.RegisterListener(SetQuestUnlocked);
             onQuestAccepted.RegisterListener(SetQuestActive);
             onCompleteQuest.RegisterListener(CompleteQuest);
@@ -64,7 +67,7 @@ namespace Features.Quests.Logic
            onDisplayQuest.Raise(quest);
         }
 
-        public void CompleteQuest(Quest_SO quest)
+        private void CompleteQuest(Quest_SO quest)
         {
             if (!activeQuests.Items.Contains(quest))
             {
@@ -78,12 +81,11 @@ namespace Features.Quests.Logic
             {
                 quest.IsActive = false;
                 quest.IsCompleted = true;
-                
-                // remove all Quest Items from Inventory
-                foreach (Goal goal in quest.GoalList)
+
+                // remove all Collect Quest Items from Inventory
+                foreach (var goal in quest.GoalList.Where(goal => goal.Type==Goal.GoalType.collect))
                 {
-                    var item = goal.CurrentAmount;
-                    item.Add(-goal.RequiredAmount);
+                    goal.CurrentAmount.Add(-goal.RequiredAmount);
                 }
                 
                 Debug.Log("'" + quest.QuestTitle + "' Completed");
@@ -94,6 +96,14 @@ namespace Features.Quests.Logic
                 Debug.Log("not all Quest Goals have been completed yet");
             } 
         }
-
+        
+        public void UpdateTalkQuest()
+        {
+            // for each activeQuest with goalType Talk
+            foreach (var goal in activeQuests.Items.SelectMany(quest => quest.GoalList.Where(goal => goal.Type==Goal.GoalType.talk)))
+            {
+                goal.Evaluate(npcFocus);
+            }
+        }
     }
-}
+} 

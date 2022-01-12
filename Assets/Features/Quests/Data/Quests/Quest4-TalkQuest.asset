@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a54c835cd434817add4d3fdde868665, type: 3}
-  m_Name: Quest4
+  m_Name: Quest4-TalkQuest
   m_EditorClassIdentifier: 
   id: 4
-  title: Quest 4
-  description: Das ist die 4. Quest
+  title: Talk Quest
+  description: Talk to Melody
   goals:
-  - current: {fileID: 11400000, guid: 8ce660b6c02272749980efc2e80a79f6, type: 2}
-    required: 7
-    sprite: {fileID: 21300000, guid: 43e221860d46c42abab1fea3b4b3e7e9, type: 3}
-  position: {x: 0, y: 0}
+  - goalType: 1
+    sprite: {fileID: 21300000, guid: b69dd42474a3b0a429cf79e46f26a3bd, type: 3}
+    npcName: Melody
+    current: {fileID: 0}
+    required: 1
+  position: {x: -14.92, y: 8.14}

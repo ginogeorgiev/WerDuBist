@@ -42,7 +42,7 @@ namespace Features.Quests.UILogic
 
                 // write Goal Info
                 TMP_Text goalText = goalUI.transform.GetChild(0).gameObject.transform.GetChild(1).GetComponent<TMP_Text>();
-                goalText.text = goal.CurrentAmount.Get().ToString();
+                goalText.text = goal.Type==Goal.GoalType.collect ? goal.CurrentAmount.Get().ToString() : "0";
                 goalText.text += "/";
                 goalText.text += goal.RequiredAmount.ToString();
                 
@@ -79,9 +79,18 @@ namespace Features.Quests.UILogic
             for (var i = 0; i < focus.Get().GoalList.Count(); i++)
             {
                 TMP_Text goalUI = questUI.GetChild(2 + i).GetChild(0).gameObject.transform.GetChild(1).GetComponent<TMP_Text>();
-                goalUI.text = focus.Get().GoalList[i].CurrentAmount.Get().ToString();
-                goalUI.text  += "/";
-                goalUI.text  += focus.Get().GoalList[i].RequiredAmount.ToString();
+                var goal = focus.Get().GoalList[i];
+
+                if (goal.Type==Goal.GoalType.collect)
+                {
+                    goalUI.text = goal.CurrentAmount.Get().ToString();
+                    goalUI.text  += "/";
+                    goalUI.text  += goal.RequiredAmount.ToString() ;
+                }
+                else// if type talk 
+                {
+                     goalUI.text = goal.Completed ? "1/1" : "0/1";
+                }
             }
             
             
@@ -118,8 +127,8 @@ namespace Features.Quests.UILogic
                 questUI.GetChild(2 + i).GetChild(0).gameObject.transform.GetChild(0).gameObject.SetActive(boo);
             }
         }
-        
-        public void RemoveQuest(Quest_SO quest)
+
+        private void RemoveQuest(Quest_SO quest)
         {
             // destroy UI Prefab of completed Quest
             Destroy(GetQuestUI(quest.QuestID).gameObject);
@@ -167,5 +176,6 @@ namespace Features.Quests.UILogic
                 LayoutRebuilder.ForceRebuildLayoutImmediate(rec);
             }
         }
+        
     }
 }
