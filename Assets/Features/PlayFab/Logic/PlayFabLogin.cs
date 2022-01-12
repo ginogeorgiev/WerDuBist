@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Features.Evaluation.Logic;
 using PlayFab;
 using PlayFab.ClientModels;
 using TMPro;
@@ -31,10 +32,10 @@ namespace Features.PlayFab.Logic
             Debug.LogError(error.GenerateErrorReport());
         }
 
-        public void SetUserData(Dictionary<string,string> dataToSave) {
+        public void SetUserData(EvaluationData evalData) {
             PlayFabClientAPI.UpdateUserData(
                 new UpdateUserDataRequest() {
-                    Data = dataToSave
+                    Data = evalData.EvaluationDictionary
                 },
                 result => {},
                 error =>
