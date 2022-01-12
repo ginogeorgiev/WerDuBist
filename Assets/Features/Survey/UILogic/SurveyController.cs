@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using DataStructures.Variables;
+using Features.Evaluation.Logic;
 using Features.Survey.Logic;
 using TMPro;
 using UnityEngine;
@@ -13,6 +14,7 @@ namespace Features.Survey.UILogic
     {
         [Header("For UI QuestItem generation")]
         [Tooltip("SO")] [SerializeField] private Questions_SO questionsData;
+        [Tooltip("SO")] [SerializeField] private EvaluationData evaluationData;
 
         private IEnumerable<Question_SO> questions;
         [SerializeField] private bool randomizeQuestions;
@@ -46,6 +48,8 @@ namespace Features.Survey.UILogic
 
         private void Awake()
         {
+            questionItemRuntimeSet.Restore();
+            
             // Cache questionList and randomize if necessary
             questions = randomizeQuestions ? questionsData.Items.OrderBy(x => Guid.NewGuid()) : questionsData.Items;
 
@@ -80,22 +84,31 @@ namespace Features.Survey.UILogic
             {
                 foreach (Toggle toggle in question.Toggles)
                 {
+                    int value = -1;
                     // for positive keyed questions
                     if (question.Question.Key)
                     {
                         switch (toggle.gameObject.name)
                         {
                             case "Agree" when toggle.isOn:
-                                question.Question.Aspect.Add(4);
+                                question.Question.SurveyAspectValue.Add(4);
+                                value = 4;
                                 break;
                             case "PartlyAgree" when toggle.isOn:
-                                question.Question.Aspect.Add(3);
+                                question.Question.SurveyAspectValue.Add(3);
+                                value = 3;
                                 break;
                             case "Neither" when toggle.isOn:
-                                question.Question.Aspect.Add(2);
+                                question.Question.SurveyAspectValue.Add(2);
+                                value = 2;
                                 break;
                             case "PartlyDisagree" when toggle.isOn:
-                                question.Question.Aspect.Add(1);
+                                question.Question.SurveyAspectValue.Add(1);
+                                value = 1;
+                                break;
+                            case "Disagree" when toggle.isOn:
+                                question.Question.SurveyAspectValue.Add(0);
+                                value = 0;
                                 break;
                         }
                     }
@@ -105,19 +118,28 @@ namespace Features.Survey.UILogic
                         switch (toggle.gameObject.name)
                         {
                             case "Disagree" when toggle.isOn:
-                                question.Question.Aspect.Add(4);
+                                question.Question.SurveyAspectValue.Add(4);
+                                value = 4;
                                 break;
                             case "PartlyDisagree" when toggle.isOn:
-                                question.Question.Aspect.Add(3);
+                                question.Question.SurveyAspectValue.Add(3);
+                                value = 3;
                                 break;
                             case "Neither" when toggle.isOn:
-                                question.Question.Aspect.Add(2);
+                                question.Question.SurveyAspectValue.Add(2);
+                                value = 2;
                                 break;
                             case "PartlyAgree" when toggle.isOn:
-                                question.Question.Aspect.Add(1);
+                                question.Question.SurveyAspectValue.Add(1);
+                                value = 1;
+                                break;
+                            case "Agree" when toggle.isOn:
+                                question.Question.SurveyAspectValue.Add(1);
+                                value = 1;
                                 break;
                         }
                     }
+                    evaluationData.Add(question.Question.SurveyAspectValue.name + "_" + question.Question.Question, value.ToString());
                 }
             }
 
