@@ -60,7 +60,6 @@ namespace Features.NPCs.Logic
             foreach (var conversation in conversationElements.Where(element => element.Quest!=null))
             {
                 var pos = transform.localPosition;
-                Debug.Log(pos);
                 conversation.Quest.QuestPosition = new Vector2(pos.x,pos.y);
             }
         }
