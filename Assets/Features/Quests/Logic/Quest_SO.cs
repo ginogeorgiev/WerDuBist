@@ -19,7 +19,12 @@ namespace Features.Quests.Logic
         public string QuestTitle => title;
         public string QuestDescription => description;
         public List<Goal> GoalList => goals;
-        public Vector2 QuestPosition => position;
+        public Vector2 QuestPosition
+        {
+            get => position;
+            set => position = value;
+        }
+
         public bool Visible => visible;
         
         public bool IsUnlocked { get; set; }

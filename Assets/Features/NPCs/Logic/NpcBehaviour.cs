@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using DataStructures.Event;
 using Features.Dialog.Logic;
 using Features.Input;
@@ -38,7 +39,7 @@ namespace Features.NPCs.Logic
         [SerializeField] private NpcFocus_So npcFocus;
         [SerializeField] private GameEvent_SO onActiveConversationChanged;
         [SerializeField] private QuestEvent onCompleteQuest;
-        
+
         [Header("Nichts ausfüllen, das ist zum debuggen")]
         [SerializeField] private int conversationIndex;
         [SerializeField] private DialogConversation_SO activeConversation;
@@ -54,6 +55,14 @@ namespace Features.NPCs.Logic
             if (conversationElements == null || conversationElements.Count == 0) return;
             
             activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
+
+            // set own position for all Quest this NPC gives
+            foreach (var conversation in conversationElements.Where(element => element.Quest!=null))
+            {
+                var pos = transform.localPosition;
+                Debug.Log(pos);
+                conversation.Quest.QuestPosition = new Vector2(pos.x,pos.y);
+            }
         }
 
         public void OnNpcFocusChanged()
