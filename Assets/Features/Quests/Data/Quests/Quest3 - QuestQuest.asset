@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a54c835cd434817add4d3fdde868665, type: 3}
-  m_Name: Quest3
+  m_Name: Quest3 - QuestQuest
   m_EditorClassIdentifier: 
   id: 3
-  title: 'MORE '
-  description: This Quest, I like it. ANOTHER
+  title: Quest Quest
+  description: Do the Talk Quest
   goals:
-  - goalType: 0
-    sprite: {fileID: 21300000, guid: 5565af51b5e204d51a9e8151bcdf9d06, type: 3}
+  - goalType: 2
+    sprite: {fileID: 21300000, guid: 83860b19500c9ec42a8ef0a9c54eaaca, type: 3}
+    otherQuest: {fileID: 11400000, guid: 9ec1ef8e3ab31a840bb549d99dc183af, type: 2}
     npcName: 
-    current: {fileID: 11400000, guid: 8f1021f9996055647bfffffbabb57a18, type: 2}
+    current: {fileID: 0}
     required: 5
-  position: {x: 0, y: 0}
+  position: {x: -30.92, y: 7.33}
   visible: 1

@@ -83,6 +83,12 @@ namespace Features.Quests.Logic
             {
                 goal.CurrentAmount.Add(-goal.RequiredAmount);
             }
+            
+            // reevaluate each activeQuest.Goal with goalType Quest
+            foreach (var goal in activeQuests.Items.SelectMany(q => q.GoalList.Where(goal => goal.Type==Goal.GoalType.quest)))
+            {
+                goal.Evaluate();
+            }
                 
             Debug.Log("'" + quest.QuestTitle + "' Completed");
             onRemoveQuest.Raise(quest);
@@ -90,8 +96,8 @@ namespace Features.Quests.Logic
         
         public void UpdateTalkQuest()
         {
-            // for each activeQuest with goalType Talk
-            foreach (var goal in activeQuests.Items.SelectMany(quest => quest.GoalList.Where(goal => goal.Type==Goal.GoalType.talk)))
+            // for each activeQuest.Goal with goalType Talk
+            foreach (var goal in activeQuests.Items.SelectMany(q => q.GoalList.Where(goal => goal.Type==Goal.GoalType.talk)))
             {
                 goal.Evaluate(npcFocus);
             }

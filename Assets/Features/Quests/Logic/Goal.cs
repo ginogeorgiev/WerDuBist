@@ -11,12 +11,16 @@ namespace Features.Quests.Logic
         public enum GoalType
         {
             collect,
-            talk
+            talk,
+            quest
         }
 
         [SerializeField] private GoalType goalType;
         [SerializeField] private Sprite sprite;
 
+        [Header("For other Quest as Goal:")] [SerializeField]
+        private Quest_SO otherQuest;
+        
         [Header("For Talking Goal:")] [SerializeField]
         private string npcName;
 
@@ -28,6 +32,8 @@ namespace Features.Quests.Logic
         public GoalType Type => goalType;
         public Sprite GoalSprite => sprite;
 
+        public Quest_SO OtherQuest => otherQuest;
+        
         public string NpcName => npcName;
 
         public IntVariable CurrentAmount => current;
@@ -42,10 +48,12 @@ namespace Features.Quests.Logic
 
         public void Evaluate()
         {
-            if (goalType == GoalType.collect)
+            Completed = goalType switch
             {
-                Completed = CurrentAmount.Get() >= RequiredAmount;
-            }
+                GoalType.collect => CurrentAmount.Get() >= RequiredAmount,
+                GoalType.quest => otherQuest.IsCompleted,
+                _ => Completed
+            };
         }
 
         public void Evaluate(NpcFocus_So npcFocus)

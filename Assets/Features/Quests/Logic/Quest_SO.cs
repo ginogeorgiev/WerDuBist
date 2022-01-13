@@ -12,7 +12,7 @@ namespace Features.Quests.Logic
         [SerializeField] private string description;
         [SerializeField] private List<Goal> goals;
         [SerializeField] private Vector2 position;
-        [Tooltip("visible=true means the quest will be displayed on the QuestUI when accepted")]
+        [Tooltip("visible=true means the Quest will be displayed on the QuestUI and Map")]
         [SerializeField] private bool visible;
         
         public int QuestID => id;

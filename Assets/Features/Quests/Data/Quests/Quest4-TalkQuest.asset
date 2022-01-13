@@ -18,8 +18,9 @@ MonoBehaviour:
   goals:
   - goalType: 1
     sprite: {fileID: 21300000, guid: b69dd42474a3b0a429cf79e46f26a3bd, type: 3}
+    otherQuest: {fileID: 0}
     npcName: Melody
     current: {fileID: 0}
     required: 1
   position: {x: -14.92, y: 8.14}
-  visible: 0
+  visible: 1

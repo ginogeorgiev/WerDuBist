@@ -71,7 +71,7 @@ namespace Features.Map.Logic
             mapUI.SetActive(!mapUI.activeSelf);
         }
         
-        public void switchIslands()
+        public void SwitchIslands()
         {
             mapBG.GetComponent<Image>().sprite = mainIsland;
             

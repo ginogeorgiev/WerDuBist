@@ -31,7 +31,7 @@ namespace Features.Quests.UILogic
                 return;
             }
             // Instantiate Quest UI Prefab
-            GameObject questUI= Instantiate(questPrefab, new Vector3 (0,0,0), Quaternion.identity);
+            var questUI= Instantiate(questPrefab, new Vector3 (0,0,0), Quaternion.identity);
             questUI.transform.SetParent(contentUI.transform);
 
             // write Quest Info
@@ -41,16 +41,16 @@ namespace Features.Quests.UILogic
             foreach (var goal in quest.GoalList)
             {
                 // Instantiate new Goal UI Prefab
-                GameObject goalUI = Instantiate(goalPrefab, new Vector3 (0,0,0), Quaternion.identity);
+                var goalUI = Instantiate(goalPrefab, new Vector3 (0,0,0), Quaternion.identity);
                 goalUI.transform.SetParent(questUI.transform);
 
                 // write Goal Info
-                TMP_Text goalText = goalUI.transform.GetChild(0).gameObject.transform.GetChild(1).GetComponent<TMP_Text>();
+                var goalText = goalUI.transform.GetChild(0).gameObject.transform.GetChild(1).GetComponent<TMP_Text>();
                 goalText.text = goal.Type==Goal.GoalType.collect ? goal.CurrentAmount.Get().ToString() : "0";
                 goalText.text += "/";
                 goalText.text += goal.RequiredAmount.ToString();
                 
-                Image goalImg = goalUI.transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<Image>();
+                var goalImg = goalUI.transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<Image>();
                 goalImg.sprite = goal.GoalSprite;
             }
             
@@ -172,7 +172,7 @@ namespace Features.Quests.UILogic
             
             for (var i = 0; i < contentUI.transform.childCount; i++)
             {
-                Transform questUI = contentUI.transform.GetChild(i);
+                var questUI = contentUI.transform.GetChild(i);
                 if (questUI.GetComponent<QuestFocusController>().Quest.QuestID == id)
                 {
                     return questUI;
