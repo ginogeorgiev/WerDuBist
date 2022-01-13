@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Features.Evaluation.Logic;
 using Features.Survey.Logic;
 using TMPro;
 using UnityEngine;
@@ -27,6 +28,11 @@ namespace Features.Survey.UILogic
         }
         
         private void OnDisable()
+        {
+            questionItemRuntimeSet.Remove(this);
+        }
+        
+        private void OnDestroy()
         {
             questionItemRuntimeSet.Remove(this);
         }

@@ -45,6 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapUI: {fileID: 6854141941167865341}
+  mapBG: {fileID: 6854141941360313188}
+  mainIsland: {fileID: 21300000, guid: e6c93a46a5990f64882664812ccf19b3, type: 3}
+  mapCamera: {fileID: 6854141941640970545}
+  mapOverlay: {fileID: 6854141941190753519}
+  mapBorder: {fileID: 6854141940514370468}
   questFocus: {fileID: 11400000, guid: 9a54019ef02478e4385862f29bec9568, type: 2}
   questMarker: {fileID: 6411306146009367982, guid: 49b865d6e55708e4583760924448f0f6, type: 3}
   questActive: {fileID: 21300000, guid: c49c9181f9f2d924ab721c777d4fdd16, type: 3}
@@ -308,6 +313,7 @@ GameObject:
   - component: {fileID: 6854141941179856850}
   - component: {fileID: 6854141941179856849}
   - component: {fileID: 6854141941179856854}
+  - component: {fileID: 2049180449}
   m_Layer: 5
   m_Name: EventListener
   m_TagString: Untagged
@@ -385,6 +391,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2049180449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6854141941179856845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: 282b474c47840ac4cba94211528efebe, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6854141939821812640}
+        m_TargetAssemblyTypeName: Features.Map.Logic.BigMapController, Assembly-CSharp
+        m_MethodName: switchIslands
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6854141941190753518
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,14 +446,14 @@ RectTransform:
   m_GameObject: {fileID: 6854141941190753518}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7235294, y: 0.7235294, z: 0.7235294}
+  m_LocalScale: {x: 0.6945882, y: 0.6945882, z: 0.6945882}
   m_Children: []
   m_Father: {fileID: 6854141940921024003}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 2.2, y: -9.6}
   m_SizeDelta: {x: 659, y: 456}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6854141941190753517
@@ -515,7 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9137255, g: 0.9137255, b: 0.9137255, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -591,7 +625,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6854141941640970545}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -481.15332, y: -218.98273, z: -1.5339355}
+  m_LocalPosition: {x: -504.98, y: -215.41, z: -1.5339355}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6854141941538888695}
@@ -628,7 +662,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1536
+    m_Bits: 512
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: a8492cfa799a68d45bc4a0601d348a39, type: 2}
   m_TargetDisplay: 0

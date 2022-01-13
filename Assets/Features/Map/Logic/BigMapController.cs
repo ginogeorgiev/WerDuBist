@@ -13,6 +13,12 @@ namespace Features.Map.Logic
     {
         [SerializeField] private GameObject mapUI;
 
+        [SerializeField] private GameObject mapBG;
+        [SerializeField] private Sprite mainIsland;
+        [SerializeField] private GameObject mapCamera;
+        [SerializeField] private Transform mapOverlay;
+        [SerializeField] private RectTransform mapBorder;
+
         [SerializeField] private Focus_SO<Quest_SO> questFocus;
 
         [SerializeField] private GameObject questMarker;
@@ -31,6 +37,7 @@ namespace Features.Map.Logic
 
         private void Awake()
         {
+            questMarker.transform.localScale = new Vector3(0.5f, 0.5f, 1);
             onDisplayUnlockedQuest.RegisterListener(DisplayUnlockedQuest);
             onDisplayActiveQuest.RegisterListener(DisplayActiveQuest);
             onRemoveQuest.RegisterListener(RemoveQuest);
@@ -62,6 +69,25 @@ namespace Features.Map.Logic
         public void ToggleMapUI()
         {
             mapUI.SetActive(!mapUI.activeSelf);
+        }
+        
+        public void switchIslands()
+        {
+            mapBG.GetComponent<Image>().sprite = mainIsland;
+            
+            mapCamera.GetComponent<Camera>().orthographicSize = 55f;
+            mapCamera.transform.localPosition = new Vector3(-420, -170, -1.5f);
+
+            mapOverlay.localPosition = new Vector3(-2.2f, 0.2f, 0);
+            mapOverlay.localScale = new Vector3(0.6534686f, 0.6534686f, 0.6534686f);
+
+            mapBorder.sizeDelta = new Vector2(885, 618);
+
+            questMarker.transform.localScale = new Vector3(2, 2, 1);
+            foreach (var marker in newQuestMarkers)
+            {
+                marker.Value.transform.localScale = new Vector3(2, 2, 1);
+            }
         }
 
         private void DisplayUnlockedQuest(Quest_SO quest)
@@ -98,7 +124,7 @@ namespace Features.Map.Logic
         
         private void RemoveQuest(Quest_SO quest)
         {
-            Destroy(newQuestMarkers[quest.QuestID]);
+            Destroy(activeQuestMarkers[quest.QuestID]);
             activeQuestMarkers.Remove(quest.QuestID);
         }
     }
