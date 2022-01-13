@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 266c97da10218e94ab464a1f7e833e73, type: 3}
-  m_Name: 04-Playfair-Conversation-02
+  m_Name: 10-Frau-Conversation-02-True 1
   m_EditorClassIdentifier: 
   speakerLeft: {fileID: 11400000, guid: a5d20b15f28ea8143b6531e8889a2eaf, type: 2}
-  speakerRight: {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
+  speakerRight: {fileID: 11400000, guid: 51f59b3b6d0ae1c43a6d410b4d40576b, type: 2}
   lines:
-  - npcData: {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
-    text: '
+  - npcData: {fileID: 11400000, guid: 51f59b3b6d0ae1c43a6d410b4d40576b, type: 2}
+    text: 'Da bist du ja mein Schatz.
 
 '
-  dialogQuestion: {fileID: 11400000, guid: 406869015b0fcee42842dffad93c2153, type: 2}
+  dialogQuestion: {fileID: 0}

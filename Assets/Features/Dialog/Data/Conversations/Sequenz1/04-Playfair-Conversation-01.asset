@@ -18,5 +18,7 @@ MonoBehaviour:
   - npcData: {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
     text: "Haha, schon wieder gewonnen. Wie viele Siege sind das? 3 Siege in Folge
       f\xFCr mich. Hahaha. \r\n"
-  dialogQuestion: {fileID: 0}
-  nextDialogConversationStep: {fileID: 11400000, guid: 9c4b70400b1b90f479c68ff31008a656, type: 2}
+  - npcData: {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
+    text: "Ah, du musst der Neue sein, \xFCber den alle reden. Mein Name ist Playfair.
+      Und was f\xFChrt dich heute hierher?\n"
+  dialogQuestion: {fileID: 11400000, guid: 406869015b0fcee42842dffad93c2153, type: 2}
