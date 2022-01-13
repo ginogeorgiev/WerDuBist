@@ -22,7 +22,7 @@ namespace Features.Quests.Logic
         private Quest_SO otherQuest;
         
         [Header("For Talking Goal:")] [SerializeField]
-        private string npcName;
+        private NPCData_SO npc;
 
         [Header("For Collecting Goal:")] [SerializeField]
         private IntVariable current;
@@ -34,16 +34,21 @@ namespace Features.Quests.Logic
 
         public Quest_SO OtherQuest => otherQuest;
         
-        public string NpcName => npcName;
+        public NPCData_SO Npc => npc;
 
         public IntVariable CurrentAmount => current;
         public int RequiredAmount => required;
 
         public bool Completed { get; set; }
-        
+
         public void Restore()
         {
             Completed = false;
+            
+            if (goalType == GoalType.talk)
+            {
+                sprite = npc.Icon;
+            }
         }
 
         public void Evaluate()
@@ -58,7 +63,7 @@ namespace Features.Quests.Logic
 
         public void Evaluate(NpcFocus_So npcFocus)
         {
-            if (NpcName == npcFocus.Get().Data.FullName)
+            if (Npc.ID == npcFocus.Get().Data.ID)
             {
                 Completed = true;
             }

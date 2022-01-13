@@ -85,7 +85,7 @@ namespace Features.Quests.Logic
             }
             
             // reevaluate each activeQuest.Goal with goalType Quest
-            foreach (var goal in activeQuests.Items.SelectMany(q => q.GoalList.Where(goal => goal.Type==Goal.GoalType.quest)))
+            foreach (var goal in questSet.Items.SelectMany(q => q.GoalList.Where(goal => goal.Type==Goal.GoalType.quest)))
             {
                 goal.Evaluate();
             }

@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e101bbedf808fad488e79663f8f7649d, type: 3}
   m_Name: Morty
   m_EditorClassIdentifier: 
+  id: 27
   fullName: Morty
   portrait: {fileID: 21300000, guid: 00a0de5f8e228e649b6419fb6397495d, type: 3}
+  icon: {fileID: 0}

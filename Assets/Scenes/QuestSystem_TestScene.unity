@@ -153,7 +153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5506266131864378915, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 858
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5506266131864378915, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -213,11 +213,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8432286848697763842, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8432286848697763842, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 207
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8432286848697763842, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -840,6 +840,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2049180449, guid: 4cac416ac1cb80e4aa1ab37501c5c517, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchIslands
+      objectReference: {fileID: 0}
     - target: {fileID: 6854141941538888694, guid: 4cac416ac1cb80e4aa1ab37501c5c517, type: 3}
       propertyPath: m_Name
       value: BigMap

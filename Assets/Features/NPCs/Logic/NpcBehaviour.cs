@@ -28,8 +28,6 @@ namespace Features.NPCs.Logic
     
     public class NpcBehaviour : MonoBehaviour
     {
-        [SerializeField] private int id;
-
         [Header("Hier kommt das SO zum NPC rein (den Kreis rechts dafür benutzen)")]
         [SerializeField] private NPCData_SO data;
         

@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e101bbedf808fad488e79663f8f7649d, type: 3}
   m_Name: Kind
   m_EditorClassIdentifier: 
+  id: 16
   fullName: Kind
   portrait: {fileID: 21300000, guid: 2e6d7f4a3471bf948952572ca0035266, type: 3}
+  icon: {fileID: 0}

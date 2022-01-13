@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e101bbedf808fad488e79663f8f7649d, type: 3}
   m_Name: Terry_Handwerker
   m_EditorClassIdentifier: 
+  id: 7
   fullName: Terry, der Handwerker
   portrait: {fileID: 21300000, guid: 53665c49542a39b4a9c1875bbff600ff, type: 3}
+  icon: {fileID: 0}

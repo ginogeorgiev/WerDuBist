@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e101bbedf808fad488e79663f8f7649d, type: 3}
   m_Name: Calibri
   m_EditorClassIdentifier: 
+  id: 9
   fullName: Calibri
   portrait: {fileID: 21300000, guid: 63bb8d4fb3bbcf94bb226210d9fc8918, type: 3}
+  icon: {fileID: 0}
