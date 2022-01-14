@@ -1,10 +1,8 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using Features.Evaluation.Logic;
 using PlayFab;
 using PlayFab.ClientModels;
-using TMPro;
 using UnityEngine;
 
 namespace Features.PlayFab.Logic
@@ -14,13 +12,13 @@ namespace Features.PlayFab.Logic
         [SerializeField] private EvaluationData evalData;
         [SerializeField] private int throttleTime = 10;
         [SerializeField] private bool disableSendData = false;
-        [SerializeField] private bool disableCharacterCreation = false;
+        [SerializeField] private bool disableAccountCreation = false;
         
         private bool coroutineRunning;
 
         public void Start()
         {
-            if (disableCharacterCreation) return;
+            if (disableAccountCreation) return;
             
             if (string.IsNullOrEmpty(PlayFabSettings.staticSettings.TitleId)){
                 /*
@@ -45,14 +43,14 @@ namespace Features.PlayFab.Logic
 
         public void OnEvaluationDictionaryChanged()
         {
-            if (!coroutineRunning && !disableSendData)
+            if (!coroutineRunning && !disableSendData && !disableAccountCreation)
             {
                 StartCoroutine(RequestThrottle());
             }
         }
         
         public void SetUserData() {
-            if(evalData == null || evalData.EvaluationDictionary == null || disableSendData) { return; }
+            if(evalData == null || evalData.EvaluationDictionary == null || disableSendData || disableAccountCreation) { return; }
             
             PlayFabClientAPI.UpdateUserData(
                 new UpdateUserDataRequest() {
