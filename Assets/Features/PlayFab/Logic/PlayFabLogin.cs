@@ -13,11 +13,15 @@ namespace Features.PlayFab.Logic
     {
         [SerializeField] private EvaluationData evalData;
         [SerializeField] private int throttleTime = 10;
+        [SerializeField] private bool disableSendData = false;
+        [SerializeField] private bool disableCharacterCreation = false;
         
         private bool coroutineRunning;
 
         public void Start()
         {
+            if (disableCharacterCreation) return;
+            
             if (string.IsNullOrEmpty(PlayFabSettings.staticSettings.TitleId)){
                 /*
                 Please change the titleId below to your own titleId from PlayFab Game Manager.
@@ -41,14 +45,14 @@ namespace Features.PlayFab.Logic
 
         public void OnEvaluationDictionaryChanged()
         {
-            if (!coroutineRunning)
+            if (!coroutineRunning && !disableSendData)
             {
                 StartCoroutine(RequestThrottle());
             }
         }
         
         public void SetUserData() {
-            if(evalData == null || evalData.EvaluationDictionary == null) { return; }
+            if(evalData == null || evalData.EvaluationDictionary == null || disableSendData) { return; }
             
             PlayFabClientAPI.UpdateUserData(
                 new UpdateUserDataRequest() {

@@ -134,3 +134,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   evalData: {fileID: 11400000, guid: a58b3433114e9ff4495382a1d69c02aa, type: 2}
   throttleTime: 10
+  disableSendData: 1
+  disableCharacterCreation: 1
