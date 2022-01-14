@@ -90,9 +90,16 @@ namespace Features.Quests.UILogic
                     goalUI.text  += "/";
                     goalUI.text  += goal.RequiredAmount.ToString() ;
                 }
-                else// if type talk 
+                else if (goal.Type==Goal.GoalType.collect)
                 {
                      goalUI.text = goal.Completed ? "1/1" : "0/1";
+                }
+                else if (goal.Type==Goal.GoalType.quest)
+                {
+                    var q = goal.OtherQuests.FindAll(quest => quest.IsCompleted).Count();
+                    goalUI.text = q.ToString();
+                    goalUI.text  += "/";
+                    goalUI.text  += goal.RequiredAmount.ToString() ;
                 }
             }
             
@@ -133,6 +140,8 @@ namespace Features.Quests.UILogic
 
         private void RemoveQuest(Quest_SO quest)
         {
+            if (!activeQuests.Items.Contains(quest)) return;
+            
             if (!quest.Visible)
             {
                 activeQuests.Items.Remove(quest);

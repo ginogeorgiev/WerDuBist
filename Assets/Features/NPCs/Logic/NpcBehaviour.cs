@@ -56,11 +56,27 @@ namespace Features.NPCs.Logic
             
             activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
 
-            // set own position for all Quest this NPC gives
+            // set own position for all Quest this NPC starts/ends
+            var pos = transform.position;
             foreach (var conversation in conversationElements.Where(element => element.Quest!=null))
             {
-                var pos = transform.localPosition;
-                conversation.Quest.QuestPosition = new Vector2(pos.x,pos.y);
+                conversation.Quest.EndPosition = new Vector2(pos.x,pos.y);
+            }
+            foreach (var conversation in conversationElements.Where(c => c.DialogConversationLeft != null))
+            {
+                if (conversation.DialogConversationLeft.DialogQuestion == null) continue;
+                foreach (var con in conversation.DialogConversationLeft.DialogQuestion.Choices.Where(choice => choice.Quest!=null))
+                {
+                    con.Quest.StartPosition = new Vector2(pos.x,pos.y);
+                }
+            }
+            foreach (var conversation in conversationElements.Where(c => c.DialogConversationRight != null))
+            {
+                if (conversation.DialogConversationRight.DialogQuestion == null) continue;
+                foreach (var con in conversation.DialogConversationRight.DialogQuestion.Choices.Where(choice => choice.Quest!=null))
+                {
+                    con.Quest.StartPosition = new Vector2(pos.x,pos.y);
+                }
             }
         }
 

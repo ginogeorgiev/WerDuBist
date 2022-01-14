@@ -69,7 +69,7 @@ namespace Features.Quests.Logic
 
         private void CompleteQuest(Quest_SO quest)
         {
-            if (!activeQuests.Items.Contains(quest)) return;
+            if (quest.GoalList.All(goal => goal.Type==Goal.GoalType.collect) && !activeQuests.Items.Contains(quest)) return;
 
             quest.CheckGoals();
             
@@ -84,7 +84,7 @@ namespace Features.Quests.Logic
                 goal.CurrentAmount.Add(-goal.RequiredAmount);
             }
             
-            // reevaluate each activeQuest.Goal with goalType Quest
+            // reevaluate each Quest.Goal with goalType Quest
             foreach (var goal in questSet.Items.SelectMany(q => q.GoalList.Where(goal => goal.Type==Goal.GoalType.quest)))
             {
                 goal.Evaluate();
@@ -97,7 +97,7 @@ namespace Features.Quests.Logic
         public void UpdateTalkQuest()
         {
             // for each activeQuest.Goal with goalType Talk
-            foreach (var goal in activeQuests.Items.SelectMany(q => q.GoalList.Where(goal => goal.Type==Goal.GoalType.talk)))
+            foreach (var goal in questSet.Items.SelectMany(q => q.GoalList.Where(goal => goal.Type==Goal.GoalType.talk)))
             {
                 goal.Evaluate(npcFocus);
             }

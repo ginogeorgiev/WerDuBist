@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using DataStructures.Variables;
 using Features.NPCs.Logic;
 using UnityEngine;
@@ -19,7 +20,7 @@ namespace Features.Quests.Logic
         [SerializeField] private Sprite sprite;
 
         [Header("For other Quest as Goal:")] [SerializeField]
-        private Quest_SO otherQuest;
+        private List<Quest_SO> otherQuests;
         
         [Header("For Talking Goal:")] [SerializeField]
         private NPCData_SO npc;
@@ -32,7 +33,7 @@ namespace Features.Quests.Logic
         public GoalType Type => goalType;
         public Sprite GoalSprite => sprite;
 
-        public Quest_SO OtherQuest => otherQuest;
+        public List<Quest_SO> OtherQuests => otherQuests;
         
         public NPCData_SO Npc => npc;
 
@@ -49,6 +50,10 @@ namespace Features.Quests.Logic
             {
                 sprite = npc.Icon;
             }
+            if (goalType == GoalType.quest)
+            {
+                required = otherQuests.Count;
+            }
         }
 
         public void Evaluate()
@@ -56,7 +61,7 @@ namespace Features.Quests.Logic
             Completed = goalType switch
             {
                 GoalType.collect => CurrentAmount.Get() >= RequiredAmount,
-                GoalType.quest => otherQuest.IsCompleted,
+                GoalType.quest => otherQuests.TrueForAll(quest => quest.IsCompleted),
                 _ => Completed
             };
         }
@@ -68,5 +73,6 @@ namespace Features.Quests.Logic
                 Completed = true;
             }
         }
+        
     }
 }

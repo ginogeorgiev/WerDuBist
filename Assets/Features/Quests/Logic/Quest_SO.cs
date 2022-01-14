@@ -10,19 +10,26 @@ namespace Features.Quests.Logic
         [SerializeField] private int id;
         [SerializeField] private string title;
         [SerializeField] private string description;
-        [SerializeField] private List<Goal> goals;
-        [SerializeField] private Vector2 position;
         [Tooltip("visible=true means the Quest will be displayed on the QuestUI and Map")]
         [SerializeField] private bool visible;
+        [SerializeField] private List<Goal> goals;
+        [SerializeField] private Vector2 startPosition;
+        [SerializeField] private Vector2 endPosition;
+        
         
         public int QuestID => id;
         public string QuestTitle => title;
         public string QuestDescription => description;
         public List<Goal> GoalList => goals;
-        public Vector2 QuestPosition
+        public Vector2 StartPosition
         {
-            get => position;
-            set => position = value;
+            get => startPosition;
+            set => startPosition = value;
+        }
+        public Vector2 EndPosition
+        {
+            get => endPosition;
+            set => endPosition = value;
         }
 
         public bool Visible => visible;

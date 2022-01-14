@@ -15,12 +15,14 @@ MonoBehaviour:
   id: 3
   title: Quest Quest
   description: Do the Talk Quest
+  visible: 1
   goals:
   - goalType: 2
     sprite: {fileID: 21300000, guid: 83860b19500c9ec42a8ef0a9c54eaaca, type: 3}
-    otherQuest: {fileID: 11400000, guid: 9ec1ef8e3ab31a840bb549d99dc183af, type: 2}
-    npcName: 
+    otherQuests:
+    - {fileID: 11400000, guid: 9ec1ef8e3ab31a840bb549d99dc183af, type: 2}
+    npc: {fileID: 0}
     current: {fileID: 0}
-    required: 5
-  position: {x: -30.92, y: 7.33}
-  visible: 1
+    required: 1
+  startPosition: {x: -30.92, y: 7.33}
+  endPosition: {x: -30.92, y: 7.33}
