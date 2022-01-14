@@ -809,7 +809,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ergebnis Anzeigen
+  m_text: Ergebnis Absenden
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1808,7 +1808,7 @@ GameObject:
   - component: {fileID: 3516786231919915469}
   - component: {fileID: 32101476857667531}
   m_Layer: 5
-  m_Name: ShowResult_Button
+  m_Name: SubmitResult_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1916,7 +1916,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: ecb3d5dcd5557fc428e0c9360a20cabe, type: 2}
+      - m_Target: {fileID: 11400000, guid: 415b9b01c786f834b919e26705edc95e, type: 2}
         m_TargetAssemblyTypeName: DataStructures.Event.GameEvent_SO, Assembly-CSharp
         m_MethodName: Raise
         m_Mode: 1
