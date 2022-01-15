@@ -1,10 +1,10 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace Features.Evaluation.Logic
+namespace Features.Evaluation.Logic.Editor
 {
     [CustomEditor(typeof(EvaluationData))]
-    public class EvaluationDataEditor : Editor
+    public class EvaluationDataEditor : UnityEditor.Editor
     {
         public override void OnInspectorGUI()
         {

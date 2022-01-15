@@ -1,10 +1,10 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace Features.Survey.UILogic
+namespace Features.Survey.UILogic.Editor
     {
         [CustomEditor(typeof(SurveyController))]
-        public class SurveyControllerEditor : Editor
+        public class SurveyControllerEditor : UnityEditor.Editor
         {
             public override void OnInspectorGUI()
             {
