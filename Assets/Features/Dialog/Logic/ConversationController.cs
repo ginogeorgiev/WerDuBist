@@ -1,3 +1,4 @@
+using DataStructures.Event;
 using DataStructures.Variables;
 using Features.Input;
 using Features.NPCs.Logic;
@@ -17,6 +18,7 @@ namespace Features.Dialog.Logic
         [SerializeField] private DialogConversation_SO dialogConversation;
         [SerializeField] private BoolVariable isPlayerInConversation;
         [SerializeField] private QuestionEvent questionEvent;
+        [SerializeField] private GameEvent_SO onConversationStarted;
 
         [SerializeField] private GameObject questionUI;
         
@@ -100,6 +102,7 @@ namespace Features.Dialog.Logic
         private void Initialize()
         {
             conversationStarted = true;
+            onConversationStarted.Raise();
             activeLineIndex = 0;
             speakerUIControllerLeft.Speaker = dialogConversation.SpeakerLeft;
             speakerUIControllerRight.Speaker = dialogConversation.SpeakerRight;
@@ -115,7 +118,7 @@ namespace Features.Dialog.Logic
             if (questionUI.activeSelf) return;
             
             if (dialogConversation == null) return;
-            
+
             isPlayerInConversation.SetTrue();
             tutorialData.OnDeActivateInteractInfo.Raise();
             

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using DataStructures.Event;
 using Features.Dialog.Logic;
 using Features.Input;
@@ -28,8 +29,6 @@ namespace Features.NPCs.Logic
     
     public class NpcBehaviour : MonoBehaviour
     {
-        [SerializeField] private int id;
-
         [Header("Hier kommt das SO zum NPC rein (den Kreis rechts dafür benutzen)")]
         [SerializeField] private NPCData_SO data;
         
@@ -40,7 +39,7 @@ namespace Features.NPCs.Logic
         [SerializeField] private NpcFocus_So npcFocus;
         [SerializeField] private GameEvent_SO onActiveConversationChanged;
         [SerializeField] private QuestEvent onCompleteQuest;
-        
+
         [Header("Nichts ausfüllen, das ist zum debuggen")]
         [SerializeField] private int conversationIndex;
         [SerializeField] private DialogConversation_SO activeConversation;
@@ -56,6 +55,29 @@ namespace Features.NPCs.Logic
             if (conversationElements == null || conversationElements.Count == 0) return;
             
             activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
+
+            // set own position for all Quest this NPC starts/ends
+            var pos = transform.position;
+            foreach (var conversation in conversationElements.Where(element => element.Quest!=null))
+            {
+                conversation.Quest.EndPosition = new Vector2(pos.x,pos.y);
+            }
+            foreach (var conversation in conversationElements.Where(c => c.DialogConversationLeft != null))
+            {
+                if (conversation.DialogConversationLeft.DialogQuestion == null) continue;
+                foreach (var con in conversation.DialogConversationLeft.DialogQuestion.Choices.Where(choice => choice.Quest!=null))
+                {
+                    con.Quest.StartPosition = new Vector2(pos.x,pos.y);
+                }
+            }
+            foreach (var conversation in conversationElements.Where(c => c.DialogConversationRight != null))
+            {
+                if (conversation.DialogConversationRight.DialogQuestion == null) continue;
+                foreach (var con in conversation.DialogConversationRight.DialogQuestion.Choices.Where(choice => choice.Quest!=null))
+                {
+                    con.Quest.StartPosition = new Vector2(pos.x,pos.y);
+                }
+            }
         }
 
         public void OnNpcFocusChanged()

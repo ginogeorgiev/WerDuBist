@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a54c835cd434817add4d3fdde868665, type: 3}
-  m_Name: Quest1-BuildRaft
+  m_Name: Quest3 - QuestQuest
   m_EditorClassIdentifier: 
-  id: 1
-  title: "Baue ein Flo\xDF"
-  description: Sammel Holz
+  id: 3
+  title: Quest Quest
+  description: Do the Talk Quest
   visible: 1
   goals:
-  - goalType: 0
-    sprite: {fileID: 21300000, guid: 9047e3b09aa11455db9f8e350a790354, type: 3}
-    otherQuest: {fileID: 0}
+  - goalType: 2
+    sprite: {fileID: 21300000, guid: 83860b19500c9ec42a8ef0a9c54eaaca, type: 3}
+    otherQuests:
+    - {fileID: 11400000, guid: 9ec1ef8e3ab31a840bb549d99dc183af, type: 2}
     npc: {fileID: 0}
-    current: {fileID: 11400000, guid: 15be0257408b7f545868f4fa436c151e, type: 2}
-    required: 5
-  startPosition: {x: -27.61, y: -1.76}
-  endPosition: {x: -27.61, y: -1.76}
+    current: {fileID: 0}
+    required: 1
+  startPosition: {x: -30.92, y: 7.33}
+  endPosition: {x: -30.92, y: 7.33}

@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e101bbedf808fad488e79663f8f7649d, type: 3}
   m_Name: Frau
   m_EditorClassIdentifier: 
+  id: 15
   fullName: Frau
   portrait: {fileID: 21300000, guid: 94b400aefe227d448b8247e0aa41e0b6, type: 3}
+  icon: {fileID: 0}

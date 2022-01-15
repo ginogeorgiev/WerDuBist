@@ -71,7 +71,7 @@ namespace Features.Map.Logic
             mapUI.SetActive(!mapUI.activeSelf);
         }
         
-        public void switchIslands()
+        public void SwitchIslands()
         {
             mapBG.GetComponent<Image>().sprite = mainIsland;
             
@@ -92,7 +92,7 @@ namespace Features.Map.Logic
 
         private void DisplayUnlockedQuest(Quest_SO quest)
         {
-            var obj= Instantiate(questMarker, quest.QuestPosition, Quaternion.identity);
+            var obj= Instantiate(questMarker, quest.StartPosition, Quaternion.identity);
             obj.transform.SetParent(mapUI.transform);
             obj.GetComponent<SpriteRenderer>().sprite = questNew;
 
@@ -101,11 +101,19 @@ namespace Features.Map.Logic
         
         private void DisplayActiveQuest(Quest_SO quest)
         {
-            var obj = newQuestMarkers[quest.QuestID];
-            obj.GetComponent<SpriteRenderer>().sprite = questActive;
-            
+            if (!quest.Visible)
+            {
+                Destroy(newQuestMarkers[quest.QuestID]);
+            }
+            else
+            {
+                var obj = newQuestMarkers[quest.QuestID];
+                obj.GetComponent<SpriteRenderer>().sprite = questActive;
+                obj.transform.position = new Vector3(quest.EndPosition.x, quest.EndPosition.y, -.5f);
+                activeQuestMarkers.Add(quest.QuestID, obj);
+            }
+
             newQuestMarkers.Remove(quest.QuestID);
-            activeQuestMarkers.Add(quest.QuestID, obj);
         }
         
         public void DisplayActiveFocus()
@@ -124,8 +132,16 @@ namespace Features.Map.Logic
         
         private void RemoveQuest(Quest_SO quest)
         {
-            Destroy(activeQuestMarkers[quest.QuestID]);
-            activeQuestMarkers.Remove(quest.QuestID);
+            if (activeQuestMarkers.ContainsKey(quest.QuestID))
+            {
+                Destroy(activeQuestMarkers[quest.QuestID]);
+                activeQuestMarkers.Remove(quest.QuestID);
+            } 
+            else if (newQuestMarkers.ContainsKey(quest.QuestID))
+            {
+                Destroy(newQuestMarkers[quest.QuestID]);
+                newQuestMarkers.Remove(quest.QuestID);
+            }
         }
     }
 }

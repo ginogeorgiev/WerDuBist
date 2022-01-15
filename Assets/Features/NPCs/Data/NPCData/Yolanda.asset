@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e101bbedf808fad488e79663f8f7649d, type: 3}
   m_Name: Yolanda
   m_EditorClassIdentifier: 
+  id: 6
   fullName: Yolanda
   portrait: {fileID: 21300000, guid: 93e9f2baa44e848469bf24fbae087dd0, type: 3}
+  icon: {fileID: 0}

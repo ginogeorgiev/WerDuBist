@@ -20,4 +20,3 @@ MonoBehaviour:
   - npcData: {fileID: 11400000, guid: a5d20b15f28ea8143b6531e8889a2eaf, type: 2}
     text: "Ich bin schiffbr\xFCchig."
   dialogQuestion: {fileID: 11400000, guid: e0809b2e4b0614c4b81ffe416029474d, type: 2}
-  nextDialogConversationStep: {fileID: 0}
