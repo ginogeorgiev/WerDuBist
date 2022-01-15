@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 266c97da10218e94ab464a1f7e833e73, type: 3}
   m_Name: "26-Kapit\xE4n-Conversation-02"
   m_EditorClassIdentifier: 
-  speakerLeft: {fileID: 0}
-  speakerRight: {fileID: 0}
-  lines: []
+  speakerLeft: {fileID: 11400000, guid: a5d20b15f28ea8143b6531e8889a2eaf, type: 2}
+  speakerRight: {fileID: 11400000, guid: 6f84125686e4a4d4ca729a3a09492db4, type: 2}
+  lines:
+  - npcData: {fileID: 11400000, guid: a5d20b15f28ea8143b6531e8889a2eaf, type: 2}
+    text: "(Du kannst h\xF6ren, wie der Kapit\xE4n etwas schreit.)"
+  - npcData: {fileID: 11400000, guid: 6f84125686e4a4d4ca729a3a09492db4, type: 2}
+    text: Nun, wenn du wirklich Zeit zum Nachdenken brauchst, dann nimm sie dir.
+  - npcData: {fileID: 11400000, guid: 6f84125686e4a4d4ca729a3a09492db4, type: 2}
+    text: "Denk aber nicht zu lange dar\xFCber nach, denn der Wind und die See sind
+      sehr unbest\xE4ndig."
   dialogQuestion: {fileID: 0}

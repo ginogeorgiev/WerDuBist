@@ -12,4 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
   m_Name: 26-Rockwell-Question-01
   m_EditorClassIdentifier: 
-  choices: []
+  choices:
+  - text: Ich bin bereit, eine Entscheidung zu treffen.
+    dialogConversation: {fileID: 11400000, guid: 2573d164fc3e5694bab1d33bb28d9f1f, type: 2}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 0}
+  - text: "Geben Sie mir eine Sekunde Zeit, dar\xFCber nachzudenken."
+    dialogConversation: {fileID: 11400000, guid: 7098b048638a0924cbf19b4c8ead4a2b, type: 2}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 0}
+  - text: "Ich brauche etwas Zeit, um ernsthaft dar\xFCber nachzudenken."
+    dialogConversation: {fileID: 11400000, guid: d99d486623d9c0946a9e2dd660cc5ddd, type: 2}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 0}

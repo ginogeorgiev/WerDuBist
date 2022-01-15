@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
   m_Name: 26-Rockwell-Question-02
   m_EditorClassIdentifier: 
-  choices: []
+  choices:
+  - text: "Ich bleibe sehr gerne hier. Wenn Sie mich lassen w\xFCrden."
+    dialogConversation: {fileID: 11400000, guid: 84ff120ccaff7074e891daff2d5fe8b5, type: 2}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 0}
+  - text: "Danke f\xFCr das Angebot, aber ich muss nach Hause gehen."
+    dialogConversation: {fileID: 11400000, guid: a1ef02befd5eb814a801551be9b04001, type: 2}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 0}

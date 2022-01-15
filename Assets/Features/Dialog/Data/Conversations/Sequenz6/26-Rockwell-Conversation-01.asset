@@ -12,7 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 266c97da10218e94ab464a1f7e833e73, type: 3}
   m_Name: 26-Rockwell-Conversation-01
   m_EditorClassIdentifier: 
-  speakerLeft: {fileID: 0}
-  speakerRight: {fileID: 0}
-  lines: []
-  dialogQuestion: {fileID: 0}
+  speakerLeft: {fileID: 11400000, guid: a5d20b15f28ea8143b6531e8889a2eaf, type: 2}
+  speakerRight: {fileID: 11400000, guid: 41ade48c0f6a52a4f80cd74d816d111d, type: 2}
+  lines:
+  - npcData: {fileID: 11400000, guid: 41ade48c0f6a52a4f80cd74d816d111d, type: 2}
+    text: 'Ah, ich sehe, du hast deine Vorbereitungen erledigt, junger Mann. '
+  - npcData: {fileID: 11400000, guid: 41ade48c0f6a52a4f80cd74d816d111d, type: 2}
+    text: Wir sind alle hierher gekommen, um uns von dir zu verabschieden.
+  - npcData: {fileID: 11400000, guid: 41ade48c0f6a52a4f80cd74d816d111d, type: 2}
+    text: "Jeder aus der Insel hat dar\xFCber gesprochen. wir m\xF6chten, dass du
+      auf dieser Insel bleibst."
+  - npcData: {fileID: 11400000, guid: 41ade48c0f6a52a4f80cd74d816d111d, type: 2}
+    text: "Alle sind dankbar f\xFCr alles, was du w\xE4hrend deiner Zeit hier getan
+      hast, und wir haben uns gedacht, dass du vielleicht ein ganz neues Leben hier
+      auf der Insel beginnen k\xF6nntest."
+  - npcData: {fileID: 11400000, guid: 41ade48c0f6a52a4f80cd74d816d111d, type: 2}
+    text: Also, wie sieht es aus, willst du bei uns bleiben?
+  - npcData: {fileID: 11400000, guid: a5d20b15f28ea8143b6531e8889a2eaf, type: 2}
+    text: (Von diesem Punkt an wird sich dein Schicksal entscheiden. Bist du bereit,
+      eine Entscheidung zu treffen?)
+  dialogQuestion: {fileID: 11400000, guid: 316cf1d51ef5bfd4980acad18d152315, type: 2}

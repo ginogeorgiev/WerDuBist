@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 266c97da10218e94ab464a1f7e833e73, type: 3}
   m_Name: 26-Rockwell-Conversation-03
   m_EditorClassIdentifier: 
-  speakerLeft: {fileID: 0}
-  speakerRight: {fileID: 0}
-  lines: []
+  speakerLeft: {fileID: 11400000, guid: a5d20b15f28ea8143b6531e8889a2eaf, type: 2}
+  speakerRight: {fileID: 11400000, guid: 41ade48c0f6a52a4f80cd74d816d111d, type: 2}
+  lines:
+  - npcData: {fileID: 11400000, guid: 41ade48c0f6a52a4f80cd74d816d111d, type: 2}
+    text: "Ah, wunderbar. Dann hei\xDFe ich dich [Spielername ] als Vertreter des
+      Dorfes in deinem neuen Zuhause herzlich willkommen. "
   dialogQuestion: {fileID: 0}

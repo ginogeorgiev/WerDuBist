@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 266c97da10218e94ab464a1f7e833e73, type: 3}
   m_Name: "26-Kapit\xE4n-Conversation-01"
   m_EditorClassIdentifier: 
-  speakerLeft: {fileID: 0}
-  speakerRight: {fileID: 0}
-  lines: []
-  dialogQuestion: {fileID: 0}
+  speakerLeft: {fileID: 11400000, guid: a5d20b15f28ea8143b6531e8889a2eaf, type: 2}
+  speakerRight: {fileID: 11400000, guid: 6f84125686e4a4d4ca729a3a09492db4, type: 2}
+  lines:
+  - npcData: {fileID: 11400000, guid: 6f84125686e4a4d4ca729a3a09492db4, type: 2}
+    text: "Oh, du bist fr\xFCher zur\xFCck, als ich dachte. Die Vorbereitungen sind
+      fast abgeschlossen. Vielleicht m\xF6chten du noch ein wenig warten."
+  dialogQuestion: {fileID: 11400000, guid: c2046b27a2179014bb0b2603a9f7cd4f, type: 2}

@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
   m_Name: "26-Kapit\xE4n-Question-01"
   m_EditorClassIdentifier: 
-  choices: []
+  choices:
+  - text: Ich kann noch ein bisschen warten.
+    dialogConversation: {fileID: 0}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 0}
