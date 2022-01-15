@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 namespace DataStructures.RuntimeSet
 {
@@ -32,6 +31,11 @@ namespace DataStructures.RuntimeSet
         public void Restore()
         {
             items.Clear();
+        }
+
+        private void OnEnable()
+        {
+            Restore();
         }
     }
 }

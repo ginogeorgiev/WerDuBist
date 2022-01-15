@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
-  m_Name: 01-Melody-Q2
+  m_Name: Somebody2-Q2
   m_EditorClassIdentifier: 
   choices:
-  - text: Na dann mal los.
+  - text: Wird gemacht.
     ingameQuestion: {fileID: 0}
     value: 0
     dialogConversation: {fileID: 0}
-    choiceEvent: {fileID: 11400000, guid: d882be4c82286df4b94ba25cbe00c803, type: 2}
-    quest: {fileID: 11400000, guid: 54dbc863e07340346b70e6c50ba17994, type: 2}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 11400000, guid: 13307adfb0f75e74aa0ec204f152b77c, type: 2}

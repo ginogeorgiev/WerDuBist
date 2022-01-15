@@ -48,14 +48,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34c1689b6e0f4508a754de2a36e12d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  npcFocus: {fileID: 11400000, guid: e1b8dc06bac9c86478b1a76b4ce599c6, type: 2}
   data: {fileID: 0}
-  activeConversation: {fileID: 0}
-  onActiveConversationChanged: {fileID: 11400000, guid: a98456addc653ad4fa3f69cbe444cb67, type: 2}
   conversationElements: []
-  conversationIndex: 0
+  npcFocus: {fileID: 11400000, guid: e1b8dc06bac9c86478b1a76b4ce599c6, type: 2}
+  npcBehaviourRuntimeSet: {fileID: 11400000, guid: 9d553a0a1058f1b4fa6ea1634cc00b10, type: 2}
+  onActiveConversationChanged: {fileID: 11400000, guid: a98456addc653ad4fa3f69cbe444cb67, type: 2}
   onCompleteQuest: {fileID: 11400000, guid: a1a72b2b5c2b8f44f840edf2784f961e, type: 2}
+  conversationIndex: 0
+  activeConversation: {fileID: 0}
 --- !u!114 &987336911311489786
 MonoBehaviour:
   m_ObjectHideFlags: 0
