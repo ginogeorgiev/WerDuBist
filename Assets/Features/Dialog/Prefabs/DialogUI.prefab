@@ -1619,6 +1619,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onConversationStarted: {fileID: 11400000, guid: a4c0113cce1ea7940b97dd603cab66ac, type: 2}
   questionUI: {fileID: 5657984875310201835}
   speakerLeft: {fileID: 5657984874109734534}
   speakerRight: {fileID: 5657984875276584541}

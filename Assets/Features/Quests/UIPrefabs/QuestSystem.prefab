@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  event: {fileID: 11400000, guid: a98456addc653ad4fa3f69cbe444cb67, type: 2}
+  event: {fileID: 11400000, guid: a4c0113cce1ea7940b97dd603cab66ac, type: 2}
   response:
     m_PersistentCalls:
       m_Calls:
@@ -375,7 +375,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 858, y: 0}
+  m_AnchoredPosition: {x: 866, y: 0}
   m_SizeDelta: {x: 214, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &5861041857713194565
