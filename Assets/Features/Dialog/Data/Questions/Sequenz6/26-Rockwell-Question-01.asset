@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
+  m_Name: 26-Rockwell-Question-01
+  m_EditorClassIdentifier: 
+  choices:
+  - text: Ich bin bereit, eine Entscheidung zu treffen.
+    dialogConversation: {fileID: 11400000, guid: 2573d164fc3e5694bab1d33bb28d9f1f, type: 2}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 0}
+  - text: "Geben Sie mir eine Sekunde Zeit, dar\xFCber nachzudenken."
+    dialogConversation: {fileID: 11400000, guid: 7098b048638a0924cbf19b4c8ead4a2b, type: 2}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 0}
+  - text: "Ich brauche etwas Zeit, um ernsthaft dar\xFCber nachzudenken."
+    dialogConversation: {fileID: 11400000, guid: d99d486623d9c0946a9e2dd660cc5ddd, type: 2}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 0}

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
+  m_Name: 08-Calibri-Q03
+  m_EditorClassIdentifier: 
+  choices:
+  - text: "Sie gr\xFCndlich belehren."
+    dialogConversation: {fileID: 11400000, guid: 6f3fb45ba43ced7498d2335b0eaf1bfa, type: 2}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 0}
+  - text: Sie bedrohen.
+    dialogConversation: {fileID: 11400000, guid: 26a58d8d141f3854ea3092c677bbcaa4, type: 2}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 0}
+  - text: "Sie verpr\xFCgeln."
+    dialogConversation: {fileID: 11400000, guid: 43c7178a787412f43b37fb3681f3c0df, type: 2}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 0}

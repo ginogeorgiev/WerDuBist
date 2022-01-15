@@ -15,6 +15,34 @@ PrefabInstance:
       propertyPath: data
       value: 
       objectReference: {fileID: 11400000, guid: 47df417dc16681147bb9ad57ab229b65, type: 2}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.data[0].quest
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.data[1].quest
+      value: 
+      objectReference: {fileID: 11400000, guid: 8d4ba0823450ab5469ad0340d0e49c62, type: 2}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.data[0].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: a74a0f2bcbb66e642ae07c2ec571a7ea, type: 2}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.data[1].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 066dda1a21ad86941a6773aa9bfffd04, type: 2}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.data[0].dialogConversationRight
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.data[1].dialogConversationRight
+      value: 
+      objectReference: {fileID: 11400000, guid: ec3057e5f2fd2594e927d7ca57f57519, type: 2}
     - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -61,7 +89,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4204690260697107190, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: m_Name
-      value: 14_Alte_Frau
+      value: 14_Alte_Dame
       objectReference: {fileID: 0}
     - target: {fileID: 4835833018944873319, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: m_Size.x
