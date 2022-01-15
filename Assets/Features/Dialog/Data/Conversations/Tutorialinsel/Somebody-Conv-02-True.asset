@@ -16,6 +16,5 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 5beffcf89b8346b47ab405e626342162, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 5beffcf89b8346b47ab405e626342162, type: 2}
-    text: ...
+    text: Talk to Melody
   dialogQuestion: {fileID: 0}
-  nextDialogConversationStep: {fileID: 0}

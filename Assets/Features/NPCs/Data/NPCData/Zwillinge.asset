@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e101bbedf808fad488e79663f8f7649d, type: 3}
   m_Name: Zwillinge
   m_EditorClassIdentifier: 
+  id: 26
   fullName: Die Zwillinge
   portrait: {fileID: 21300000, guid: e0545470fd92a8141a86b1b6848082ea, type: 3}
+  icon: {fileID: 0}

@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e101bbedf808fad488e79663f8f7649d, type: 3}
   m_Name: Playfair
   m_EditorClassIdentifier: 
+  id: 3
   fullName: Playfair
   portrait: {fileID: 21300000, guid: 588e22a184f4a3e4fa126abdcc2dfe78, type: 3}
+  icon: {fileID: 0}

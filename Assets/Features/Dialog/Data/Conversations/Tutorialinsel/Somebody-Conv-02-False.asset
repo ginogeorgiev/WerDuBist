@@ -18,4 +18,3 @@ MonoBehaviour:
   - npcData: {fileID: 11400000, guid: 5beffcf89b8346b47ab405e626342162, type: 2}
     text: Ich auch.
   dialogQuestion: {fileID: 0}
-  nextDialogConversationStep: {fileID: 0}

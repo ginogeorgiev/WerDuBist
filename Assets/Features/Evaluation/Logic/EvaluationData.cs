@@ -21,13 +21,12 @@ namespace Features.Evaluation.Logic
             
             if (EvaluationDictionary.ContainsKey(key))
             {
-                EvaluationDictionary.Remove(key);
-                EvaluationDictionary.Add(key, "" + value);
+                EvaluationDictionary[key] = value;
                 if (evaluationDictionaryChanged != null) evaluationDictionaryChanged.Raise();
             }
             else
             {
-                EvaluationDictionary.Add(key, "" + value);
+                EvaluationDictionary.Add(key, value);
                 if (evaluationDictionaryChanged != null) evaluationDictionaryChanged.Raise();
             }
         }
