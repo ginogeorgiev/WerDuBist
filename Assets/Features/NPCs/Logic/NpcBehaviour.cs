@@ -13,12 +13,15 @@ namespace Features.NPCs.Logic
     {
         [Header("Hier kommt die weitere führende Conversation rein", order = 0)]
         [SerializeField] private DialogConversation_SO dialogConversationLeft;
+        [Header("Hier Haken nur setzten wenn darunter alles leer bleibt und es nicht der Eingangs- bzw. Ausgangs-Dialog ist", order = 1)]
+        [SerializeField] private bool advanceConvAutomatically;
         
-        [Header("Hier kommt die weitere führende Conversation rein, wenn es gerade eine Aktive Quest zu erledigen gibt.", order = 1)]
-        [Space (-10, order = 2)]
-        [Header("Und die Quest muss mit übergeben werden, damit sie geprüft werden kann", order = 3)]
+        [Header("Hier kommt die weitere führende Conversation rein, wenn es gerade eine Aktive Quest zu erledigen gibt.", order = 2)]
+        [Space (-10, order = 3)]
+        [Header("Und die Quest muss mit übergeben werden, damit sie geprüft werden kann", order = 4)]
         [SerializeField] private DialogConversation_SO dialogConversationRight;
         [SerializeField] private Quest_SO quest;
+        public bool AdvanceConvAutomatically => advanceConvAutomatically;
 
         public DialogConversation_SO DialogConversationLeft => dialogConversationLeft;
 
@@ -37,6 +40,7 @@ namespace Features.NPCs.Logic
         
         [Header("Hier sollte bereits alles durch das Template ausgefüllt sein")]
         [SerializeField] private NpcFocus_So npcFocus;
+        [SerializeField] private NpcBehaviourRuntimeSet npcBehaviourRuntimeSet;
         [SerializeField] private GameEvent_SO onActiveConversationChanged;
         [SerializeField] private QuestEvent onCompleteQuest;
 
@@ -52,6 +56,8 @@ namespace Features.NPCs.Logic
         
         private void Start()
         {
+            npcBehaviourRuntimeSet.Add(this);
+            
             if (conversationElements == null || conversationElements.Count == 0) return;
             
             activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
@@ -108,12 +114,23 @@ namespace Features.NPCs.Logic
             {
                 if (conversationElements == null || conversationElements.Count == 0) return;
                 
-                if (conversationIndex + 1 < conversationElements.Count)
-                {
-                    conversationIndex++;
-                }
                 activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
                 onActiveConversationChanged.Raise();
+                
+                if (!conversationElements[conversationIndex].AdvanceConvAutomatically) return;
+                
+                AdvanceConvIndex();
+                
+                activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
+                onActiveConversationChanged.Raise();
+            }
+        }
+
+        public void AdvanceConvIndex()
+        {
+            if (conversationIndex + 1 < conversationElements.Count)
+            {
+                conversationIndex++;
             }
         }
 

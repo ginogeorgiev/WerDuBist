@@ -55,6 +55,7 @@ MonoBehaviour:
   onRemoveQuest: {fileID: 11400000, guid: c1e0e9372ce86704ab957429fa6d10ec, type: 2}
   questFocus: {fileID: 11400000, guid: 9a54019ef02478e4385862f29bec9568, type: 2}
   npcFocus: {fileID: 11400000, guid: e1b8dc06bac9c86478b1a76b4ce599c6, type: 2}
+  behaviourRuntimeSet: {fileID: 11400000, guid: 9d553a0a1058f1b4fa6ea1634cc00b10, type: 2}
   firstQuests:
   - {fileID: 11400000, guid: 176559f37d56ba74ca9fc4bf4febde95, type: 2}
   - {fileID: 11400000, guid: 9ec1ef8e3ab31a840bb549d99dc183af, type: 2}
@@ -375,7 +376,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 866, y: 0}
+  m_AnchoredPosition: {x: 570, y: 0}
   m_SizeDelta: {x: 214, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &5861041857713194565

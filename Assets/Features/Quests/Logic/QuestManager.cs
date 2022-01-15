@@ -19,6 +19,7 @@ namespace Features.Quests.Logic
         
         [SerializeField] private QuestFocus_SO questFocus;
         [SerializeField] private NpcFocus_So npcFocus;
+        [SerializeField] private NpcBehaviourRuntimeSet behaviourRuntimeSet;
         
         [SerializeField] private List<Quest_SO> firstQuests;
 
@@ -64,13 +65,27 @@ namespace Features.Quests.Logic
            
            activeQuests.Items.Add(quest);
            quest.IsActive = true;
+           
+           // advance certain conversations after quest is accepted if necessary
+           if (quest.NpcsToAdvanceConversationsList.Count != 0)
+           {
+               foreach (NpcBehaviour npcBehaviour in quest.NpcsToAdvanceConversationsList.SelectMany(
+                   npcData => behaviourRuntimeSet.GetItems().Where(npcBehaviour => npcData.ID == npcBehaviour.Data.ID)))
+               {
+                   npcBehaviour.AdvanceConvIndex();
+               }
+           }
+           
            onDisplayQuest.Raise(quest);
         }
 
         private void CompleteQuest(Quest_SO quest)
         {
-            if (quest.GoalList.All(goal => goal.Type==Goal.GoalType.collect) && !activeQuests.Items.Contains(quest)) return;
-
+            //TODO ich habe das hier auskommentiert weils so geht, bitte prüfen !!
+            // if (quest.GoalList.All(goal => goal.Type==Goal.GoalType.collect)) return;
+            
+            if (!activeQuests.Items.Contains(quest)) return;
+            
             quest.CheckGoals();
             
             if (!quest.CheckGoals()) return;
@@ -78,6 +93,12 @@ namespace Features.Quests.Logic
             quest.IsActive = false;
             quest.IsCompleted = true;
 
+            // check after each quest completion if sequence is completed
+            if (quest.SingleSequenceData != null)
+            {
+                quest.SingleSequenceData.CheckForNextSequence();
+            }
+            
             // remove all Collect Quest Items from Inventory
             foreach (var goal in quest.GoalList.Where(goal => goal.Type==Goal.GoalType.collect))
             {
