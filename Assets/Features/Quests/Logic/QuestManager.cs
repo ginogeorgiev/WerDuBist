@@ -97,9 +97,10 @@ namespace Features.Quests.Logic
         public void UpdateTalkQuest()
         {
             // for each activeQuest.Goal with goalType Talk
-            foreach (var goal in questSet.Items.SelectMany(q => q.GoalList.Where(goal => goal.Type==Goal.GoalType.talk)))
+            foreach (var quest in questSet.Items.Where(q => q.GoalList.Any(goal => goal.Type == Goal.GoalType.talk)))
             {
-                goal.Evaluate(npcFocus);
+                quest.CheckGoals(npcFocus);
+                CompleteQuest(quest);
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Features.NPCs.Logic;
 using UnityEngine;
 
 namespace Features.Quests.Logic
@@ -43,6 +44,16 @@ namespace Features.Quests.Logic
             foreach (var goal in GoalList)
             {
                 goal.Evaluate();
+            }
+            // quest completed if all goals are completed
+            return GoalList.All(goal => goal.Completed);
+        }
+        
+        public bool CheckGoals(NpcFocus_So  npcId)
+        {
+            foreach (var goal in GoalList)
+            {
+                goal.Evaluate(npcId);
             }
             // quest completed if all goals are completed
             return GoalList.All(goal => goal.Completed);
