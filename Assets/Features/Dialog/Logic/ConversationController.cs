@@ -48,7 +48,7 @@ namespace Features.Dialog.Logic
         private PlayerControls playerControls;
         private void Awake()
         {
-            playerControls = new PlayerControls();
+            playerControls = InputController.playerControls;
         }
         
         private void OnEnable()

@@ -42,7 +42,7 @@ namespace Features.Map.Logic
             onDisplayActiveQuest.RegisterListener(DisplayActiveQuest);
             onRemoveQuest.RegisterListener(RemoveQuest);
             
-            playerControls = new PlayerControls();
+            playerControls = InputController.playerControls;
         }
 
         public void Start()

@@ -100,6 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 834501714651703082}
   - component: {fileID: 8107309262952150251}
+  - component: {fileID: 5187013373402740334}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -136,3 +137,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseGame: {fileID: 11400000, guid: 96dca4ce2fd67fa4d883087591371dc6, type: 2}
   unpauseGame: {fileID: 11400000, guid: 662549d21aac913439235cb1867508aa, type: 2}
+--- !u!114 &5187013373402740334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9178697188607494311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16980917d74d1c4aa849305bb796030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
