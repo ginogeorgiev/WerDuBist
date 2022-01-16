@@ -12,7 +12,6 @@ namespace Features.Quests.Logic
         public void FocusOnQuest()
         {
             focus.Set(Quest);
-            Debug.Log("Focus on: " + Quest.QuestID);
         }
     }
 }

@@ -53,10 +53,11 @@ MonoBehaviour:
   onDisplayQuest: {fileID: 11400000, guid: 8498b43859c2d57479baaad9cab97123, type: 2}
   onCompleteQuest: {fileID: 11400000, guid: a1a72b2b5c2b8f44f840edf2784f961e, type: 2}
   onRemoveQuest: {fileID: 11400000, guid: c1e0e9372ce86704ab957429fa6d10ec, type: 2}
-  focus: {fileID: 11400000, guid: 9a54019ef02478e4385862f29bec9568, type: 2}
+  questFocus: {fileID: 11400000, guid: 9a54019ef02478e4385862f29bec9568, type: 2}
+  npcFocus: {fileID: 11400000, guid: e1b8dc06bac9c86478b1a76b4ce599c6, type: 2}
+  behaviourRuntimeSet: {fileID: 11400000, guid: 9d553a0a1058f1b4fa6ea1634cc00b10, type: 2}
   firstQuests:
   - {fileID: 11400000, guid: 176559f37d56ba74ca9fc4bf4febde95, type: 2}
-  - {fileID: 11400000, guid: 5b649c808943ac345a1f74bfa5d4056f, type: 2}
 --- !u!1 &4802871112802404793
 GameObject:
   m_ObjectHideFlags: 0
@@ -68,7 +69,7 @@ GameObject:
   - component: {fileID: 4802871112802404792}
   - component: {fileID: 4802871112802404789}
   - component: {fileID: 958677459}
-  - component: {fileID: 1516296260}
+  - component: {fileID: 807139691}
   m_Layer: 0
   m_Name: EventListener
   m_TagString: Untagged
@@ -146,7 +147,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1516296260
+--- !u!114 &807139691
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,18 +159,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  event: {fileID: 11400000, guid: 994c33e274c02084287f92d45f71ade9, type: 2}
+  event: {fileID: 11400000, guid: a4c0113cce1ea7940b97dd603cab66ac, type: 2}
   response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1524817012585307856}
         m_TargetAssemblyTypeName: Features.Quests.Logic.QuestManager, Assembly-CSharp
-        m_MethodName: ItemCollected
-        m_Mode: 2
+        m_MethodName: UpdateTalkQuest
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: DataStructures.Variables.IntVariable,
-            Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5314688510526871457}
+        m_TargetAssemblyTypeName: Features.Quests.UILogic.QuestUIController, Assembly-CSharp
+        m_MethodName: UpdateQuests
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

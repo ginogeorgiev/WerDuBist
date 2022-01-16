@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e101bbedf808fad488e79663f8f7649d, type: 3}
   m_Name: Kellner
   m_EditorClassIdentifier: 
+  id: 29
   fullName: Kellner
   portrait: {fileID: 21300000, guid: 224a33718333ab941b4d9ba5e158838d, type: 3}
+  icon: {fileID: 0}

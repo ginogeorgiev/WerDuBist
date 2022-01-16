@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cba5f168530e44290b1e01ed7f0468, type: 3}
+  m_Name: Sequence-00-Data
+  m_EditorClassIdentifier: 
+  npcsToAdvanceConversationsList: []
+  quests:
+  - {fileID: 11400000, guid: 176559f37d56ba74ca9fc4bf4febde95, type: 2}
+  - {fileID: 11400000, guid: 54dbc863e07340346b70e6c50ba17994, type: 2}
+  npcsToActivateList: []
+  questsToUnlockList:
+  - {fileID: 11400000, guid: 64d67580bff265e41ae674871fb00f8b, type: 2}
+  - {fileID: 11400000, guid: 9ec1ef8e3ab31a840bb549d99dc183af, type: 2}
+  onQuestUnlocked: {fileID: 11400000, guid: 8f5648f89cd5125409176c7fad3a91df, type: 2}
+  behaviourRuntimeSet: {fileID: 11400000, guid: 9d553a0a1058f1b4fa6ea1634cc00b10, type: 2}
+  sequenceCompletedEvent: {fileID: 11400000, guid: e8303b8678ef6aa4992df7d7f0322dc4, type: 2}

@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e101bbedf808fad488e79663f8f7649d, type: 3}
   m_Name: Pantai_Member_1
   m_EditorClassIdentifier: 
+  id: 10
   fullName: Pantai Member #1
   portrait: {fileID: 21300000, guid: 9cc680ebfdb6cd047a220cd3a997df9d, type: 3}
+  icon: {fileID: 0}

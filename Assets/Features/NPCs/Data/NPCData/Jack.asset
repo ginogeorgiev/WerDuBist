@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e101bbedf808fad488e79663f8f7649d, type: 3}
   m_Name: Jack
   m_EditorClassIdentifier: 
+  id: 24
   fullName: Jack
   portrait: {fileID: 21300000, guid: e056b5dd978d0e74d9898ceebe9f986a, type: 3}
+  icon: {fileID: 0}

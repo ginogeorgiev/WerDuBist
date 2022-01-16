@@ -71,7 +71,7 @@ namespace Features.Map.Logic
             mapUI.SetActive(!mapUI.activeSelf);
         }
         
-        public void switchIslands()
+        public void SwitchIslands()
         {
             mapBG.GetComponent<Image>().sprite = mainIsland;
             
@@ -83,16 +83,15 @@ namespace Features.Map.Logic
 
             mapBorder.sizeDelta = new Vector2(885, 618);
 
-            questMarker.transform.localScale = new Vector3(2, 2, 1);
-            foreach (var marker in newQuestMarkers)
-            {
-                marker.Value.transform.localScale = new Vector3(2, 2, 1);
-            }
+            questMarker.transform.localScale = new Vector3(2.5f, 2.5f, 1);
+            
+            focusMarker.transform.localScale = new Vector3(2.5f, 2.5f, 1);
+            
         }
 
         private void DisplayUnlockedQuest(Quest_SO quest)
         {
-            var obj= Instantiate(questMarker, quest.QuestPosition, Quaternion.identity);
+            var obj= Instantiate(questMarker, quest.StartPosition, Quaternion.identity);
             obj.transform.SetParent(mapUI.transform);
             obj.GetComponent<SpriteRenderer>().sprite = questNew;
 
@@ -101,11 +100,23 @@ namespace Features.Map.Logic
         
         private void DisplayActiveQuest(Quest_SO quest)
         {
-            var obj = newQuestMarkers[quest.QuestID];
-            obj.GetComponent<SpriteRenderer>().sprite = questActive;
-            
+            if (!quest.Visible)
+            {
+                Destroy(newQuestMarkers[quest.QuestID]);
+            }
+            else
+            {
+                
+                var obj = newQuestMarkers.ContainsKey(quest.QuestID) ? 
+                    newQuestMarkers[quest.QuestID] : Instantiate(questMarker, quest.StartPosition, Quaternion.identity);
+                
+                obj.GetComponent<SpriteRenderer>().sprite = questActive;
+                obj.transform.position = new Vector3(quest.EndPosition.x, quest.EndPosition.y, -.5f);
+                obj.transform.SetParent(mapUI.transform);
+                activeQuestMarkers.Add(quest.QuestID, obj);
+            }
+
             newQuestMarkers.Remove(quest.QuestID);
-            activeQuestMarkers.Add(quest.QuestID, obj);
         }
         
         public void DisplayActiveFocus()
@@ -119,13 +130,22 @@ namespace Features.Map.Logic
             
             var obj = activeQuestMarkers[questFocus.Get().QuestID];
             obj.GetComponent<SpriteRenderer>().sprite = questFocusActive;
+            obj.transform.SetParent(mapUI.transform);
             focusMarker = obj;
         }
         
         private void RemoveQuest(Quest_SO quest)
         {
-            Destroy(activeQuestMarkers[quest.QuestID]);
-            activeQuestMarkers.Remove(quest.QuestID);
+            if (activeQuestMarkers.ContainsKey(quest.QuestID))
+            {
+                Destroy(activeQuestMarkers[quest.QuestID]);
+                activeQuestMarkers.Remove(quest.QuestID);
+            } 
+            else if (newQuestMarkers.ContainsKey(quest.QuestID))
+            {
+                Destroy(newQuestMarkers[quest.QuestID]);
+                newQuestMarkers.Remove(quest.QuestID);
+            }
         }
     }
 }

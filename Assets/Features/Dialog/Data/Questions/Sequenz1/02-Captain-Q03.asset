@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
+  m_Name: 02-Captain-Q03
+  m_EditorClassIdentifier: 
+  text: 
+  choices:
+  - text: Bitte! Ich schick Ihnen Geld zu sobald ich wieder Zuhause bin.
+    dialogConversation: {fileID: 11400000, guid: 0b455818bfb4d9445b4bb7a4dfea83df, type: 2}
+    choiceEvent: {fileID: 0}
+    questEvent: {fileID: 11400000, guid: d3ded01f8c8bb7b43ab7640a65b29a4a, type: 2}
+    quest: {fileID: 11400000, guid: 64d67580bff265e41ae674871fb00f8b, type: 2}
+  - text: Kann ich das vielleicht irgendwie abarbeiten?
+    dialogConversation: {fileID: 11400000, guid: 0b455818bfb4d9445b4bb7a4dfea83df, type: 2}
+    choiceEvent: {fileID: 0}
+    questEvent: {fileID: 11400000, guid: d3ded01f8c8bb7b43ab7640a65b29a4a, type: 2}
+    quest: {fileID: 11400000, guid: 64d67580bff265e41ae674871fb00f8b, type: 2}
