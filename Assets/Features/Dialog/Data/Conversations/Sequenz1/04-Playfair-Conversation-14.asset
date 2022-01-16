@@ -17,5 +17,8 @@ MonoBehaviour:
   lines:
   - npcData: {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
     text: "Playfair beginnt mit dem Austeilen der Bl\xE4tter. \n"
-  dialogQuestion: {fileID: 0}
-  nextDialogConversationStep: {fileID: 11400000, guid: ae8f6f6856f34804d99bf80138a74a12, type: 2}
+  - npcData: {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
+    text: 'Du hast gewonnen.
+
+'
+  dialogQuestion: {fileID: 11400000, guid: f23905cdf7f7a6346b6b5373923823c1, type: 2}

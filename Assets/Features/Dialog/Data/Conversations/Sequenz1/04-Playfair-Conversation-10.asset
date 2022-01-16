@@ -19,5 +19,8 @@ MonoBehaviour:
     text: 'Du hast wieder verloren.
 
 '
-  dialogQuestion: {fileID: 0}
-  nextDialogConversationStep: {fileID: 11400000, guid: 3c704e13e2b1db44c83991061cdbf0b7, type: 2}
+  - npcData: {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
+    text: "Ahahaha, das sind 2 in Folge, Bruder. Ich habe in meinem ganzen Leben
+      noch nie jemanden so schlecht spielen sehen, nichts f\xFCr ungut, Bruder. Willst
+      du es weiter versuchen?  Ahahahaha."
+  dialogQuestion: {fileID: 11400000, guid: e10831b69534dad4ca12394596262af2, type: 2}

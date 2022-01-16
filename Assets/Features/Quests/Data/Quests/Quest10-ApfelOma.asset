@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a54c835cd434817add4d3fdde868665, type: 3}
-  m_Name: "Quest10-\xC4pfel"
+  m_Name: Quest10-ApfelOma
   m_EditorClassIdentifier: 
   id: 10
   title: Die alte Dame

@@ -17,16 +17,32 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 6f84125686e4a4d4ca729a3a09492db4, type: 2}
     - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: conversationElements.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: conversationElements.Array.data[0].quest
       value: 
       objectReference: {fileID: 11400000, guid: 64d67580bff265e41ae674871fb00f8b, type: 2}
     - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.data[1].quest
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: conversationElements.Array.data[0].dialogConversationLeft
       value: 
       objectReference: {fileID: 11400000, guid: af503e815807ed042bdca388ac7191ae, type: 2}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.data[1].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d77ec95b95fcac4486a3b0f785a5b68, type: 2}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.data[0].advanceConvAutomatically
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.data[1].advanceConvAutomatically
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: m_RootOrder
       value: 0

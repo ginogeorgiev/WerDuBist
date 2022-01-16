@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
   m_Name: 04-Playfair-Question-05
   m_EditorClassIdentifier: 
-  text: 
   choices:
   - text: Spiel es taktisch. Entwickle eine Gewinnstrategie.
-    dialogConversation: {fileID: 11400000, guid: 658baf3b20c464e46ac9e3b9af5c5e9a, type: 2}
+    ingameQuestion: {fileID: 0}
+    value: 0
+    dialogConversation: {fileID: 11400000, guid: 2dd685077c1aa654ba60f7722acdcbfe, type: 2}
     choiceEvent: {fileID: 0}
-    questEvent: {fileID: 0}
     quest: {fileID: 0}
   - text: Zeit zum Improvisieren. Folge deinem Herzen.
-    dialogConversation: {fileID: 11400000, guid: 658baf3b20c464e46ac9e3b9af5c5e9a, type: 2}
+    ingameQuestion: {fileID: 0}
+    value: 0
+    dialogConversation: {fileID: 11400000, guid: 2dd685077c1aa654ba60f7722acdcbfe, type: 2}
     choiceEvent: {fileID: 0}
-    questEvent: {fileID: 0}
     quest: {fileID: 0}

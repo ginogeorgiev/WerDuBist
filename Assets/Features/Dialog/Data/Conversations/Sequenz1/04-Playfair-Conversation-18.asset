@@ -16,6 +16,5 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
-    text: "Tut mir leid, Mel. Wir sehen uns sp\xE4ter, Bruder.\n"
+    text: "Verdammt, es is ja schon wieder so sp\xE4t. Mel wird mich umbringen...\n"
   dialogQuestion: {fileID: 0}
-  nextDialogConversationStep: {fileID: 0}

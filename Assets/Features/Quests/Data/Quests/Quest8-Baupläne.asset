@@ -10,13 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a54c835cd434817add4d3fdde868665, type: 3}
-  m_Name: "Quest7-Baupl\xE4ne"
+  m_Name: "Quest8-Baupl\xE4ne"
   m_EditorClassIdentifier: 
-  id: 7
+  id: 8
+  npcsToAdvanceConversationsList:
+  - {fileID: 11400000, guid: 929b028d2515e874187beebef2c8cd5d, type: 2}
   title: "\xDCbermittlung der Baupl\xE4ne"
   description: "Bringe Terry seine Baupl\xE4ne."
+  visible: 1
   goals:
-  - current: {fileID: 11400000, guid: aabf314d0209c27499eb41f91dc89215, type: 2}
+  - goalType: 1
+    sprite: {fileID: 0}
+    otherQuests: []
+    npc: {fileID: 11400000, guid: 929b028d2515e874187beebef2c8cd5d, type: 2}
+    current: {fileID: 11400000, guid: aabf314d0209c27499eb41f91dc89215, type: 2}
     required: 3
-    sprite: {fileID: 21300000, guid: 43e221860d46c42abab1fea3b4b3e7e9, type: 3}
-  position: {x: 0, y: 0}
+  startPosition: {x: 0, y: 0}
+  endPosition: {x: 46.42, y: 2.78}

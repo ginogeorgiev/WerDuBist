@@ -19,5 +19,9 @@ MonoBehaviour:
     text: '...
 
 '
-  dialogQuestion: {fileID: 0}
-  nextDialogConversationStep: {fileID: 11400000, guid: 43083f114e21de1438c74cc577f5da26, type: 2}
+  - npcData: {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
+    text: Und das sind alle Regeln von Capsa. Und damit ist das Thema erledigt, lasst
+      uns spielen.
+  - npcData: {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
+    text: "Playfair f\xE4ngt an, die Karten auszuteilen. Was ist dein erster Zug?"
+  dialogQuestion: {fileID: 11400000, guid: 1e9d63bf9cc2b354b991baa302d26d94, type: 2}

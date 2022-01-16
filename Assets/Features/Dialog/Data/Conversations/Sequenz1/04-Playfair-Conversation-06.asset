@@ -16,6 +16,7 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
-    text: "Playfair f\xE4ngt an, die Karten auszuteilen. Was ist dein erster Zug?\n"
+    text: '
+
+'
   dialogQuestion: {fileID: 11400000, guid: 1e9d63bf9cc2b354b991baa302d26d94, type: 2}
-  nextDialogConversationStep: {fileID: 0}

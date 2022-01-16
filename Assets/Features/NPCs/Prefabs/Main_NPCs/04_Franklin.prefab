@@ -17,10 +17,14 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 4f891f84b1917194891d42dda3cb1e27, type: 2}
     - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: conversationElements.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: conversationElements.Array.data[0].quest
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.data[1].quest
       value: 
       objectReference: {fileID: 11400000, guid: 24bb4f95e1885374a8bead21d2b26a68, type: 2}
     - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
@@ -30,9 +34,17 @@ PrefabInstance:
     - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: conversationElements.Array.data[0].dialogConversationLeft
       value: 
+      objectReference: {fileID: 11400000, guid: a752501e45d545e4999eb4ac994d2636, type: 2}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.data[1].dialogConversationLeft
+      value: 
       objectReference: {fileID: 11400000, guid: d67adc6cee9bf934ea91a7118b0ea824, type: 2}
     - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: conversationElements.Array.data[0].dialogConversationRight
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.data[1].dialogConversationRight
       value: 
       objectReference: {fileID: 11400000, guid: b792bbbfb94a49147bb7dc6cfe487159, type: 2}
     - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}

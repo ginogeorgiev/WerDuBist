@@ -15,6 +15,26 @@ PrefabInstance:
       propertyPath: data
       value: 
       objectReference: {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.data[0].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 75eed17a66a12b84eb8e5a092be27547, type: 2}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.data[1].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 73b6ff9ae2c8bab4a9ef7fd03c3b4de4, type: 2}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.data[2].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 7a8eaa94be7e33d42bbe69a0988ddd8a, type: 2}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.data[0].advanceConvAutomatically
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: m_RootOrder
       value: 0

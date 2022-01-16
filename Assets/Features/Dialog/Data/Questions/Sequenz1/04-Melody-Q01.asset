@@ -14,10 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choices:
   - text: Nicht viel, ich versuche nur, den Dorfbewohnern zu helfen.
+    ingameQuestion: {fileID: 0}
+    value: 0
     dialogConversation: {fileID: 11400000, guid: 91f50c019efcd964cbf44201166b9d3b, type: 2}
     choiceEvent: {fileID: 0}
     quest: {fileID: 0}
   - text: Ich komme zurecht. Ich helfe hier und da aus.
+    ingameQuestion: {fileID: 0}
+    value: 0
     dialogConversation: {fileID: 11400000, guid: 91f50c019efcd964cbf44201166b9d3b, type: 2}
     choiceEvent: {fileID: 0}
     quest: {fileID: 0}

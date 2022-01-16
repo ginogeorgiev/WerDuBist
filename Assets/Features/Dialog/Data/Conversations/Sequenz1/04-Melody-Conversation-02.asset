@@ -20,5 +20,4 @@ MonoBehaviour:
       Er ist schon eine Weile weg, und seine Pausenzeit ist um. Wenn du ihn siehst,
       kannst du ihm sagen, dass er zur\xFCckkommen soll? Er tr\xE4gt sehr bunte Kleidung
       und hat Dreadlocks."
-  dialogQuestion: {fileID: 0}
-  nextDialogConversationStep: {fileID: 0}
+  dialogQuestion: {fileID: 11400000, guid: 525baac34a321644da7461fd28753b4c, type: 2}

@@ -10,13 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 266c97da10218e94ab464a1f7e833e73, type: 3}
-  m_Name: 04-Playfair-Conversation-17
+  m_Name: 04-Melody-Conversation-Eingang
   m_EditorClassIdentifier: 
-  speakerLeft: {fileID: 11400000, guid: 3286d80512a5b6c49a0946274b3abb63, type: 2}
-  speakerRight: {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
+  speakerLeft: {fileID: 11400000, guid: a5d20b15f28ea8143b6531e8889a2eaf, type: 2}
+  speakerRight: {fileID: 11400000, guid: 3286d80512a5b6c49a0946274b3abb63, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 3286d80512a5b6c49a0946274b3abb63, type: 2}
-    text: "Hier bist du also gewesen. Deine Pause ist l\xE4ngst vorbei! Die Kisten
-      bewegen sich nicht von selbst, das wei\xDFt du.\n"
+    text: ...
   dialogQuestion: {fileID: 0}
-  nextDialogConversationStep: {fileID: 11400000, guid: 0aa25a5d63cb6bc4682d4aeb82dd4b60, type: 2}

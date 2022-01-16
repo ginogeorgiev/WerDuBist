@@ -19,5 +19,4 @@ MonoBehaviour:
     text: "Schon gut, schon gut, Bruder. Ich gebe zu, du bist besser, als ich dachte.
       Es hat mir viel Spa\xDF gemacht, mit dir zu spielen, Bruder. Lass uns das n\xE4chste
       Mal wieder spielen, diesmal ohne zu schummeln, versprochen."
-  dialogQuestion: {fileID: 0}
-  nextDialogConversationStep: {fileID: 0}
+  dialogQuestion: {fileID: 11400000, guid: 091302ac9274491438cd026d5a839ee3, type: 2}
