@@ -90,6 +90,8 @@ namespace Features.Dialog.Logic
         
         private void EndConversation()
         {
+            if (dialogConversation.AdvanceConvAutomatically) npcFocus.Get().AdvanceConvIndex();
+        
             dialogConversation = null;
             conversationStarted = false;
             speakerUIControllerLeft.Hide();
