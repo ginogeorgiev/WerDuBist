@@ -107,7 +107,10 @@ namespace Features.Map.Logic
             }
             else
             {
-                var obj = newQuestMarkers[quest.QuestID];
+                
+                var obj = newQuestMarkers.ContainsKey(quest.QuestID) ? 
+                    newQuestMarkers[quest.QuestID] : Instantiate(questMarker, quest.StartPosition, Quaternion.identity);
+                
                 obj.GetComponent<SpriteRenderer>().sprite = questActive;
                 obj.transform.position = new Vector3(quest.EndPosition.x, quest.EndPosition.y, -.5f);
                 activeQuestMarkers.Add(quest.QuestID, obj);

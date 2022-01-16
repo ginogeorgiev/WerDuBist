@@ -76,14 +76,6 @@ namespace Features.NPCs.Logic
                     con.Quest.StartPosition = new Vector2(pos.x,pos.y);
                 }
             }
-            foreach (var conversation in conversationElements.Where(c => c.DialogConversationRight != null))
-            {
-                if (conversation.DialogConversationRight.DialogQuestion == null) continue;
-                foreach (var con in conversation.DialogConversationRight.DialogQuestion.Choices.Where(choice => choice.Quest!=null))
-                {
-                    con.Quest.StartPosition = new Vector2(pos.x,pos.y);
-                }
-            }
         }
 
         public void OnNpcFocusChanged()

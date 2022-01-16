@@ -46,13 +46,14 @@ namespace Features.Quests.Logic
         {
             Completed = false;
             
-            if (goalType == GoalType.talk)
+            switch (goalType)
             {
-                sprite = npc.Icon;
-            }
-            if (goalType == GoalType.quest)
-            {
-                required = otherQuests.Count;
+                case GoalType.talk when npc.Icon!=null:
+                    sprite = npc.Icon;
+                    break;
+                case GoalType.quest:
+                    required = otherQuests.Count;
+                    break;
             }
         }
 
