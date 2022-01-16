@@ -84,7 +84,7 @@ namespace Features.NPCs.Logic
 
         public void OnCheckForNextConversationPart()
         {
-            // dunno if that works
+            // now it works i guess
             if (conversationElements[conversationIndex].Quest != null)
             {
                 if (conversationElements[conversationIndex].Quest.CheckGoals(null))
@@ -105,15 +105,13 @@ namespace Features.NPCs.Logic
                 
                 activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
                 onActiveConversationChanged.Raise();
-                
-                if (!conversationElements[conversationIndex].DialogConversationLeft.AdvanceConvAutomatically) return;
-                
-                AdvanceConvIndex();
             }
         }
 
         public void AdvanceConvIndex()
         {
+            if (conversationElements == null || conversationElements.Count == 0) return;
+            
             if (conversationIndex + 1 < conversationElements.Count)
             {
                 conversationIndex++;
