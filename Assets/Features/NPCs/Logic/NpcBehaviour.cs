@@ -13,15 +13,12 @@ namespace Features.NPCs.Logic
     {
         [Header("Hier kommt die weitere führende Conversation rein", order = 0)]
         [SerializeField] private DialogConversation_SO dialogConversationLeft;
-        [Header("Hier Haken nur setzten wenn darunter alles leer bleibt und es nicht der Eingangs- bzw. Ausgangs-Dialog ist", order = 1)]
-        [SerializeField] private bool advanceConvAutomatically;
         
         [Header("Hier kommt die weitere führende Conversation rein, wenn es gerade eine Aktive Quest zu erledigen gibt.", order = 2)]
         [Space (-10, order = 3)]
         [Header("Und die Quest muss mit übergeben werden, damit sie geprüft werden kann", order = 4)]
         [SerializeField] private DialogConversation_SO dialogConversationRight;
         [SerializeField] private Quest_SO quest;
-        public bool AdvanceConvAutomatically => advanceConvAutomatically;
 
         public DialogConversation_SO DialogConversationLeft => dialogConversationLeft;
 
@@ -117,12 +114,9 @@ namespace Features.NPCs.Logic
                 activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
                 onActiveConversationChanged.Raise();
                 
-                if (!conversationElements[conversationIndex].AdvanceConvAutomatically) return;
+                if (!conversationElements[conversationIndex].DialogConversationLeft.AdvanceConvAutomatically) return;
                 
                 AdvanceConvIndex();
-                
-                activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
-                onActiveConversationChanged.Raise();
             }
         }
 
@@ -131,6 +125,9 @@ namespace Features.NPCs.Logic
             if (conversationIndex + 1 < conversationElements.Count)
             {
                 conversationIndex++;
+                
+                activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
+                onActiveConversationChanged.Raise();
             }
         }
 
