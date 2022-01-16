@@ -58,8 +58,6 @@ MonoBehaviour:
   behaviourRuntimeSet: {fileID: 11400000, guid: 9d553a0a1058f1b4fa6ea1634cc00b10, type: 2}
   firstQuests:
   - {fileID: 11400000, guid: 176559f37d56ba74ca9fc4bf4febde95, type: 2}
-  - {fileID: 11400000, guid: 9ec1ef8e3ab31a840bb549d99dc183af, type: 2}
-  - {fileID: 11400000, guid: 64d67580bff265e41ae674871fb00f8b, type: 2}
 --- !u!1 &4802871112802404793
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,7 +374,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 570, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 214, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &5861041857713194565
@@ -493,8 +491,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 207, y: 0}
-  m_SizeDelta: {x: 200, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &1153761684975809496
 CanvasRenderer:

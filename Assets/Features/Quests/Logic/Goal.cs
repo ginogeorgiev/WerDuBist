@@ -57,23 +57,28 @@ namespace Features.Quests.Logic
             }
         }
 
-        public void Evaluate()
-        {
-            Completed = goalType switch
-            {
-                GoalType.collect => CurrentAmount.Get() >= RequiredAmount,
-                GoalType.quest => otherQuests.TrueForAll(quest => quest.IsCompleted),
-                _ => Completed
-            };
-        }
-
         public void Evaluate(NpcFocus_So npcFocus)
         {
-            if (Npc.ID == npcFocus.Get().Data.ID)
+            switch (goalType)
             {
-                Completed = true;
+                case GoalType.talk:
+                    if (npcFocus != null)
+                    {
+                        if (Npc.ID == npcFocus.Get().Data.ID)
+                        {
+                            Completed = true;
+                        }
+                    } 
+                    break;
+                case GoalType.collect:
+                    Completed = CurrentAmount.Get() >= RequiredAmount;
+                    break;
+                case GoalType.quest:
+                    Completed = otherQuests.TrueForAll(quest => quest.IsCompleted);
+                    break;
             }
+
         }
-        
+
     }
 }
