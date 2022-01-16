@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Features.NPCs.Logic;
 using Features.StorySequences.Logic;
@@ -49,22 +50,25 @@ namespace Features.Quests.Logic
         public bool IsActive { get; set; }
         public bool IsCompleted { get; set; }
         
-        //TODO vlt ein CheckGoals und ein Evaluate was für alle quests und goals funktioniert
-        public bool CheckGoals()
-        {
-            foreach (var goal in GoalList)
-            {
-                goal.Evaluate();
-            }
-            // quest completed if all goals are completed
-            return GoalList.All(goal => goal.Completed);
-        }
-        
         public bool CheckGoals(NpcFocus_So  npcId)
         {
             foreach (var goal in GoalList)
             {
-                goal.Evaluate(npcId);
+                switch (goal.Type)
+                {
+                    case Goal.GoalType.talk:
+                        if (npcId != null)
+                        {
+                            goal.Evaluate(npcId);
+                        }
+                        break;
+                    case Goal.GoalType.collect:
+                        goal.Evaluate(null);
+                        break;
+                    case Goal.GoalType.quest:
+                        goal.Evaluate(null);
+                        break;
+                }
             }
             // quest completed if all goals are completed
             return GoalList.All(goal => goal.Completed);

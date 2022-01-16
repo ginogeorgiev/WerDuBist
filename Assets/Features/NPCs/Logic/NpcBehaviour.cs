@@ -90,7 +90,7 @@ namespace Features.NPCs.Logic
             // dunno if that works
             if (conversationElements[conversationIndex].Quest != null)
             {
-                if (conversationElements[conversationIndex].Quest.CheckGoals())
+                if (conversationElements[conversationIndex].Quest.CheckGoals(null))
                 {
                     onCompleteQuest.Raise(conversationElements[conversationIndex].Quest);
                     activeConversation = conversationElements[conversationIndex].DialogConversationRight;
