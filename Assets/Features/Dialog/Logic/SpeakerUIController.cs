@@ -9,6 +9,7 @@ namespace Features.Dialog.Logic
     {
         [SerializeField] private Image portrait;
         [SerializeField] private GameObject portraitMaskWhenSpeakerIsPlayer=null;
+        [SerializeField] private GameObject accessoryWhenSpeakerIsPlayer = null;
         [SerializeField] private TMP_Text fullName;
         [SerializeField] private TMP_Text dialog;
 
@@ -20,9 +21,11 @@ namespace Features.Dialog.Logic
             {
                 speaker = value;
                 
-                if (portraitMaskWhenSpeakerIsPlayer != null)
+                if (portraitMaskWhenSpeakerIsPlayer != null || accessoryWhenSpeakerIsPlayer != null)
                 {
-                    portraitMaskWhenSpeakerIsPlayer.SetActive(speaker.FullName.Equals("Acast"));
+                    var IsSpeakerPlayer = speaker.FullName.Equals("Acast");
+                    portraitMaskWhenSpeakerIsPlayer.SetActive(IsSpeakerPlayer);
+                    accessoryWhenSpeakerIsPlayer.SetActive(IsSpeakerPlayer);
                 }
                 
                 portrait.sprite = speaker.Portrait;
