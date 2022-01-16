@@ -29,9 +29,16 @@ namespace Features.StorySequences.Logic
         [SerializeField] private List<NPCData_SO> npcsToActivateList;
         [Space (10, order = 11)]
         
-        [Header("Hier die Kreise benutzen, sollte immer nur eins möglich sein", order = 12)]
+        [Header("Hier kommen alle Quests rein, die unlocked werden ", order = 12)]
+        [Space (-10, order = 13)]
+        [Header("sollen, wenn diese Sequenz abgeschlossen ist.", order = 14)]
+        [SerializeField] private List<Quest_SO> questsToUnlockList;
+        [SerializeField] private QuestEvent onQuestUnlocked;
+        [Space (10, order = 15)]
+        
+        [Header("Hier die Kreise benutzen, sollte immer nur eins möglich sein", order = 16)]
         [SerializeField] private NpcBehaviourRuntimeSet behaviourRuntimeSet;
-        [Header("Hoffentlich selbsterklärend (muss selbst erstellt werden)", order = 12)]
+        [Header("Hoffentlich selbsterklärend (muss selbst erstellt werden)", order = 17)]
         [SerializeField] private GameEvent_SO sequenceCompletedEvent;
 
         private void OnEnable()
@@ -82,6 +89,14 @@ namespace Features.StorySequences.Logic
                     npcData => behaviourRuntimeSet.GetItems().Where(npcBehaviour => npcData.ID == npcBehaviour.Data.ID)))
                 {
                     npcBehaviour.gameObject.SetActive(true);
+                }
+            }
+            
+            if (questsToUnlockList.Count != 0)
+            {
+                foreach (var quest in questsToUnlockList)
+                {
+                    onQuestUnlocked.Raise(quest);
                 }
             }
         }
