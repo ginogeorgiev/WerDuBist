@@ -83,11 +83,10 @@ namespace Features.Map.Logic
 
             mapBorder.sizeDelta = new Vector2(885, 618);
 
-            questMarker.transform.localScale = new Vector3(2, 2, 1);
-            foreach (var marker in newQuestMarkers)
-            {
-                marker.Value.transform.localScale = new Vector3(2, 2, 1);
-            }
+            questMarker.transform.localScale = new Vector3(2.5f, 2.5f, 1);
+            
+            focusMarker.transform.localScale = new Vector3(2.5f, 2.5f, 1);
+            
         }
 
         private void DisplayUnlockedQuest(Quest_SO quest)
@@ -113,6 +112,7 @@ namespace Features.Map.Logic
                 
                 obj.GetComponent<SpriteRenderer>().sprite = questActive;
                 obj.transform.position = new Vector3(quest.EndPosition.x, quest.EndPosition.y, -.5f);
+                obj.transform.SetParent(mapUI.transform);
                 activeQuestMarkers.Add(quest.QuestID, obj);
             }
 
@@ -130,6 +130,7 @@ namespace Features.Map.Logic
             
             var obj = activeQuestMarkers[questFocus.Get().QuestID];
             obj.GetComponent<SpriteRenderer>().sprite = questFocusActive;
+            obj.transform.SetParent(mapUI.transform);
             focusMarker = obj;
         }
         

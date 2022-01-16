@@ -26,4 +26,5 @@ MonoBehaviour:
     text: "Ich bin mit meinem Surfbrett hier, aber da passen wir nicht beide drauf.
       Bring mir doch ein paar Planken die hier rumliegen, dann bauen wir zusammen
       ein Floss f\xFCr dich."
+  advanceConvAutomatically: 1
   dialogQuestion: {fileID: 11400000, guid: f50dde9de95cfff4caa836ee185d2cd3, type: 2}

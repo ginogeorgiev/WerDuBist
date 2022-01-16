@@ -81,14 +81,11 @@ namespace Features.Quests.Logic
 
         private void CompleteQuest(Quest_SO quest)
         {
-            //TODO ich habe das hier auskommentiert weils so geht, bitte prüfen !!
-            // if (quest.GoalList.All(goal => goal.Type==Goal.GoalType.collect)) return;
-            
             if (!activeQuests.Items.Contains(quest)) return;
             
-            quest.CheckGoals();
+            quest.CheckGoals(null);
             
-            if (!quest.CheckGoals()) return;
+            if (!quest.CheckGoals(null)) return;
             
             quest.IsActive = false;
             quest.IsCompleted = true;
@@ -105,10 +102,10 @@ namespace Features.Quests.Logic
                 goal.CurrentAmount.Add(-goal.RequiredAmount);
             }
             
-            // reevaluate each Quest.Goal with goalType Quest
-            foreach (var goal in questSet.Items.SelectMany(q => q.GoalList.Where(goal => goal.Type==Goal.GoalType.quest)))
+            // reevaluate each Quest with goalType Quest
+            foreach (var q in questSet.Items.Where(q => q.GoalList.Any(goal => goal.Type == Goal.GoalType.quest)))
             {
-                goal.Evaluate();
+                q.CheckGoals(null);
             }
                 
             Debug.Log("'" + quest.QuestTitle + "' Completed");
