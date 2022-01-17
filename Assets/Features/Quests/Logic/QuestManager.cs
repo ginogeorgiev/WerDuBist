@@ -8,7 +8,7 @@ namespace Features.Quests.Logic
     public class QuestManager : MonoBehaviour
     {
         [SerializeField] private QuestSet_SO questSet;
-        [SerializeField] private QuestSetActive_SO activeQuests;
+        [SerializeField] private QuestSet_SO activeQuests;
         
         [SerializeField] private QuestEvent onQuestUnlocked;
         [SerializeField] private QuestEvent onDisplayUnlockedQuest;
@@ -21,6 +21,9 @@ namespace Features.Quests.Logic
         [SerializeField] private NpcFocus_So npcFocus;
         [SerializeField] private NpcBehaviourRuntimeSet behaviourRuntimeSet;
         
+        [Header(" des Games direkt unlocked werden sollen")]
+        [Space(-10)]
+        [Header("In diese Liste kommen alle Quests, die zu Beginn")]
         [SerializeField] private List<Quest_SO> firstQuests;
 
         private void Start()
@@ -82,9 +85,7 @@ namespace Features.Quests.Logic
         private void CompleteQuest(Quest_SO quest)
         {
             if (!activeQuests.Items.Contains(quest)) return;
-            
-            quest.CheckGoals(null);
-            
+
             if (!quest.CheckGoals(null)) return;
             
             quest.IsActive = false;
@@ -117,8 +118,11 @@ namespace Features.Quests.Logic
             // for each Quest with goalType Talk
             foreach (var quest in questSet.Items.Where(q => q.GoalList.Any(goal => goal.Type == Goal.GoalType.talk)))
             {
-                quest.CheckGoals(npcFocus);
-                CompleteQuest(quest);
+                if (npcFocus.Get()!=null)
+                {
+                    quest.CheckGoals(npcFocus);
+                    CompleteQuest(quest);
+                }
             }
         }
     }

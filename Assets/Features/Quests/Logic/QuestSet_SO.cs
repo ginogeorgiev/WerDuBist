@@ -6,9 +6,8 @@ namespace Features.Quests.Logic
    [CreateAssetMenu(fileName = "NewQuestSet", menuName = "Feature/Quests/QuestSet")]
    public class QuestSet_SO : ScriptableObject
    {
-       // class holds all existing quests
-       [SerializeField] private List<Quest_SO> existingQuests;
+       [SerializeField] private List<Quest_SO> quests;
       
-       public IEnumerable<Quest_SO> Items => existingQuests;
+       public List<Quest_SO> Items => quests;
    }       
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest1-BuildRaft
   m_EditorClassIdentifier: 
   id: 1
-  singleSequenceData: {fileID: 11400000, guid: f6719900b6d05ad42a028a975a40ae33, type: 2}
+  npcsToAdvanceConversationsList: []
   title: "Baue ein Flo\xDF"
   description: Sammel Holz
   visible: 1
@@ -26,3 +26,4 @@ MonoBehaviour:
     required: 5
   startPosition: {x: -27.61, y: -1.76}
   endPosition: {x: -27.61, y: -1.76}
+  questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}
