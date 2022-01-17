@@ -634,11 +634,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 164299969304360258, guid: 5779a835bafe7b74c91dd6010ad0b14f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 70.65
+      value: 56.46
       objectReference: {fileID: 0}
     - target: {fileID: 164299969304360258, guid: 5779a835bafe7b74c91dd6010ad0b14f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 79.12
+      value: 70.72
       objectReference: {fileID: 0}
     - target: {fileID: 164299969304360258, guid: 5779a835bafe7b74c91dd6010ad0b14f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1006,7 +1006,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 164299969304360258, guid: 8344c52efb8ebad47abbd4f1b0ece8b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.31
+      value: 43.47
       objectReference: {fileID: 0}
     - target: {fileID: 164299969304360258, guid: 8344c52efb8ebad47abbd4f1b0ece8b6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1192,11 +1192,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 544657871452038233, guid: 4455b5c56b9c5714b8f498450b841a4f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 43.29
+      value: 42.406
       objectReference: {fileID: 0}
     - target: {fileID: 544657871452038233, guid: 4455b5c56b9c5714b8f498450b841a4f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.25
+      value: 3.356
       objectReference: {fileID: 0}
     - target: {fileID: 544657871452038233, guid: 4455b5c56b9c5714b8f498450b841a4f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1233,6 +1233,18 @@ PrefabInstance:
     - target: {fileID: 544657871452038236, guid: 4455b5c56b9c5714b8f498450b841a4f, type: 3}
       propertyPath: m_Name
       value: AB_Fishing_Rod1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544657871452038237, guid: 4455b5c56b9c5714b8f498450b841a4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544657871452038238, guid: 4455b5c56b9c5714b8f498450b841a4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3487674254826923088, guid: 4455b5c56b9c5714b8f498450b841a4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4455b5c56b9c5714b8f498450b841a4f, type: 3}
@@ -1294,7 +1306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 544657871452038236, guid: 4455b5c56b9c5714b8f498450b841a4f, type: 3}
       propertyPath: m_Name
-      value: AB_Fishing_Rod2
+      value: AB_Fishing_Rod2_Quest
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4455b5c56b9c5714b8f498450b841a4f, type: 3}
