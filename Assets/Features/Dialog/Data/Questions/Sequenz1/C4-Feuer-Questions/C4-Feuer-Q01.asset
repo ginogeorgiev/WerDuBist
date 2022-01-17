@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
+  m_Name: C4-Feuer-Q01
+  m_EditorClassIdentifier: 
+  choices:
+  - text: Holz nachlegen.
+    ingameQuestion: {fileID: 11400000, guid: 1c809b081a24e2546b2fbfc83a9fc28c, type: 2}
+    value: 1
+    dialogConversation: {fileID: 11400000, guid: aaf147cf64077cf49bf444ebc50b86d0, type: 2}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 0}
+  - text: Weg gehen.
+    ingameQuestion: {fileID: 11400000, guid: 1c809b081a24e2546b2fbfc83a9fc28c, type: 2}
+    value: 1
+    dialogConversation: {fileID: 0}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 0}

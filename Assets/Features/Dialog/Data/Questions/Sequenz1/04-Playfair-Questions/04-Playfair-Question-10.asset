@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
+  m_Name: 04-Playfair-Question-10
+  m_EditorClassIdentifier: 
+  choices:
+  - text: "Ach \xFCbrigens Melody sucht dich."
+    ingameQuestion: {fileID: 0}
+    value: 0
+    dialogConversation: {fileID: 11400000, guid: 0aa25a5d63cb6bc4682d4aeb82dd4b60, type: 2}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 0}
+  - text: Solltest du nicht eh arbeiten?
+    ingameQuestion: {fileID: 0}
+    value: 0
+    dialogConversation: {fileID: 11400000, guid: 0aa25a5d63cb6bc4682d4aeb82dd4b60, type: 2}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 0}
