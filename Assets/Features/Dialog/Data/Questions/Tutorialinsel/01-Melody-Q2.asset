@@ -17,5 +17,6 @@ MonoBehaviour:
     ingameQuestion: {fileID: 0}
     value: 0
     dialogConversation: {fileID: 0}
-    choiceEvent: {fileID: 11400000, guid: d882be4c82286df4b94ba25cbe00c803, type: 2}
+    choiceEvents:
+    - {fileID: 11400000, guid: d882be4c82286df4b94ba25cbe00c803, type: 2}
     quest: {fileID: 0}
