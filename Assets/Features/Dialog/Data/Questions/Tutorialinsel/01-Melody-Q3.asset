@@ -22,6 +22,6 @@ MonoBehaviour:
   - text: Bis Bald.
     ingameQuestion: {fileID: 0}
     value: 0
-    dialogConversation: {fileID: 0}
+    dialogConversation: {fileID: 11400000, guid: e00ec46a9de86e5438c7c1ad7a764d26, type: 2}
     choiceEvent: {fileID: 0}
     quest: {fileID: 11400000, guid: 54dbc863e07340346b70e6c50ba17994, type: 2}

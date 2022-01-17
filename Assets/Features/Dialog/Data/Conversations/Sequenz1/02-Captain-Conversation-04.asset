@@ -18,5 +18,5 @@ MonoBehaviour:
   - npcData: {fileID: 11400000, guid: 6f84125686e4a4d4ca729a3a09492db4, type: 2}
     text: "Ich mach dir einen Vorschlag. Das Schiff ist eh noch nicht bereit f\xFCr
       die Fahrt. Hilf den Leuten hier auf der Insel und ich werde dich mitnehmen."
+  advanceConvAutomatically: 1
   dialogQuestion: {fileID: 0}
-  nextDialogConversationStep: {fileID: 0}

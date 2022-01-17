@@ -15,8 +15,8 @@ MonoBehaviour:
   speakerLeft: {fileID: 11400000, guid: a5d20b15f28ea8143b6531e8889a2eaf, type: 2}
   speakerRight: {fileID: 11400000, guid: 6f84125686e4a4d4ca729a3a09492db4, type: 2}
   lines:
-  - npcData: {fileID: 11400000, guid: 6f84125686e4a4d4ca729a3a09492db4, type: 2}
+  - npcData: {fileID: 0}
     text: Na Jungchen, alles okay bei dir? Siehst ein bisschen blass um die Nase
       aus.
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 11400000, guid: c3ec2af7a9eb9814cb9e74bd8dddce94, type: 2}
-  nextDialogConversationStep: {fileID: 0}

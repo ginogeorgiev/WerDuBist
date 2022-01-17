@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 266c97da10218e94ab464a1f7e833e73, type: 3}
-  m_Name: Melody-Conversation-03
+  m_Name: 02-Captain-Conversation-05 Right
   m_EditorClassIdentifier: 
   speakerLeft: {fileID: 11400000, guid: a5d20b15f28ea8143b6531e8889a2eaf, type: 2}
-  speakerRight: {fileID: 11400000, guid: 2a6489c87cf46f14db3526c2ede3d338, type: 2}
+  speakerRight: {fileID: 11400000, guid: 6f84125686e4a4d4ca729a3a09492db4, type: 2}
   lines:
-  - npcData: {fileID: 11400000, guid: 2a6489c87cf46f14db3526c2ede3d338, type: 2}
-    text: Das hat ja gut geklappt. Hier nebenan liegt direkt ein Boot an. Frag doch
-      mal ob die dich vielleicht mitnehmen. Damit du wieder nach Hause kannst.
+  - npcData: {fileID: 11400000, guid: 6f84125686e4a4d4ca729a3a09492db4, type: 2}
+    text: Krank einfach allen geholfen. Voll Laser wie du abgehst.
   advanceConvAutomatically: 0
-  dialogQuestion: {fileID: 11400000, guid: 1e06fd4c81b87784f87ec6c1d294d7d0, type: 2}
+  dialogQuestion: {fileID: 0}

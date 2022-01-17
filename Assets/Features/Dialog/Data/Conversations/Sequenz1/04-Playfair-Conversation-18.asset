@@ -17,4 +17,5 @@ MonoBehaviour:
   lines:
   - npcData: {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
     text: "Verdammt, es is ja schon wieder so sp\xE4t. Mel wird mich umbringen...\n"
+  advanceConvAutomatically: 1
   dialogQuestion: {fileID: 0}
