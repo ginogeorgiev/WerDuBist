@@ -29,25 +29,35 @@ namespace Features.StorySequences.Logic
         [SerializeField] private List<NPCData_SO> npcsToActivateList;
         [Space (10, order = 11)]
         
-        [Header("Hier kommen alle Quests rein, die unlocked werden ", order = 12)]
+        [Header("Hier kommen alle NPC rein, die inaktiv werden ", order = 12)]
         [Space (-10, order = 13)]
         [Header("sollen, wenn diese Sequenz abgeschlossen ist.", order = 14)]
+        [SerializeField] private List<NPCData_SO> npcsToDeactivateList;
+        [Space (10, order = 15)]
+
+        [Header("Hier kommen alle Quests rein, die unlocked werden ", order = 16)]
+        [Space (-10, order = 17)]
+        [Header("sollen, wenn diese Sequenz abgeschlossen ist.", order = 18)]
         [SerializeField] private List<Quest_SO> questsToUnlockList;
         [SerializeField] private QuestEvent onQuestUnlocked;
-        [Space (10, order = 15)]
+        [Space (10, order = 19)]
         
-        [Header("Hier die Kreise benutzen, sollte immer nur eins möglich sein", order = 16)]
+        [Header("Hier die Kreise benutzen, sollte immer nur eins möglich sein", order = 12)]
         [SerializeField] private NpcBehaviourRuntimeSet behaviourRuntimeSet;
-        [Header("Hoffentlich selbsterklärend (muss selbst erstellt werden)", order = 17)]
+        [Header("Hoffentlich selbsterklärend (muss selbst erstellt werden)", order = 21)]
         [SerializeField] private GameEvent_SO sequenceCompletedEvent;
 
-        private void OnEnable()
-        {
-            foreach (Quest_SO quest in quests)
-            {
-                quest.SingleSequenceData = this;
-            }
-        }
+        public List<NPCData_SO> NpcsToAdvanceConversationsList => npcsToAdvanceConversationsList;
+
+        public List<Quest_SO> Quests => quests;
+
+        public List<NPCData_SO> NpcsToActivateList => npcsToActivateList;
+
+        public List<Quest_SO> QuestsToUnlockList => questsToUnlockList;
+
+        public QuestEvent ONQuestUnlocked => onQuestUnlocked;
+
+        public GameEvent_SO SequenceCompletedEvent => sequenceCompletedEvent;
 
         public void CheckForNextSequence()
         {
@@ -85,16 +95,25 @@ namespace Features.StorySequences.Logic
 
             if (npcsToActivateList.Count != 0)
             {
-                foreach (NpcBehaviour npcBehaviour in npcsToActivateList.SelectMany(
-                    npcData => behaviourRuntimeSet.GetItems().Where(npcBehaviour => npcData.ID == npcBehaviour.Data.ID)))
+                foreach (NpcBehaviour npcBehaviour in npcsToActivateList.SelectMany
+                    (npcData => behaviourRuntimeSet.GetItems().Where(npcBehaviour => npcData.ID == npcBehaviour.Data.ID)))
                 {
                     npcBehaviour.gameObject.SetActive(true);
                 }
             }
             
+            if (npcsToDeactivateList.Count != 0)
+            {
+                foreach (NpcBehaviour npcBehaviour in npcsToDeactivateList.SelectMany
+                    (npcData => behaviourRuntimeSet.GetItems().Where(npcBehaviour => npcData.ID == npcBehaviour.Data.ID)))
+                {
+                    npcBehaviour.gameObject.SetActive(false);
+                }
+            }
+            
             if (questsToUnlockList.Count != 0)
             {
-                foreach (var quest in questsToUnlockList)
+                foreach (Quest_SO quest in questsToUnlockList)
                 {
                     onQuestUnlocked.Raise(quest);
                 }

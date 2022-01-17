@@ -6,6 +6,9 @@ namespace Features.NPCs.Logic
     [CreateAssetMenu(fileName = "NewNpcBehaviourRuntimeSet", menuName = "Feature/NPCs/NpcBehaviourRuntimeSet")]
     public class NpcBehaviourRuntimeSet : RuntimeSet_SO<NpcBehaviour>
     {
-        
+        private void OnDisable()
+        {
+            Restore();
+        }
     }
 }

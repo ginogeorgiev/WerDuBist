@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: TestTalkQuest
   m_EditorClassIdentifier: 
   id: 100
-  npcsToAdvanceConversationsList: []
+  npcsToAdvanceConversationsList:
+  - {fileID: 11400000, guid: 0d695ebfb9284604b9a9a6ed7d6e1637, type: 2}
   title: Laber mit Melody
   description: 
   visible: 1
@@ -21,8 +22,8 @@ MonoBehaviour:
   - goalType: 1
     sprite: {fileID: 21300000, guid: b69dd42474a3b0a429cf79e46f26a3bd, type: 3}
     otherQuests: []
-    npc: {fileID: 11400000, guid: c3b6eba42fcff1b41bd602742492c2ec, type: 2}
+    npc: {fileID: 11400000, guid: 0d695ebfb9284604b9a9a6ed7d6e1637, type: 2}
     current: {fileID: 0}
     required: 1
-  startPosition: {x: -14.92, y: 8.14}
+  startPosition: {x: -15.36, y: 8.63}
   endPosition: {x: 0, y: 0}

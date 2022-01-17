@@ -17,4 +17,5 @@ MonoBehaviour:
   lines:
   - npcData: {fileID: 11400000, guid: 5beffcf89b8346b47ab405e626342162, type: 2}
     text: Erledige Sombody's Quest.
+  advanceConvAutomatically: 1
   dialogQuestion: {fileID: 11400000, guid: dd51e3511d5415848aa0b6cd622ec4db, type: 2}
