@@ -375,6 +375,7 @@ GameObject:
   - component: {fileID: 6223636772432124554}
   - component: {fileID: 6223636772432124555}
   - component: {fileID: 6223636772432124552}
+  - component: {fileID: 4773235494967847375}
   m_Layer: 5
   m_Name: Survey_Canvas
   m_TagString: Untagged
@@ -498,6 +499,41 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!328 &4773235494967847375
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6223636772432124553}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 45b921a5cd1b0f246963010ad054487a, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: _MainTex
+  m_RenderMode: 0
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1 &6223636773222984357
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,7 +744,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6223636772174210714}
   m_HandleRect: {fileID: 6223636772174210715}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1225,6 +1261,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cde5c2166472efe4cb07c1f25481fc6d, type: 3}
+--- !u!114 &2509084759645746892 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3877265579344582083, guid: cde5c2166472efe4cb07c1f25481fc6d, type: 3}
+  m_PrefabInstance: {fileID: 1665452029061440271}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7060545731622973830 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8566065452371972745, guid: cde5c2166472efe4cb07c1f25481fc6d, type: 3}
@@ -1310,17 +1357,6 @@ MonoBehaviour:
 --- !u!114 &4183405965608919201 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3247849889542407086, guid: cde5c2166472efe4cb07c1f25481fc6d, type: 3}
-  m_PrefabInstance: {fileID: 1665452029061440271}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2509084759645746892 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3877265579344582083, guid: cde5c2166472efe4cb07c1f25481fc6d, type: 3}
   m_PrefabInstance: {fileID: 1665452029061440271}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 874270741}
   - component: {fileID: 874270740}
   - component: {fileID: 874270743}
-  - component: {fileID: 874270744}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -160,7 +159,7 @@ Camera:
   m_GameObject: {fileID: 874270739}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 4
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -240,41 +239,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!328 &874270744
-VideoPlayer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 874270739}
-  m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 45b921a5cd1b0f246963010ad054487a, type: 3}
-  m_TargetCameraAlpha: 0.57
-  m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 874270741}
-  m_TargetTexture: {fileID: 0}
-  m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: _MainTex
-  m_RenderMode: 0
-  m_AspectRatio: 2
-  m_DataSource: 0
-  m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
-  m_Url: 
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
-  m_SkipOnDrop: 1
-  m_Looping: 1
-  m_WaitForFirstFrame: 1
-  m_FrameReadyEventEnabled: 0
-  m_VideoShaders: []
 --- !u!1 &1624742477
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,6 +464,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4773235494967847375, guid: b11357f47965e2b4aac2b880990b610e, type: 3}
+      propertyPath: m_TargetCamera
+      value: 
+      objectReference: {fileID: 874270741}
     - target: {fileID: 4777321902174809288, guid: b11357f47965e2b4aac2b880990b610e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -619,6 +587,10 @@ PrefabInstance:
     - target: {fileID: 6223636773504306651, guid: b11357f47965e2b4aac2b880990b610e, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223636773504306651, guid: b11357f47965e2b4aac2b880990b610e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000061035156
       objectReference: {fileID: 0}
     - target: {fileID: 6226848733666733794, guid: b11357f47965e2b4aac2b880990b610e, type: 3}
       propertyPath: m_AnchorMax.y
