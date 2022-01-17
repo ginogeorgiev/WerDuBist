@@ -16,18 +16,32 @@ namespace Features.Quests.Logic
             quest
         }
 
+        [Header("Hier GoalType über das Dropdown auswählen", order = 1)]
         [SerializeField] private GoalType goalType;
+        [Header("Icon, das neben dem Goal angezeigt werden soll", order = 2)]
+        [Space(-10, order = 3)]
+        [Header("(wird bei Talking Goals automatisch gesetzt)", order = 4)]
         [SerializeField] private Sprite sprite;
-
-        [Header("For other Quest as Goal:")] [SerializeField]
-        private List<Quest_SO> otherQuests;
+        [Space (20, order = 5)]
         
-        [Header("For Talking Goal:")] [SerializeField]
-        private NPCData_SO npc;
+        [Header("Nur ausfüllen für Quest Goal", order = 6)]
+        [Header("in diese Liste kommen alle Quests, die für", order = 7)]
+        [Space (-10, order = 8)]
+        [Header(" dieses Goal erfüllt sein müssen", order = 9)]
+        [SerializeField] private List<Quest_SO> otherQuests;
+        [Space (20, order = 10)]
+        
+        [Header("Nur ausfüllen für  Talking Goal", order = 11)] 
+        [Header("Hier kommt rein, welcher NPC angesprochen werden soll", order = 12)]
+        [SerializeField] private NPCData_SO npc;
+        [Space (20, order = 13)]
 
-        [Header("For Collecting Goal:")] [SerializeField]
-        private IntVariable current;
-
+        [Header("Nur ausfüllen für  Collecting Goal", order = 14)] 
+        [Header("Hier kommt die zum Collectable", order = 15)] 
+        [Space (-10, order = 16)]
+        [Header(" dazugehörige IntVariable rein", order = 17)]
+        [SerializeField] private IntVariable current;
+        [Header("Wie viele davon gesammelt werden solln", order = 18)]
         [SerializeField] private int required;
 
         public GoalType Type => goalType;
