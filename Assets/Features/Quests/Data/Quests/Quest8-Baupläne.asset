@@ -23,7 +23,7 @@ MonoBehaviour:
     sprite: {fileID: 0}
     otherQuests: []
     npc: {fileID: 11400000, guid: 929b028d2515e874187beebef2c8cd5d, type: 2}
-    current: {fileID: 11400000, guid: aabf314d0209c27499eb41f91dc89215, type: 2}
-    required: 3
+    current: {fileID: 0}
+    required: 0
   startPosition: {x: 0, y: 0}
-  endPosition: {x: 46.42, y: 2.78}
+  endPosition: {x: 43.47, y: 3.62}

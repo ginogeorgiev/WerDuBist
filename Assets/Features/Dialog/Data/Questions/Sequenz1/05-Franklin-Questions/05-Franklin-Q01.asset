@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
+  m_Name: 05-Franklin-Q01
+  m_EditorClassIdentifier: 
+  choices:
+  - text: Ich dachte mir, dass du vielleicht Hilfe brauchst.
+    ingameQuestion: {fileID: 0}
+    value: 0
+    dialogConversation: {fileID: 11400000, guid: bb2ca2028a65d514e9d78f7669e211a5, type: 2}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 0}
+  - text: Ich habe mich gefragt, was du eigentlich gerade machst?
+    ingameQuestion: {fileID: 0}
+    value: 0
+    dialogConversation: {fileID: 11400000, guid: bb2ca2028a65d514e9d78f7669e211a5, type: 2}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 0}
