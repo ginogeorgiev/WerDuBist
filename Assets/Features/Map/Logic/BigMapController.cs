@@ -102,11 +102,14 @@ namespace Features.Map.Logic
         {
             if (!quest.Visible)
             {
-                Destroy(newQuestMarkers[quest.QuestID]);
+                if (newQuestMarkers.ContainsKey(quest.QuestID))
+                {
+                    Destroy(newQuestMarkers[quest.QuestID]);
+                }
+                else return;
             }
             else
             {
-                
                 var obj = newQuestMarkers.ContainsKey(quest.QuestID) ? 
                     newQuestMarkers[quest.QuestID] : Instantiate(questMarker, quest.StartPosition, Quaternion.identity);
                 
@@ -121,8 +124,9 @@ namespace Features.Map.Logic
         
         public void DisplayActiveFocus()
         {
-            if (questFocus.Get() == null) return; 
-            
+            if (questFocus.Get() == null) return;
+            if (!activeQuestMarkers.ContainsKey(questFocus.Get().QuestID)) return;
+
             if (focusMarker!=null)
             {
                 focusMarker.GetComponent<SpriteRenderer>().sprite = questActive;
