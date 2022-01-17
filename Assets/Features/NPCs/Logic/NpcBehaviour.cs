@@ -51,10 +51,15 @@ namespace Features.NPCs.Logic
 
         public ConversationElement GetActiveConversationElement => conversationElements[conversationIndex];
         
-        private void Start()
+        private void Awake()
         {
             npcBehaviourRuntimeSet.Add(this);
             
+            playerControls = new PlayerControls();
+        }
+        
+        private void Start()
+        {
             if (conversationElements == null || conversationElements.Count == 0) return;
             
             activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
@@ -73,6 +78,11 @@ namespace Features.NPCs.Logic
                     con.Quest.StartPosition = new Vector2(pos.x,pos.y);
                 }
             }
+        }
+
+        private void OnDestroy()
+        {
+            npcBehaviourRuntimeSet.Remove(this);
         }
 
         public void OnNpcFocusChanged()
@@ -116,6 +126,8 @@ namespace Features.NPCs.Logic
             {
                 conversationIndex++;
                 
+                Debug.Log(Data.name + "'s conversation advanced to " + conversationIndex);
+                
                 activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
                 onActiveConversationChanged.Raise();
             }
@@ -134,10 +146,6 @@ namespace Features.NPCs.Logic
         #region Input related
         
         private PlayerControls playerControls;
-        private void Awake()
-        {
-            playerControls = new PlayerControls();
-        }
         
         private void OnEnable()
         {

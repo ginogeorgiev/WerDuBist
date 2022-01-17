@@ -190,6 +190,9 @@ namespace Features.Player.Logic
             transitionData.OnStart.Raise();
             yield return new WaitForSeconds(transitionData.FadeInTime);
             
+            Debug.Log(transform.position);
+            Debug.Log(teleportFocus.Get().position);
+            
             transform.position = teleportFocus.Get().position;
             yield return new WaitForSeconds(1f);
             
