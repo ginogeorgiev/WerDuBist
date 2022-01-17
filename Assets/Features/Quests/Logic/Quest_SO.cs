@@ -19,11 +19,18 @@ namespace Features.Quests.Logic
         
         [SerializeField] private string title;
         [SerializeField] private string description;
-        [Tooltip("visible=true means the Quest will be displayed on the QuestUI and Map")]
+        [Header("Der Harken muss hier gesetzt werden, wenn die Quests", order = 4)]
+        [Space (-10, order = 5)]
+        [Header("im QuestUI und auf der Map angezeigt werden soll", order = 6)]
         [SerializeField] private bool visible;
+        [Header("Durch das + können hier Goals erstellt werden", order = 7)]
         [SerializeField] private List<Goal> goals;
         [SerializeField] private Vector2 startPosition;
         [SerializeField] private Vector2 endPosition;
+        [Header("Hier muss einfach das _QuestSet mit rein", order = 8)]
+        [Space (-10, order = 9)]
+        [Header("(das erste, wenn man auf den Kreis klickt)", order = 10)]
+        [SerializeField] private QuestSet_SO questSet;
         
         public int QuestID => id;
         
@@ -49,7 +56,13 @@ namespace Features.Quests.Logic
         public bool IsUnlocked { get; set; }
         public bool IsActive { get; set; }
         public bool IsCompleted { get; set; }
-        
+
+        private void OnEnable()
+        {
+            if (questSet.Items.Contains(this)) return;
+                questSet.Items.Add(this);
+        }
+
         public bool CheckGoals(NpcFocus_So  npcId)
         {
             foreach (var goal in GoalList)

@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Melody-Conversation-01
   m_EditorClassIdentifier: 
   speakerLeft: {fileID: 11400000, guid: a5d20b15f28ea8143b6531e8889a2eaf, type: 2}
-  speakerRight: {fileID: 11400000, guid: 3286d80512a5b6c49a0946274b3abb63, type: 2}
+  speakerRight: {fileID: 11400000, guid: 2a6489c87cf46f14db3526c2ede3d338, type: 2}
   lines:
-  - npcData: {fileID: 11400000, guid: 3286d80512a5b6c49a0946274b3abb63, type: 2}
+  - npcData: {fileID: 11400000, guid: 2a6489c87cf46f14db3526c2ede3d338, type: 2}
     text: Oh mein Gott, wo kommst du denn her und warum siehst du so abgerissen aus.
   - npcData: {fileID: 11400000, guid: a5d20b15f28ea8143b6531e8889a2eaf, type: 2}
     text: "Ich glaub ich bin schiffbr\xFCchig."
-  - npcData: {fileID: 11400000, guid: 3286d80512a5b6c49a0946274b3abb63, type: 2}
+  - npcData: {fileID: 11400000, guid: 2a6489c87cf46f14db3526c2ede3d338, type: 2}
     text: 'Du brauchst auf jeden Fall Hilfe. Auf der anderen Insel ist eine kleine
       Stadt. Aber da kommen wir nicht so leicht hin ohne Boot. '
-  - npcData: {fileID: 11400000, guid: 3286d80512a5b6c49a0946274b3abb63, type: 2}
+  - npcData: {fileID: 11400000, guid: 2a6489c87cf46f14db3526c2ede3d338, type: 2}
     text: "Ich bin mit meinem Surfbrett hier, aber da passen wir nicht beide drauf.
       Bring mir doch ein paar Planken die hier rumliegen, dann bauen wir zusammen
       ein Floss f\xFCr dich."

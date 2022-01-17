@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e101bbedf808fad488e79663f8f7649d, type: 3}
   m_Name: Somebody_Test
   m_EditorClassIdentifier: 
-  id: 1000
+  id: 1002
   fullName: Acast
   portrait: {fileID: 21300000, guid: d0743852030dcff4397592d0e848d5f3, type: 3}
   icon: {fileID: 21300000, guid: 28edd3b3f15d8e34baec233b34b84831, type: 3}

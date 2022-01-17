@@ -17,4 +17,6 @@ MonoBehaviour:
   lines:
   - npcData: {fileID: 11400000, guid: 929b028d2515e874187beebef2c8cd5d, type: 2}
     text: "Ok, ganz langsam, wo war ich heute \xFCberall\u2026"
-  dialogQuestion: {fileID: 0}
+  - npcData: {fileID: 11400000, guid: 929b028d2515e874187beebef2c8cd5d, type: 2}
+    text: Huh? Was ist los?
+  dialogQuestion: {fileID: 11400000, guid: f12c8fd418615c14babdda5e119d5ff9, type: 2}
