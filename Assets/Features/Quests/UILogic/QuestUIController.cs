@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Features.Quests.Logic;
@@ -14,7 +15,7 @@ namespace Features.Quests.UILogic
         [SerializeField] private GameObject contentUI;
         [SerializeField] private GameObject questPrefab;
         [SerializeField] private GameObject goalPrefab;
-        [SerializeField] private QuestSetActive_SO activeQuests;
+        [SerializeField] private QuestSet_SO activeQuests;
         [SerializeField] private QuestEvent onDisplayQuest;
         [SerializeField] private QuestEvent onRemoveQuest;
 
@@ -46,7 +47,19 @@ namespace Features.Quests.UILogic
 
                 // write Goal Info
                 var goalText = goalUI.transform.GetChild(0).gameObject.transform.GetChild(1).GetComponent<TMP_Text>();
-                goalText.text = goal.Type==Goal.GoalType.collect ? goal.CurrentAmount.Get().ToString() : "0";
+                
+                switch (goal.Type)
+                {
+                    case Goal.GoalType.collect:
+                        goalText.text = goal.CurrentAmount.Get().ToString();
+                        break;
+                    case Goal.GoalType.talk:
+                        goalText.text = "0";
+                        break;
+                    case Goal.GoalType.quest:
+                        goalText.text = goal.OtherQuests.Count(qu => qu.IsCompleted).ToString();
+                        break;
+                }
                 goalText.text += "/";
                 goalText.text += goal.RequiredAmount.ToString();
                 
@@ -77,6 +90,9 @@ namespace Features.Quests.UILogic
             
             // find QuestUI with correct questID
             var questUI = GetQuestUI(focus.Get().QuestID);
+            
+            if (questUI==null) return;
+            
 
             // update all goal texts
             for (var i = 0; i < focus.Get().GoalList.Count(); i++)
@@ -103,7 +119,6 @@ namespace Features.Quests.UILogic
                 }
             }
             
-            
             RebuildLayout();
         }
         
@@ -128,6 +143,7 @@ namespace Features.Quests.UILogic
             //sets all Quest Info active/inactive i.e. collapses unfocused Quests
              
             var questUI = GetQuestUI(quest.QuestID);
+            if (questUI==null) return;
             
             questUI.transform.GetChild(1).GetChild(0).gameObject.SetActive(boo);
             
@@ -141,15 +157,18 @@ namespace Features.Quests.UILogic
         private void RemoveQuest(Quest_SO quest)
         {
             if (!activeQuests.Items.Contains(quest)) return;
-            
+
             if (!quest.Visible)
             {
                 activeQuests.Items.Remove(quest);
                 return;
             }
 
+            var questUI = GetQuestUI(quest.QuestID);
+            if (questUI==null) return;
+            
             // destroy UI Prefab of completed Quest
-            Destroy(GetQuestUI(quest.QuestID).gameObject);
+            Destroy(questUI.gameObject);
             
             // remove from active quests
             activeQuests.Items.Remove(quest);

@@ -22,4 +22,4 @@ MonoBehaviour:
     text: " K\xF6nntest du mir ein Gefallen tun und diese Pl\xE4ne an ihn weitergeben?
       Ich muss noch hier einiges an Pl\xE4nen aufholen, das w\xE4re sehr nett von
       dir."
-  dialogQuestion: {fileID: 0}
+  dialogQuestion: {fileID: 11400000, guid: 587c1fb521a29ee43b87c1c044fcf3b9, type: 2}

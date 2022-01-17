@@ -26,3 +26,4 @@ MonoBehaviour:
     required: 1
   startPosition: {x: -27.61, y: -1.76}
   endPosition: {x: 37.68, y: 5.68}
+  questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}
