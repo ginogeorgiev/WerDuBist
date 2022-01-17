@@ -45,4 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequences:
   - {fileID: 11400000, guid: f6719900b6d05ad42a028a975a40ae33, type: 2}
+  - {fileID: 11400000, guid: ca6a9cc8622974b4e95c0af772aa140b, type: 2}
   npcBehaviourRuntimeSet: {fileID: 11400000, guid: 9d553a0a1058f1b4fa6ea1634cc00b10, type: 2}

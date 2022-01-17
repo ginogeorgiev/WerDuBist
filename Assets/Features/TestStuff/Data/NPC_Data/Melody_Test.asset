@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e101bbedf808fad488e79663f8f7649d, type: 3}
   m_Name: Melody_Test
   m_EditorClassIdentifier: 
-  id: 1002
+  id: 1000
   fullName: Melody
   portrait: {fileID: 21300000, guid: b218e2a2b2e76884ea7a75c6380a368c, type: 3}
   icon: {fileID: 21300000, guid: b69dd42474a3b0a429cf79e46f26a3bd, type: 3}
