@@ -8,13 +8,13 @@ namespace DataStructures.Variables
         public void Append(string value)
         {
             runtimeValue += value;
-            onValueChanged.Raise();
+            if(onValueChanged != null) onValueChanged.Raise();
         }
 
         public void Append(StringVariable value)
         {
             runtimeValue += value.runtimeValue;
-            onValueChanged.Raise();
+            if(onValueChanged != null) onValueChanged.Raise();
         }
     }
 }
