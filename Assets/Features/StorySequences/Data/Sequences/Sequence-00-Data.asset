@@ -21,9 +21,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 176559f37d56ba74ca9fc4bf4febde95, type: 2}
   - {fileID: 11400000, guid: 54dbc863e07340346b70e6c50ba17994, type: 2}
   npcsToActivateList: []
+  npcsToDeactivateList: []
   questsToUnlockList:
   - {fileID: 11400000, guid: 64d67580bff265e41ae674871fb00f8b, type: 2}
   - {fileID: 11400000, guid: 9ec1ef8e3ab31a840bb549d99dc183af, type: 2}
+  - {fileID: 11400000, guid: 7cd0a61d2994d27498bacd7de514c7fc, type: 2}
+  - {fileID: 11400000, guid: db7db85b763276949a93b3e13fd166d7, type: 2}
   onQuestUnlocked: {fileID: 11400000, guid: 8f5648f89cd5125409176c7fad3a91df, type: 2}
   behaviourRuntimeSet: {fileID: 11400000, guid: 9d553a0a1058f1b4fa6ea1634cc00b10, type: 2}
   sequenceCompletedEvent: {fileID: 11400000, guid: e8303b8678ef6aa4992df7d7f0322dc4, type: 2}
