@@ -13,7 +13,7 @@ namespace Features.Dialog.Logic
 
     public class ConversationController : MonoBehaviour
     {
-        [SerializeField] private BoolVariable blockInputOnPause;
+        [SerializeField] private BoolVariable isGamePaused;
         
         [SerializeField] private NpcFocus_So npcFocus;
         [SerializeField] private TutorialData_SO tutorialData;
@@ -119,7 +119,7 @@ namespace Features.Dialog.Logic
 
         private void AdvanceLine()
         {
-            if (blockInputOnPause.Get()) return;
+            if (isGamePaused.Get()) return;
             
             if (questionUI.activeSelf) return;
             

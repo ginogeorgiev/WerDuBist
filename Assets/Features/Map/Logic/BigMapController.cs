@@ -11,7 +11,7 @@ namespace Features.Map.Logic
     public class BigMapController : MonoBehaviour
     {
         [SerializeField] private GameObject mapUI;
-        [SerializeField] private BoolVariable blockInputOnPause;
+        [SerializeField] private BoolVariable isGamePaused;
 
         [SerializeField] private GameObject mapBG;
         [SerializeField] private Sprite mainIsland;
@@ -68,7 +68,7 @@ namespace Features.Map.Logic
 
         public void ToggleMapUI()
         {
-            if (blockInputOnPause.Get()) return;
+            if (isGamePaused.Get()) return;
             
             mapUI.SetActive(!mapUI.activeSelf);
         }

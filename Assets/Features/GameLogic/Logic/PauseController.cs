@@ -14,7 +14,7 @@ namespace Features.GameController.Logic
     public class PauseController : MonoBehaviour
     {
         [SerializeField] private GameEvent_SO pauseGame, unpauseGame;
-        [SerializeField] private BoolVariable blockInputOnPause;
+        [SerializeField] private BoolVariable isGamePaused;
 
         private StateMachine stateMachine;
         private PauseState pauseState;
@@ -33,8 +33,8 @@ namespace Features.GameController.Logic
         private void Awake()
         {
             stateMachine = new StateMachine();
-            pauseState = new PauseState(blockInputOnPause);
-            unpauseState = new UnpauseState(blockInputOnPause);
+            pauseState = new PauseState(isGamePaused);
+            unpauseState = new UnpauseState(isGamePaused);
 
             playerControls = new PlayerControls();
         }

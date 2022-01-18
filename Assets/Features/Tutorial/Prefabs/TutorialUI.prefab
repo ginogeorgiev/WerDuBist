@@ -446,6 +446,7 @@ GameObject:
   - component: {fileID: 3726866334736108476}
   - component: {fileID: 8445098328298362578}
   - component: {fileID: 1142028743812539515}
+  - component: {fileID: 8831374844705241948}
   m_Layer: 5
   m_Name: GameEventListener
   m_TagString: Untagged
@@ -880,6 +881,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8831374844705241948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7894985178790516243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: 96dca4ce2fd67fa4d883087591371dc6, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6507383241699474855}
+        m_TargetAssemblyTypeName: Features.Tutorial.Logic.TutorialUIBehaviour, Assembly-CSharp
+        m_MethodName: OnDelayedDeActivateAllInfos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8420188929599723181
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,6 +966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialData: {fileID: 11400000, guid: 2c11094f41d7ae04c9b54ff87bd93fc2, type: 2}
+  isGamePaused: {fileID: 11400000, guid: 5a5fdbce983558e4782244fb314ff9b9, type: 2}
 --- !u!223 &8420188929599723182
 Canvas:
   m_ObjectHideFlags: 0

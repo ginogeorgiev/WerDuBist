@@ -6,16 +6,16 @@ namespace Features.GameLogic.Logic.States
 {
     public class UnpauseState : IState
     {
-        private BoolVariable blockInputOnPause;
+        private BoolVariable isGamePaused;
         
-        public UnpauseState(BoolVariable blockInputOnPause)
+        public UnpauseState(BoolVariable isGamePaused)
         {
-            this.blockInputOnPause = blockInputOnPause;
+            this.isGamePaused = isGamePaused;
         }
         
         public void Enter()
         {
-            blockInputOnPause.Set(false);
+            isGamePaused.Set(false);
             Time.timeScale = 1f;
         }
 

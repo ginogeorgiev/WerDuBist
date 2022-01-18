@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98e7f27c19fc272448e63ff558302a5c, type: 3}
-  m_Name: blockInputOnPause
+  m_Name: isGamePaused
   m_EditorClassIdentifier: 
   runtimeValue: 0
   storedValue: 0
