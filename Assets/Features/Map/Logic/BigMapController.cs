@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Features.Quests.Logic;
 using DataStructures.Focus;
+using DataStructures.Variables;
 using Features.Input;
 using UnityEngine.UI;
 
@@ -10,6 +11,7 @@ namespace Features.Map.Logic
     public class BigMapController : MonoBehaviour
     {
         [SerializeField] private GameObject mapUI;
+        [SerializeField] private BoolVariable isGamePaused;
 
         [SerializeField] private GameObject mapBG;
         [SerializeField] private Sprite mainIsland;
@@ -66,6 +68,8 @@ namespace Features.Map.Logic
 
         public void ToggleMapUI()
         {
+            if (isGamePaused.Get()) return;
+            
             mapUI.SetActive(!mapUI.activeSelf);
         }
         
