@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DataStructures.Event;
 using Features.Evaluation.Logic;
 using Features.Quests.Logic;
@@ -36,7 +37,7 @@ namespace Features.Dialog.Logic
         [Header("Dieses Feld ausfüllen, wenn nach der Auswahl einer Option ", order = 8)]
         [Space (-10, order = 9)]
         [Header("ein besonderes Event starten soll (zb. Teleport Player).", order = 10)]
-        [SerializeField] private GameEvent_SO choiceEvent;
+        [SerializeField] private List<GameEvent_SO> choiceEvents;
 
         [Space (10, order = 11)]
         [Header("Wenn diese Dialog Option dafür sorgen würde, ", order = 12)]
@@ -54,7 +55,11 @@ namespace Features.Dialog.Logic
 
         public void OnChoiceEvent()
         {
-            choiceEvent.Raise();
+            foreach (GameEvent_SO gameEvent in choiceEvents)
+            {
+                gameEvent.Raise();
+            }
+            
         }
 
         public void OnAddToEvaluation()
@@ -78,7 +83,7 @@ namespace Features.Dialog.Logic
         }
 
         public Quest_SO Quest => quest;
-        public GameEvent_SO ChoiceEvent => choiceEvent;
+        public List<GameEvent_SO> ChoiceEvents => choiceEvents;
 
         public string Text => text;
 

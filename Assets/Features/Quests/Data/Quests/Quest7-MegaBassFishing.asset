@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a54c835cd434817add4d3fdde868665, type: 3}
+  m_Name: Quest7-MegaBassFishing
+  m_EditorClassIdentifier: 
+  id: 7
+  npcsToAdvanceConversationsList:
+  - {fileID: 11400000, guid: 3ae66e805df3d5d42b1329d19a09f1ac, type: 2}
+  title: Mega Bass Fishing
+  description: Fange 3 Fische
+  visible: 1
+  goals:
+  - goalType: 1
+    sprite: {fileID: 21300000, guid: af59ea05bcba0574a9b9112dcdc02f19, type: 3}
+    otherQuests: []
+    npc: {fileID: 11400000, guid: 3ae66e805df3d5d42b1329d19a09f1ac, type: 2}
+    current: {fileID: 11400000, guid: 8ce660b6c02272749980efc2e80a79f6, type: 2}
+    required: 3
+  startPosition: {x: 0, y: 0}
+  endPosition: {x: 43.47, y: 3.62}
+  questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}

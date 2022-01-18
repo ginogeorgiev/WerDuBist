@@ -19,4 +19,5 @@ MonoBehaviour:
     text: Was machst du hier?
   - npcData: {fileID: 11400000, guid: a5d20b15f28ea8143b6531e8889a2eaf, type: 2}
     text: "Ich bin schiffbr\xFCchig."
-  dialogQuestion: {fileID: 11400000, guid: e0809b2e4b0614c4b81ffe416029474d, type: 2}
+  advanceConvAutomatically: 1
+  dialogQuestion: {fileID: 11400000, guid: bdd84e368807dd143bd53821c598dfb8, type: 2}

@@ -8,13 +8,13 @@ namespace DataStructures.Variables
         public void Add(int value)
         {
             runtimeValue += value;
-            onValueChanged.Raise();
+            if(onValueChanged != null) onValueChanged.Raise();
         }
 
         public void Add(IntVariable value)
         {
             runtimeValue += value.runtimeValue;
-            onValueChanged.Raise();
+            if(onValueChanged != null) onValueChanged.Raise();
         }
     }
 }

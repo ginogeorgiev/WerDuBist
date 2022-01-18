@@ -51,7 +51,7 @@ namespace Features.Dialog.Logic
                 button.onClick.AddListener(choice.OnQuestAccepted);
             }
 
-            if (choice.ChoiceEvent != null)
+            if (choice.ChoiceEvents.Count != 0)
             {
                 button.onClick.AddListener(choice.OnChoiceEvent);
             }

@@ -5,7 +5,7 @@ namespace DataStructures.RuntimeSet
 {
     public abstract class RuntimeSet_SO<T> : ScriptableObject
     {
-        private List<T> items = new List<T>();
+        [SerializeField] private List<T> items = new List<T>();
 
         public List<T> GetItems()
         {
@@ -31,11 +31,6 @@ namespace DataStructures.RuntimeSet
         public void Restore()
         {
             items.Clear();
-        }
-
-        private void OnEnable()
-        {
-            Restore();
         }
     }
 }

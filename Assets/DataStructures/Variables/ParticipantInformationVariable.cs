@@ -22,13 +22,13 @@ namespace DataStructures.Variables
                 age = age,
                 gamingExperience = gamingExperience
             };
-            onValueChanged.Raise();
+            if(onValueChanged != null) onValueChanged.Raise();
         }
 
         public void Set(ParticipantInformationVariable value)
         {
             runtimeValue = value.runtimeValue;
-            onValueChanged.Raise();
+            if(onValueChanged != null) onValueChanged.Raise();
         }
     }
 }

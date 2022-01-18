@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using DataStructures.Event;
 using UnityEngine;
 using Features.Quests.Logic;
 using DataStructures.Focus;
@@ -83,11 +81,11 @@ namespace Features.Map.Logic
 
             mapBorder.sizeDelta = new Vector2(885, 618);
 
-            questMarker.transform.localScale = new Vector3(2, 2, 1);
-            foreach (var marker in newQuestMarkers)
-            {
-                marker.Value.transform.localScale = new Vector3(2, 2, 1);
-            }
+            questMarker.transform.localScale = new Vector3(2.5f, 2.5f, 1);
+
+            if (focusMarker == null) return;
+            focusMarker.transform.localScale = new Vector3(2.5f, 2.5f, 1);
+            
         }
 
         private void DisplayUnlockedQuest(Quest_SO quest)
@@ -103,13 +101,20 @@ namespace Features.Map.Logic
         {
             if (!quest.Visible)
             {
-                Destroy(newQuestMarkers[quest.QuestID]);
+                if (newQuestMarkers.ContainsKey(quest.QuestID))
+                {
+                    Destroy(newQuestMarkers[quest.QuestID]);
+                }
+                else return;
             }
             else
             {
-                var obj = newQuestMarkers[quest.QuestID];
+                var obj = newQuestMarkers.ContainsKey(quest.QuestID) ? 
+                    newQuestMarkers[quest.QuestID] : Instantiate(questMarker, quest.StartPosition, Quaternion.identity);
+                
                 obj.GetComponent<SpriteRenderer>().sprite = questActive;
                 obj.transform.position = new Vector3(quest.EndPosition.x, quest.EndPosition.y, -.5f);
+                obj.transform.SetParent(mapUI.transform);
                 activeQuestMarkers.Add(quest.QuestID, obj);
             }
 
@@ -118,8 +123,9 @@ namespace Features.Map.Logic
         
         public void DisplayActiveFocus()
         {
-            if (questFocus.Get() == null) return; 
-            
+            if (questFocus.Get() == null) return;
+            if (!activeQuestMarkers.ContainsKey(questFocus.Get().QuestID)) return;
+
             if (focusMarker!=null)
             {
                 focusMarker.GetComponent<SpriteRenderer>().sprite = questActive;
@@ -127,6 +133,7 @@ namespace Features.Map.Logic
             
             var obj = activeQuestMarkers[questFocus.Get().QuestID];
             obj.GetComponent<SpriteRenderer>().sprite = questFocusActive;
+            obj.transform.SetParent(mapUI.transform);
             focusMarker = obj;
         }
         

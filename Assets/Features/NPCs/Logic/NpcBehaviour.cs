@@ -13,15 +13,12 @@ namespace Features.NPCs.Logic
     {
         [Header("Hier kommt die weitere führende Conversation rein", order = 0)]
         [SerializeField] private DialogConversation_SO dialogConversationLeft;
-        [Header("Hier Haken nur setzten wenn darunter alles leer bleibt und es nicht der Eingangs- bzw. Ausgangs-Dialog ist", order = 1)]
-        [SerializeField] private bool advanceConvAutomatically;
         
         [Header("Hier kommt die weitere führende Conversation rein, wenn es gerade eine Aktive Quest zu erledigen gibt.", order = 2)]
         [Space (-10, order = 3)]
         [Header("Und die Quest muss mit übergeben werden, damit sie geprüft werden kann", order = 4)]
         [SerializeField] private DialogConversation_SO dialogConversationRight;
         [SerializeField] private Quest_SO quest;
-        public bool AdvanceConvAutomatically => advanceConvAutomatically;
 
         public DialogConversation_SO DialogConversationLeft => dialogConversationLeft;
 
@@ -54,10 +51,15 @@ namespace Features.NPCs.Logic
 
         public ConversationElement GetActiveConversationElement => conversationElements[conversationIndex];
         
-        private void Start()
+        private void Awake()
         {
             npcBehaviourRuntimeSet.Add(this);
             
+            playerControls = new PlayerControls();
+        }
+        
+        private void Start()
+        {
             if (conversationElements == null || conversationElements.Count == 0) return;
             
             activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
@@ -76,14 +78,11 @@ namespace Features.NPCs.Logic
                     con.Quest.StartPosition = new Vector2(pos.x,pos.y);
                 }
             }
-            foreach (var conversation in conversationElements.Where(c => c.DialogConversationRight != null))
-            {
-                if (conversation.DialogConversationRight.DialogQuestion == null) continue;
-                foreach (var con in conversation.DialogConversationRight.DialogQuestion.Choices.Where(choice => choice.Quest!=null))
-                {
-                    con.Quest.StartPosition = new Vector2(pos.x,pos.y);
-                }
-            }
+        }
+
+        private void OnDestroy()
+        {
+            npcBehaviourRuntimeSet.Remove(this);
         }
 
         public void OnNpcFocusChanged()
@@ -95,10 +94,10 @@ namespace Features.NPCs.Logic
 
         public void OnCheckForNextConversationPart()
         {
-            // dunno if that works
+            // now it works i guess
             if (conversationElements[conversationIndex].Quest != null)
             {
-                if (conversationElements[conversationIndex].Quest.CheckGoals())
+                if (conversationElements[conversationIndex].Quest.CheckGoals(null))
                 {
                     onCompleteQuest.Raise(conversationElements[conversationIndex].Quest);
                     activeConversation = conversationElements[conversationIndex].DialogConversationRight;
@@ -116,21 +115,21 @@ namespace Features.NPCs.Logic
                 
                 activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
                 onActiveConversationChanged.Raise();
-                
-                if (!conversationElements[conversationIndex].AdvanceConvAutomatically) return;
-                
-                AdvanceConvIndex();
-                
-                activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
-                onActiveConversationChanged.Raise();
             }
         }
 
         public void AdvanceConvIndex()
         {
+            if (conversationElements == null || conversationElements.Count == 0) return;
+            
             if (conversationIndex + 1 < conversationElements.Count)
             {
                 conversationIndex++;
+                
+                Debug.Log(Data.name + "'s conversation advanced to " + conversationIndex);
+                
+                activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
+                onActiveConversationChanged.Raise();
             }
         }
 
@@ -147,10 +146,6 @@ namespace Features.NPCs.Logic
         #region Input related
         
         private PlayerControls playerControls;
-        private void Awake()
-        {
-            playerControls = new PlayerControls();
-        }
         
         private void OnEnable()
         {
