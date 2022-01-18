@@ -13,6 +13,8 @@ namespace Features.Dialog.Logic
 
     public class ConversationController : MonoBehaviour
     {
+        [SerializeField] private BoolVariable blockInputOnPause;
+        
         [SerializeField] private NpcFocus_So npcFocus;
         [SerializeField] private TutorialData_SO tutorialData;
         [SerializeField] private DialogConversation_SO dialogConversation;
@@ -48,7 +50,7 @@ namespace Features.Dialog.Logic
         private PlayerControls playerControls;
         private void Awake()
         {
-            playerControls = InputController.playerControls;
+            playerControls = new PlayerControls();
         }
         
         private void OnEnable()
@@ -117,6 +119,8 @@ namespace Features.Dialog.Logic
 
         private void AdvanceLine()
         {
+            if (blockInputOnPause.Get()) return;
+            
             if (questionUI.activeSelf) return;
             
             if (dialogConversation == null) return;

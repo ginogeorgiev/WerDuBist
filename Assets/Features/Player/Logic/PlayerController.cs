@@ -31,6 +31,8 @@ namespace Features.Player.Logic
         [SerializeField] private TutorialData_SO tutorialData;
 
         [SerializeField] private GridElementEnteredEvent onGridElementEntered;
+        
+        [SerializeField] private BoolVariable blockInputOnPause;
 
         private new Rigidbody2D rigidbody2D;
 
@@ -80,6 +82,8 @@ namespace Features.Player.Logic
 
         private void HandleKeyboardInput()
         {
+            if(blockInputOnPause.Get()) return;
+            
             // If the player is in a conversation, the keyboard inputs for walking should be ignored
             if(isPlayerInConversation.Get()) return;
 

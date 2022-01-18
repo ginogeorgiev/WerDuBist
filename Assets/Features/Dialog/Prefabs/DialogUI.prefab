@@ -1600,6 +1600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8bd57cc1186a994a929ff7225926043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockInputOnPause: {fileID: 11400000, guid: 5a5fdbce983558e4782244fb314ff9b9, type: 2}
   npcFocus: {fileID: 11400000, guid: e1b8dc06bac9c86478b1a76b4ce599c6, type: 2}
   tutorialData: {fileID: 11400000, guid: 2c11094f41d7ae04c9b54ff87bd93fc2, type: 2}
   dialogConversation: {fileID: 0}

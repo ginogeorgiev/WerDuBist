@@ -1,8 +1,9 @@
 using System;
 using DataStructures.Event;
 using DataStructures.StateMachineLogic;
+using DataStructures.Variables;
 using Features.Dialog.Logic;
-using Features.GameController.Logic.States;
+using Features.GameLogic.Logic.States;
 using Features.Input;
 using Features.Map.Logic;
 using UnityEngine;
@@ -13,6 +14,7 @@ namespace Features.GameController.Logic
     public class PauseController : MonoBehaviour
     {
         [SerializeField] private GameEvent_SO pauseGame, unpauseGame;
+        [SerializeField] private BoolVariable blockInputOnPause;
 
         private StateMachine stateMachine;
         private PauseState pauseState;
@@ -31,10 +33,10 @@ namespace Features.GameController.Logic
         private void Awake()
         {
             stateMachine = new StateMachine();
-            pauseState = new PauseState();
-            unpauseState = new UnpauseState();
+            pauseState = new PauseState(blockInputOnPause);
+            unpauseState = new UnpauseState(blockInputOnPause);
 
-            playerControls = InputController.playerControls;
+            playerControls = new PlayerControls();
         }
 
         private void Start()
