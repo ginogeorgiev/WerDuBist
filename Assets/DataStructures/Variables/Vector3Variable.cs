@@ -8,13 +8,13 @@ namespace DataStructures.Variables
         public void Add(Vector3 value)
         {
             runtimeValue += value;
-            onValueChanged.Raise();
+            if(onValueChanged != null) onValueChanged.Raise();
         }
 
         public void Add(Vector3Variable value)
         {
             runtimeValue += value.runtimeValue;
-            onValueChanged.Raise();
+            if(onValueChanged != null) onValueChanged.Raise();
         }
     }
 }

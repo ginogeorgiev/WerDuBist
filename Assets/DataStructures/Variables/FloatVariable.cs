@@ -8,13 +8,13 @@ namespace DataStructures.Variables
         public void Add(float value)
         {
             runtimeValue += value;
-            onValueChanged.Raise();
+            if(onValueChanged != null) onValueChanged.Raise();
         }
 
         public void Add(FloatVariable value)
         {
             runtimeValue += value.runtimeValue;
-            onValueChanged.Raise();
+            if(onValueChanged != null) onValueChanged.Raise();
         }
     }
 }
