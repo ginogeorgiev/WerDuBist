@@ -91,7 +91,10 @@ namespace Features.NPCs.Logic
 
         private void OnDestroy()
         {
-            npcBehaviourRuntimeSet.Remove(this);
+            if (npcBehaviourRuntimeSet.GetItems().Contains(this))
+            {
+                npcBehaviourRuntimeSet.Remove(this);
+            }
         }
 
         public void OnNpcFocusChanged()
