@@ -39,7 +39,7 @@ namespace Features.Input
                 {
                     ""name"": ""Interact"",
                     ""type"": ""Button"",
-                    ""id"": ""384d9ad7-5fcf-4274-8efd-340196c45600"",
+                    ""id"": ""7ebafee2-988a-4f82-a31a-46738a4637b8"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -188,7 +188,7 @@ namespace Features.Input
                 },
                 {
                     ""name"": """",
-                    ""id"": ""65347d87-8c06-4933-93c2-630b693f8965"",
+                    ""id"": ""b4a786ee-5d15-44a4-aa1e-b22ad66c6f0b"",
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
