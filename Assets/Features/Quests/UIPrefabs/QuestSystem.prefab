@@ -58,6 +58,7 @@ MonoBehaviour:
   behaviourRuntimeSet: {fileID: 11400000, guid: 9d553a0a1058f1b4fa6ea1634cc00b10, type: 2}
   firstQuests:
   - {fileID: 11400000, guid: 176559f37d56ba74ca9fc4bf4febde95, type: 2}
+  - {fileID: 11400000, guid: 54dbc863e07340346b70e6c50ba17994, type: 2}
 --- !u!1 &4802871112802404793
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +376,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 576, y: 0}
+  m_AnchoredPosition: {x: 1910, y: 0}
   m_SizeDelta: {x: 214, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &5861041857713194565
