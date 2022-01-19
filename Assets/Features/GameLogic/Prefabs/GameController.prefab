@@ -48,6 +48,7 @@ MonoBehaviour:
   onLaunchGame: {fileID: 11400000, guid: c0d27581dccf502418800800626faf13, type: 2}
   onLaunchSurvey: {fileID: 11400000, guid: 6b08bee8258c572488549ff59be2150e, type: 2}
   onActivateResultScreen: {fileID: 11400000, guid: 56c94978a4f6e8845b86bfb1bbcbd2a5, type: 2}
+  onDeActivateGameUI: {fileID: 11400000, guid: 61c714aec2c2b554e8c62e0a5f8b1baf, type: 2}
   isGameLaunched: {fileID: 11400000, guid: 448c53502b4055b47bb092d2b091b79c, type: 2}
   isSurveyLaunched: {fileID: 11400000, guid: 0cbb6ae71ec3a914b9ebb211e15976c3, type: 2}
   evaluationData: {fileID: 11400000, guid: a58b3433114e9ff4495382a1d69c02aa, type: 2}

@@ -12,6 +12,7 @@ namespace Features.GameLogic.Logic
         [SerializeField] private GameEvent_SO onLaunchGame;
         [SerializeField] private GameEvent_SO onLaunchSurvey;
         [SerializeField] private GameEvent_SO onActivateResultScreen;
+        [SerializeField] private GameEvent_SO onDeActivateGameUI;
         
         [SerializeField] private BoolVariable isGameLaunched;
         [SerializeField] private BoolVariable isSurveyLaunched;
@@ -22,6 +23,11 @@ namespace Features.GameLogic.Logic
         {
             isGameLaunched.SetFalse();
             isSurveyLaunched.SetFalse();
+        }
+
+        private void Start()
+        {
+            onDeActivateGameUI.Raise();
         }
 
         public void OnStartButtonPressed()
