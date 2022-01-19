@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a54c835cd434817add4d3fdde868665, type: 3}
+  m_Name: Quest5-FindePlayfair
+  m_EditorClassIdentifier: 
+  id: 5
+  npcsToAdvanceConversationsList:
+  - {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
+  title: Finde Playfair
+  description: "Sorg daf\xFCr, dass Playfair wieder arbeitet."
+  visible: 1
+  goals:
+  - goalType: 1
+    sprite: {fileID: 0}
+    otherQuests: []
+    npc: {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
+    current: {fileID: 0}
+    required: 0
+  startPosition: {x: 0, y: 0}
+  endPosition: {x: 0, y: 0}
+  questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}

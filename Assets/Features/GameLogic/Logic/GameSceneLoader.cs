@@ -20,6 +20,9 @@ namespace Features.GameLogic.Logic
         
         private readonly List<AsyncOperation> scenesToLoad = new List<AsyncOperation>();
         
+        [SerializeField] private TransitionData transitionData;
+        [SerializeField] private float transitionTime = 1f;
+        
         [SerializeField] private GameEvent_SO onLoadCompleted;
 
         private void Awake()
@@ -56,6 +59,14 @@ namespace Features.GameLogic.Logic
             }
             
             yield return new WaitUntil(() => totalScenesLoaded == scenesToLoad.Count);
+            
+            yield return new WaitForSeconds(0.5f);
+            
+            fillAmount.fillAmount = 0.99f;
+            loadingPercentAmount.text = "99 %";
+            
+            transitionData.OnStart.Raise();
+            yield return new WaitForSeconds(transitionData.FadeInTime);
 
             onLoadCompleted.Raise();
             
@@ -64,6 +75,9 @@ namespace Features.GameLogic.Logic
             fillAmount.fillAmount = 0;
             loadingPercentAmount.text = "0 %";
             
+            yield return new WaitForSeconds(transitionTime);
+            transitionData.OnEnd.Raise();
+
             SceneManager.UnloadSceneAsync(0);
         }
     }

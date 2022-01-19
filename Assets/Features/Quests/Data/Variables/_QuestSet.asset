@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b4cf1bb2324b54b30d8f6a9dad1599, type: 3}
   m_Name: _QuestSet
   m_EditorClassIdentifier: 
-  existingQuests:
+  quests:
+  - {fileID: 11400000, guid: 8d4ba0823450ab5469ad0340d0e49c62, type: 2}
   - {fileID: 11400000, guid: 176559f37d56ba74ca9fc4bf4febde95, type: 2}
-  - {fileID: 11400000, guid: 5b649c808943ac345a1f74bfa5d4056f, type: 2}
+  - {fileID: 11400000, guid: 54dbc863e07340346b70e6c50ba17994, type: 2}
   - {fileID: 11400000, guid: 64d67580bff265e41ae674871fb00f8b, type: 2}
+  - {fileID: 11400000, guid: 7fba00d3e6cd31d4b9b3d94d651ab8de, type: 2}
+  - {fileID: 11400000, guid: db7db85b763276949a93b3e13fd166d7, type: 2}
   - {fileID: 11400000, guid: 9ec1ef8e3ab31a840bb549d99dc183af, type: 2}
+  - {fileID: 11400000, guid: 24bb4f95e1885374a8bead21d2b26a68, type: 2}
+  - {fileID: 11400000, guid: 7cd0a61d2994d27498bacd7de514c7fc, type: 2}

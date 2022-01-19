@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using Features.NPCs.Logic;
 using UnityEngine;
 
 namespace Features.Quests.Logic
@@ -6,7 +8,7 @@ namespace Features.Quests.Logic
     public class QuestManager : MonoBehaviour
     {
         [SerializeField] private QuestSet_SO questSet;
-        [SerializeField] private QuestSetActive_SO activeQuests;
+        [SerializeField] private QuestSet_SO activeQuests;
         
         [SerializeField] private QuestEvent onQuestUnlocked;
         [SerializeField] private QuestEvent onDisplayUnlockedQuest;
@@ -15,20 +17,25 @@ namespace Features.Quests.Logic
         [SerializeField] private QuestEvent onCompleteQuest;
         [SerializeField] private QuestEvent onRemoveQuest;
         
-        [SerializeField] private QuestFocus_SO focus;
+        [SerializeField] private QuestFocus_SO questFocus;
+        [SerializeField] private NpcFocus_So npcFocus;
+        [SerializeField] private NpcBehaviourRuntimeSet behaviourRuntimeSet;
         
+        [Header(" des Games direkt unlocked werden sollen")]
+        [Space(-10)]
+        [Header("In diese Liste kommen alle Quests, die zu Beginn")]
         [SerializeField] private List<Quest_SO> firstQuests;
 
         private void Start()
         {
             // reset all quests
-            foreach (Quest_SO quest in questSet.Items)
+            foreach (var quest in questSet.Items)
             {
                 quest.Restore();
             }
            
             activeQuests.Items.Clear();
-            focus.Restore();
+            questFocus.Restore();
             onQuestUnlocked.RegisterListener(SetQuestUnlocked);
             onQuestAccepted.RegisterListener(SetQuestActive);
             onCompleteQuest.RegisterListener(CompleteQuest);
@@ -61,39 +68,62 @@ namespace Features.Quests.Logic
            
            activeQuests.Items.Add(quest);
            quest.IsActive = true;
+           
+           // advance certain conversations after quest is accepted if necessary
+           if (quest.NpcsToAdvanceConversationsList.Count != 0)
+           {
+               foreach (NpcBehaviour npcBehaviour in quest.NpcsToAdvanceConversationsList.SelectMany(
+                   npcData => behaviourRuntimeSet.GetItems().Where(npcBehaviour => npcData.ID == npcBehaviour.Data.ID)))
+               {
+                   npcBehaviour.AdvanceConvIndex();
+               }
+           }
+           
            onDisplayQuest.Raise(quest);
         }
 
-        public void CompleteQuest(Quest_SO quest)
+        private void CompleteQuest(Quest_SO quest)
         {
-            if (!activeQuests.Items.Contains(quest))
+            if (!activeQuests.Items.Contains(quest)) return;
+
+            if (!quest.CheckGoals(null)) return;
+            
+            quest.IsActive = false;
+            quest.IsCompleted = true;
+
+            // check after each quest completion if sequence is completed
+            if (quest.SingleSequenceData != null)
             {
-                Debug.Log("Quest not accepted yet");
-                return;
+                quest.SingleSequenceData.CheckForNextSequence();
             }
             
-            quest.CheckGoals();
-            // if completed
-            if (quest.CheckGoals())
+            // remove all Collect Quest Items from Inventory
+            foreach (var goal in quest.GoalList.Where(goal => goal.Type==Goal.GoalType.collect))
             {
-                quest.IsActive = false;
-                quest.IsCompleted = true;
-                
-                // remove all Quest Items from Inventory
-                foreach (Goal goal in quest.GoalList)
-                {
-                    var item = goal.CurrentAmount;
-                    item.Add(-goal.RequiredAmount);
-                }
-                
-                Debug.Log("'" + quest.QuestTitle + "' Completed");
-                onRemoveQuest.Raise(quest);
+                goal.CurrentAmount.Add(-goal.RequiredAmount);
             }
-            else
+            
+            // reevaluate each Quest with goalType Quest
+            foreach (var q in questSet.Items.Where(q => q.GoalList.Any(goal => goal.Type == Goal.GoalType.quest)))
             {
-                Debug.Log("not all Quest Goals have been completed yet");
-            } 
+                q.CheckGoals(null);
+            }
+                
+            Debug.Log("'" + quest.QuestTitle + "' Completed");
+            onRemoveQuest.Raise(quest);
         }
-
+        
+        public void UpdateTalkQuest()
+        {
+            // for each Quest with goalType Talk
+            foreach (var quest in questSet.Items.Where(q => q.GoalList.Any(goal => goal.Type == Goal.GoalType.talk)))
+            {
+                if (npcFocus.Get()!=null)
+                {
+                    quest.CheckGoals(npcFocus);
+                    CompleteQuest(quest);
+                }
+            }
+        }
     }
-}
+} 

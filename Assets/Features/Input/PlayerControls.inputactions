@@ -24,7 +24,7 @@
                 {
                     "name": "Interact",
                     "type": "Button",
-                    "id": "e3e31600-b6b1-452d-8dd8-fe0fc01ae79f",
+                    "id": "7d5c8c00-b2d0-4c5f-ba94-ceb6f1c6cff0",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -33,6 +33,14 @@
                     "name": "Map",
                     "type": "Button",
                     "id": "e3e31600-b6b1-452d-8dd8-fe0fc01ae79f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "PauseOrResume",
+                    "type": "Button",
+                    "id": "5ac52f5f-9761-4e69-b9f7-a2f8f3f75dbd",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -173,7 +181,7 @@
                 },
                 {
                     "name": "",
-                    "id": "9ae8c111-0704-4cbf-bcff-4ac57881d490",
+                    "id": "05813dfd-7660-448a-848f-0fe5e0abbc5b",
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
@@ -190,6 +198,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Map",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d33762cd-36ed-47e7-9003-a7a338ef2fce",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PauseOrResume",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

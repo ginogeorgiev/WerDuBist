@@ -31,6 +31,8 @@ namespace Features.Player.Logic
         [SerializeField] private TutorialData_SO tutorialData;
 
         [SerializeField] private GridElementEnteredEvent onGridElementEntered;
+        
+        [SerializeField] private BoolVariable isGamePaused;
 
         private new Rigidbody2D rigidbody2D;
 
@@ -80,6 +82,8 @@ namespace Features.Player.Logic
 
         private void HandleKeyboardInput()
         {
+            if(isGamePaused.Get()) return;
+            
             // If the player is in a conversation, the keyboard inputs for walking should be ignored
             if(isPlayerInConversation.Get()) return;
 
@@ -125,10 +129,25 @@ namespace Features.Player.Logic
                 other.gameObject.SetActive(false);
                 playerInventory.Stone.Add(1);
             }
-            if (other.CompareTag("Starfish"))
+            if (other.CompareTag("AppleRed"))
             {
                 other.gameObject.SetActive(false);
-                playerInventory.Starfish.Add(1);
+                playerInventory.AppleRed.Add(1);
+            }
+            if (other.CompareTag("Tube"))
+            {
+                other.gameObject.SetActive(false);
+                playerInventory.Tube.Add(1);
+            }
+            if (other.CompareTag("MetalPlate1"))
+            {
+                other.gameObject.SetActive(false);
+                playerInventory.MetalPlate1.Add(1);
+            }
+            if (other.CompareTag("MetalPlate2"))
+            {
+                other.gameObject.SetActive(false);
+                playerInventory.MetalPlate2.Add(1);
             }
             
             if (other.CompareTag("GridElement"))

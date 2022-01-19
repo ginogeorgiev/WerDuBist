@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e101bbedf808fad488e79663f8f7649d, type: 3}
   m_Name: Alter_Mann
   m_EditorClassIdentifier: 
+  id: 18
   fullName: Alter Mann
   portrait: {fileID: 21300000, guid: 68eb5936ad0462c4f84d40d55ecdef9b, type: 3}
+  icon: {fileID: 0}

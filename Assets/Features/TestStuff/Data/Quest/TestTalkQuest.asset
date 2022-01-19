@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a54c835cd434817add4d3fdde868665, type: 3}
+  m_Name: TestTalkQuest
+  m_EditorClassIdentifier: 
+  id: 100
+  npcsToAdvanceConversationsList:
+  - {fileID: 11400000, guid: 0d695ebfb9284604b9a9a6ed7d6e1637, type: 2}
+  title: Laber mit Melody
+  description: 
+  visible: 1
+  goals:
+  - goalType: 1
+    sprite: {fileID: 21300000, guid: b69dd42474a3b0a429cf79e46f26a3bd, type: 3}
+    otherQuests: []
+    npc: {fileID: 11400000, guid: 0d695ebfb9284604b9a9a6ed7d6e1637, type: 2}
+    current: {fileID: 0}
+    required: 1
+  startPosition: {x: -15.36, y: 8.63}
+  endPosition: {x: 0, y: 0}
+  questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}

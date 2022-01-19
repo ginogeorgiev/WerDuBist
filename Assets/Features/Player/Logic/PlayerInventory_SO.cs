@@ -8,12 +8,21 @@ namespace Features.Player.Logic
     {
         [SerializeField] private IntVariable wood;
         [SerializeField] private IntVariable stone;
-        [SerializeField] private IntVariable starfish;
+        [SerializeField] private IntVariable appleRed;
+        [SerializeField] private IntVariable tube;
+        [SerializeField] private IntVariable metalPlate1;
+        [SerializeField] private IntVariable metalPlate2;
 
         public IntVariable Wood => wood;
 
         public IntVariable Stone => stone;
 
-        public IntVariable Starfish => starfish;
+        public IntVariable AppleRed => appleRed;
+
+        public IntVariable Tube => tube;
+
+        public IntVariable MetalPlate1 => metalPlate1;
+
+        public IntVariable MetalPlate2 => metalPlate2;
     }
 }

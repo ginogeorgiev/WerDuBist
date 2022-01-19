@@ -39,7 +39,7 @@ namespace Features.Input
                 {
                     ""name"": ""Interact"",
                     ""type"": ""Button"",
-                    ""id"": ""7ebafee2-988a-4f82-a31a-46738a4637b8"",
+                    ""id"": ""7d5c8c00-b2d0-4c5f-ba94-ceb6f1c6cff0"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -48,6 +48,14 @@ namespace Features.Input
                     ""name"": ""Map"",
                     ""type"": ""Button"",
                     ""id"": ""e3e31600-b6b1-452d-8dd8-fe0fc01ae79f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""PauseOrResume"",
+                    ""type"": ""Button"",
+                    ""id"": ""5ac52f5f-9761-4e69-b9f7-a2f8f3f75dbd"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -188,7 +196,7 @@ namespace Features.Input
                 },
                 {
                     ""name"": """",
-                    ""id"": ""b4a786ee-5d15-44a4-aa1e-b22ad66c6f0b"",
+                    ""id"": ""05813dfd-7660-448a-848f-0fe5e0abbc5b"",
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -207,6 +215,17 @@ namespace Features.Input
                     ""action"": ""Map"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d33762cd-36ed-47e7-9003-a7a338ef2fce"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PauseOrResume"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -219,6 +238,7 @@ namespace Features.Input
             m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
             m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
             m_Player_Map = m_Player.FindAction("Map", throwIfNotFound: true);
+            m_Player_PauseOrResume = m_Player.FindAction("PauseOrResume", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -272,6 +292,7 @@ namespace Features.Input
         private readonly InputAction m_Player_Sprint;
         private readonly InputAction m_Player_Interact;
         private readonly InputAction m_Player_Map;
+        private readonly InputAction m_Player_PauseOrResume;
         public struct PlayerActions
         {
             private @PlayerControls m_Wrapper;
@@ -280,6 +301,7 @@ namespace Features.Input
             public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
             public InputAction @Interact => m_Wrapper.m_Player_Interact;
             public InputAction @Map => m_Wrapper.m_Player_Map;
+            public InputAction @PauseOrResume => m_Wrapper.m_Player_PauseOrResume;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -301,6 +323,9 @@ namespace Features.Input
                     @Map.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMap;
                     @Map.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMap;
                     @Map.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMap;
+                    @PauseOrResume.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPauseOrResume;
+                    @PauseOrResume.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPauseOrResume;
+                    @PauseOrResume.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPauseOrResume;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -317,6 +342,9 @@ namespace Features.Input
                     @Map.started += instance.OnMap;
                     @Map.performed += instance.OnMap;
                     @Map.canceled += instance.OnMap;
+                    @PauseOrResume.started += instance.OnPauseOrResume;
+                    @PauseOrResume.performed += instance.OnPauseOrResume;
+                    @PauseOrResume.canceled += instance.OnPauseOrResume;
                 }
             }
         }
@@ -327,6 +355,7 @@ namespace Features.Input
             void OnSprint(InputAction.CallbackContext context);
             void OnInteract(InputAction.CallbackContext context);
             void OnMap(InputAction.CallbackContext context);
+            void OnPauseOrResume(InputAction.CallbackContext context);
         }
     }
 }

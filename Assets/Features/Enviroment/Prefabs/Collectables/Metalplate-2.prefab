@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3621412789345655548}
   - component: {fileID: 1002411039380790925}
-  - component: {fileID: 6817671664590182542}
+  - component: {fileID: 5137573814711007424}
   m_Layer: 0
   m_Name: Metalplate-2
-  m_TagString: Untagged
+  m_TagString: MetalPlate2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,8 +83,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &6817671664590182542
-PolygonCollider2D:
+--- !u!61 &5137573814711007424
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,10 +93,10 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.064569116, y: 0.048426807}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -106,52 +106,6 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.13499999, y: -1.145}
-      - {x: -0.105, y: -1.135}
-      - {x: 0.175, y: -1.055}
-      - {x: 0.21499999, y: -1.025}
-      - {x: 0.305, y: -0.92499995}
-      - {x: 0.385, y: -0.885}
-      - {x: 0.465, y: -0.865}
-      - {x: 0.565, y: -0.865}
-      - {x: 0.685, y: -0.905}
-      - {x: 0.715, y: -0.905}
-      - {x: 0.815, y: -0.885}
-      - {x: 0.895, y: -0.84499997}
-      - {x: 1.305, y: -0.705}
-      - {x: 1.385, y: -0.675}
-      - {x: 1.415, y: -0.645}
-      - {x: 1.415, y: -0.565}
-      - {x: 1.395, y: -0.53499997}
-      - {x: 1.155, y: -0.044999998}
-      - {x: 1.135, y: -0.024999999}
-      - {x: 0.865, y: 0.525}
-      - {x: 0.84499997, y: 0.545}
-      - {x: 0.60499996, y: 1.035}
-      - {x: 0.585, y: 1.055}
-      - {x: 0.39499998, y: 1.435}
-      - {x: 0.315, y: 1.435}
-      - {x: 0.255, y: 1.405}
-      - {x: -0.66499996, y: 1.035}
-      - {x: -0.755, y: 1.015}
-      - {x: -0.865, y: 1.035}
-      - {x: -0.935, y: 0.995}
-      - {x: -1.305, y: 0.865}
-      - {x: -1.415, y: 0.805}
-      - {x: -1.415, y: 0.555}
-      - {x: -1.405, y: 0.435}
-      - {x: -1.395, y: 0.305}
-      - {x: -1.385, y: 0.185}
-      - {x: -1.375, y: 0.055}
-      - {x: -1.365, y: -0.065}
-      - {x: -1.355, y: -0.195}
-      - {x: -1.305, y: -0.815}
-      - {x: -1.265, y: -1.3149999}
-      - {x: -1.255, y: -1.425}
-      - {x: -1.255, y: -1.435}
-      - {x: -1.105, y: -1.435}
-      - {x: -0.965, y: -1.385}
-      - {x: -0.685, y: -1.305}
-      - {x: -0.375, y: -1.2149999}
+  serializedVersion: 2
+  m_Size: {x: 2.6578157, y: 2.6009617}
+  m_EdgeRadius: 0

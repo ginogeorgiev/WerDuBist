@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
+  m_Name: 13-Kellner-Question-01
+  m_EditorClassIdentifier: 
+  choices:
+  - text: "Du Vollidiot! Jetzt bin ich ganz klebrig. Bist du zu bl\xF6d, um dein
+      Job richtig zu  machen!"
+    ingameQuestion: {fileID: 11400000, guid: 6c65a220e528f1f4f9ee4954a036452f, type: 2}
+    value: 1.5
+    dialogConversation: {fileID: 0}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 0}
+  - text: Nichts sagen.
+    ingameQuestion: {fileID: 11400000, guid: 6c65a220e528f1f4f9ee4954a036452f, type: 2}
+    value: 1
+    dialogConversation: {fileID: 0}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 0}
+  - text: Schon gut, das kann man wegwischen.
+    ingameQuestion: {fileID: 11400000, guid: 6c65a220e528f1f4f9ee4954a036452f, type: 2}
+    value: 0.5
+    dialogConversation: {fileID: 0}
+    choiceEvent: {fileID: 0}
+    quest: {fileID: 0}

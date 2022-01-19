@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 namespace DataStructures.RuntimeSet
 {
     public abstract class RuntimeSet_SO<T> : ScriptableObject
     {
-        private List<T> items = new List<T>();
+        [SerializeField] private List<T> items = new List<T>();
 
         public List<T> GetItems()
         {

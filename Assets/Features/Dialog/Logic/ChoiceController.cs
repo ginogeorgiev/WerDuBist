@@ -13,16 +13,19 @@ namespace Features.Dialog.Logic
     {
         [SerializeField] private Choice choice;
         [SerializeField] private ConversationChangeEvent conversationChangeEvent;
+        [SerializeField] [Range(-100, -10)] private int serializedButtonSpacing = -100;
 
         [SerializeField] private EvaluationData serializedEvaluationData;
         
         [SerializeField] private QuestEvent serializedQuestEvent;
 
+        private static int buttonSpacing;
         private static QuestEvent questEvent;
         private static EvaluationData evaluationData;
         
         private void Awake()
         {
+            buttonSpacing = serializedButtonSpacing;
             questEvent = serializedQuestEvent;
             evaluationData = serializedEvaluationData;
         }
@@ -36,7 +39,6 @@ namespace Features.Dialog.Logic
         //Adds a gameObject (choice button) for every choice there is
         public static ChoiceController AddChoiceButton(Button choiceButtonTemplate, Choice choice, int index)
         {
-            const int buttonSpacing = -60;
             Button button = Instantiate(choiceButtonTemplate);
             
             button.transform.SetParent(choiceButtonTemplate.transform.parent);
@@ -51,7 +53,7 @@ namespace Features.Dialog.Logic
                 button.onClick.AddListener(choice.OnQuestAccepted);
             }
 
-            if (choice.ChoiceEvent != null)
+            if (choice.ChoiceEvents.Count != 0)
             {
                 button.onClick.AddListener(choice.OnChoiceEvent);
             }

@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e101bbedf808fad488e79663f8f7649d, type: 3}
   m_Name: Musiker
   m_EditorClassIdentifier: 
+  id: 19
   fullName: Musiker
   portrait: {fileID: 21300000, guid: d674d6858f0157c479827a762951cce7, type: 3}
+  icon: {fileID: 0}

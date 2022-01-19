@@ -1,3 +1,4 @@
+using DataStructures.Event;
 using DataStructures.Variables;
 using Features.Input;
 using Features.NPCs.Logic;
@@ -12,11 +13,14 @@ namespace Features.Dialog.Logic
 
     public class ConversationController : MonoBehaviour
     {
+        [SerializeField] private BoolVariable isGamePaused;
+        
         [SerializeField] private NpcFocus_So npcFocus;
         [SerializeField] private TutorialData_SO tutorialData;
         [SerializeField] private DialogConversation_SO dialogConversation;
         [SerializeField] private BoolVariable isPlayerInConversation;
         [SerializeField] private QuestionEvent questionEvent;
+        [SerializeField] private GameEvent_SO onConversationStarted;
 
         [SerializeField] private GameObject questionUI;
         
@@ -88,6 +92,8 @@ namespace Features.Dialog.Logic
         
         private void EndConversation()
         {
+            if (dialogConversation.AdvanceConvAutomatically) npcFocus.Get().AdvanceConvIndex();
+        
             dialogConversation = null;
             conversationStarted = false;
             speakerUIControllerLeft.Hide();
@@ -100,6 +106,7 @@ namespace Features.Dialog.Logic
         private void Initialize()
         {
             conversationStarted = true;
+            onConversationStarted.Raise();
             activeLineIndex = 0;
             speakerUIControllerLeft.Speaker = dialogConversation.SpeakerLeft;
             speakerUIControllerRight.Speaker = dialogConversation.SpeakerRight;
@@ -112,10 +119,12 @@ namespace Features.Dialog.Logic
 
         private void AdvanceLine()
         {
+            if (isGamePaused.Get()) return;
+            
             if (questionUI.activeSelf) return;
             
             if (dialogConversation == null) return;
-            
+
             isPlayerInConversation.SetTrue();
             tutorialData.OnDeActivateInteractInfo.Raise();
             

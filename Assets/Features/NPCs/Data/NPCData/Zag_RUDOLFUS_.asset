@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e101bbedf808fad488e79663f8f7649d, type: 3}
   m_Name: Zag_RUDOLFUS_
   m_EditorClassIdentifier: 
+  id: 25
   fullName: Rudolfus
   portrait: {fileID: 21300000, guid: 7b2525be1b459564ebe45bb36f6e6d05, type: 3}
+  icon: {fileID: 0}

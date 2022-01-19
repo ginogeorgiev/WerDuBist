@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e101bbedf808fad488e79663f8f7649d, type: 3}
   m_Name: Sam_Samuel
   m_EditorClassIdentifier: 
+  id: 22
   fullName: 'Sam '
   portrait: {fileID: 21300000, guid: a358301899ea08649ab8a4dcba88afbc, type: 3}
+  icon: {fileID: 0}
