@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 23
   fullName: Zag
-  portrait: {fileID: 21300000, guid: 7b2525be1b459564ebe45bb36f6e6d05, type: 3}
-  icon: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 15c22bdf2f630a448b85f54cdaaf2a77, type: 3}
+  icon: {fileID: 21300000, guid: 5ef57882d659ca0459fd29e0f8660733, type: 3}

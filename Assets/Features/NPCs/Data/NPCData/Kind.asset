@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 16
   fullName: Kind
-  portrait: {fileID: 21300000, guid: 2e6d7f4a3471bf948952572ca0035266, type: 3}
-  icon: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 5674ad4c900bbbf4daf9e01ce0d5d9fd, type: 3}
+  icon: {fileID: 21300000, guid: 70d174c9f4bc1564781b8674e630d7ab, type: 3}

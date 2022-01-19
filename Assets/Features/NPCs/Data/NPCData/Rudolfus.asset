@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e101bbedf808fad488e79663f8f7649d, type: 3}
+  m_Name: Rudolfus
+  m_EditorClassIdentifier: 
+  id: 25
+  fullName: Rudolfus
+  portrait: {fileID: 21300000, guid: 78588610bbf186b45bae2ace4b070e18, type: 3}
+  icon: {fileID: 21300000, guid: b2e54347631cf774281a4b8e954fb826, type: 3}

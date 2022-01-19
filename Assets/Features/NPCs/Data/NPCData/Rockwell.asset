@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 8
   fullName: Rockwell
-  portrait: {fileID: 21300000, guid: cc178f223f6e58149ac29d6b871a871a, type: 3}
-  icon: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 4c8dc67ae1ec7cd45b1b612e2f60d205, type: 3}
+  icon: {fileID: 21300000, guid: e3963a93438d07444b937192afeb24b2, type: 3}

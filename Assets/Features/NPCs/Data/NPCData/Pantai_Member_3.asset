@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   fullName: Pantai Member #3
-  portrait: {fileID: 21300000, guid: d6c4b469123863945931ccb2b26d5fd5, type: 3}
-  icon: {fileID: 0}
+  portrait: {fileID: 21300000, guid: c46a8e2febce7b040b5be95e8ae14294, type: 3}
+  icon: {fileID: 21300000, guid: dff82ffccd45a1e44a8ff50bc244658b, type: 3}
