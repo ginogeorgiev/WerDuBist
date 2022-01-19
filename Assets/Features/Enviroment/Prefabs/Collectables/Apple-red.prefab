@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1688858154817280976}
   m_Layer: 0
   m_Name: Apple-red
-  m_TagString: Untagged
+  m_TagString: AppleRed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

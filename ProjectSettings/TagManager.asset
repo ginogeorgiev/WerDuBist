@@ -9,7 +9,10 @@ TagManager:
   - Wood
   - Stone
   - NPC
-  - Starfish
+  - AppleRed
+  - Tube
+  - MetalPlate1
+  - MetalPlate2
   layers:
   - Default
   - TransparentFX
