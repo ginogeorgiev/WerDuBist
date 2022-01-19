@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using DataStructures.Event;
@@ -21,34 +22,27 @@ namespace Features.UserData.Survey.UILogic
         [SerializeField] private bool randomizeQuestions;
         [Tooltip("Prefab")] [SerializeField] private GameObject questionItem;
         [Tooltip("Ref")] [SerializeField] private RectTransform content;
+        [Tooltip("Ref")] [SerializeField] private ScrollRect scrollView;
+        [Tooltip("Ref")] [SerializeField] private float scrollTime = 0.4f;
+        [Tooltip("Ref")] [SerializeField] private float scrollValue = 0.021f;
 
         [Header("For calculating the Result")]
         [SerializeField] private bool autoUpdateResult = true;
         [SerializeField] private GameEvent_SO onSurveyCompleted;
         [SerializeField] private GameEvent_SO onSendUserData;
         [Tooltip("SO")] [SerializeField] private QuestionItemRuntimeSet questionItemRuntimeSet;
-
+        
         [Header("The 5 Aspects")]
         [Tooltip("SO")] [SerializeField] private IntVariable extraversion;
         [Tooltip("SO")] [SerializeField] private IntVariable agreeableness;
         [Tooltip("SO")] [SerializeField] private IntVariable conscientiousness;
         [Tooltip("SO")] [SerializeField] private IntVariable neuroticism;
         [Tooltip("SO")] [SerializeField] private IntVariable openness;
-
-        [Header("The 5 Results for each Aspects")]
-        [Tooltip("GameObjectRef")] [SerializeField] private TMP_Text extraversionText;
-        [Tooltip("GameObjectRef")] [SerializeField] private TMP_Text agreeablenessText;
-        [Tooltip("GameObjectRef")] [SerializeField] private TMP_Text conscientiousnessText;
-        [Tooltip("GameObjectRef")] [SerializeField] private TMP_Text neuroticismText;
-        [Tooltip("GameObjectRef")] [SerializeField] private TMP_Text opennessText;
-
-        [Header("The 5 Results for each Aspects in percent")]
-        [Tooltip("GameObjectRef")] [SerializeField] private TMP_Text extraversionPercentage;
-        [Tooltip("GameObjectRef")] [SerializeField] private TMP_Text agreeablenessPercentage;
-        [Tooltip("GameObjectRef")] [SerializeField] private TMP_Text conscientiousnessPercentage;
-        [Tooltip("GameObjectRef")] [SerializeField] private TMP_Text neuroticismPercentage;
-        [Tooltip("GameObjectRef")] [SerializeField] private TMP_Text opennessPercentage;
-
+        
+        [Header("ResultItem References")]
+        [Tooltip("Ref")] [SerializeField] private Button submitResult_Button;
+        [Tooltip("Ref")] [SerializeField] private GameObject info_Text;
+        
         private void Awake()
         {
             questionItemRuntimeSet.Restore();
@@ -62,6 +56,9 @@ namespace Features.UserData.Survey.UILogic
                 GameObject uiQuestionItem = Instantiate(questionItem, content);
                 uiQuestionItem.GetComponent<QuestionItemBehaviour>().Question = question;
             }
+            
+            submitResult_Button.interactable = false;
+            info_Text.SetActive(true);
 
             // Move the ResultItem to the last position of the Scroll-View
             content.GetChild(0).SetAsLastSibling();
@@ -146,24 +143,23 @@ namespace Features.UserData.Survey.UILogic
                 }
             }
 
-            UpdateResultUI();
+            // Adjust scroll position after selecting a answer
+            StartCoroutine(MoveScrollView());
+
+            OnValidateResult();
         }
 
-        private void UpdateResultUI()
+        private IEnumerator MoveScrollView()
         {
-            // Update Values
-            extraversionText.text = extraversion.Get().ToString();
-            agreeablenessText.text = agreeableness.Get().ToString();
-            conscientiousnessText.text = conscientiousness.Get().ToString();
-            neuroticismText.text = neuroticism.Get().ToString();
-            opennessText.text = openness.Get().ToString();
+            float startTime = Time.time;
+            Vector2 newPos = new Vector2(0, scrollView.normalizedPosition.y - scrollValue);
+            while (Time.time < startTime + scrollTime)
+            {
+                scrollView.normalizedPosition = Vector2.Lerp(scrollView.normalizedPosition, newPos, (Time.time - startTime)/scrollTime);
+                yield return null;
+            }
 
-            // Update Percentages
-            extraversionPercentage.text = extraversion.Get() * 2.5f + "%";
-            agreeablenessPercentage.text = agreeableness.Get() * 2.5f + "%";
-            conscientiousnessPercentage.text = conscientiousness.Get() * 2.5f + "%";
-            neuroticismPercentage.text = neuroticism.Get() * 2.5f + "%";
-            opennessPercentage.text = openness.Get() * 2.5f + "%";
+            scrollView.normalizedPosition = newPos;
         }
 
         public void ResetSurvey()
@@ -180,18 +176,30 @@ namespace Features.UserData.Survey.UILogic
             {
                 toggle.isOn = false;
             }
-            
-            UpdateResultUI();
         }
         
-        public void OnValidateResult()
+        private void OnValidateResult()
         {
-            //TODO
+            foreach (QuestionItemBehaviour question in questionItemRuntimeSet.GetItems())
+            {
+                bool atLeastOneToggleIsOn = false;
+                foreach (Toggle toggle in question.Toggles.Where(toggle => toggle.isOn))
+                {
+                    atLeastOneToggleIsOn = true;
+                }
 
-            OnSubmitSurveyResult();
+                if (atLeastOneToggleIsOn) continue;
+                
+                submitResult_Button.interactable = false;
+                info_Text.SetActive(true);
+                return;
+            }
+            
+            submitResult_Button.interactable = true;
+            info_Text.SetActive(false);
         }
 
-        private void OnSubmitSurveyResult()
+        public void OnSubmitSurveyResult()
         {
             onSendUserData.Raise();
 
