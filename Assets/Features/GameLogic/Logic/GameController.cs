@@ -1,4 +1,4 @@
-using System;
+using System.Collections;
 using DataStructures.Event;
 using DataStructures.Variables;
 using Features.Evaluation.Logic;
@@ -13,15 +13,33 @@ namespace Features.GameLogic.Logic
         [SerializeField] private GameEvent_SO onLaunchSurvey;
         [SerializeField] private GameEvent_SO onActivateResultScreen;
         
+        [SerializeField] private GameEvent_SO onDeActivateStartScreen;
+        
+        [SerializeField] private GameEvent_SO onDeActivateGameUI;
+        [SerializeField] private GameEvent_SO onDeActivateInfoGatheringUI;
+        [SerializeField] private GameEvent_SO onDeActivateSurveyUI;
+        
         [SerializeField] private BoolVariable isGameLaunched;
         [SerializeField] private BoolVariable isSurveyLaunched;
         
+        [SerializeField] private TransitionData transitionData;
+        [SerializeField] private float transitionTime = 1f;
+        
         [SerializeField] private EvaluationData evaluationData;
+
+        private bool coroutineIsRunning;
 
         private void Awake()
         {
             isGameLaunched.SetFalse();
             isSurveyLaunched.SetFalse();
+        }
+
+        private void Start()
+        {
+            onDeActivateGameUI.Raise();
+            onDeActivateInfoGatheringUI.Raise();
+            onDeActivateSurveyUI.Raise();
         }
 
         public void OnStartButtonPressed()
@@ -30,17 +48,21 @@ namespace Features.GameLogic.Logic
 
             if (rand.Next(0,2) == 0)
             {
-                onLaunchGame.Raise();
-                Debug.Log("onLaunchGame Raised");
-                isGameLaunched.SetTrue();
-                evaluationData.EvaluationDictionary.Add("Erst Game","-");
+                if (!coroutineIsRunning)
+                {
+                    isGameLaunched.SetTrue();
+                    evaluationData.EvaluationDictionary.Add("Erst Game","-");
+                    StartCoroutine(TriggerTransition(onLaunchGame));
+                }
             }
             else
             {
-                onLaunchSurvey.Raise();
-                Debug.Log("onLaunchSurvey Raised");
-                isSurveyLaunched.SetTrue();
-                evaluationData.EvaluationDictionary.Add("Erst Survey","-");
+                if (!coroutineIsRunning)
+                {
+                    isSurveyLaunched.SetTrue();
+                    evaluationData.EvaluationDictionary.Add("Erst Survey","-");
+                    StartCoroutine(TriggerTransition(onLaunchSurvey));
+                }
             }
         }
 
@@ -48,11 +70,14 @@ namespace Features.GameLogic.Logic
         {
             if (!isGameLaunched.Get())
             {
-                onLaunchGame.Raise();
+                StartCoroutine(TriggerTransition(onLaunchGame));
             }
             else
             {
-                onActivateResultScreen.Raise();
+                if (!coroutineIsRunning)
+                {
+                    StartCoroutine(TriggerTransition(onActivateResultScreen));
+                }
             }
         }
 
@@ -60,12 +85,29 @@ namespace Features.GameLogic.Logic
         {
             if (!isSurveyLaunched.Get())
             {
-                onLaunchSurvey.Raise();
+                StartCoroutine(TriggerTransition(onLaunchSurvey));
             }
             else
             {
-                onActivateResultScreen.Raise();
+                if (!coroutineIsRunning)
+                {
+                    StartCoroutine(TriggerTransition(onActivateResultScreen));
+                }
             }
+        }
+
+        private IEnumerator TriggerTransition(GameEvent_SO gameEvent)
+        {
+            coroutineIsRunning = true;
+            transitionData.OnStart.Raise();
+            yield return new WaitForSeconds(transitionData.FadeInTime);
+            
+            onDeActivateStartScreen.Raise();
+            gameEvent.Raise();
+            
+            yield return new WaitForSeconds(transitionTime);
+            transitionData.OnEnd.Raise();
+            coroutineIsRunning = false;
         }
     }
 }
