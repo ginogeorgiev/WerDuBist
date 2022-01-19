@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4146369362076843805}
   - component: {fileID: 8392939944119041147}
+  - component: {fileID: 8741623124479902240}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -50,6 +51,21 @@ MonoBehaviour:
   isGameLaunched: {fileID: 11400000, guid: 448c53502b4055b47bb092d2b091b79c, type: 2}
   isSurveyLaunched: {fileID: 11400000, guid: 0cbb6ae71ec3a914b9ebb211e15976c3, type: 2}
   evaluationData: {fileID: 11400000, guid: a58b3433114e9ff4495382a1d69c02aa, type: 2}
+--- !u!114 &8741623124479902240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3873871471288634306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a82175cf391924ea4c243a1f59bb0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseGame: {fileID: 11400000, guid: 96dca4ce2fd67fa4d883087591371dc6, type: 2}
+  unpauseGame: {fileID: 11400000, guid: 662549d21aac913439235cb1867508aa, type: 2}
+  isGamePaused: {fileID: 11400000, guid: 5a5fdbce983558e4782244fb314ff9b9, type: 2}
 --- !u!1 &4500402473059782070
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,6 +80,8 @@ GameObject:
   - component: {fileID: 5099153951165153895}
   - component: {fileID: 5668254554229508342}
   - component: {fileID: 4001595253890080188}
+  - component: {fileID: 1385171908548614537}
+  - component: {fileID: 2503083772253521228}
   m_Layer: 0
   m_Name: GameEventListener
   m_TagString: Untagged
@@ -252,6 +270,64 @@ MonoBehaviour:
       - m_Target: {fileID: 8392939944119041147}
         m_TargetAssemblyTypeName: Features.GameLogic.Logic.GameController, Assembly-CSharp
         m_MethodName: OnSurveyCompleted
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1385171908548614537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4500402473059782070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: 96dca4ce2fd67fa4d883087591371dc6, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8741623124479902240}
+        m_TargetAssemblyTypeName: Features.GameController.Logic.PauseController,
+          Assembly-CSharp
+        m_MethodName: PauseGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2503083772253521228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4500402473059782070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: 662549d21aac913439235cb1867508aa, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8741623124479902240}
+        m_TargetAssemblyTypeName: Features.GameController.Logic.PauseController,
+          Assembly-CSharp
+        m_MethodName: UnpauseGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

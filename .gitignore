@@ -31,6 +31,9 @@
 .vs/
 .vsconfig
 
+#Mac Temp
+.DS_Store
+
 # Gradle cache directory
 .gradle/
 

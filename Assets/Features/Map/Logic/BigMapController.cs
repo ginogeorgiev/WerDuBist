@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Features.Quests.Logic;
 using DataStructures.Focus;
+using DataStructures.Variables;
 using Features.Input;
 using UnityEngine.UI;
 
@@ -10,6 +11,7 @@ namespace Features.Map.Logic
     public class BigMapController : MonoBehaviour
     {
         [SerializeField] private GameObject mapUI;
+        [SerializeField] private BoolVariable isGamePaused;
 
         [SerializeField] private GameObject mapBG;
         [SerializeField] private Sprite mainIsland;
@@ -19,7 +21,10 @@ namespace Features.Map.Logic
 
         [SerializeField] private Focus_SO<Quest_SO> questFocus;
 
-        [SerializeField] private GameObject questMarker;
+        [SerializeField] private GameObject questMarker_Tutorial;
+        [SerializeField] private GameObject questMarker_Main;
+        private GameObject questMarker;
+        
         [SerializeField] private Sprite questActive;
         [SerializeField] private Sprite questFocusActive;
         [SerializeField] private Sprite questNew;
@@ -35,7 +40,7 @@ namespace Features.Map.Logic
 
         private void Awake()
         {
-            questMarker.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+            questMarker = questMarker_Tutorial;
             onDisplayUnlockedQuest.RegisterListener(DisplayUnlockedQuest);
             onDisplayActiveQuest.RegisterListener(DisplayActiveQuest);
             onRemoveQuest.RegisterListener(RemoveQuest);
@@ -66,6 +71,8 @@ namespace Features.Map.Logic
 
         public void ToggleMapUI()
         {
+            if (isGamePaused.Get()) return;
+            
             mapUI.SetActive(!mapUI.activeSelf);
         }
         
@@ -81,20 +88,19 @@ namespace Features.Map.Logic
 
             mapBorder.sizeDelta = new Vector2(885, 618);
 
-            questMarker.transform.localScale = new Vector3(2.5f, 2.5f, 1);
-
-            if (focusMarker == null) return;
-            focusMarker.transform.localScale = new Vector3(2.5f, 2.5f, 1);
-            
+            questMarker = questMarker_Main;
         }
 
         private void DisplayUnlockedQuest(Quest_SO quest)
         {
-            var obj= Instantiate(questMarker, quest.StartPosition, Quaternion.identity);
+            var marker = questMarker;
+            if (quest.QuestID == 2) marker = questMarker_Main;
+
+            var obj= Instantiate(marker, quest.StartPosition, Quaternion.identity);
             obj.transform.SetParent(mapUI.transform);
             obj.GetComponent<SpriteRenderer>().sprite = questNew;
 
-            newQuestMarkers.Add(quest.QuestID, obj);
+            newQuestMarkers.Add(quest.QuestID, obj); 
         }
         
         private void DisplayActiveQuest(Quest_SO quest)
