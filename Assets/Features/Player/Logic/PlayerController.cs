@@ -129,10 +129,25 @@ namespace Features.Player.Logic
                 other.gameObject.SetActive(false);
                 playerInventory.Stone.Add(1);
             }
-            if (other.CompareTag("Starfish"))
+            if (other.CompareTag("AppleRed"))
             {
                 other.gameObject.SetActive(false);
-                playerInventory.Starfish.Add(1);
+                playerInventory.AppleRed.Add(1);
+            }
+            if (other.CompareTag("Tube"))
+            {
+                other.gameObject.SetActive(false);
+                playerInventory.Tube.Add(1);
+            }
+            if (other.CompareTag("MetalPlate1"))
+            {
+                other.gameObject.SetActive(false);
+                playerInventory.MetalPlate1.Add(1);
+            }
+            if (other.CompareTag("MetalPlate2"))
+            {
+                other.gameObject.SetActive(false);
+                playerInventory.MetalPlate2.Add(1);
             }
             
             if (other.CompareTag("GridElement"))
