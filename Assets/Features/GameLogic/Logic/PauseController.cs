@@ -1,15 +1,11 @@
-using System;
 using DataStructures.Event;
 using DataStructures.StateMachineLogic;
 using DataStructures.Variables;
-using Features.Dialog.Logic;
 using Features.GameLogic.Logic.States;
 using Features.Input;
-using Features.Map.Logic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-namespace Features.GameController.Logic
+namespace Features.GameLogic.Logic
 {
     public class PauseController : MonoBehaviour
     {
@@ -48,7 +44,7 @@ namespace Features.GameController.Logic
         {
             if (unpauseGame==null || pauseGame==null) return;
             
-            var gameEventToRaise = Time.timeScale == 0f ? unpauseGame : pauseGame;
+            GameEvent_SO gameEventToRaise = Time.timeScale == 0f ? unpauseGame : pauseGame;
             gameEventToRaise.Raise();
         }
         
