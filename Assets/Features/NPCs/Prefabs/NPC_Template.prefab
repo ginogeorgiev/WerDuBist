@@ -54,6 +54,7 @@ MonoBehaviour:
   npcBehaviourRuntimeSet: {fileID: 11400000, guid: 9d553a0a1058f1b4fa6ea1634cc00b10, type: 2}
   onActiveConversationChanged: {fileID: 11400000, guid: a98456addc653ad4fa3f69cbe444cb67, type: 2}
   onCompleteQuest: {fileID: 11400000, guid: a1a72b2b5c2b8f44f840edf2784f961e, type: 2}
+  questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}
   conversationIndex: 0
   activeConversation: {fileID: 0}
 --- !u!114 &987336911311489786

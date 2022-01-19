@@ -40,6 +40,7 @@ namespace Features.NPCs.Logic
         [SerializeField] private NpcBehaviourRuntimeSet npcBehaviourRuntimeSet;
         [SerializeField] private GameEvent_SO onActiveConversationChanged;
         [SerializeField] private QuestEvent onCompleteQuest;
+        [SerializeField] private QuestSet_SO questSet;
 
         [Header("Nichts ausfüllen, das ist zum debuggen")]
         [SerializeField] private int conversationIndex;
@@ -68,14 +69,22 @@ namespace Features.NPCs.Logic
             var pos = transform.position;
             foreach (var conversation in conversationElements.Where(element => element.Quest!=null))
             {
-                conversation.Quest.EndPosition = new Vector2(pos.x,pos.y);
+                conversation.Quest.EndPosition = pos;
+                conversation.Quest.StartPosition = pos;
             }
             foreach (var conversation in conversationElements.Where(c => c.DialogConversationLeft != null))
             {
                 if (conversation.DialogConversationLeft.DialogQuestion == null) continue;
                 foreach (var con in conversation.DialogConversationLeft.DialogQuestion.Choices.Where(choice => choice.Quest!=null))
                 {
-                    con.Quest.StartPosition = new Vector2(pos.x,pos.y);
+                    con.Quest.StartPosition = pos;
+                }
+            }
+            foreach (var quest in questSet.Items)
+            {
+                foreach (var goal in quest.GoalList.Where(goal => goal.Npc == data))
+                {
+                    quest.EndPosition = pos;
                 }
             }
         }

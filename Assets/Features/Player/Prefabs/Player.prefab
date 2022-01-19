@@ -368,6 +368,7 @@ MonoBehaviour:
   transitionData: {fileID: 11400000, guid: 73c969799c95a9c4e8b7fad43380a837, type: 2}
   tutorialData: {fileID: 11400000, guid: 2c11094f41d7ae04c9b54ff87bd93fc2, type: 2}
   onGridElementEntered: {fileID: 11400000, guid: 7aaffad7639e4d34f889889dd724f31e, type: 2}
+  isGamePaused: {fileID: 11400000, guid: 5a5fdbce983558e4782244fb314ff9b9, type: 2}
 --- !u!212 &6592273595326390539
 SpriteRenderer:
   m_ObjectHideFlags: 0
