@@ -70,7 +70,6 @@ namespace Features.Dialog.Logic
             if (dialogConversation.DialogQuestion != null)
             {
                 questionEvent.Invoke(dialogConversation.DialogQuestion);
-                Debug.Log(dialogConversation.DialogQuestion.name);
                 EndConversation();
             }
             else
