@@ -9,7 +9,10 @@ TagManager:
   - Wood
   - Stone
   - NPC
-  - Starfish
+  - AppleRed
+  - Tube
+  - MetalPlate1
+  - MetalPlate2
   layers:
   - Default
   - TransparentFX
@@ -53,11 +56,11 @@ TagManager:
   - name: Enviroment
     uniqueID: 2029698573
     locked: 0
-  - name: Beach
-    uniqueID: 2464935353
-    locked: 0
   - name: Player
     uniqueID: 3363447473
+    locked: 0
+  - name: Beach
+    uniqueID: 2464935353
     locked: 0
   - name: PalmtreeFront
     uniqueID: 3265521107

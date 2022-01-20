@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wood: {fileID: 11400000, guid: 15be0257408b7f545868f4fa436c151e, type: 2}
   stone: {fileID: 11400000, guid: 8f1021f9996055647bfffffbabb57a18, type: 2}
-  starfish: {fileID: 11400000, guid: 8ce660b6c02272749980efc2e80a79f6, type: 2}
+  appleRed: {fileID: 11400000, guid: a4b3e3554428bc0488af37fbed9aa412, type: 2}
+  tube: {fileID: 11400000, guid: bb8298e1e7aade84ca80926b98893b6d, type: 2}
+  metalPlate1: {fileID: 11400000, guid: 1057fba291817ac469ba8d14124ddf66, type: 2}
+  metalPlate2: {fileID: 11400000, guid: 6413a40f43fec0f4cb7bef4cf0e12548, type: 2}

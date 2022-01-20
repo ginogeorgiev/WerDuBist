@@ -48,8 +48,14 @@ MonoBehaviour:
   onLaunchGame: {fileID: 11400000, guid: c0d27581dccf502418800800626faf13, type: 2}
   onLaunchSurvey: {fileID: 11400000, guid: 6b08bee8258c572488549ff59be2150e, type: 2}
   onActivateResultScreen: {fileID: 11400000, guid: 56c94978a4f6e8845b86bfb1bbcbd2a5, type: 2}
+  onDeActivateStartScreen: {fileID: 11400000, guid: ae0606f0caa705840b29139bb680d5bd, type: 2}
+  onDeActivateGameUI: {fileID: 11400000, guid: 61c714aec2c2b554e8c62e0a5f8b1baf, type: 2}
+  onDeActivateInfoGatheringUI: {fileID: 11400000, guid: f9a16438fd38767499774d76ac1adf7e, type: 2}
+  onDeActivateSurveyUI: {fileID: 11400000, guid: f267098d354f4f84a8d96a2cc68df63e, type: 2}
   isGameLaunched: {fileID: 11400000, guid: 448c53502b4055b47bb092d2b091b79c, type: 2}
   isSurveyLaunched: {fileID: 11400000, guid: 0cbb6ae71ec3a914b9ebb211e15976c3, type: 2}
+  transitionData: {fileID: 11400000, guid: 73c969799c95a9c4e8b7fad43380a837, type: 2}
+  transitionTime: 2
   evaluationData: {fileID: 11400000, guid: a58b3433114e9ff4495382a1d69c02aa, type: 2}
 --- !u!114 &8741623124479902240
 MonoBehaviour:
@@ -183,6 +189,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: fc6728d1863edd24a83f3d2d94408eef, type: 2}
+        m_TargetAssemblyTypeName: DataStructures.Event.GameEvent_SO, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5099153951165153895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,6 +217,18 @@ MonoBehaviour:
   response:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 11400000, guid: 61c714aec2c2b554e8c62e0a5f8b1baf, type: 2}
+        m_TargetAssemblyTypeName: DataStructures.Event.GameEvent_SO, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 11400000, guid: 5091996ae33c9fc4c9371568d7151b7b, type: 2}
         m_TargetAssemblyTypeName: DataStructures.Event.GameEvent_SO, Assembly-CSharp
         m_MethodName: Raise
@@ -211,7 +241,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 61c714aec2c2b554e8c62e0a5f8b1baf, type: 2}
+      - m_Target: {fileID: 11400000, guid: 6f87b09df415029428c24d93505d0fc7, type: 2}
         m_TargetAssemblyTypeName: DataStructures.Event.GameEvent_SO, Assembly-CSharp
         m_MethodName: Raise
         m_Mode: 1

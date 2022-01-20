@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 877804806362674602}
   - component: {fileID: 4820508861512803429}
+  - component: {fileID: 2956876670879841325}
   m_Layer: 0
   m_Name: CityHall
   m_TagString: Untagged
@@ -82,3 +83,70 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &2956876670879841325
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8630165999523913781}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.97, y: 4.79}
+    newSize: {x: 6.97, y: 4.79}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1.9549999, y: -2.085}
+      - {x: -1.8349999, y: -2.2949998}
+      - {x: -1.6949999, y: -2.395}
+      - {x: -1.355, y: -2.395}
+      - {x: -1.225, y: -2.325}
+      - {x: -1.1949999, y: -2.2849998}
+      - {x: -1.1949999, y: -2.075}
+      - {x: 1.2049999, y: -2.325}
+      - {x: 1.295, y: -2.395}
+      - {x: 1.625, y: -2.395}
+      - {x: 1.8149999, y: -2.375}
+      - {x: 1.9549999, y: -2.115}
+      - {x: 2.405, y: -2.305}
+      - {x: 2.5449998, y: -2.395}
+      - {x: 2.885, y: -2.395}
+      - {x: 2.995, y: -2.335}
+      - {x: 3.0449998, y: -2.2849998}
+      - {x: 3.0449998, y: -2.085}
+      - {x: 3.435, y: -2.085}
+      - {x: 3.485, y: -2.065}
+      - {x: 3.485, y: -1.675}
+      - {x: 3.375, y: -1.375}
+      - {x: 3.455, y: 0.275}
+      - {x: 3.485, y: 0.36499998}
+      - {x: 3.485, y: 0.91499996}
+      - {x: 2.645, y: 2.355}
+      - {x: 2.605, y: 2.395}
+      - {x: -2.625, y: 2.395}
+      - {x: -2.635, y: 2.385}
+      - {x: -3.215, y: 1.405}
+      - {x: -3.485, y: 0.98499995}
+      - {x: -3.485, y: 0.315}
+      - {x: -3.385, y: 0.295}
+      - {x: -3.385, y: -1.625}
+      - {x: -3.485, y: -1.7249999}
+      - {x: -3.485, y: -2.055}
+      - {x: -3.445, y: -2.085}
+      - {x: -2.885, y: -2.395}
+      - {x: -2.565, y: -2.395}
+      - {x: -2.435, y: -2.325}
+      - {x: -2.405, y: -2.2849998}
+      - {x: -2.405, y: -2.085}
