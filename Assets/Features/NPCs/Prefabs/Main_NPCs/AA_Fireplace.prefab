@@ -13,14 +13,18 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: e61bf57c6592a0640833d6fdc499629b, type: 2}
     - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: conversationElements.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: conversationElements.Array.data[0].dialogConversationLeft
       value: 
-      objectReference: {fileID: 11400000, guid: 716d22e1ebf5b7e498edf2aacf1d028d, type: 2}
+      objectReference: {fileID: 11400000, guid: 6a80f034c9911ec4baa82989a7674ea1, type: 2}
     - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: conversationElements.Array.data[1].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 716d22e1ebf5b7e498edf2aacf1d028d, type: 2}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.data[2].dialogConversationLeft
       value: 
       objectReference: {fileID: 11400000, guid: aaf147cf64077cf49bf444ebc50b86d0, type: 2}
     - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
@@ -29,11 +33,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 42.93
       objectReference: {fileID: 0}
     - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 30.4
       objectReference: {fileID: 0}
     - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: m_LocalPosition.z

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Terry_Handwerker
   m_EditorClassIdentifier: 
   id: 7
-  fullName: Terry, der Handwerker
-  portrait: {fileID: 21300000, guid: b99565e827a2dca49ba4d4b067e70e7c, type: 3}
-  icon: {fileID: 21300000, guid: c06735aec3aeae944856cca500694d0f, type: 3}
+  fullName: Terry
+  portrait: {fileID: 21300000, guid: 53665c49542a39b4a9c1875bbff600ff, type: 3}
+  icon: {fileID: 0}

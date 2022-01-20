@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
+  m_Name: 07-Terry-Q3
+  m_EditorClassIdentifier: 
+  choices:
+  - text: Ordentlich ist mein zweiter Name, haha!
+    ingameQuestion: {fileID: 11400000, guid: 34e1b84860e2c9b44af7618dacf9ba06, type: 2}
+    value: 3
+    dialogConversation: {fileID: 11400000, guid: bf9834e6ee5911f42ae7a48d6c410cdb, type: 2}
+    choiceEvents: []
+    quest: {fileID: 0}
+  - text: "Ich vergesse ab und zu auch Sachen hier und da zur\xFCckzulegen."
+    ingameQuestion: {fileID: 11400000, guid: 34e1b84860e2c9b44af7618dacf9ba06, type: 2}
+    value: 2
+    dialogConversation: {fileID: 11400000, guid: bf9834e6ee5911f42ae7a48d6c410cdb, type: 2}
+    choiceEvents: []
+    quest: {fileID: 0}
+  - text: Ich bezeichne mich eher als chaotisch, wenn es um Ordnung geht.
+    ingameQuestion: {fileID: 11400000, guid: 34e1b84860e2c9b44af7618dacf9ba06, type: 2}
+    value: 1
+    dialogConversation: {fileID: 11400000, guid: bf9834e6ee5911f42ae7a48d6c410cdb, type: 2}
+    choiceEvents: []
+    quest: {fileID: 0}
