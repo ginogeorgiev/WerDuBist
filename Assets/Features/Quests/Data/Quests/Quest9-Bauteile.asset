@@ -14,16 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 9
   npcsToAdvanceConversationsList: []
-  title: "\xDCbermittlung der Baupl\xE4ne"
-  description: "Bringe Terry seine Baupl\xE4ne."
+  title: Finde Terrys Bauteile
+  description: Terry hat seine Bauteile verloren. Er meinte er war am Strand, beim
+    Markt und am Rathaus.
   visible: 1
   goals:
   - goalType: 0
-    sprite: {fileID: 21300000, guid: 43e221860d46c42abab1fea3b4b3e7e9, type: 3}
+    sprite: {fileID: 21300000, guid: c1cc0f92627b74f00b89d950d65dfb5e, type: 3}
     otherQuests: []
     npc: {fileID: 0}
-    current: {fileID: 11400000, guid: aabf314d0209c27499eb41f91dc89215, type: 2}
+    current: {fileID: 11400000, guid: bb8298e1e7aade84ca80926b98893b6d, type: 2}
     required: 3
-  startPosition: {x: 0, y: 0}
-  endPosition: {x: 0, y: 0}
+  startPosition: {x: 21.55, y: 27.73}
+  endPosition: {x: 21.55, y: 27.73}
   questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}

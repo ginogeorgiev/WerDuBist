@@ -12,21 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
   m_Name: 05-Franklin-Q03
   m_EditorClassIdentifier: 
-  text: 
   choices:
   - text: Es war furchtbar, ich werde nie wieder angeln gehen.
-    dialogConversation: {fileID: 0}
-    choiceEvent: {fileID: 0}
-    questEvent: {fileID: 0}
+    ingameQuestion: {fileID: 0}
+    value: 0
+    dialogConversation: {fileID: 11400000, guid: fcd951bb5a8df4641bf43e74b4dd7505, type: 2}
+    choiceEvents: []
     quest: {fileID: 0}
   - text: Es war... okay, denke ich.
-    dialogConversation: {fileID: 0}
-    choiceEvent: {fileID: 0}
-    questEvent: {fileID: 0}
+    ingameQuestion: {fileID: 0}
+    value: 0
+    dialogConversation: {fileID: 11400000, guid: fcd951bb5a8df4641bf43e74b4dd7505, type: 2}
+    choiceEvents: []
     quest: {fileID: 0}
   - text: Ich habe dabei eine Menge gelernt. Es war hart, aber ich denke, das war
       es wert.
-    dialogConversation: {fileID: 0}
-    choiceEvent: {fileID: 0}
-    questEvent: {fileID: 0}
+    ingameQuestion: {fileID: 0}
+    value: 0
+    dialogConversation: {fileID: 11400000, guid: fcd951bb5a8df4641bf43e74b4dd7505, type: 2}
+    choiceEvents: []
     quest: {fileID: 0}

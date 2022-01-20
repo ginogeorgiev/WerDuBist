@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: "Quest2-SprichMitKapit\xE4n"
   m_EditorClassIdentifier: 
   id: 2
-  npcsToAdvanceConversationsList: []
+  npcsToAdvanceConversationsList:
+  - {fileID: 11400000, guid: 6f84125686e4a4d4ca729a3a09492db4, type: 2}
   title: "Sprich mit dem Kapit\xE4n"
   description: 
   visible: 1
@@ -24,6 +25,6 @@ MonoBehaviour:
     npc: {fileID: 11400000, guid: 6f84125686e4a4d4ca729a3a09492db4, type: 2}
     current: {fileID: 0}
     required: 1
-  startPosition: {x: -27.61, y: -1.76}
+  startPosition: {x: 34.31, y: 10.55}
   endPosition: {x: 37.68, y: 5.68}
   questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}
