@@ -10,16 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 266c97da10218e94ab464a1f7e833e73, type: 3}
-  m_Name: 06-Yolanda-Conversation-03
+  m_Name: 06-Yolanda-Conversation-04-Left
   m_EditorClassIdentifier: 
   speakerLeft: {fileID: 11400000, guid: a5d20b15f28ea8143b6531e8889a2eaf, type: 2}
   speakerRight: {fileID: 11400000, guid: 2143337a184d4b84081f036419253b81, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 2143337a184d4b84081f036419253b81, type: 2}
-    text: "Kein Stress, ich war nur neugierig haha. Na gut, hier habe ich es endlich
-      fertig. Das sind die Pl\xE4ne f\xFCr Terry."
-  - npcData: {fileID: 11400000, guid: 2143337a184d4b84081f036419253b81, type: 2}
-    text: " K\xF6nntest du mir ein Gefallen tun und diese Pl\xE4ne an ihn weitergeben?
-      Ich muss noch hier einiges an Pl\xE4nen aufholen, das w\xE4re sehr nett von
-      dir."
-  dialogQuestion: {fileID: 11400000, guid: 587c1fb521a29ee43b87c1c044fcf3b9, type: 2}
+    text: Such Terry bei seiner Werkstatt westlich von hier auf.
+  advanceConvAutomatically: 0
+  dialogQuestion: {fileID: 0}

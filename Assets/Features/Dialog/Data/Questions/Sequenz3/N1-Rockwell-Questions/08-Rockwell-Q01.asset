@@ -14,10 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choices:
   - text: "Ich k\xFCmmere mich um sie, keine Sorge"
+    ingameQuestion: {fileID: 0}
+    value: 0
     dialogConversation: {fileID: 11400000, guid: 21a37c16ff87e9e40af70b70d8d4b2f6, type: 2}
-    choiceEvent: {fileID: 0}
-    quest: {fileID: 0}
-  - text: Oh, ich werde ihnen eine Lektion erteilen, oder zwei
+    choiceEvents: []
+    quest: {fileID: 11400000, guid: 0afb65ae756f5ae489b597b41accda83, type: 2}
+  - text: Oh, ich werde ihnen eine Lektion erteilen.
+    ingameQuestion: {fileID: 0}
+    value: 0
     dialogConversation: {fileID: 11400000, guid: 21a37c16ff87e9e40af70b70d8d4b2f6, type: 2}
-    choiceEvent: {fileID: 0}
-    quest: {fileID: 0}
+    choiceEvents: []
+    quest: {fileID: 11400000, guid: 0afb65ae756f5ae489b597b41accda83, type: 2}
