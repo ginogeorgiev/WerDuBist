@@ -18,17 +18,17 @@ MonoBehaviour:
     ingameQuestion: {fileID: 11400000, guid: 6c65a220e528f1f4f9ee4954a036452f, type: 2}
     value: 1.5
     dialogConversation: {fileID: 0}
-    choiceEvent: {fileID: 0}
-    quest: {fileID: 0}
+    choiceEvents: []
+    quest: {fileID: 11400000, guid: f9a323680c87a1e4895803310a5d7fe1, type: 2}
   - text: Nichts sagen.
     ingameQuestion: {fileID: 11400000, guid: 6c65a220e528f1f4f9ee4954a036452f, type: 2}
     value: 1
     dialogConversation: {fileID: 0}
-    choiceEvent: {fileID: 0}
-    quest: {fileID: 0}
+    choiceEvents: []
+    quest: {fileID: 11400000, guid: f9a323680c87a1e4895803310a5d7fe1, type: 2}
   - text: Schon gut, das kann man wegwischen.
     ingameQuestion: {fileID: 11400000, guid: 6c65a220e528f1f4f9ee4954a036452f, type: 2}
     value: 0.5
     dialogConversation: {fileID: 0}
-    choiceEvent: {fileID: 0}
-    quest: {fileID: 0}
+    choiceEvents: []
+    quest: {fileID: 11400000, guid: f9a323680c87a1e4895803310a5d7fe1, type: 2}

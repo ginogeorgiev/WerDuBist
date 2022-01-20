@@ -291,7 +291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7038154350595453307, guid: 9067356294d2dd94fa76131392b67d74, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.084982
+      value: 24.48
       objectReference: {fileID: 0}
     - target: {fileID: 7038154350595453307, guid: 9067356294d2dd94fa76131392b67d74, type: 3}
       propertyPath: m_LocalPosition.y
@@ -415,11 +415,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 164299969304360258, guid: cb7f85ec34c91ef41aed0396c6173fa9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.24
+      value: 38.94
       objectReference: {fileID: 0}
     - target: {fileID: 164299969304360258, guid: cb7f85ec34c91ef41aed0396c6173fa9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 27.77
+      value: 23.77
       objectReference: {fileID: 0}
     - target: {fileID: 164299969304360258, guid: cb7f85ec34c91ef41aed0396c6173fa9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -453,6 +453,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 164299969304360259, guid: cb7f85ec34c91ef41aed0396c6173fa9, type: 3}
+      propertyPath: conversationElements.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 164299969304360259, guid: cb7f85ec34c91ef41aed0396c6173fa9, type: 3}
+      propertyPath: conversationElements.Array.data[0].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: b09509e468e4dcb46827da997c09f27b, type: 2}
+    - target: {fileID: 164299969304360259, guid: cb7f85ec34c91ef41aed0396c6173fa9, type: 3}
+      propertyPath: conversationElements.Array.data[1].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 157431824fb82c44ab96d486db4b038f, type: 2}
+    - target: {fileID: 164299969304360259, guid: cb7f85ec34c91ef41aed0396c6173fa9, type: 3}
+      propertyPath: conversationElements.Array.data[2].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 4130ba06de36fc44fbbb79193f78ed47, type: 2}
     - target: {fileID: 164299969304360263, guid: cb7f85ec34c91ef41aed0396c6173fa9, type: 3}
       propertyPath: m_Name
       value: 30_Lausi
@@ -1189,6 +1205,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 814726377453596602}
     m_Modifications:
+    - target: {fileID: 1735449775650077746, guid: 2f58506befbb271488b67693464bee72, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735449775650077746, guid: 2f58506befbb271488b67693464bee72, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2353103466293080770, guid: 2f58506befbb271488b67693464bee72, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.4800014
+      objectReference: {fileID: 0}
+    - target: {fileID: 2353103466293080770, guid: 2f58506befbb271488b67693464bee72, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7200012
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876966599300651781, guid: 2f58506befbb271488b67693464bee72, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.8499985
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876966599300651781, guid: 2f58506befbb271488b67693464bee72, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.7200089
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728357763705533484, guid: 2f58506befbb271488b67693464bee72, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.8499985
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728357763705533484, guid: 2f58506befbb271488b67693464bee72, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.66999054
+      objectReference: {fileID: 0}
     - target: {fileID: 6093123497907778019, guid: 2f58506befbb271488b67693464bee72, type: 3}
       propertyPath: m_Name
       value: 14_Alte_Dame
@@ -1236,6 +1284,30 @@ PrefabInstance:
     - target: {fileID: 6093123497907778022, guid: 2f58506befbb271488b67693464bee72, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656563364672336900, guid: 2f58506befbb271488b67693464bee72, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.2599983
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656563364672336900, guid: 2f58506befbb271488b67693464bee72, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.51000977
+      objectReference: {fileID: 0}
+    - target: {fileID: 7752593872249203973, guid: 2f58506befbb271488b67693464bee72, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.6400013
+      objectReference: {fileID: 0}
+    - target: {fileID: 7752593872249203973, guid: 2f58506befbb271488b67693464bee72, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.199997
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605964816698734360, guid: 2f58506befbb271488b67693464bee72, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.2699986
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605964816698734360, guid: 2f58506befbb271488b67693464bee72, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5499954
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f58506befbb271488b67693464bee72, type: 3}
@@ -1673,11 +1745,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 164299969304360258, guid: 541e122e43f5dd04eafe86b04ee36a9f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.93
+      value: 30.75
       objectReference: {fileID: 0}
     - target: {fileID: 164299969304360258, guid: 541e122e43f5dd04eafe86b04ee36a9f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.58
+      value: 21.92
       objectReference: {fileID: 0}
     - target: {fileID: 164299969304360258, guid: 541e122e43f5dd04eafe86b04ee36a9f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1711,6 +1783,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 164299969304360259, guid: 541e122e43f5dd04eafe86b04ee36a9f, type: 3}
+      propertyPath: conversationElements.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 164299969304360259, guid: 541e122e43f5dd04eafe86b04ee36a9f, type: 3}
+      propertyPath: conversationElements.Array.data[0].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 3bca549765cace347b35e47fc72229b4, type: 2}
+    - target: {fileID: 164299969304360259, guid: 541e122e43f5dd04eafe86b04ee36a9f, type: 3}
+      propertyPath: conversationElements.Array.data[1].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 7964af9078a54e549bb111765baafd29, type: 2}
+    - target: {fileID: 164299969304360259, guid: 541e122e43f5dd04eafe86b04ee36a9f, type: 3}
+      propertyPath: conversationElements.Array.data[2].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 80369cb88d6fc8941a7c1a68d4194b37, type: 2}
     - target: {fileID: 164299969304360263, guid: 541e122e43f5dd04eafe86b04ee36a9f, type: 3}
       propertyPath: m_Name
       value: 29_Kellner

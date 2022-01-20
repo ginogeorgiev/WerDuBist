@@ -9,10 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e101bbedf808fad488e79663f8f7649d, type: 3}
-  m_Name: Rockwell_Coffee
+  m_Script: {fileID: 11500000, guid: b61bf13e647c7e742a936c7d0bd7ee3f, type: 3}
+  m_Name: Seqence4Completed
   m_EditorClassIdentifier: 
-  id: 34
-  fullName: Rockwell
-  portrait: {fileID: 21300000, guid: cc178f223f6e58149ac29d6b871a871a, type: 3}
-  icon: {fileID: 21300000, guid: e3963a93438d07444b937192afeb24b2, type: 3}

@@ -16,11 +16,10 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 45ab7c007ca723a4e92d1b2d82e59d25, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 45ab7c007ca723a4e92d1b2d82e59d25, type: 2}
-    text: "Tut mir leid f\xFCr die Versp\xE4tung [Spielername] hab Gesten zu viel
-      K\xE4se Nachos verschlungen. Als dankesch\xF6n, das du dich um die Pantai Gang
-      gek\xFCmmert hast m\xF6chte ich dir 100 M\xFCnzen geben und zum Fr\xFChst\xFCck
-      einladen"
+    text: "Tut mir leid f\xFCr die Versp\xE4tung. Hab gestern zu viel K\xE4se Nachos
+      verschlungen. Als Dankesch\xF6n, das du dich um die Pantai Gang gek\xFCmmert
+      hast m\xF6chte ich dir 100 M\xFCnzen geben und dir einen Kaffee spendieren."
   - npcData: {fileID: 11400000, guid: 45ab7c007ca723a4e92d1b2d82e59d25, type: 2}
     text: "*Spieler hat 100 M\xFCnzen erhalten*"
   advanceConvAutomatically: 1
-  dialogQuestion: {fileID: 0}
+  dialogQuestion: {fileID: 11400000, guid: 0d9230bed99b4cd4e8a40e82ebab1e52, type: 2}

@@ -10,21 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a54c835cd434817add4d3fdde868665, type: 3}
-  m_Name: "Quest8-Baupl\xE4ne"
+  m_Name: Quest15-Lausi
   m_EditorClassIdentifier: 
-  id: 8
-  npcsToAdvanceConversationsList:
-  - {fileID: 11400000, guid: 929b028d2515e874187beebef2c8cd5d, type: 2}
-  title: "\xDCbermittlung der Baupl\xE4ne"
-  description: "Bringe Terry seine Baupl\xE4ne."
+  id: 15
+  npcsToAdvanceConversationsList: []
+  title: Lausi der Obdachlose
+  description: Guck was Lausi von dir will.
   visible: 1
   goals:
   - goalType: 1
-    sprite: {fileID: 21300000, guid: 221f74ae96516472fab4ae2ba7e959d7, type: 3}
+    sprite: {fileID: 21300000, guid: a874834868140214dbd97d3f6534ad49, type: 3}
     otherQuests: []
-    npc: {fileID: 11400000, guid: 929b028d2515e874187beebef2c8cd5d, type: 2}
-    current: {fileID: 0}
+    npc: {fileID: 11400000, guid: 75ce139d6fc7f1c4c9976825681b1c9a, type: 2}
+    current: {fileID: 11400000, guid: aabf314d0209c27499eb41f91dc89215, type: 2}
     required: 0
-  startPosition: {x: 50.24, y: 34.97}
-  endPosition: {x: 20.03, y: 27.57}
+  startPosition: {x: 30.75, y: 21.92}
+  endPosition: {x: 38.94, y: 23.77}
   questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}
