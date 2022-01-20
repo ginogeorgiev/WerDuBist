@@ -77,7 +77,6 @@ namespace Features.Dialog.Logic
                 isPlayerInConversation.SetFalse();
                 
                 EndConversation();
-                
             }
         }
 
@@ -87,6 +86,7 @@ namespace Features.Dialog.Logic
             
             if (nextDialogConversation == null) return;
             dialogConversation = nextDialogConversation;
+            
             AdvanceLine();
         }
         
@@ -98,8 +98,7 @@ namespace Features.Dialog.Logic
             conversationStarted = false;
             speakerUIControllerLeft.Hide();
             speakerUIControllerRight.Hide();
-            
-            
+
             npcFocus.Get().OnCheckForNextConversationPart();
         }
 
@@ -124,12 +123,12 @@ namespace Features.Dialog.Logic
             if (questionUI.activeSelf) return;
             
             if (dialogConversation == null) return;
-
+            
             isPlayerInConversation.SetTrue();
             tutorialData.OnDeActivateInteractInfo.Raise();
             
             if (!conversationStarted) Initialize();
-
+            
             if (activeLineIndex < dialogConversation.Lines.Length)
             {
                 DisplayLine();
