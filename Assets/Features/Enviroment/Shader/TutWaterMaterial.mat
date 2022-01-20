@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterMaterial
+  m_Name: TutWaterMaterial
   m_Shader: {fileID: -6465566751694194690, guid: 4479dbb5c277c2d488f7cc2108b154de, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -44,7 +44,7 @@ Material:
     - Vector1_a7bf2cf626914262b133d40622860df3: 10.24
     - Vector1_da2218426d9b4f0a9e6076d610624023: 2.91
     - Vector1_e0cc9bd31b4549a78a4242f858c89093: 19.49
-    - Vector1_f3753c96ba734732a727148f664cba1d: 6.4
+    - Vector1_f3753c96ba734732a727148f664cba1d: 20
     - Vector1_fe7cb8d4abc24b29bc33979f991eb05e: 1.23
     m_Colors:
     - Color_1745d5293e2e4ab8b68423eccc433adc: {r: 0.074083336, g: 0.08819443, b: 0.127, a: 1}
