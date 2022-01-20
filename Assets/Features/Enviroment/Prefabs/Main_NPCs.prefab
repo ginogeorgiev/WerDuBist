@@ -613,7 +613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 164299969304360263, guid: 2d8d3ae50c29f424897122fce121b4c2, type: 3}
       propertyPath: m_Name
-      value: 25_Zag_RUDOLFUS_
+      value: 25_Rudolfus
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d8d3ae50c29f424897122fce121b4c2, type: 3}
@@ -1241,7 +1241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 164299969304360263, guid: 388825bc84a4f794c82a20d3aad9ba9b, type: 3}
       propertyPath: m_Name
-      value: 23_ZAG_Rudolfus
+      value: 23_Zag
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 388825bc84a4f794c82a20d3aad9ba9b, type: 3}

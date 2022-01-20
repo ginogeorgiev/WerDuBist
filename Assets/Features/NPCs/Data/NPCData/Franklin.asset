@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 4
   fullName: Franklin
-  portrait: {fileID: 21300000, guid: c2790ffd96db6cd49b84aac4527cb4da, type: 3}
-  icon: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 9dc15ec6dabe9f342ab26487050cc4d8, type: 3}
+  icon: {fileID: 21300000, guid: 9c2128981699b244ea2936e9ca542dbc, type: 3}

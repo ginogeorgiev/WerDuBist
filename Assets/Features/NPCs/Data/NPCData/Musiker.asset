@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 19
   fullName: Musiker
-  portrait: {fileID: 21300000, guid: d674d6858f0157c479827a762951cce7, type: 3}
-  icon: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 0ae748ea2bec74e489d60640775279f6, type: 3}
+  icon: {fileID: 21300000, guid: 0c53f7a360b43c9458dbce45e24d45d3, type: 3}
