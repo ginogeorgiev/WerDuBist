@@ -62,27 +62,12 @@ TagManager:
   - name: Dirt
     uniqueID: 3811040739
     locked: 0
-  - name: SmallThings
+  - name: Path
     uniqueID: 477588135
     locked: 0
-  - name: TrailBridge
+  - name: Clutter
     uniqueID: 1014489307
     locked: 0
-  - name: Collectables
-    uniqueID: 1530274975
-    locked: 0
-  - name: Enviroment
+  - name: Main
     uniqueID: 2029698573
-    locked: 0
-  - name: Player
-    uniqueID: 3363447473
-    locked: 0
-  - name: Beach
-    uniqueID: 2464935353
-    locked: 0
-  - name: PalmtreeFront
-    uniqueID: 3265521107
-    locked: 0
-  - name: smallRockFront
-    uniqueID: 3086352005
     locked: 0
