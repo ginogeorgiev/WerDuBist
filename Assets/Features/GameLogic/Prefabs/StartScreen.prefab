@@ -252,7 +252,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 4051746609510656866}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -333,7 +333,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start Game
+  m_text: Start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bc409d9b52ba8d5488ad12b7cce9864c, type: 2}
   m_sharedMaterial: {fileID: 5070848768423833703, guid: bc409d9b52ba8d5488ad12b7cce9864c, type: 2}

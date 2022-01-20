@@ -2306,7 +2306,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Gender: '
+  m_text: 'Geschlecht: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 10085517b1b9b004791856a6f0db388a, type: 2}
   m_sharedMaterial: {fileID: 2684836071628214439, guid: 10085517b1b9b004791856a6f0db388a, type: 2}
@@ -2727,8 +2727,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+    rgba: 4283059170
+  m_fontColor: {r: 0.8867924, g: 0.2944229, b: 0.28862584, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4301,10 +4301,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Done
+  m_text: OK
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 10085517b1b9b004791856a6f0db388a, type: 2}
-  m_sharedMaterial: {fileID: 2684836071628214439, guid: 10085517b1b9b004791856a6f0db388a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc409d9b52ba8d5488ad12b7cce9864c, type: 2}
+  m_sharedMaterial: {fileID: 5070848768423833703, guid: bc409d9b52ba8d5488ad12b7cce9864c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4338,7 +4338,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
