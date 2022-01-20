@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 33
   fullName: Angel
-  portrait: {fileID: 21300000, guid: af59ea05bcba0574a9b9112dcdc02f19, type: 3}
-  icon: {fileID: 21300000, guid: af59ea05bcba0574a9b9112dcdc02f19, type: 3}
+  portrait: {fileID: 21300000, guid: f17c5ee9f24141c48a28a15358a10399, type: 3}
+  icon: {fileID: 21300000, guid: b511061f26471cd46960db0a512c674d, type: 3}

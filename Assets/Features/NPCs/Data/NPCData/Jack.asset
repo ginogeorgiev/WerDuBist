@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 24
   fullName: Jack
-  portrait: {fileID: 21300000, guid: e056b5dd978d0e74d9898ceebe9f986a, type: 3}
-  icon: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 3edb18e5675d5cf4eb2a6c4956a3c450, type: 3}
+  icon: {fileID: 21300000, guid: 2bd21d4f95ba1f64d91552ed154a6631, type: 3}
