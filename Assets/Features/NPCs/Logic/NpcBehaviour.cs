@@ -69,8 +69,11 @@ namespace Features.NPCs.Logic
             var pos = transform.position;
             foreach (var conversation in conversationElements.Where(element => element.Quest!=null))
             {
-                conversation.Quest.EndPosition = pos;
                 conversation.Quest.StartPosition = pos;
+                if (conversation.Quest.EndPosition == new Vector2(0,0))
+                {
+                    conversation.Quest.EndPosition = pos; 
+                }
             }
             foreach (var conversation in conversationElements.Where(c => c.DialogConversationLeft != null))
             {

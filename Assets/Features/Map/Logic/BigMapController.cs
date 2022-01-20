@@ -51,6 +51,7 @@ namespace Features.Map.Logic
         public void Start()
         {
             playerControls.Player.Map.started += _ => ToggleMapUI();
+            mapCamera.transform.localPosition = new Vector3(-521.6f, -207.95f, -1.5f);
         }
         
         #region Input related
@@ -78,6 +79,7 @@ namespace Features.Map.Logic
         
         public void SwitchIslands()
         {
+            Debug.Log("switch");
             mapBG.GetComponent<Image>().sprite = mainIsland;
             
             mapCamera.GetComponent<Camera>().orthographicSize = 55f;
@@ -98,6 +100,7 @@ namespace Features.Map.Logic
 
             var obj= Instantiate(marker, quest.StartPosition, Quaternion.identity);
             obj.transform.SetParent(mapUI.transform);
+            obj.transform.position = new Vector3(quest.StartPosition.x, quest.StartPosition.y, -.4f);
             obj.GetComponent<SpriteRenderer>().sprite = questNew;
 
             newQuestMarkers.Add(quest.QuestID, obj); 
