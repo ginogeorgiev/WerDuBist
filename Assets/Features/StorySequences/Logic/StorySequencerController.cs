@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Features.NPCs.Logic;
 using Features.Quests.Logic;
@@ -25,6 +26,9 @@ namespace Features.StorySequences.Logic
                 // deactivates all npc from all sequences if they are part of the NpcsToActivateList
                 if (sequence.NpcsToActivateList.Count == 0) continue;
                 
+                Debug.Log(npcBehaviourRuntimeSet.GetItems().Count);
+                Debug.Log(sequence.NpcsToActivateList.Count);
+                
                 foreach (NpcBehaviour npcBehaviour in sequence.NpcsToActivateList.SelectMany
                     (npcData => npcBehaviourRuntimeSet.GetItems().Where(npcBehaviour => npcData.ID.Equals(npcBehaviour.Data.ID))))
                 {
@@ -32,6 +36,11 @@ namespace Features.StorySequences.Logic
                     Debug.Log(npcBehaviour.Data.name + " deactivated ");
                 }
             }
+        }
+
+        private void OnDisable()
+        {
+            npcBehaviourRuntimeSet.Restore();
         }
     }
 }
