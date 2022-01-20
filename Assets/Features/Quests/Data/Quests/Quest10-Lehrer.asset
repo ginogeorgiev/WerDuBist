@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a54c835cd434817add4d3fdde868665, type: 3}
-  m_Name: Quest11-Verlorenes Kind
+  m_Name: Quest10-Lehrer
   m_EditorClassIdentifier: 
-  id: 11
-  npcsToAdvanceConversationsList: []
-  title: Das verlorene Kind
-  description: Finde das Kind der Frau.
+  id: 5
+  npcsToAdvanceConversationsList:
+  - {fileID: 11400000, guid: dc02e58ae4ca8374ba152d8fe1b52038, type: 2}
+  title: "Der Gro\xDFe Lehrer"
+  description: "\xDCberzeug die Pantai Gang davon mit ihren Unruhestiften aufzuh\xF6ren."
   visible: 1
   goals:
-  - goalType: 0
-    sprite: {fileID: 21300000, guid: 43e221860d46c42abab1fea3b4b3e7e9, type: 3}
+  - goalType: 1
+    sprite: {fileID: 0}
     otherQuests: []
-    npc: {fileID: 0}
-    current: {fileID: 11400000, guid: aabf314d0209c27499eb41f91dc89215, type: 2}
-    required: 3
-  startPosition: {x: 27.49, y: 23.36}
-  endPosition: {x: 27.49, y: 23.36}
+    npc: {fileID: 11400000, guid: dc02e58ae4ca8374ba152d8fe1b52038, type: 2}
+    current: {fileID: 0}
+    required: 0
+  startPosition: {x: 35.4, y: 42.7}
+  endPosition: {x: 35.4, y: 42.7}
   questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}

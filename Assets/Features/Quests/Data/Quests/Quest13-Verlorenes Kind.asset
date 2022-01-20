@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a54c835cd434817add4d3fdde868665, type: 3}
-  m_Name: Quest10-ApfelOma
+  m_Name: Quest13-Verlorenes Kind
   m_EditorClassIdentifier: 
-  id: 10
+  id: 11
   npcsToAdvanceConversationsList: []
-  title: Die alte Dame
-  description: "Sammele die \xC4pfel auf."
+  title: Das verlorene Kind
+  description: Finde das Kind der Frau.
   visible: 1
   goals:
   - goalType: 0
@@ -24,6 +24,6 @@ MonoBehaviour:
     npc: {fileID: 0}
     current: {fileID: 11400000, guid: aabf314d0209c27499eb41f91dc89215, type: 2}
     required: 3
-  startPosition: {x: 17.79, y: 49.35}
-  endPosition: {x: 17.79, y: 49.35}
+  startPosition: {x: 27.49, y: 23.36}
+  endPosition: {x: 27.49, y: 23.36}
   questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}

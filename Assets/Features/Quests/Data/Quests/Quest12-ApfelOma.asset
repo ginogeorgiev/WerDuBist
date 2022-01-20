@@ -10,21 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a54c835cd434817add4d3fdde868665, type: 3}
-  m_Name: Quest9-Bauteile
+  m_Name: Quest12-ApfelOma
   m_EditorClassIdentifier: 
-  id: 9
+  id: 10
   npcsToAdvanceConversationsList: []
-  title: Finde Terrys Bauteile
-  description: Terry hat seine Bauteile verloren. Er meinte er war am Strand, beim
-    Markt und am Rathaus.
+  title: Die alte Dame
+  description: "Sammele die \xC4pfel auf."
   visible: 1
   goals:
   - goalType: 0
     sprite: {fileID: 21300000, guid: 43e221860d46c42abab1fea3b4b3e7e9, type: 3}
     otherQuests: []
     npc: {fileID: 0}
-    current: {fileID: 11400000, guid: 15be0257408b7f545868f4fa436c151e, type: 2}
+    current: {fileID: 11400000, guid: aabf314d0209c27499eb41f91dc89215, type: 2}
     required: 3
-  startPosition: {x: 0, y: 0}
-  endPosition: {x: 0, y: 0}
+  startPosition: {x: 17.79, y: 49.35}
+  endPosition: {x: 17.79, y: 49.35}
   questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}
