@@ -137,7 +137,7 @@ namespace Features.NPCs.Logic
             if (conversationIndex + 1 >= conversationElements.Count) return;
             
             conversationIndex++;
-            Debug.Log(Data.name + "'s conversation advanced to " + conversationIndex);
+            // Debug.Log(Data.name + "'s conversation advanced to " + conversationIndex);
             activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
             onActiveConversationChanged.Raise();
         }

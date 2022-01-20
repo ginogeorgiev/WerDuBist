@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 13
   fullName: Zeco
-  portrait: {fileID: 21300000, guid: 6fed1ac51d53df249906119331eac167, type: 3}
-  icon: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 12676f468894b204fa5d9c50576735db, type: 3}
+  icon: {fileID: 21300000, guid: 8a719ed65194df94f9907629dc6db39e, type: 3}

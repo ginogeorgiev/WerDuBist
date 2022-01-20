@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 20
   fullName: Annie
-  portrait: {fileID: 21300000, guid: 0975b4910ed8ce8479a49c418f1cf7e7, type: 3}
-  icon: {fileID: 0}
+  portrait: {fileID: 21300000, guid: e93a911d2adc8534bb67132eee1f4753, type: 3}
+  icon: {fileID: 21300000, guid: cad842a1051731a46b6900dac5c23b1b, type: 3}
