@@ -45,11 +45,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 34.69
+      value: 35.4
       objectReference: {fileID: 0}
     - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.16
+      value: 42.7
       objectReference: {fileID: 0}
     - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -89,7 +89,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4204690260697107190, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: m_Name
-      value: 08_Rockwell_Coffee
+      value: 08_Rockwell
       objectReference: {fileID: 0}
     - target: {fileID: 4835833018944873319, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: m_Size.x
