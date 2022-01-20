@@ -53,6 +53,24 @@ TagManager:
   - name: Water
     uniqueID: 1840642749
     locked: 0
+  - name: SandTiles
+    uniqueID: 2400309537
+    locked: 0
+  - name: GreenTiles
+    uniqueID: 2007080597
+    locked: 0
+  - name: Dirt
+    uniqueID: 3811040739
+    locked: 0
+  - name: SmallThings
+    uniqueID: 477588135
+    locked: 0
+  - name: TrailBridge
+    uniqueID: 1014489307
+    locked: 0
+  - name: Collectables
+    uniqueID: 1530274975
+    locked: 0
   - name: Enviroment
     uniqueID: 2029698573
     locked: 0

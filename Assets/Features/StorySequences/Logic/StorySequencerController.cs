@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Features.NPCs.Logic;
 using Features.Quests.Logic;
@@ -29,9 +30,14 @@ namespace Features.StorySequences.Logic
                     (npcData => npcBehaviourRuntimeSet.GetItems().Where(npcBehaviour => npcData.ID.Equals(npcBehaviour.Data.ID))))
                 {
                     npcBehaviour.gameObject.SetActive(false);
-                    Debug.Log(npcBehaviour.Data.name + " deactivated ");
+                    // Debug.Log(npcBehaviour.Data.name + " deactivated ");
                 }
             }
+        }
+
+        private void OnDisable()
+        {
+            npcBehaviourRuntimeSet.Restore();
         }
     }
 }

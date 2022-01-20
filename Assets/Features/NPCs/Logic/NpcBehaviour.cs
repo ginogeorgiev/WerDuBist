@@ -69,8 +69,11 @@ namespace Features.NPCs.Logic
             var pos = transform.position;
             foreach (var conversation in conversationElements.Where(element => element.Quest!=null))
             {
-                conversation.Quest.EndPosition = pos;
                 conversation.Quest.StartPosition = pos;
+                if (conversation.Quest.EndPosition == new Vector2(0,0))
+                {
+                    conversation.Quest.EndPosition = pos; 
+                }
             }
             foreach (var conversation in conversationElements.Where(c => c.DialogConversationLeft != null))
             {
@@ -137,7 +140,7 @@ namespace Features.NPCs.Logic
             if (conversationIndex + 1 >= conversationElements.Count) return;
             
             conversationIndex++;
-            Debug.Log(Data.name + "'s conversation advanced to " + conversationIndex);
+            // Debug.Log(Data.name + "'s conversation advanced to " + conversationIndex);
             activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
             onActiveConversationChanged.Raise();
         }
