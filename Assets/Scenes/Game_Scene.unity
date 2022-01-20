@@ -782,7 +782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5506266131864378915, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 698
+      value: 1910
       objectReference: {fileID: 0}
     - target: {fileID: 5506266131864378915, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -981,11 +981,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 516767723770760240, guid: e96347ce6302d914fb4dd3d2a54d940d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.94
+      value: 8.57
       objectReference: {fileID: 0}
     - target: {fileID: 516767723770760240, guid: e96347ce6302d914fb4dd3d2a54d940d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.86
+      value: 8.6
       objectReference: {fileID: 0}
     - target: {fileID: 516767723770760240, guid: e96347ce6302d914fb4dd3d2a54d940d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1089,10 +1089,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 242612741867134148, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 6951ed384d1b13d4195baa70bb748fc3, type: 2}
     - target: {fileID: 814726377453596601, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
       propertyPath: m_Name
       value: Main_NPCs
@@ -1141,206 +1137,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1397733288056774482, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: m_Size.x
-      value: 1.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1397733288056774482, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b218e2a2b2e76884ea7a75c6380a368c, type: 3}
-    - target: {fileID: 1397733288056774482, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2120589631556201734, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 56.46
-      objectReference: {fileID: 0}
-    - target: {fileID: 2120589631556201734, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 70.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 3977084925956277812, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: conversationElements.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3977084925956277812, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: conversationElements.Array.data[0].dialogConversationLeft
-      value: 
-      objectReference: {fileID: 11400000, guid: 8a0fb74005ee62246bacd8d0b353e639, type: 2}
-    - target: {fileID: 3977084925956277812, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: conversationElements.Array.data[1].dialogConversationLeft
-      value: 
-      objectReference: {fileID: 11400000, guid: 1f3a41ac78a441e4fa65295ebbf10e08, type: 2}
-    - target: {fileID: 3977084925956277812, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: conversationElements.Array.data[0].advanceConvAutomatically
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3977084925956277813, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 34.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 3977084925956277813, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7.87
-      objectReference: {fileID: 0}
-    - target: {fileID: 4480242719664533102, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: data
-      value: 
-      objectReference: {fileID: 11400000, guid: 4f891f84b1917194891d42dda3cb1e27, type: 2}
-    - target: {fileID: 4480242719664533102, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: npcFocus
-      value: 
-      objectReference: {fileID: 11400000, guid: e1b8dc06bac9c86478b1a76b4ce599c6, type: 2}
-    - target: {fileID: 4480242719664533102, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: onCompleteQuest
-      value: 
-      objectReference: {fileID: 11400000, guid: a1a72b2b5c2b8f44f840edf2784f961e, type: 2}
-    - target: {fileID: 4480242719664533102, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: npcBehaviourRuntimeSet
-      value: 
-      objectReference: {fileID: 11400000, guid: 9d553a0a1058f1b4fa6ea1634cc00b10, type: 2}
-    - target: {fileID: 4480242719664533102, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: onActiveConversationChanged
-      value: 
-      objectReference: {fileID: 11400000, guid: a98456addc653ad4fa3f69cbe444cb67, type: 2}
-    - target: {fileID: 4480242719664533102, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: conversationElements.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4480242719664533103, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 43.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 6127931184623654433, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6127931184623654434, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6127931184623654437, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 42.406
-      objectReference: {fileID: 0}
-    - target: {fileID: 6127931184623654437, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.356
-      objectReference: {fileID: 0}
-    - target: {fileID: 6538005438998843448, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: data
-      value: 
-      objectReference: {fileID: 11400000, guid: 3ae66e805df3d5d42b1329d19a09f1ac, type: 2}
-    - target: {fileID: 6538005438998843448, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: npcFocus
-      value: 
-      objectReference: {fileID: 11400000, guid: e1b8dc06bac9c86478b1a76b4ce599c6, type: 2}
-    - target: {fileID: 6538005438998843448, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: onCompleteQuest
-      value: 
-      objectReference: {fileID: 11400000, guid: a1a72b2b5c2b8f44f840edf2784f961e, type: 2}
-    - target: {fileID: 6538005438998843448, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: npcBehaviourRuntimeSet
-      value: 
-      objectReference: {fileID: 11400000, guid: 9d553a0a1058f1b4fa6ea1634cc00b10, type: 2}
-    - target: {fileID: 6538005438998843448, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: onActiveConversationChanged
-      value: 
-      objectReference: {fileID: 11400000, guid: a98456addc653ad4fa3f69cbe444cb67, type: 2}
-    - target: {fileID: 6538005438998843448, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: conversationElements.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6538005438998843448, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: conversationElements.Array.data[0].dialogConversationLeft
-      value: 
-      objectReference: {fileID: 11400000, guid: 2a92ed21b4beffc4f9aa5c2f7b45bdda, type: 2}
-    - target: {fileID: 6538005438998843452, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: m_Name
-      value: AB_Fishing_Rod2_Quest
-      objectReference: {fileID: 0}
-    - target: {fileID: 7125678409949582892, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7648207301146965703, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: data
-      value: 
-      objectReference: {fileID: 11400000, guid: 3286d80512a5b6c49a0946274b3abb63, type: 2}
-    - target: {fileID: 7648207301146965703, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: npcFocus
-      value: 
-      objectReference: {fileID: 11400000, guid: e1b8dc06bac9c86478b1a76b4ce599c6, type: 2}
-    - target: {fileID: 7648207301146965703, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: onCompleteQuest
-      value: 
-      objectReference: {fileID: 11400000, guid: a1a72b2b5c2b8f44f840edf2784f961e, type: 2}
-    - target: {fileID: 7648207301146965703, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: npcBehaviourRuntimeSet
-      value: 
-      objectReference: {fileID: 11400000, guid: 9d553a0a1058f1b4fa6ea1634cc00b10, type: 2}
-    - target: {fileID: 7648207301146965703, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: onActiveConversationChanged
-      value: 
-      objectReference: {fileID: 11400000, guid: a98456addc653ad4fa3f69cbe444cb67, type: 2}
-    - target: {fileID: 7648207301146965703, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: conversationElements.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7648207301146965703, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: conversationElements.Array.data[0].quest
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7648207301146965703, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: conversationElements.Array.data[1].quest
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7648207301146965703, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: conversationElements.Array.data[2].quest
-      value: 
-      objectReference: {fileID: 11400000, guid: 7cd0a61d2994d27498bacd7de514c7fc, type: 2}
-    - target: {fileID: 7648207301146965703, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: conversationElements.Array.data[0].dialogConversationLeft
-      value: 
-      objectReference: {fileID: 11400000, guid: 1e98d0b13fcbb464eaaffc3ae91e95bc, type: 2}
-    - target: {fileID: 7648207301146965703, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: conversationElements.Array.data[1].dialogConversationLeft
-      value: 
-      objectReference: {fileID: 11400000, guid: 05f92a9c566077a4ebcab50d723fce60, type: 2}
-    - target: {fileID: 7648207301146965703, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: conversationElements.Array.data[2].dialogConversationLeft
-      value: 
-      objectReference: {fileID: 11400000, guid: e9ba8fcfc7a145340820645ebdb9ca67, type: 2}
-    - target: {fileID: 7648207301146965703, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: conversationElements.Array.data[0].dialogConversationRight
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7648207301146965703, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: conversationElements.Array.data[1].dialogConversationRight
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7648207301146965703, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: conversationElements.Array.data[2].dialogConversationRight
-      value: 
-      objectReference: {fileID: 11400000, guid: 2a91f7a8d71f39c4da3449e2f0be2dde, type: 2}
-    - target: {fileID: 7648207301146965703, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: conversationElements.Array.data[0].advanceConvAutomatically
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7648207301146965703, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: conversationElements.Array.data[1].advanceConvAutomatically
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8536510415852565612, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: conversationElements.Array.data[1].quest
-      value: 
-      objectReference: {fileID: 11400000, guid: 7cd0a61d2994d27498bacd7de514c7fc, type: 2}
-    - target: {fileID: 8536510415852565612, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
-      propertyPath: conversationElements.Array.data[1].dialogConversationRight
-      value: 
-      objectReference: {fileID: 11400000, guid: e9ba8fcfc7a145340820645ebdb9ca67, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c049a732e9414044993f8236b347bd5, type: 3}
 --- !u!1001 &2693570432203608169

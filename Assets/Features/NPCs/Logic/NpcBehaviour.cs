@@ -133,16 +133,13 @@ namespace Features.NPCs.Logic
         public void AdvanceConvIndex()
         {
             if (conversationElements == null || conversationElements.Count == 0) return;
+
+            if (conversationIndex + 1 >= conversationElements.Count) return;
             
-            if (conversationIndex + 1 < conversationElements.Count)
-            {
-                conversationIndex++;
-                
-                Debug.Log(Data.name + "'s conversation advanced to " + conversationIndex);
-                
-                activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
-                onActiveConversationChanged.Raise();
-            }
+            conversationIndex++;
+            Debug.Log(Data.name + "'s conversation advanced to " + conversationIndex);
+            activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
+            onActiveConversationChanged.Raise();
         }
 
         public void SetNpcFocus()
