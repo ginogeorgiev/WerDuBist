@@ -257,6 +257,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 814726377453596602}
     m_Modifications:
+    - target: {fileID: 6216438790280687986, guid: 9067356294d2dd94fa76131392b67d74, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216438790280687986, guid: 9067356294d2dd94fa76131392b67d74, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216438790280687986, guid: 9067356294d2dd94fa76131392b67d74, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7038154350595453306, guid: 9067356294d2dd94fa76131392b67d74, type: 3}
+    - target: {fileID: 6216438790280687986, guid: 9067356294d2dd94fa76131392b67d74, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216438790280687986, guid: 9067356294d2dd94fa76131392b67d74, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnNpcFocusChanged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216438790280687986, guid: 9067356294d2dd94fa76131392b67d74, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Features.NPCs.Logic.NpcBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216438790280687986, guid: 9067356294d2dd94fa76131392b67d74, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7038154350595453307, guid: 9067356294d2dd94fa76131392b67d74, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -805,6 +833,26 @@ PrefabInstance:
       propertyPath: data
       value: 
       objectReference: {fileID: 11400000, guid: 45ab7c007ca723a4e92d1b2d82e59d25, type: 2}
+    - target: {fileID: 379125689373977895, guid: 1a854a7d5ae2ddc41851b3ff940808ec, type: 3}
+      propertyPath: conversationElements.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 379125689373977895, guid: 1a854a7d5ae2ddc41851b3ff940808ec, type: 3}
+      propertyPath: conversationElements.Array.data[1].quest
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 379125689373977895, guid: 1a854a7d5ae2ddc41851b3ff940808ec, type: 3}
+      propertyPath: conversationElements.Array.data[0].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 9f044281a3f87ed4fb734608f5e3fbe3, type: 2}
+    - target: {fileID: 379125689373977895, guid: 1a854a7d5ae2ddc41851b3ff940808ec, type: 3}
+      propertyPath: conversationElements.Array.data[1].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 12a78dc9ab74e69439a96d2865f5ce60, type: 2}
+    - target: {fileID: 379125689373977895, guid: 1a854a7d5ae2ddc41851b3ff940808ec, type: 3}
+      propertyPath: conversationElements.Array.data[1].dialogConversationRight
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a854a7d5ae2ddc41851b3ff940808ec, type: 3}
 --- !u!4 &3831372181461538363 stripped
@@ -887,11 +935,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 164299969304360258, guid: 7174548f479883543bbcf9a2fa4ac797, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.21
+      value: 3.89
       objectReference: {fileID: 0}
     - target: {fileID: 164299969304360258, guid: 7174548f479883543bbcf9a2fa4ac797, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 31.97
+      value: 55.24
       objectReference: {fileID: 0}
     - target: {fileID: 164299969304360258, guid: 7174548f479883543bbcf9a2fa4ac797, type: 3}
       propertyPath: m_LocalPosition.z
@@ -925,6 +973,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 164299969304360259, guid: 7174548f479883543bbcf9a2fa4ac797, type: 3}
+      propertyPath: conversationElements.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 164299969304360259, guid: 7174548f479883543bbcf9a2fa4ac797, type: 3}
+      propertyPath: conversationElements.Array.data[0].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: eeb899279d7e504458fb80dfcdc88b3f, type: 2}
     - target: {fileID: 164299969304360263, guid: 7174548f479883543bbcf9a2fa4ac797, type: 3}
       propertyPath: m_Name
       value: 16_Kind
@@ -1143,11 +1199,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6093123497907778022, guid: 2f58506befbb271488b67693464bee72, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.79
+      value: 22.4
       objectReference: {fileID: 0}
     - target: {fileID: 6093123497907778022, guid: 2f58506befbb271488b67693464bee72, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 49.35
+      value: 75.3
       objectReference: {fileID: 0}
     - target: {fileID: 6093123497907778022, guid: 2f58506befbb271488b67693464bee72, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1403,11 +1459,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 164299969304360258, guid: b9b46a77920b367459e745a0ad203ba4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.49
+      value: 16.6
       objectReference: {fileID: 0}
     - target: {fileID: 164299969304360258, guid: b9b46a77920b367459e745a0ad203ba4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.36
+      value: 54.3
       objectReference: {fileID: 0}
     - target: {fileID: 164299969304360258, guid: b9b46a77920b367459e745a0ad203ba4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1440,6 +1496,26 @@ PrefabInstance:
     - target: {fileID: 164299969304360258, guid: b9b46a77920b367459e745a0ad203ba4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 164299969304360259, guid: b9b46a77920b367459e745a0ad203ba4, type: 3}
+      propertyPath: conversationElements.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 164299969304360259, guid: b9b46a77920b367459e745a0ad203ba4, type: 3}
+      propertyPath: conversationElements.Array.data[2].quest
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 164299969304360259, guid: b9b46a77920b367459e745a0ad203ba4, type: 3}
+      propertyPath: conversationElements.Array.data[2].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 00c139b64a56af5419acca3fa2f4e7f4, type: 2}
+    - target: {fileID: 164299969304360259, guid: b9b46a77920b367459e745a0ad203ba4, type: 3}
+      propertyPath: conversationElements.Array.data[1].dialogConversationRight
+      value: 
+      objectReference: {fileID: 11400000, guid: 7074786b31f79f74189fc0f50e558674, type: 2}
+    - target: {fileID: 164299969304360259, guid: b9b46a77920b367459e745a0ad203ba4, type: 3}
+      propertyPath: conversationElements.Array.data[2].dialogConversationRight
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 164299969304360263, guid: b9b46a77920b367459e745a0ad203ba4, type: 3}
       propertyPath: m_Name
@@ -1945,6 +2021,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 164299969304360259, guid: a37a4f92e63db6043a32f6d8eee97a43, type: 3}
+      propertyPath: conversationElements.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 164299969304360259, guid: a37a4f92e63db6043a32f6d8eee97a43, type: 3}
+      propertyPath: conversationElements.Array.data[0].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 1becd091b4735da41968ae593f7d7924, type: 2}
+    - target: {fileID: 164299969304360259, guid: a37a4f92e63db6043a32f6d8eee97a43, type: 3}
+      propertyPath: conversationElements.Array.data[1].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 41e0dbe65623253469e3bc78fba5710a, type: 2}
     - target: {fileID: 164299969304360263, guid: a37a4f92e63db6043a32f6d8eee97a43, type: 3}
       propertyPath: m_Name
       value: 13_Zeco
@@ -2011,6 +2099,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 379125689373977895, guid: 1a854a7d5ae2ddc41851b3ff940808ec, type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 11400000, guid: 41ade48c0f6a52a4f80cd74d816d111d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a854a7d5ae2ddc41851b3ff940808ec, type: 3}
 --- !u!4 &8896675507513228682 stripped
@@ -2193,6 +2285,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 164299969304360259, guid: 3928fa38f4817174d9975c1bf74aa90b, type: 3}
+      propertyPath: conversationElements.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 164299969304360259, guid: 3928fa38f4817174d9975c1bf74aa90b, type: 3}
+      propertyPath: conversationElements.Array.data[2].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 7a8eaa94be7e33d42bbe69a0988ddd8a, type: 2}
     - target: {fileID: 164299969304360263, guid: 3928fa38f4817174d9975c1bf74aa90b, type: 3}
       propertyPath: m_Name
       value: 03_Playfair

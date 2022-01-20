@@ -10,19 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a54c835cd434817add4d3fdde868665, type: 3}
-  m_Name: Quest10-Lehrer
+  m_Name: Quest11-ZeitIstGeld
   m_EditorClassIdentifier: 
-  id: 10
-  npcsToAdvanceConversationsList:
-  - {fileID: 11400000, guid: dc02e58ae4ca8374ba152d8fe1b52038, type: 2}
-  title: "Der Gro\xDFe Lehrer"
-  description: "\xDCberzeug die Pantai Gang davon mit ihren Unruhestiften aufzuh\xF6ren."
+  id: 11
+  npcsToAdvanceConversationsList: []
+  title: Zeit ist Geld
+  description: Hol dir dein Belohnung bei Rockwell ab.
   visible: 1
   goals:
   - goalType: 1
     sprite: {fileID: 0}
     otherQuests: []
-    npc: {fileID: 11400000, guid: dc02e58ae4ca8374ba152d8fe1b52038, type: 2}
+    npc: {fileID: 11400000, guid: 45ab7c007ca723a4e92d1b2d82e59d25, type: 2}
     current: {fileID: 0}
     required: 0
   startPosition: {x: 35.4, y: 42.7}

@@ -22,4 +22,5 @@ MonoBehaviour:
     text: ' Wie willst du hier handeln?
 
 '
+  advanceConvAutomatically: 1
   dialogQuestion: {fileID: 11400000, guid: e5438f088ca1cc149ad39a24b152113c, type: 2}
