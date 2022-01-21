@@ -144,7 +144,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -1.1506468}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.054909565}
     oldSize: {x: 0.68, y: 2.65}
     newSize: {x: 0.68, y: 2.65}
     adaptiveTilingThreshold: 0.5
@@ -416,6 +416,22 @@ PrefabInstance:
     - target: {fileID: 312983164850798073, guid: 7b86bce7a961e5e40968a1558aa18f8a, type: 3}
       propertyPath: m_Name
       value: Main_Island
+      objectReference: {fileID: 0}
+    - target: {fileID: 1300541875427648971, guid: 7b86bce7a961e5e40968a1558aa18f8a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -27.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1300541875427648971, guid: 7b86bce7a961e5e40968a1558aa18f8a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 43.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630842669783549749, guid: 7b86bce7a961e5e40968a1558aa18f8a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630842669783549749, guid: 7b86bce7a961e5e40968a1558aa18f8a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 45.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b86bce7a961e5e40968a1558aa18f8a, type: 3}
