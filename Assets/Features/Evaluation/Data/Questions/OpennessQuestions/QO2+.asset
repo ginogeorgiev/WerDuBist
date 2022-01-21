@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: QO2+
   m_EditorClassIdentifier: 
   question: Ich habe eine lebhafte Vorstellungskraft.
-  aspect: {fileID: 11400000, guid: 28fa6f3740d236341b1e177b33fb17e0, type: 2}
-  ingameAspectValue: {fileID: 11400000, guid: bbafa928eba7a8440a25dc6995b4d445, type: 2}
+  gameAspectValue: {fileID: 11400000, guid: bbafa928eba7a8440a25dc6995b4d445, type: 2}
   surveyAspectValue: {fileID: 11400000, guid: 6b1a307e876bc8d4fa25810b6db81e4e, type: 2}
   key: 1

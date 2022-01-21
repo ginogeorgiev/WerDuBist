@@ -63,7 +63,7 @@ namespace Features.Dialog.Logic
                 //check if this is correct related to partly answered questions
                 if (choice.IngameQuestion.IngameRuntimeValue > 1)
                 {
-                    choice.IngameQuestion.IngameAspectValue.Add((int)choice.IngameQuestion.IngameRuntimeValue);
+                    choice.IngameQuestion.GameAspectValue.Add((int)choice.IngameQuestion.IngameRuntimeValue);
                 }
                 
                 choice.EvaluationData = evaluationData;

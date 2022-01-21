@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: QE4-
   m_EditorClassIdentifier: 
   question: Ich mag es nicht, Aufmerksamkeit auf mich zu ziehen
-  aspect: {fileID: 11400000, guid: aa6faf9ce81717243832df84973fdec9, type: 2}
-  ingameAspectValue: {fileID: 11400000, guid: d32d609c12f72a7459eda28e2c6f03da, type: 2}
+  gameAspectValue: {fileID: 11400000, guid: d32d609c12f72a7459eda28e2c6f03da, type: 2}
   surveyAspectValue: {fileID: 11400000, guid: aabf314d0209c27499eb41f91dc89215, type: 2}
   key: 0

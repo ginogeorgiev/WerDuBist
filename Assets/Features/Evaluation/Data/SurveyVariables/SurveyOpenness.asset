@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d60f261b718a448d960f65fcea8d2f82, type: 3}
   m_Name: SurveyOpenness
   m_EditorClassIdentifier: 
+  runtimeValue: 0
   storedValue: 0
   onValueChanged: {fileID: 11400000, guid: 15157781b8e02544698b1ce771477287, type: 2}
