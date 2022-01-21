@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d60f261b718a448d960f65fcea8d2f82, type: 3}
-  m_Name: InGameOpenness
+  m_Name: GameNeuroticism
   m_EditorClassIdentifier: 
   runtimeValue: 0
   storedValue: 0
-  onValueChanged: {fileID: 11400000, guid: 0ed7fa600cd41d5438091db1fe214d06, type: 2}
+  onValueChanged: {fileID: 11400000, guid: f39289a9d81ae4a41bc065e44a85aaca, type: 2}
