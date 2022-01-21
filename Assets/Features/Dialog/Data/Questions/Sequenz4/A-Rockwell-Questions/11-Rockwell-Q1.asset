@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
+  m_Name: 11-Rockwell-Q1
+  m_EditorClassIdentifier: 
+  choices:
+  - text: Boar, vielen Dank!
+    ingameQuestion: {fileID: 0}
+    value: 0
+    dialogConversation: {fileID: 0}
+    choiceEvents: []
+    quest: {fileID: 11400000, guid: a79e140305a9dd045a475c8e324c2365, type: 2}
+  - text: "Endlich jemand der meine Arbeit zu sch\xE4tzen wei\xDF..."
+    ingameQuestion: {fileID: 0}
+    value: 0
+    dialogConversation: {fileID: 0}
+    choiceEvents: []
+    quest: {fileID: 11400000, guid: a79e140305a9dd045a475c8e324c2365, type: 2}

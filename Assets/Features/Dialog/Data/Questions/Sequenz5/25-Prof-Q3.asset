@@ -14,14 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choices:
   - text: Ja.
+    ingameQuestion: {fileID: 11400000, guid: 749fdc82510dd37448342510a28a9d07, type: 2}
+    value: 3
     dialogConversation: {fileID: 11400000, guid: 1a2f086b174615944a2c168ce23d1ea1, type: 2}
-    choiceEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}
   - text: ' Geht so.'
+    ingameQuestion: {fileID: 11400000, guid: 749fdc82510dd37448342510a28a9d07, type: 2}
+    value: 2
     dialogConversation: {fileID: 11400000, guid: 1a2f086b174615944a2c168ce23d1ea1, type: 2}
-    choiceEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}
   - text: Nein
+    ingameQuestion: {fileID: 11400000, guid: 749fdc82510dd37448342510a28a9d07, type: 2}
+    value: 1
     dialogConversation: {fileID: 11400000, guid: 1a2f086b174615944a2c168ce23d1ea1, type: 2}
-    choiceEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}

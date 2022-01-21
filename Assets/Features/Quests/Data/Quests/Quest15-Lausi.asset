@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a54c835cd434817add4d3fdde868665, type: 3}
+  m_Name: Quest15-Lausi
+  m_EditorClassIdentifier: 
+  id: 15
+  npcsToAdvanceConversationsList: []
+  title: Lausi der Obdachlose
+  description: Guck was Lausi von dir will.
+  visible: 1
+  goals:
+  - goalType: 1
+    sprite: {fileID: 21300000, guid: a874834868140214dbd97d3f6534ad49, type: 3}
+    otherQuests: []
+    npc: {fileID: 11400000, guid: 75ce139d6fc7f1c4c9976825681b1c9a, type: 2}
+    current: {fileID: 11400000, guid: aabf314d0209c27499eb41f91dc89215, type: 2}
+    required: 0
+  startPosition: {x: 30.75, y: 21.92}
+  endPosition: {x: 38.94, y: 23.77}
+  questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}

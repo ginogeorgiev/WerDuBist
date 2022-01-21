@@ -14,14 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choices:
   - text: Beschreibt die Vorbestimmtheit eines Ereignisses
+    ingameQuestion: {fileID: 11400000, guid: 07c119146e724bf48b229c315202b25d, type: 2}
+    value: 1
     dialogConversation: {fileID: 11400000, guid: e115de64e759a6d4d8a811b15e1a58a5, type: 2}
-    choiceEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}
   - text: "Beschreibt die Rechtm\xE4\xDFigkeit einer wissenschaftlichen Aussage."
+    ingameQuestion: {fileID: 11400000, guid: 07c119146e724bf48b229c315202b25d, type: 2}
+    value: 0
     dialogConversation: {fileID: 11400000, guid: e115de64e759a6d4d8a811b15e1a58a5, type: 2}
-    choiceEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}
   - text: Wie soll man sich das alles merken?
+    ingameQuestion: {fileID: 11400000, guid: 07c119146e724bf48b229c315202b25d, type: 2}
+    value: 0
     dialogConversation: {fileID: 11400000, guid: e115de64e759a6d4d8a811b15e1a58a5, type: 2}
-    choiceEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}

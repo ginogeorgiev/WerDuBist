@@ -16,5 +16,6 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 6f84125686e4a4d4ca729a3a09492db4, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 6f84125686e4a4d4ca729a3a09492db4, type: 2}
-    text: Helf den Leuten. Das Boot ist noch nicht fertig.
+    text: Hilf den Leuten. Das Boot ist noch nicht fertig.
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 0}
