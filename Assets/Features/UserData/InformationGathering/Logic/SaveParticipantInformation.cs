@@ -30,7 +30,7 @@ namespace Features.UserData.InformationGathering.Logic
             if (activateInfoGathering == null || activateSurvey == null) { return; }
 
             // Trigger the error message upon no values, invalid values are just being corrected
-            if (ageField.text == "")
+            if (ageField.text == "" || (!string.IsNullOrEmpty(ageField.text) && int.Parse(ageField.text) < 18))
             {
                 if (!coroutineRunning)
                 {
