@@ -20,4 +20,5 @@ MonoBehaviour:
       versch\xFCttet die Getr\xE4nke auf dich. "
   - npcData: {fileID: 11400000, guid: 3c53c2b9f69fb5e429cec0b123401cc2, type: 2}
     text: "Ach du meine G\xFCte, das tut mir Leid ich Tollpatsch!"
+  advanceConvAutomatically: 1
   dialogQuestion: {fileID: 11400000, guid: 262dbfcff531d224fa2f9f9cb0a2c5a0, type: 2}

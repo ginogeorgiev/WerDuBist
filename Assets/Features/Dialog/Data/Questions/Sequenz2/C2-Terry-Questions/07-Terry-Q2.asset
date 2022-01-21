@@ -16,13 +16,13 @@ MonoBehaviour:
   - text: "Es wird schon gut gehen, ich k\xF6nnte beim Suchen mithelfen."
     ingameQuestion: {fileID: 0}
     value: 0
-    dialogConversation: {fileID: 11400000, guid: 55965c62f5b63a649b0e2f26d8b3bf79, type: 2}
+    dialogConversation: {fileID: 0}
     choiceEvents: []
     quest: {fileID: 11400000, guid: c40aacd538eac604e8b8e9e807b3e783, type: 2}
   - text: "H\xF6rt sich nach viel Stress und Arbeit an, aber ich w\xFCrde die trotzdem
       helfen."
     ingameQuestion: {fileID: 0}
     value: 0
-    dialogConversation: {fileID: 11400000, guid: 55965c62f5b63a649b0e2f26d8b3bf79, type: 2}
+    dialogConversation: {fileID: 0}
     choiceEvents: []
     quest: {fileID: 11400000, guid: c40aacd538eac604e8b8e9e807b3e783, type: 2}

@@ -16,5 +16,9 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 45b90c809fb05b849beb7e650799119b, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 45b90c809fb05b849beb7e650799119b, type: 2}
+    text: "Gut, gucken wir uns mal Ihren anderen F\xE4higkeiten an. Ich nenne Ihnen
+      ein Fremdwort und Sie beschreiben mir dessen Bedeutung.\r"
+  - npcData: {fileID: 11400000, guid: 45b90c809fb05b849beb7e650799119b, type: 2}
     text: "Kausalit\xE4t."
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 11400000, guid: 45aa47f3a9004d94f8940d4dc332dd2c, type: 2}
