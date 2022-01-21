@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4109281355207929440}
   - component: {fileID: 5584350777256258525}
-  - component: {fileID: 1692102786662099057}
   m_Layer: 0
   m_Name: Palmtree-1
   m_TagString: Untagged
@@ -83,29 +82,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!61 &1692102786662099057
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3089627190442990552}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.3530296, y: -2.8480592}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 6.46, y: 6.47}
-    newSize: {x: 6.46, y: 6.47}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.029216, y: 0.6365278}
-  m_EdgeRadius: 0
