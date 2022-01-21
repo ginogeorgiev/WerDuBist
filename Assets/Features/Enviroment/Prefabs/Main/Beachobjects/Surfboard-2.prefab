@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5211620576799918466}
   - component: {fileID: 5934762606201922332}
+  - component: {fileID: 3043487328833744914}
   m_Layer: 0
   m_Name: Surfboard-2
   m_TagString: Untagged
@@ -82,3 +83,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &3043487328833744914
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6101774421689969827}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.026821136, y: 0.18027663}
+  serializedVersion: 2
+  m_Radius: 0.26535583

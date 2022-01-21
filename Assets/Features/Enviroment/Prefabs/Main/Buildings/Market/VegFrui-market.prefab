@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 798309126101474252}
   - component: {fileID: 7396528861576404276}
+  - component: {fileID: 1973093761142888465}
   m_Layer: 0
   m_Name: VegFrui-market
   m_TagString: Untagged
@@ -82,3 +83,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!68 &1973093761142888465
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7457097595285867489}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.34675968, y: 1.4534488}
+  - {x: -1.8120689, y: 0.098459244}
+  - {x: -1.8530655, y: -0.42189407}
+  - {x: 0.49725723, y: -1.7711182}
+  - {x: 1.9326401, y: -1.1646385}
+  - {x: 1.9195976, y: 0.19268036}
+  - {x: -0.38724518, y: 1.4598403}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

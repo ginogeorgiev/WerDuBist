@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5729403714431489857}
   - component: {fileID: 2819937541595306260}
+  - component: {fileID: 2979597707400502615}
   m_Layer: 0
   m_Name: Boat
   m_TagString: Untagged
@@ -81,4 +82,41 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
+--- !u!68 &2979597707400502615
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8959022946756653630}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -4.7902417, y: -0.34077537}
+  - {x: -4.7916346, y: -1.2689543}
+  - {x: -4.494007, y: -2.167588}
+  - {x: -3.376768, y: -3.6216457}
+  - {x: -0.20971584, y: -5.3132453}
+  - {x: 2.8170652, y: -5.909663}
+  - {x: 4.0130587, y: -5.6592674}
+  - {x: 4.835238, y: -3.3042645}
+  - {x: 4.4609375, y: -1.9365239}
+  - {x: 3.6560984, y: -0.9819877}
+  - {x: 2.9848952, y: -1.1218953}
+  - {x: 1.9922919, y: -0.43733895}
+  - {x: 0.90790224, y: 0.081425905}
+  - {x: -2.3187928, y: 0.70791423}
+  - {x: -3.832615, y: 0.99405766}
+  - {x: -4.8869686, y: 0.33392906}
+  - {x: -4.758779, y: -0.7359071}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

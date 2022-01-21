@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4421464055164749118}
   - component: {fileID: 4028014633128224820}
+  - component: {fileID: 1093559983407831402}
   m_Layer: 0
   m_Name: Circus-1
   m_TagString: Untagged
@@ -82,3 +83,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!70 &1093559983407831402
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7989479559575194978}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.14458036, y: 0.6562729}
+  m_Size: {x: 3.9278097, y: 4.465828}
+  m_Direction: 0

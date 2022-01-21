@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1890685695722701533}
   - component: {fileID: 1601507047062468853}
+  - component: {fileID: 398202048667854763}
   m_Layer: 0
   m_Name: Open-Cafe
   m_TagString: Untagged
@@ -82,3 +83,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!68 &398202048667854763
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7870874914335243250}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -2.6193652, y: 0.748935}
+  - {x: -2.127629, y: 0.94886595}
+  - {x: -1.5911666, y: 0.70670116}
+  - {x: -0.035383783, y: 0.148843}
+  - {x: 2.6983802, y: 1.2360188}
+  - {x: 2.9428196, y: 1.117272}
+  - {x: 2.9382958, y: 0.02582699}
+  - {x: 2.9450223, y: 0.021839052}
+  - {x: 0.10121876, y: -1.0644022}
+  - {x: -2.6335087, y: -0.10842335}
+  - {x: -2.6174207, y: 0.7499478}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

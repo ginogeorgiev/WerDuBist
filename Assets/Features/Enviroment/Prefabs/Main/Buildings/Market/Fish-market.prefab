@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6308371051580878201}
   - component: {fileID: 8341121226862036212}
+  - component: {fileID: 187047348018153677}
   m_Layer: 0
   m_Name: Fish-market
   m_TagString: Untagged
@@ -82,3 +83,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!68 &187047348018153677
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381536394192553290}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.62974155, y: 0.50314355}
+  - {x: 1.3593063, y: -0.56960297}
+  - {x: 1.3583603, y: -1.7171288}
+  - {x: 1.4606018, y: -1.7666187}
+  - {x: 1.4728165, y: -1.9888535}
+  - {x: 0.94542694, y: -2.2662354}
+  - {x: 0.59703827, y: -2.0617847}
+  - {x: 0.5601883, y: -2.2496471}
+  - {x: 0.46186066, y: -2.306612}
+  - {x: 0.32621765, y: -2.232563}
+  - {x: 0.36762238, y: -1.8312759}
+  - {x: -1.2302399, y: -0.9145222}
+  - {x: -1.2265892, y: -1.2006454}
+  - {x: -1.2972069, y: -1.2313232}
+  - {x: -1.4010468, y: -1.1624279}
+  - {x: -1.4005051, y: 0.053949356}
+  - {x: -0.5941963, y: 0.51947236}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

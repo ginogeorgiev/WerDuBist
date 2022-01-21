@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8572124616481700248}
   - component: {fileID: 2034672232894592639}
+  - component: {fileID: 1749714601779737680}
   m_Layer: 0
   m_Name: Workbench
   m_TagString: Untagged
@@ -82,3 +83,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &1749714601779737680
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589011846583724453}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.695, y: 1.8715075}
+  - {x: -1.4481717, y: 1.6517988}
+  - {x: -1.6965255, y: 0.5988215}
+  - {x: -1.5771488, y: 0.53149426}
+  - {x: -0.96412057, y: 0.9237702}
+  - {x: -1.1787968, y: 1.5213892}
+  - {x: -0.54545116, y: 1.1285919}
+  - {x: -0.73287153, y: 0.04014635}
+  - {x: -0.65190244, y: -0.012869418}
+  - {x: -0.5609664, y: 0.058512077}
+  - {x: -0.014042631, y: 0.39435166}
+  - {x: -0.39631554, y: 1.5510548}
+  - {x: 1.0691916, y: 2.4056635}
+  - {x: 1.2508538, y: 2.2367234}
+  - {x: 1.0059417, y: 1.1015286}
+  - {x: 1.1251595, y: 1.0650603}
+  - {x: 1.7105631, y: 1.4312564}
+  - {x: 1.4588778, y: 2.2764895}
+  - {x: 1.6937147, y: 2.3895636}
+  - {x: 1.6917863, y: 2.484935}
+  - {x: 1.0639464, y: 2.8466387}
+  - {x: 0.77077633, y: 3.020525}
+  - {x: 0.55548537, y: 3.153073}
+  - {x: -0.75882834, y: 2.4236395}
+  - {x: -1.7285743, y: 1.8757354}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

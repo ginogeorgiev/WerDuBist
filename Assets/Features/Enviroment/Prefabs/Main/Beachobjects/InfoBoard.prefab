@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8708412199323196428}
   - component: {fileID: 3225785867195999164}
+  - component: {fileID: 8563433725902855174}
   m_Layer: 0
   m_Name: InfoBoard
   m_TagString: Untagged
@@ -82,3 +83,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &8563433725902855174
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917887299726953066}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -3.0600035, y: -0.053712845}
+  - {x: -2.4708292, y: 0.0046657324}
+  - {x: -2.245832, y: 0.10882287}
+  - {x: -2.2859817, y: 1.5909535}
+  - {x: 2.3607898, y: 1.6119312}
+  - {x: 2.2916167, y: 0.100363776}
+  - {x: 2.5572658, y: -0.009868264}
+  - {x: 3.0666425, y: -0.023315059}
+  - {x: 3.0612957, y: 2.8439956}
+  - {x: -3.060397, y: 2.8286862}
+  - {x: -3.0516634, y: -0.03348565}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

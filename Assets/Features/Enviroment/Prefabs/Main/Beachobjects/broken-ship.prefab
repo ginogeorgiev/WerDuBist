@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7642187911523152895}
   - component: {fileID: 8999826333860126211}
+  - component: {fileID: 5343383293428023977}
   m_Layer: 0
   m_Name: broken-ship
   m_TagString: Untagged
@@ -82,3 +83,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!70 &5343383293428023977
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8858352072328832518}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.017387439, y: 0.39291054}
+  m_Size: {x: 1.0068265, y: 0.785831}
+  m_Direction: 1

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1817607370302044536}
   - component: {fileID: 1817607370302044539}
+  - component: {fileID: 611368823653358245}
   m_Layer: 0
   m_Name: Circus-2
   m_TagString: Untagged
@@ -82,3 +83,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!68 &611368823653358245
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817607370302044538}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -2.1824896, y: 1.7317479}
+  - {x: -2.354702, y: -0.009454727}
+  - {x: 0.27304077, y: -1.5382366}
+  - {x: 1.0511093, y: -1.1566238}
+  - {x: 0.9836998, y: -0.19372368}
+  - {x: 1.6682014, y: 0.20664215}
+  - {x: 1.7938576, y: -0.7339611}
+  - {x: 2.3646202, y: -0.3785286}
+  - {x: 2.2281456, y: 1.1550636}
+  - {x: -1.2641449, y: 3.1728954}
+  - {x: -1.6012955, y: 2.29735}
+  - {x: -1.8966026, y: 1.8236504}
+  - {x: -2.21298, y: 1.6404946}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
