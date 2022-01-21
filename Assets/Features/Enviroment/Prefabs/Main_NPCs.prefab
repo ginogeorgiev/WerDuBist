@@ -271,6 +271,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 164299969304360259, guid: 567fea85af7128e46aaff2c8f1330d8f, type: 3}
+      propertyPath: conversationElements.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 164299969304360259, guid: 567fea85af7128e46aaff2c8f1330d8f, type: 3}
+      propertyPath: conversationElements.Array.data[0].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 5d54a1e44c7425a428eabf0e082925ba, type: 2}
+    - target: {fileID: 164299969304360259, guid: 567fea85af7128e46aaff2c8f1330d8f, type: 3}
+      propertyPath: conversationElements.Array.data[1].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 01f88c2bda27ad94c93d41ea2b29c671, type: 2}
+    - target: {fileID: 164299969304360259, guid: 567fea85af7128e46aaff2c8f1330d8f, type: 3}
+      propertyPath: conversationElements.Array.data[2].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 305c08c89cef44e478dc9d0a4ebd49a4, type: 2}
     - target: {fileID: 164299969304360263, guid: 567fea85af7128e46aaff2c8f1330d8f, type: 3}
       propertyPath: m_Name
       value: 22_Sam_Samuel

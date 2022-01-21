@@ -10,18 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
-  m_Name: 14-Sam-Q2
+  m_Name: 05-Franklin-QExtra
   m_EditorClassIdentifier: 
   choices:
-  - text: Gehe mit ihm mit.
+  - text: Ciao Kakao.
     ingameQuestion: {fileID: 0}
     value: 0
-    dialogConversation: {fileID: 11400000, guid: 23968c6ed9e5ab741a32de71b946680e, type: 2}
-    choiceEvents: []
-    quest: {fileID: 0}
-  - text: Setzt dich an Lagerfeuer
-    ingameQuestion: {fileID: 0}
-    value: 0
-    dialogConversation: {fileID: 11400000, guid: c6335a27cda6be04593ed52aef78e717, type: 2}
+    dialogConversation: {fileID: 0}
     choiceEvents: []
     quest: {fileID: 0}

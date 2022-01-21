@@ -15,14 +15,20 @@ MonoBehaviour:
   choices:
   - text: "Ich bin Schiffbr\xFCchig und versuche wieder nach hause zu kommen. Und
       ihr\r"
-    dialogConversation: {fileID: 0}
-    choiceEvent: {fileID: 0}
+    ingameQuestion: {fileID: 0}
+    value: 0
+    dialogConversation: {fileID: 11400000, guid: c6c7925f81260a84db34845f5c5e0d14, type: 2}
+    choiceEvents: []
     quest: {fileID: 0}
   - text: Ich bin nur auf der durchreise. Und euch?
-    dialogConversation: {fileID: 0}
-    choiceEvent: {fileID: 0}
+    ingameQuestion: {fileID: 0}
+    value: 0
+    dialogConversation: {fileID: 11400000, guid: c6c7925f81260a84db34845f5c5e0d14, type: 2}
+    choiceEvents: []
     quest: {fileID: 0}
   - text: "\u2026 - nicht antworten\r-"
-    dialogConversation: {fileID: 0}
-    choiceEvent: {fileID: 0}
+    ingameQuestion: {fileID: 0}
+    value: 0
+    dialogConversation: {fileID: 11400000, guid: c6c7925f81260a84db34845f5c5e0d14, type: 2}
+    choiceEvents: []
     quest: {fileID: 0}

@@ -17,4 +17,5 @@ MonoBehaviour:
   lines:
   - npcData: {fileID: 11400000, guid: 556851574fa031344a88b70bd17aec21, type: 2}
     text: Komm, hier ist was zu trinken
-  dialogQuestion: {fileID: 0}
+  advanceConvAutomatically: 0
+  dialogQuestion: {fileID: 11400000, guid: 776ac069995e5c54fa518b149befce47, type: 2}

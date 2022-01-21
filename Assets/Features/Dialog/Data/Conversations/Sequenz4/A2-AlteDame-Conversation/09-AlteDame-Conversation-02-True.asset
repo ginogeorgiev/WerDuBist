@@ -17,4 +17,5 @@ MonoBehaviour:
   lines:
   - npcData: {fileID: 11400000, guid: 47df417dc16681147bb9ad57ab229b65, type: 2}
     text: Vielen Dank.
+  advanceConvAutomatically: 1
   dialogQuestion: {fileID: 0}
