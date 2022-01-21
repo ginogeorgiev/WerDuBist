@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39cba5f168530e44290b1e01ed7f0468, type: 3}
   m_Name: Sequence-04-Data
   m_EditorClassIdentifier: 
-  npcsToAdvanceConversationsList: []
+  npcsToAdvanceConversationsList:
+  - {fileID: 11400000, guid: 45b90c809fb05b849beb7e650799119b, type: 2}
   quests:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: ecc97338a8abd6349a4cea6f772df687, type: 2}
+  - {fileID: 11400000, guid: 8d4ba0823450ab5469ad0340d0e49c62, type: 2}
+  - {fileID: 11400000, guid: 7fba00d3e6cd31d4b9b3d94d651ab8de, type: 2}
+  - {fileID: 11400000, guid: a79e140305a9dd045a475c8e324c2365, type: 2}
+  - {fileID: 11400000, guid: f9a323680c87a1e4895803310a5d7fe1, type: 2}
   npcsToActivateList: []
   npcsToDeactivateList: []
   questsToUnlockList: []
