@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2862781687816033168}
   - component: {fileID: 7099599263188452392}
-  - component: {fileID: 3850621923895029904}
   m_Layer: 0
   m_Name: Hut-4
   m_TagString: Untagged
@@ -69,9 +68,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1830031943
-  m_SortingLayer: 3
-  m_SortingOrder: 2
+  m_SortingLayerID: 2029698573
+  m_SortingLayer: 7
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a39631ed049e44e1a80a14ed64d7382b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -82,89 +81,4 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!60 &3850621923895029904
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2546872886508350321}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.22, y: 2.81}
-    newSize: {x: 3.22, y: 2.81}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.36, y: -0.995}
-      - {x: 1.42, y: -0.945}
-      - {x: 1.43, y: -0.91499996}
-      - {x: 1.43, y: 0.645}
-      - {x: 1.51, y: 0.655}
-      - {x: 1.5999999, y: 0.695}
-      - {x: 1.61, y: 0.715}
-      - {x: 1.61, y: 0.815}
-      - {x: 1.5999999, y: 0.825}
-      - {x: 1.49, y: 0.865}
-      - {x: 1.41, y: 0.875}
-      - {x: 1.35, y: 0.85499996}
-      - {x: 1.3199999, y: 0.875}
-      - {x: 1.24, y: 0.895}
-      - {x: 1.22, y: 0.935}
-      - {x: 1.17, y: 0.97499996}
-      - {x: 0.97999996, y: 1.035}
-      - {x: 0.88, y: 1.045}
-      - {x: 0.58, y: 1.135}
-      - {x: 0.32, y: 1.2149999}
-      - {x: 0.22, y: 1.2149999}
-      - {x: 0, y: 1.285}
-      - {x: -0.049999997, y: 1.295}
-      - {x: -0.04, y: 1.3349999}
-      - {x: -0.16, y: 1.395}
-      - {x: -0.22999999, y: 1.405}
-      - {x: -0.29999998, y: 1.405}
-      - {x: -0.5, y: 1.355}
-      - {x: -0.65999997, y: 1.305}
-      - {x: -0.71999997, y: 1.275}
-      - {x: -0.82, y: 1.245}
-      - {x: -0.97999996, y: 1.2049999}
-      - {x: -1.06, y: 1.165}
-      - {x: -1.38, y: 1.0649999}
-      - {x: -1.52, y: 1.035}
-      - {x: -1.61, y: 0.98499995}
-      - {x: -1.61, y: 0.865}
-      - {x: -1.5799999, y: 0.84499997}
-      - {x: -1.48, y: 0.825}
-      - {x: -1.48, y: 0.415}
-      - {x: -1.4699999, y: 0.405}
-      - {x: -1.4699999, y: -0.945}
-      - {x: -1.4599999, y: -0.965}
-      - {x: -1.39, y: -0.995}
-      - {x: -1.27, y: -1.015}
-      - {x: -1.17, y: -1.045}
-      - {x: -0.90999997, y: -1.115}
-      - {x: -0.76, y: -1.155}
-      - {x: -0.65, y: -1.1949999}
-      - {x: -0.45, y: -1.235}
-      - {x: -0.34, y: -1.265}
-      - {x: -0.29999998, y: -1.275}
-      - {x: -0.08, y: -1.3349999}
-      - {x: -0.01, y: -1.355}
-      - {x: 0.14999999, y: -1.395}
-      - {x: 0.17, y: -1.405}
-      - {x: 0.35999998, y: -1.405}
-      - {x: 0.63, y: -1.285}
-      - {x: 1.04, y: -1.115}
-      - {x: 1.28, y: -1.015}
+  m_SpriteSortPoint: 1
