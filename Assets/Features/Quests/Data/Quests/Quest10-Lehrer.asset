@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a54c835cd434817add4d3fdde868665, type: 3}
   m_Name: Quest10-Lehrer
   m_EditorClassIdentifier: 
-  id: 5
+  id: 10
   npcsToAdvanceConversationsList:
   - {fileID: 11400000, guid: dc02e58ae4ca8374ba152d8fe1b52038, type: 2}
   title: "Der Gro\xDFe Lehrer"

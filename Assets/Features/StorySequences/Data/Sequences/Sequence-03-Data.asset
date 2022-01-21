@@ -18,6 +18,9 @@ MonoBehaviour:
   npcsToActivateList:
   - {fileID: 11400000, guid: 39351e14eaaf5de46b8602df49f6317d, type: 2}
   - {fileID: 11400000, guid: 45ab7c007ca723a4e92d1b2d82e59d25, type: 2}
+  - {fileID: 11400000, guid: 47df417dc16681147bb9ad57ab229b65, type: 2}
+  - {fileID: 11400000, guid: 51f59b3b6d0ae1c43a6d410b4d40576b, type: 2}
+  - {fileID: 11400000, guid: 4795dcd0de5559f4aac8664fb8a289a3, type: 2}
   npcsToDeactivateList:
   - {fileID: 11400000, guid: 41ade48c0f6a52a4f80cd74d816d111d, type: 2}
   questsToUnlockList: []

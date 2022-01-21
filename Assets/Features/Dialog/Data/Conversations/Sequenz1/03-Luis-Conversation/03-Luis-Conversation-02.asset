@@ -19,5 +19,5 @@ MonoBehaviour:
     text: "Jaaaaa! Ich bin so happy!! Danke, dass du das machst f\xFCr mich, aber
       du versprichst mir dann, dass du es zur\xFCck bringst, wenn du fertig mit deinem
       Tag bist, ok?"
+  advanceConvAutomatically: 1
   dialogQuestion: {fileID: 0}
-  nextDialogConversationStep: {fileID: 0}
