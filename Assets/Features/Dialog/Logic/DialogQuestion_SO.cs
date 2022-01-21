@@ -65,7 +65,7 @@ namespace Features.Dialog.Logic
         public void OnAddToEvaluation()
         {
             ingameQuestion.IngameRuntimeValue += value;
-            evaluationData.Add(ingameQuestion.IngameAspectValue.name + "_" + ingameQuestion.Question, Mathf.Min(ingameQuestion.IngameRuntimeValue, 3).ToString());
+            evaluationData.Add(ingameQuestion.GameAspectValue.name + "_" + ingameQuestion.Question, Mathf.Min(ingameQuestion.IngameRuntimeValue, 3).ToString());
         }
 
         public Question_SO IngameQuestion => ingameQuestion;

@@ -5414,6 +5414,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fillTime: 3
+  waitForTransitionTime: 3
+  questions: {fileID: 11400000, guid: bf0f9f6b5d75c4743873f6ad01558cc9, type: 2}
   surveyOpenness: {fileID: 11400000, guid: 6b1a307e876bc8d4fa25810b6db81e4e, type: 2}
   surveyConscientiousness: {fileID: 11400000, guid: 6160081856212984bb5691604221317f, type: 2}
   surveyExtraversion: {fileID: 11400000, guid: aabf314d0209c27499eb41f91dc89215, type: 2}

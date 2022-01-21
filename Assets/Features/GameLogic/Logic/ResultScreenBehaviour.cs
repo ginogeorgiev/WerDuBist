@@ -1,5 +1,7 @@
 using System.Collections;
 using DataStructures.Variables;
+using Features.Evaluation.Logic;
+using Features.UserData.Survey.Logic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +12,8 @@ namespace Features.GameLogic.Logic
     {
         [SerializeField][Range(0,5)] private float fillTime = 3f;
         [SerializeField][Range(0,5)] private float waitForTransitionTime = 3f;
+
+        [SerializeField] private Questions_SO questions;
         
         [Header("The 5 Survey Aspects")]
         [Tooltip("SO")] [SerializeField] private IntVariable surveyOpenness;
@@ -55,6 +59,31 @@ namespace Features.GameLogic.Logic
 
         private void OnEnable()
         {
+            // Apply runtime values of each answered question by the player to their respective IntVariables (Aspects)
+            foreach (Question_SO item in questions.Items)
+            {
+                if (item.GameAspectValue.Equals(gameOpenness))
+                {
+                    item.GameAspectValue.Add((int)item.IngameRuntimeValue);
+                }
+                if (item.GameAspectValue.Equals(gameConscientiousness))
+                {
+                    item.GameAspectValue.Add((int)item.IngameRuntimeValue);
+                }
+                if (item.GameAspectValue.Equals(gameExtraversion))
+                {
+                    item.GameAspectValue.Add((int)item.IngameRuntimeValue);
+                }
+                if (item.GameAspectValue.Equals(gameAgreeableness))
+                {
+                    item.GameAspectValue.Add((int)item.IngameRuntimeValue);
+                }
+                if (item.GameAspectValue.Equals(gameNeuroticism))
+                {
+                    item.GameAspectValue.Add((int)item.IngameRuntimeValue);
+                }
+            }
+            
             StartCoroutine(UpdateResultUI());
         }
         
