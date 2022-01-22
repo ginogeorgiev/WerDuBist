@@ -20,4 +20,5 @@ MonoBehaviour:
   - npcData: {fileID: 11400000, guid: 6f84125686e4a4d4ca729a3a09492db4, type: 2}
     text: "Hey, wir haben keine Zeit mehr, l\xE4nger zu warten. Entscheide dich jetzt.
       Willst du mit mir segeln oder nicht?"
-  dialogQuestion: {fileID: 0}
+  advanceConvAutomatically: 0
+  dialogQuestion: {fileID: 11400000, guid: bcd0d15cba7bcbe4ab5ac46005575987, type: 2}

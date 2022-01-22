@@ -17,5 +17,6 @@ MonoBehaviour:
   lines:
   - npcData: {fileID: 11400000, guid: 41ade48c0f6a52a4f80cd74d816d111d, type: 2}
     text: "Ich verstehe. Dann verabschiede ich mich als Vertreter des Dorfes von
-      dir und w\xFCnsche dir eine sichere Reise [Spielername]."
+      dir und w\xFCnsche dir eine sichere Reise."
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 0}

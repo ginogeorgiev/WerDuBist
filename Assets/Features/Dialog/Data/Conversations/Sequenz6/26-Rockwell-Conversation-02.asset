@@ -16,5 +16,6 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 41ade48c0f6a52a4f80cd74d816d111d, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 41ade48c0f6a52a4f80cd74d816d111d, type: 2}
-    text: Also, wie sieht es aus? Willst du bei uns bleiben [Spielername]?
+    text: Also, wie sieht es aus? Willst du bei uns bleiben?
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 11400000, guid: bcd0d15cba7bcbe4ab5ac46005575987, type: 2}
