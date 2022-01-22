@@ -16,6 +16,7 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 41ade48c0f6a52a4f80cd74d816d111d, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 41ade48c0f6a52a4f80cd74d816d111d, type: 2}
-    text: "Ah, wunderbar. Dann hei\xDFe ich dich [Spielername ] als Vertreter des
-      Dorfes in deinem neuen Zuhause herzlich willkommen. "
+    text: "Ah, wunderbar. Dann hei\xDFe ich dich als Vertreter des Dorfes in deinem
+      neuen Zuhause herzlich willkommen. "
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 0}
