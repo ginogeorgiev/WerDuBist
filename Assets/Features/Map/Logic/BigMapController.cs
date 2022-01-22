@@ -36,7 +36,6 @@ namespace Features.Map.Logic
         private readonly Dictionary<int, GameObject> newQuestMarkers = new Dictionary<int, GameObject>();
         private readonly Dictionary<int, GameObject> activeQuestMarkers = new Dictionary<int, GameObject>();
         private GameObject focusMarker;
-        private bool isIslandSwitched;
         
 
         private void Awake()
@@ -47,8 +46,6 @@ namespace Features.Map.Logic
             onRemoveQuest.RegisterListener(RemoveQuest);
             
             playerControls = new PlayerControls();
-
-            isIslandSwitched = false;
         }
 
         public void Start()
@@ -82,9 +79,6 @@ namespace Features.Map.Logic
         
         public void SwitchIslands()
         {
-            if(isIslandSwitched) return;
-            
-            Debug.Log("switch");
             mapBG.GetComponent<Image>().sprite = mainIsland;
             
             mapCamera.GetComponent<Camera>().orthographicSize = 55f;
@@ -96,8 +90,6 @@ namespace Features.Map.Logic
             mapBorder.sizeDelta = new Vector2(885, 618);
 
             questMarker = questMarker_Main;
-
-            isIslandSwitched = true;
         }
 
         private void DisplayUnlockedQuest(Quest_SO quest)
