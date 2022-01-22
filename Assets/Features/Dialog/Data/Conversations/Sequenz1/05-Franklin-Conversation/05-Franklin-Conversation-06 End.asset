@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 266c97da10218e94ab464a1f7e833e73, type: 3}
-  m_Name: "26-Kapit\xE4n-Conversation-01"
+  m_Name: 05-Franklin-Conversation-06 End
   m_EditorClassIdentifier: 
   speakerLeft: {fileID: 11400000, guid: a5d20b15f28ea8143b6531e8889a2eaf, type: 2}
-  speakerRight: {fileID: 11400000, guid: 6f84125686e4a4d4ca729a3a09492db4, type: 2}
+  speakerRight: {fileID: 11400000, guid: 4f891f84b1917194891d42dda3cb1e27, type: 2}
   lines:
-  - npcData: {fileID: 11400000, guid: 6f84125686e4a4d4ca729a3a09492db4, type: 2}
-    text: Da bist du ja wieder. Das Boot ist fertig, aber du solltest dich vielleicht
-      noch von den Leuten verabschieden.
+  - npcData: {fileID: 11400000, guid: 4f891f84b1917194891d42dda3cb1e27, type: 2}
+    text: "Schei\xDFe, was ist hier denn los. Die verschrecken mir noch meine Fische."
   advanceConvAutomatically: 0
-  dialogQuestion: {fileID: 11400000, guid: c2046b27a2179014bb0b2603a9f7cd4f, type: 2}
+  dialogQuestion: {fileID: 0}

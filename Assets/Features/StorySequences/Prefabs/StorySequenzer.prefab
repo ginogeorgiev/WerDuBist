@@ -49,4 +49,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1bf247b49b71bda499643acae0a30bd5, type: 2}
   - {fileID: 11400000, guid: 7c7b7721569e7f9429b72fe981d6c091, type: 2}
   - {fileID: 11400000, guid: 0e93a97dbb2b2724487beb09d63f4427, type: 2}
+  - {fileID: 11400000, guid: 4276f7544e4761246b38563ba28c780b, type: 2}
   npcBehaviourRuntimeSet: {fileID: 11400000, guid: 9d553a0a1058f1b4fa6ea1634cc00b10, type: 2}

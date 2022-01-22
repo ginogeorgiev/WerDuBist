@@ -10,21 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a54c835cd434817add4d3fdde868665, type: 3}
-  m_Name: Quest3-GebenundNehmen
+  m_Name: Quest15-Lausi 3
   m_EditorClassIdentifier: 
-  id: 3
+  id: 15
   npcsToAdvanceConversationsList: []
-  title: Geben und Nehmen
-  description: Hilf den Inselbewohner.
+  title: Lausi der Obdachlose
+  description: Guck was Lausi von dir will.
   visible: 1
   goals:
-  - goalType: 2
-    sprite: {fileID: 21300000, guid: e3963a93438d07444b937192afeb24b2, type: 3}
-    otherQuests:
-    - {fileID: 11400000, guid: 7cd0a61d2994d27498bacd7de514c7fc, type: 2}
-    npc: {fileID: 0}
-    current: {fileID: 0}
-    required: 2
-  startPosition: {x: 34.24, y: 2.49}
-  endPosition: {x: 34.6, y: 3.62}
+  - goalType: 1
+    sprite: {fileID: 21300000, guid: a874834868140214dbd97d3f6534ad49, type: 3}
+    otherQuests: []
+    npc: {fileID: 11400000, guid: 75ce139d6fc7f1c4c9976825681b1c9a, type: 2}
+    current: {fileID: 11400000, guid: aabf314d0209c27499eb41f91dc89215, type: 2}
+    required: 0
+  startPosition: {x: 30.75, y: 21.92}
+  endPosition: {x: 38.94, y: 23.77}
   questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}

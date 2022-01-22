@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: "26-Kapit\xE4n-Question-01"
   m_EditorClassIdentifier: 
   choices:
-  - text: Ich kann noch ein bisschen warten.
+  - text: "Nat\xFCrlich."
+    ingameQuestion: {fileID: 0}
+    value: 0
     dialogConversation: {fileID: 0}
-    choiceEvent: {fileID: 0}
-    quest: {fileID: 0}
+    choiceEvents: []
+    quest: {fileID: 11400000, guid: ecda47ae786e0d3438c277dd64c6e0bf, type: 2}

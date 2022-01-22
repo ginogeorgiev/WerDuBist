@@ -19,4 +19,5 @@ MonoBehaviour:
     dialogConversation: {fileID: 0}
     choiceEvents:
     - {fileID: 11400000, guid: d882be4c82286df4b94ba25cbe00c803, type: 2}
+    - {fileID: 11400000, guid: 07172978c7fe77a488337777e571f388, type: 2}
     quest: {fileID: 0}

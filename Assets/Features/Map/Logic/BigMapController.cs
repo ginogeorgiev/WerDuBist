@@ -79,7 +79,6 @@ namespace Features.Map.Logic
         
         public void SwitchIslands()
         {
-            Debug.Log("switch");
             mapBG.GetComponent<Image>().sprite = mainIsland;
             
             mapCamera.GetComponent<Camera>().orthographicSize = 55f;
