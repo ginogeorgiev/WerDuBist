@@ -7,7 +7,7 @@ namespace Features.Evaluation.Logic
     public class Question_SO : ScriptableObject
     {
         [SerializeField] private string question;
-        [SerializeField] private IntVariable ingameAspectValue;
+        [SerializeField] private IntVariable gameAspectValue;
         [SerializeField] private IntVariable surveyAspectValue;
         [Tooltip("false means - (negative) and true means + (positive)")]
         [SerializeField] private bool key;
@@ -21,7 +21,7 @@ namespace Features.Evaluation.Logic
 
         public string Question => question;
 
-        public IntVariable IngameAspectValue => ingameAspectValue;
+        public IntVariable GameAspectValue => gameAspectValue;
         public IntVariable SurveyAspectValue => surveyAspectValue;
 
         public bool Key => key;

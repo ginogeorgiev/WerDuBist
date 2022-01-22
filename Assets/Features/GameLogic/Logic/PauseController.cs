@@ -12,6 +12,8 @@ namespace Features.GameLogic.Logic
         [SerializeField] private GameEvent_SO pauseGame, unpauseGame;
         [SerializeField] private BoolVariable isGamePaused;
 
+        private bool inGame;
+
         private StateMachine stateMachine;
         private PauseState pauseState;
         private UnpauseState unpauseState;
@@ -28,6 +30,8 @@ namespace Features.GameLogic.Logic
 
         private void Awake()
         {
+            inGame = false;
+            
             stateMachine = new StateMachine();
             pauseState = new PauseState(isGamePaused);
             unpauseState = new UnpauseState(isGamePaused);
@@ -37,7 +41,10 @@ namespace Features.GameLogic.Logic
 
         private void Start()
         {
-            playerControls.Player.PauseOrResume.started += _ => ChangeGamePauseState();
+            playerControls.Player.PauseOrResume.started += _ =>
+            {
+                if (inGame) ChangeGamePauseState();
+            };
         }
 
         private void ChangeGamePauseState()
@@ -46,6 +53,16 @@ namespace Features.GameLogic.Logic
             
             GameEvent_SO gameEventToRaise = Time.timeScale == 0f ? unpauseGame : pauseGame;
             gameEventToRaise.Raise();
+        }
+
+        public void EnablePauseUIActivation()
+        {
+            inGame = true;
+        }
+        
+        public void DisablePauseUIActivation()
+        {
+            inGame = false;
         }
         
         #region Input related

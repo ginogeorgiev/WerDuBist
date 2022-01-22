@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: QA5+
   m_EditorClassIdentifier: 
   question: "Ich f\xFChle die Gef\xFChle anderer."
-  aspect: {fileID: 11400000, guid: e012092e2587a51439b6909612177664, type: 2}
-  ingameAspectValue: {fileID: 11400000, guid: e6ee05576047f0a47bdaf761992bbee9, type: 2}
+  gameAspectValue: {fileID: 11400000, guid: e6ee05576047f0a47bdaf761992bbee9, type: 2}
   surveyAspectValue: {fileID: 11400000, guid: 0e384512a9e3e1b47b62759e9250fa64, type: 2}
   key: 1

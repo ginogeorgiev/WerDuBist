@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 3
   npcsToAdvanceConversationsList: []
   title: Geben und Nehmen
-  description: Helf den Inselbewohner.
+  description: Hilf den Inselbewohner.
   visible: 1
   goals:
   - goalType: 2
@@ -26,6 +26,6 @@ MonoBehaviour:
     npc: {fileID: 0}
     current: {fileID: 0}
     required: 2
-  startPosition: {x: 37.68, y: 5.68}
-  endPosition: {x: 37.68, y: 5.68}
+  startPosition: {x: 34.6, y: 3.62}
+  endPosition: {x: 34.6, y: 3.62}
   questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}

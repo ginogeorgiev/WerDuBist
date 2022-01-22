@@ -30,6 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 278292038882715936}
+  - {fileID: 2193030612926611081}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -88,6 +89,7 @@ GameObject:
   - component: {fileID: 4001595253890080188}
   - component: {fileID: 1385171908548614537}
   - component: {fileID: 2503083772253521228}
+  - component: {fileID: 5776409873521756071}
   m_Layer: 0
   m_Name: GameEventListener
   m_TagString: Untagged
@@ -253,6 +255,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8741623124479902240}
+        m_TargetAssemblyTypeName: Features.GameLogic.Logic.PauseController, Assembly-CSharp
+        m_MethodName: DisablePauseUIActivation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5668254554229508342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,6 +286,18 @@ MonoBehaviour:
       - m_Target: {fileID: 8392939944119041147}
         m_TargetAssemblyTypeName: Features.GameLogic.Logic.GameController, Assembly-CSharp
         m_MethodName: OnGameCompleted
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8741623124479902240}
+        m_TargetAssemblyTypeName: Features.GameLogic.Logic.PauseController, Assembly-CSharp
+        m_MethodName: DisablePauseUIActivation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -367,3 +393,93 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5776409873521756071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4500402473059782070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: c0d27581dccf502418800800626faf13, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8741623124479902240}
+        m_TargetAssemblyTypeName: Features.GameLogic.Logic.PauseController, Assembly-CSharp
+        m_MethodName: EnablePauseUIActivation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1001 &6616495345303968258
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4146369362076843805}
+    m_Modifications:
+    - target: {fileID: 1303595526303030127, guid: 49d0c452163ec354cbd0e9e9ec26f4d6, type: 3}
+      propertyPath: m_Name
+      value: PauseUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025373750058706059, guid: 49d0c452163ec354cbd0e9e9ec26f4d6, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025373750058706059, guid: 49d0c452163ec354cbd0e9e9ec26f4d6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025373750058706059, guid: 49d0c452163ec354cbd0e9e9ec26f4d6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025373750058706059, guid: 49d0c452163ec354cbd0e9e9ec26f4d6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025373750058706059, guid: 49d0c452163ec354cbd0e9e9ec26f4d6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025373750058706059, guid: 49d0c452163ec354cbd0e9e9ec26f4d6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025373750058706059, guid: 49d0c452163ec354cbd0e9e9ec26f4d6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025373750058706059, guid: 49d0c452163ec354cbd0e9e9ec26f4d6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025373750058706059, guid: 49d0c452163ec354cbd0e9e9ec26f4d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025373750058706059, guid: 49d0c452163ec354cbd0e9e9ec26f4d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025373750058706059, guid: 49d0c452163ec354cbd0e9e9ec26f4d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 49d0c452163ec354cbd0e9e9ec26f4d6, type: 3}
+--- !u!4 &2193030612926611081 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5025373750058706059, guid: 49d0c452163ec354cbd0e9e9ec26f4d6, type: 3}
+  m_PrefabInstance: {fileID: 6616495345303968258}
+  m_PrefabAsset: {fileID: 0}

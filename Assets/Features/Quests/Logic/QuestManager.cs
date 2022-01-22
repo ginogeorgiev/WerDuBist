@@ -33,6 +33,20 @@ namespace Features.Quests.Logic
             {
                 quest.Restore();
             }
+            foreach (var quest in questSet.Items.Where(q => q.EndPosition == new Vector2(0,0)))  
+            {
+                if (quest.StartPosition != new Vector2(0,0))
+                {
+                    quest.EndPosition = quest.StartPosition;
+                }
+            }
+            foreach (var quest in questSet.Items.Where(q => q.StartPosition == new Vector2(0,0)))  
+            {
+                if (quest.EndPosition != new Vector2(0,0))
+                {
+                    quest.StartPosition = quest.EndPosition;
+                }
+            }
            
             activeQuests.Items.Clear();
             questFocus.Restore();
@@ -109,7 +123,7 @@ namespace Features.Quests.Logic
                 q.CheckGoals(null);
             }
                 
-            // Debug.Log("'" + quest.QuestTitle + "' Completed");
+            Debug.Log("'" + quest.QuestTitle + "' Completed");
             onRemoveQuest.Raise(quest);
         }
         

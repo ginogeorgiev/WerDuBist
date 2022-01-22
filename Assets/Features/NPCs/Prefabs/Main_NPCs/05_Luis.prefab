@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 3c37acb8af748d141affedf4bf99b425, type: 2}
     - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: conversationElements.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: conversationElements.Array.data[0].dialogConversationLeft
@@ -27,6 +27,10 @@ PrefabInstance:
       propertyPath: conversationElements.Array.data[1].dialogConversationLeft
       value: 
       objectReference: {fileID: 11400000, guid: 7d879ab4d24d2ba409658e0002387ee4, type: 2}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.data[2].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: ec60cd7cebf0f054096477ea540a37be, type: 2}
     - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: m_RootOrder
       value: 0

@@ -22,4 +22,5 @@ MonoBehaviour:
     text: "Danke daf\xFCr, ich muss jetzt noch ein Motor fertig bekommen f\xFCr ein
       Boot und finde bestimmte Teile, die ich brauche nicht mehr. Ich tollpatsch
       habe die bestimmt irgendwo auf der Insel liegen gelassen verdammt."
+  advanceConvAutomatically: 1
   dialogQuestion: {fileID: 11400000, guid: d14e6da7130ec6644a2d705b14e39805, type: 2}

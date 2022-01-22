@@ -122,7 +122,7 @@ MonoBehaviour:
   m_text: This is a example dialog text, just to check some things out like size
     etc. This is a example dialog text, just to check some things out like size etc.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 10085517b1b9b004791856a6f0db388a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc409d9b52ba8d5488ad12b7cce9864c, type: 2}
   m_sharedMaterial: {fileID: 2684836071628214439, guid: 10085517b1b9b004791856a6f0db388a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5657984874344544536
@@ -667,7 +667,7 @@ MonoBehaviour:
   m_text: This is a example dialog text, just to check some things out like size
     etc. This is a example dialog text, just to check some things out like size etc.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 10085517b1b9b004791856a6f0db388a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc409d9b52ba8d5488ad12b7cce9864c, type: 2}
   m_sharedMaterial: {fileID: 2684836071628214439, guid: 10085517b1b9b004791856a6f0db388a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -731,7 +731,7 @@ MonoBehaviour:
   m_margin: {x: -413.82355, y: -14.368866, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5657984874962409892
@@ -801,7 +801,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9861e4e7669881a4887ba6d94c135f52, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc409d9b52ba8d5488ad12b7cce9864c, type: 2}
   m_sharedMaterial: {fileID: 1662107105954679766, guid: 9861e4e7669881a4887ba6d94c135f52, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -865,7 +865,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5657984874976432814
@@ -1482,7 +1482,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Terry, der Handwerker
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9861e4e7669881a4887ba6d94c135f52, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc409d9b52ba8d5488ad12b7cce9864c, type: 2}
   m_sharedMaterial: {fileID: 1662107105954679766, guid: 9861e4e7669881a4887ba6d94c135f52, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1546,7 +1546,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5657984875722222074
@@ -1867,9 +1867,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 68ad24c6dddd8374eab619457f92d032, type: 3}
+    m_Font: {fileID: 12800000, guid: 94a4723f3d0028143bb00edad238a33e, type: 3}
     m_FontSize: 28
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 46

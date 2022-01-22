@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: QN2+
   m_EditorClassIdentifier: 
   question: "Ich f\xFChle mich selten deprimiert."
-  aspect: {fileID: 11400000, guid: 24bc4d30fe5b3c443b9743114439a304, type: 2}
-  ingameAspectValue: {fileID: 11400000, guid: ef25e890f4d85824e94d1040b35aa741, type: 2}
+  gameAspectValue: {fileID: 11400000, guid: ef25e890f4d85824e94d1040b35aa741, type: 2}
   surveyAspectValue: {fileID: 11400000, guid: e1f7793b5f5bb0247a0e26c30508cb58, type: 2}
   key: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5990918384910721265}
   - component: {fileID: 4835833018944873319}
   - component: {fileID: 4204690260697107188}
-  - component: {fileID: 4204690260697107191}
+  - component: {fileID: 251721895928512926}
   m_Layer: 7
   m_Name: NPC_Template
   m_TagString: NPC
@@ -141,8 +141,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -931519823
-  m_SortingLayer: 4
+  m_SortingLayerID: 2029698573
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -154,7 +154,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!58 &4204690260697107188
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -171,8 +171,8 @@ CircleCollider2D:
   m_Offset: {x: -0.12, y: 0}
   serializedVersion: 2
   m_Radius: 2
---- !u!70 &4204690260697107191
-CapsuleCollider2D:
+--- !u!61 &251721895928512926
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -184,6 +184,16 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.11830592, y: -0.0020244122}
-  m_Size: {x: 0.6869316, y: 1.6601186}
-  m_Direction: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8, y: 0.3886}
+  m_EdgeRadius: 0

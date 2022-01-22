@@ -26,14 +26,11 @@ namespace Features.StorySequences.Logic
                 // deactivates all npc from all sequences if they are part of the NpcsToActivateList
                 if (sequence.NpcsToActivateList.Count == 0) continue;
                 
-                Debug.Log(npcBehaviourRuntimeSet.GetItems().Count);
-                Debug.Log(sequence.NpcsToActivateList.Count);
-                
                 foreach (NpcBehaviour npcBehaviour in sequence.NpcsToActivateList.SelectMany
                     (npcData => npcBehaviourRuntimeSet.GetItems().Where(npcBehaviour => npcData.ID.Equals(npcBehaviour.Data.ID))))
                 {
                     npcBehaviour.gameObject.SetActive(false);
-                    Debug.Log(npcBehaviour.Data.name + " deactivated ");
+                    // Debug.Log(npcBehaviour.Data.name + " deactivated ");
                 }
             }
         }
