@@ -3,6 +3,7 @@ using System.Collections;
 using DataStructures.Event;
 using DataStructures.StateMachineLogic;
 using DataStructures.Variables;
+using Features.Dialog.Logic;
 using Features.GameLogic.Logic;
 using Features.Input;
 using Features.NPCs.Logic;
@@ -160,6 +161,12 @@ namespace Features.Player.Logic
                 other.GetComponent<NpcBehaviour>().SetNpcFocus();
                 tutorialData.OnActivateInteractInfo.Raise();
             }
+
+            if (other.CompareTag("DialogTrigger"))
+            {
+                other.GetComponent<DialogTrigger>().StartConversation();
+                tutorialData.OnDeActivateInteractInfo.Raise();
+            }
         }
 
         private void OnTriggerExit2D(Collider2D other)
@@ -167,6 +174,11 @@ namespace Features.Player.Logic
             if (other.CompareTag("NPC"))
             {
                 other.GetComponent<NpcBehaviour>().RemoveNpcFocus();
+                tutorialData.OnDeActivateInteractInfo.Raise();
+            }
+            
+            if (other.CompareTag("DialogTrigger"))
+            {
                 tutorialData.OnDeActivateInteractInfo.Raise();
             }
         }

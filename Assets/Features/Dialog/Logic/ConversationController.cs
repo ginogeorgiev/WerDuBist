@@ -116,7 +116,7 @@ namespace Features.Dialog.Logic
             }
         }
 
-        private void AdvanceLine()
+        public void AdvanceLine()
         {
             if (isGamePaused.Get()) return;
             
