@@ -100,36 +100,52 @@ namespace Features.NPCs.Logic
             }
         }
 
-        public void OnNpcFocusChanged()
+        public void SetRepeatingConversation()
         {
             if (conversationElements == null || conversationElements.Count == 0) return;
             
-            activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
-        }
+            // Check for Repeating (Eingang oder Ausgang)
 
-        public void OnCheckForNextConversationPart()
-        {
-            // now it works i guess
+            if (conversationElements[conversationIndex].DialogConversationLeft.name.Contains("Eingang") ||
+                conversationElements[conversationIndex].DialogConversationLeft.name.Contains("Ausgang"))
+            {
+                // Debug.Log("Ist " + conversationElements[conversationIndex].DialogConversationLeft.name);
+
+                activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
+                onActiveConversationChanged.Raise();
+            }
+            
+            // Check for Left if there is a Quest to complete
+            
             if (conversationElements[conversationIndex].Quest != null)
             {
-                if (conversationElements[conversationIndex].Quest.CheckGoals(null))
+                if (!conversationElements[conversationIndex].Quest.CheckGoals(null))
                 {
-                    onCompleteQuest.Raise(conversationElements[conversationIndex].Quest);
-                    activeConversation = conversationElements[conversationIndex].DialogConversationRight;
-                    onActiveConversationChanged.Raise();
-                }
-                else
-                {
+                    // Debug.Log("Is unCompleted Quest");
                     activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
                     onActiveConversationChanged.Raise();
                 }
             }
-            else
+        }
+
+        public void CheckSetRightConversation()
+        {
+            if (conversationElements == null || conversationElements.Count == 0) return;
+            
+            if (conversationElements[conversationIndex].Quest != null)
             {
-                if (conversationElements == null || conversationElements.Count == 0) return;
-                
-                activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
-                onActiveConversationChanged.Raise();
+                if (conversationElements[conversationIndex].Quest.CheckGoals(null))
+                {
+                    if (!conversationElements[conversationIndex].DialogConversationRight.RightWasSet)
+                    {
+                        // Debug.Log("Is Completed Quest");
+                        onCompleteQuest.Raise(conversationElements[conversationIndex].Quest);
+                        activeConversation = conversationElements[conversationIndex].DialogConversationRight;
+                        onActiveConversationChanged.Raise();
+
+                        conversationElements[conversationIndex].DialogConversationRight.RightWasSet = true;
+                    }
+                }
             }
         }
 
@@ -140,9 +156,7 @@ namespace Features.NPCs.Logic
             if (conversationIndex + 1 >= conversationElements.Count) return;
             
             conversationIndex++;
-            // Debug.Log(Data.name + "'s conversation advanced to " + conversationIndex);
             activeConversation = conversationElements[conversationIndex].DialogConversationLeft;
-            onActiveConversationChanged.Raise();
         }
 
         public void SetNpcFocus()
