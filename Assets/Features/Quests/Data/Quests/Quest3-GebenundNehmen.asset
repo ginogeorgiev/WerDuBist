@@ -22,9 +22,12 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: e3963a93438d07444b937192afeb24b2, type: 3}
     otherQuests:
     - {fileID: 11400000, guid: 7cd0a61d2994d27498bacd7de514c7fc, type: 2}
+    - {fileID: 11400000, guid: db7db85b763276949a93b3e13fd166d7, type: 2}
+    - {fileID: 11400000, guid: d50d7b03fc85125418d663da3e7d531c, type: 2}
+    - {fileID: 11400000, guid: 24bb4f95e1885374a8bead21d2b26a68, type: 2}
     npc: {fileID: 0}
     current: {fileID: 0}
-    required: 2
+    required: 1
   startPosition: {x: 34.24, y: 2.49}
   endPosition: {x: 34.6, y: 3.62}
   questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}
