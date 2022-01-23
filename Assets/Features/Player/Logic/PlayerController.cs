@@ -180,6 +180,7 @@ namespace Features.Player.Logic
             if (other.CompareTag("DialogTrigger"))
             {
                 tutorialData.OnDeActivateInteractInfo.Raise();
+                other.GetComponent<DialogTrigger>().AfterTriggerConversation();
             }
         }
 

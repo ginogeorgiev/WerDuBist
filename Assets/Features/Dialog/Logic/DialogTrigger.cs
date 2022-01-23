@@ -16,7 +16,11 @@ namespace Features.Dialog.Logic
             npcForDialog.OnCheckForNextConversationPart();
             npcForDialog.SetNpcFocus();
             onStartConversation.Raise();
-            
+        }
+
+        public void AfterTriggerConversation()
+        {
+            npcForDialog.RemoveNpcFocus();
             this.gameObject.SetActive(false);
         }
     }
