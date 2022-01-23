@@ -132,6 +132,8 @@ namespace Features.Quests.Logic
             // for each Quest with goalType Talk
             foreach (var quest in questSet.Items.Where(q => q.GoalList.Any(goal => goal.Type == Goal.GoalType.talk)))
             {
+                if (!quest.IsActive) continue;
+                
                 if (npcFocus.Get()!=null)
                 {
                     quest.CheckGoals(npcFocus);

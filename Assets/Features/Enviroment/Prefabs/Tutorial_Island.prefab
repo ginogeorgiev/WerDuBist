@@ -59,7 +59,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4761439916893357529}
+  - {fileID: 7378650346951569002}
   - {fileID: 8618763434830575366}
   - {fileID: 1867180435}
   m_Father: {fileID: 1493908843942462354}
@@ -1521,6 +1521,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Surfboard-2
       objectReference: {fileID: 0}
+    - target: {fileID: 5211620576799918466, guid: 99625e90cb2a6e64f9f4acf06d50e63d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211620576799918466, guid: 99625e90cb2a6e64f9f4acf06d50e63d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.81
+      objectReference: {fileID: 0}
     - target: {fileID: 7791603699214819889, guid: 99625e90cb2a6e64f9f4acf06d50e63d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1567,9 +1575,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99625e90cb2a6e64f9f4acf06d50e63d, type: 3}
---- !u!4 &4761439916893357529 stripped
+--- !u!4 &7378650346951569002 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7791603699214819889, guid: 99625e90cb2a6e64f9f4acf06d50e63d, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5211620576799918466, guid: 99625e90cb2a6e64f9f4acf06d50e63d, type: 3}
   m_PrefabInstance: {fileID: 3329671029489068008}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3837548087000683763

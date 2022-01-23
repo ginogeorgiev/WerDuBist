@@ -3582,6 +3582,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 6ee1d4b71ec0ddc4b90a223589dd8f27, type: 2}
+        m_TargetAssemblyTypeName: DataStructures.Variables.BoolVariable, Assembly-CSharp
+        m_MethodName: SetTrue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &5669743563551101756
 GameObject:
   m_ObjectHideFlags: 0

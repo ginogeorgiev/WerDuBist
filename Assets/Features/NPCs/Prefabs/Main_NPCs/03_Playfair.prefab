@@ -7,6 +7,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1805056867452798616, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_Size.x
+      value: 1.027427
+      objectReference: {fileID: 0}
+    - target: {fileID: 1805056867452798616, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.41528356
+      objectReference: {fileID: 0}
+    - target: {fileID: 1805056867452798616, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 1805056867452798616, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577266593141601615, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_Size.x
+      value: 0.41561165
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577266593141601615, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.028875377
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577266593141601615, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.18549067
+      objectReference: {fileID: 0}
     - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: id
       value: 3

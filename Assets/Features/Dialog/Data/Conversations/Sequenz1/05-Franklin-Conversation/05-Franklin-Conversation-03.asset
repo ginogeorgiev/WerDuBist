@@ -20,4 +20,4 @@ MonoBehaviour:
       Angel ausgeworfen. Die kannst du nutzen. Wenn du gut bist f\xE4ngst du drei
       Fische."
   advanceConvAutomatically: 1
-  dialogQuestion: {fileID: 11400000, guid: 93fe3122b31a94a44a8d920d803d2924, type: 2}
+  dialogQuestion: {fileID: 0}

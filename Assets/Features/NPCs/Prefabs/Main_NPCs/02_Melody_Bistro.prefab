@@ -11,6 +11,34 @@ PrefabInstance:
       propertyPath: response.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1805056867452798616, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_Size.x
+      value: 1.3842316
+      objectReference: {fileID: 0}
+    - target: {fileID: 1805056867452798616, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.21376038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1805056867452798616, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1805056867452798616, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577266593141601615, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_Size.x
+      value: 0.46043438
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577266593141601615, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.1276558
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577266593141601615, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.18549068
+      objectReference: {fileID: 0}
     - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: data
       value: 
