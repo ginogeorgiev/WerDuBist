@@ -13,6 +13,7 @@ TagManager:
   - Tube
   - MetalPlate1
   - MetalPlate2
+  - DialogTrigger
   layers:
   - Default
   - TransparentFX

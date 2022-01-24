@@ -3,6 +3,7 @@ using System.Collections;
 using DataStructures.Event;
 using DataStructures.StateMachineLogic;
 using DataStructures.Variables;
+using Features.Dialog.Logic;
 using Features.GameLogic.Logic;
 using Features.Input;
 using Features.NPCs.Logic;
@@ -33,6 +34,8 @@ namespace Features.Player.Logic
         [SerializeField] private GridElementEnteredEvent onGridElementEntered;
         
         [SerializeField] private BoolVariable isGamePaused;
+
+        private bool isPlayerTeleporting=false;
 
         private new Rigidbody2D rigidbody2D;
 
@@ -90,7 +93,7 @@ namespace Features.Player.Logic
             Vector2 movementInput = movementInputAction.ReadValue<Vector2>();
             float sprintInput = sprintInputAction.ReadValue<float>();
 
-            if (movementInput.x != 0 || movementInput.y != 0)
+            if ((movementInput.x != 0 || movementInput.y != 0) && !isPlayerTeleporting)
             {
                 if (stateMachine.CurrentState != walkingState && stateMachine.CurrentState != sprintingState)
                 {
@@ -160,6 +163,22 @@ namespace Features.Player.Logic
                 other.GetComponent<NpcBehaviour>().SetNpcFocus();
                 tutorialData.OnActivateInteractInfo.Raise();
             }
+
+            if (other.CompareTag("DialogTrigger"))
+            {
+                other.GetComponentInParent<NpcBehaviour>().SetNpcFocus();
+                DialogTrigger dialogTrigger = other.GetComponent<DialogTrigger>();
+                if (dialogTrigger.TeleportPlayerForTrigger)
+                {
+                    dialogTrigger.SetTeleportFocus();
+                    StartCoroutine(TeleportPlayerSequence(dialogTrigger.TeleportFocus, dialogTrigger));
+                }
+                else
+                {
+                    dialogTrigger.StartConversation();
+                }
+                tutorialData.OnDeActivateInteractInfo.Raise();
+            }
         }
 
         private void OnTriggerExit2D(Collider2D other)
@@ -168,6 +187,15 @@ namespace Features.Player.Logic
             {
                 other.GetComponent<NpcBehaviour>().RemoveNpcFocus();
                 tutorialData.OnDeActivateInteractInfo.Raise();
+            }
+            
+            if (other.CompareTag("DialogTrigger"))
+            {
+                tutorialData.OnDeActivateInteractInfo.Raise();
+
+                if (other.GetComponent<DialogTrigger>().TeleportPlayerForTrigger) return;
+                other.GetComponentInParent<NpcBehaviour>().RemoveNpcFocus();
+                other.gameObject.SetActive(false);
             }
         }
 
@@ -204,15 +232,21 @@ namespace Features.Player.Logic
             StartCoroutine(TeleportPlayerSequence(teleportFocus));
         }
 
-        private IEnumerator TeleportPlayerSequence(PlayerTeleportFocus_SO teleportFocus)
+        private IEnumerator TeleportPlayerSequence(PlayerTeleportFocus_SO teleportFocus, DialogTrigger dialogTrigger=null)
         {
+            isPlayerTeleporting = true;
             transitionData.OnStart.Raise();
             
             yield return new WaitForSeconds(transitionData.FadeInTime);
-            
             transform.position = teleportFocus.Get().position;
-            yield return new WaitForSeconds(1f);
+            if (dialogTrigger != null)
+            {
+                dialogTrigger.StartConversation();
+                dialogTrigger.OnConversationOver();
+            }
             
+            yield return new WaitForSeconds(1f);
+            isPlayerTeleporting = false;
             transitionData.OnEnd.Raise();
         }
     }
