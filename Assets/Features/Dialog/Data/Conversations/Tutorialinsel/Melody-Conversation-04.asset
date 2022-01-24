@@ -16,7 +16,7 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 2a6489c87cf46f14db3526c2ede3d338, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 2a6489c87cf46f14db3526c2ede3d338, type: 2}
-    text: Ich bin meistens beim Bistro am Marktplatz. Falls du noch fragen hast komm
+    text: Ich bin meistens beim Bistro am Marktplatz. Falls du noch Fragen hast komm
       jeder Zeit vorbei.
   advanceConvAutomatically: 1
   dialogQuestion: {fileID: 0}

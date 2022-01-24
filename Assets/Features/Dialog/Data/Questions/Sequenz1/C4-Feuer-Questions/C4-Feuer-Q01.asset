@@ -16,12 +16,12 @@ MonoBehaviour:
   - text: Holz nachlegen.
     ingameQuestion: {fileID: 11400000, guid: 1c809b081a24e2546b2fbfc83a9fc28c, type: 2}
     value: 1
-    dialogConversation: {fileID: 11400000, guid: aaf147cf64077cf49bf444ebc50b86d0, type: 2}
-    choiceEvent: {fileID: 0}
+    dialogConversation: {fileID: 11400000, guid: 143f765f68997854f827fe68fa2da77d, type: 2}
+    choiceEvents: []
     quest: {fileID: 0}
   - text: Weg gehen.
     ingameQuestion: {fileID: 11400000, guid: 1c809b081a24e2546b2fbfc83a9fc28c, type: 2}
     value: 1
     dialogConversation: {fileID: 0}
-    choiceEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}
