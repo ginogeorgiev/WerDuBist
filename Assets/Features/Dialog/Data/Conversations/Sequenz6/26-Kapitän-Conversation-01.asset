@@ -16,6 +16,7 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 6f84125686e4a4d4ca729a3a09492db4, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 6f84125686e4a4d4ca729a3a09492db4, type: 2}
-    text: "Oh, du bist fr\xFCher zur\xFCck, als ich dachte. Die Vorbereitungen sind
-      fast abgeschlossen. Vielleicht m\xF6chten du noch ein wenig warten."
+    text: Da bist du ja wieder. Das Boot ist fertig, aber du solltest dich vielleicht
+      noch von den Leuten verabschieden.
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 11400000, guid: c2046b27a2179014bb0b2603a9f7cd4f, type: 2}

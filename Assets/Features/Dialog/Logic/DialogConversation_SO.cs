@@ -1,3 +1,4 @@
+using System;
 using Features.NPCs.Logic;
 using UnityEngine;
 
@@ -24,7 +25,9 @@ namespace Features.Dialog.Logic
         [Space (-10, order = 9)]
         [Header("Antwortmögllichkeiten folgen soll muss hier was rein", order = 10)]
         [SerializeField] private DialogQuestion_SO dialogQuestion;
-        
+
+        public bool RightWasSet { get; set; }
+
         public NPCData_SO SpeakerLeft => speakerLeft;
 
         public NPCData_SO SpeakerRight => speakerRight;
@@ -34,6 +37,11 @@ namespace Features.Dialog.Logic
         public bool AdvanceConvAutomatically => advanceConvAutomatically;
 
         public DialogQuestion_SO DialogQuestion => dialogQuestion;
+
+        private void OnEnable()
+        {
+            RightWasSet = false;
+        }
     }
     
     [System.Serializable]

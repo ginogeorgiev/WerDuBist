@@ -220,6 +220,7 @@ namespace Features.Player.Logic
         private IEnumerator TeleportPlayerSequence(PlayerTeleportFocus_SO teleportFocus)
         {
             transitionData.OnStart.Raise();
+            
             yield return new WaitForSeconds(transitionData.FadeInTime);
             
             transform.position = teleportFocus.Get().position;

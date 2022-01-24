@@ -99,7 +99,7 @@ namespace Features.Dialog.Logic
             speakerUIControllerLeft.Hide();
             speakerUIControllerRight.Hide();
 
-            npcFocus.Get().OnCheckForNextConversationPart();
+            npcFocus.Get().SetRepeatingConversation();
         }
 
         private void Initialize()
@@ -109,11 +109,6 @@ namespace Features.Dialog.Logic
             activeLineIndex = 0;
             speakerUIControllerLeft.Speaker = dialogConversation.SpeakerLeft;
             speakerUIControllerRight.Speaker = dialogConversation.SpeakerRight;
-
-            if (npcFocus.Get().GetActiveConversationElement.Quest != null)
-            {
-                npcFocus.Get().OnCheckForNextConversationPart();
-            }
         }
 
         public void AdvanceLine()
@@ -121,6 +116,8 @@ namespace Features.Dialog.Logic
             if (isGamePaused.Get()) return;
             
             if (questionUI.activeSelf) return;
+
+            npcFocus.Get()?.CheckSetRightConversation();
             
             if (dialogConversation == null) return;
             

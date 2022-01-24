@@ -10,11 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4204690260697107187}
   - component: {fileID: 4204690260697107186}
-  - component: {fileID: 987336911311489786}
   - component: {fileID: 5990918384910721265}
   - component: {fileID: 4835833018944873319}
-  - component: {fileID: 4204690260697107188}
-  - component: {fileID: 251721895928512926}
+  - component: {fileID: 3577266593141601615}
+  - component: {fileID: 1805056867452798616}
   m_Layer: 7
   m_Name: NPC_Template
   m_TagString: NPC
@@ -57,34 +56,6 @@ MonoBehaviour:
   questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}
   conversationIndex: 0
   activeConversation: {fileID: 0}
---- !u!114 &987336911311489786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4204690260697107190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  event: {fileID: 11400000, guid: b0641603d3237834bbd7360905f269bf, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4204690260697107186}
-        m_TargetAssemblyTypeName: Features.Dialog.Logic.NpcBehaviour, Assembly-CSharp
-        m_MethodName: OnNpcFocusChanged
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!95 &5990918384910721265
 Animator:
   serializedVersion: 3
@@ -149,30 +120,14 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 1.01, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!58 &4204690260697107188
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4204690260697107190}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.12, y: 0}
-  serializedVersion: 2
-  m_Radius: 2
---- !u!61 &251721895928512926
-BoxCollider2D:
+--- !u!70 &3577266593141601615
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -184,16 +139,32 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.052004904, y: 0.18549065}
+  m_Size: {x: 0.4993971, y: 0.30159184}
+  m_Direction: 1
+--- !u!61 &1805056867452798616
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4204690260697107190}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.1633369, y: 0.9663166}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.01, y: 2}
+    newSize: {x: 1.01, y: 2}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.3886}
+  m_Size: {x: 1.364063, y: 1.7473733}
   m_EdgeRadius: 0

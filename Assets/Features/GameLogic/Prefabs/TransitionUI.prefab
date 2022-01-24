@@ -292,3 +292,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 5367461226515919853}
   transitionData: {fileID: 11400000, guid: 73c969799c95a9c4e8b7fad43380a837, type: 2}
+  onDeActivateGameUI: {fileID: 11400000, guid: 61c714aec2c2b554e8c62e0a5f8b1baf, type: 2}
+  onActivateGameUI: {fileID: 11400000, guid: 9e2d5b783c716b44aa87130827572112, type: 2}

@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1805056867452798616, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1805056867452798616, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.01
+      objectReference: {fileID: 0}
     - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: id
       value: 4
@@ -17,7 +25,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 4f891f84b1917194891d42dda3cb1e27, type: 2}
     - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: conversationElements.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: conversationElements.Array.data[0].quest
@@ -51,6 +59,10 @@ PrefabInstance:
       propertyPath: conversationElements.Array.data[3].dialogConversationLeft
       value: 
       objectReference: {fileID: 11400000, guid: 5e418d763b5543e408d55f849ec611a4, type: 2}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.data[4].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 4ee12084943a8c3479b5cd603314b8f9, type: 2}
     - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
       propertyPath: conversationElements.Array.data[0].dialogConversationRight
       value: 
