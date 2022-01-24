@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
   m_Name: 03-Luis-Q01
   m_EditorClassIdentifier: 
-  text: 
   choices:
   - text: "Aber nat\xFCrlich passe ich darauf auf, sieht auch sch\xF6n aus."
+    ingameQuestion: {fileID: 0}
+    value: 0
     dialogConversation: {fileID: 11400000, guid: 0f64f17f0272a7b45b1a5912b5b07dd4, type: 2}
-    choiceEvent: {fileID: 0}
-    questEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}
   - text: Ich versuche es, aber werde dir nichts versprechen.
+    ingameQuestion: {fileID: 0}
+    value: 0
     dialogConversation: {fileID: 11400000, guid: 0f64f17f0272a7b45b1a5912b5b07dd4, type: 2}
-    choiceEvent: {fileID: 0}
-    questEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}

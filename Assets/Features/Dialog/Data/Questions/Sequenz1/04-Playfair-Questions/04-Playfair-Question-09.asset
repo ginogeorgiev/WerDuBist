@@ -12,20 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
   m_Name: 04-Playfair-Question-09
   m_EditorClassIdentifier: 
-  text: 
   choices:
   - text: Und das ist mein Sieg. Gut gespielt, Bruder.
+    ingameQuestion: {fileID: 11400000, guid: 6c61a5a2f75984246a898eb9b185fe60, type: 2}
+    value: 0.2
     dialogConversation: {fileID: 11400000, guid: 634764c51645be442931c849438efff7, type: 2}
-    choiceEvent: {fileID: 0}
-    questEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}
   - text: Das ist also das Ergebnis wenn wir fair spielen.
+    ingameQuestion: {fileID: 11400000, guid: 6c61a5a2f75984246a898eb9b185fe60, type: 2}
+    value: 0.4
     dialogConversation: {fileID: 11400000, guid: 634764c51645be442931c849438efff7, type: 2}
-    choiceEvent: {fileID: 0}
-    questEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}
   - text: JAAA! NIMM DAS, DU SCHUMMLER!
+    ingameQuestion: {fileID: 11400000, guid: 6c61a5a2f75984246a898eb9b185fe60, type: 2}
+    value: 0.6
     dialogConversation: {fileID: 11400000, guid: 634764c51645be442931c849438efff7, type: 2}
-    choiceEvent: {fileID: 0}
-    questEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}

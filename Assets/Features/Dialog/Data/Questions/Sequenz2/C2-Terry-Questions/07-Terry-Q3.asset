@@ -14,19 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choices:
   - text: Ordentlich ist mein zweiter Name, haha!
-    ingameQuestion: {fileID: 11400000, guid: 34e1b84860e2c9b44af7618dacf9ba06, type: 2}
+    ingameQuestion: {fileID: 11400000, guid: aaa640960c7f2344fb9b7a3137cec65b, type: 2}
     value: 3
     dialogConversation: {fileID: 11400000, guid: bf9834e6ee5911f42ae7a48d6c410cdb, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
   - text: "Ich vergesse ab und zu auch Sachen hier und da zur\xFCckzulegen."
-    ingameQuestion: {fileID: 11400000, guid: 34e1b84860e2c9b44af7618dacf9ba06, type: 2}
+    ingameQuestion: {fileID: 11400000, guid: aaa640960c7f2344fb9b7a3137cec65b, type: 2}
     value: 2
     dialogConversation: {fileID: 11400000, guid: bf9834e6ee5911f42ae7a48d6c410cdb, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
   - text: Ich bezeichne mich eher als chaotisch, wenn es um Ordnung geht.
-    ingameQuestion: {fileID: 11400000, guid: 34e1b84860e2c9b44af7618dacf9ba06, type: 2}
+    ingameQuestion: {fileID: 11400000, guid: aaa640960c7f2344fb9b7a3137cec65b, type: 2}
     value: 1
     dialogConversation: {fileID: 11400000, guid: bf9834e6ee5911f42ae7a48d6c410cdb, type: 2}
     choiceEvents: []

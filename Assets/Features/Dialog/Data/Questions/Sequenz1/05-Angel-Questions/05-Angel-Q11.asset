@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choices:
   - text: Ich brauche deine Hilfe nicht. Lass uns weitermachen.
-    ingameQuestion: {fileID: 11400000, guid: c11fd5265bab6f94eb8313827c7cf094, type: 2}
-    value: 1
+    ingameQuestion: {fileID: 0}
+    value: 0
     dialogConversation: {fileID: 11400000, guid: 06f85fb792bced64ba71ee170f87c6d5, type: 2}
-    choiceEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}
   - text: '"Ich gebe auf. Ich gebe auf. Ich bin fertig mit dem Angeln. FERTIG!'
-    ingameQuestion: {fileID: 11400000, guid: c11fd5265bab6f94eb8313827c7cf094, type: 2}
-    value: 2
+    ingameQuestion: {fileID: 11400000, guid: 2cee13890759e2f4e8b9255e6126a172, type: 2}
+    value: 1
     dialogConversation: {fileID: 11400000, guid: 53859e52e947bc348956ddececad2c2d, type: 2}
-    choiceEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}
