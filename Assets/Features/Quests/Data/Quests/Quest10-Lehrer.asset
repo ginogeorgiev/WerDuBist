@@ -20,11 +20,11 @@ MonoBehaviour:
   visible: 1
   goals:
   - goalType: 1
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 39904a6e8efcb504d936fc329bea5d46, type: 3}
     otherQuests: []
     npc: {fileID: 11400000, guid: dc02e58ae4ca8374ba152d8fe1b52038, type: 2}
     current: {fileID: 0}
-    required: 0
-  startPosition: {x: 35.4, y: 42.7}
-  endPosition: {x: 35.4, y: 42.7}
+    required: 1
+  startPosition: {x: 38.39, y: 42.29}
+  endPosition: {x: -6.03, y: 79.95}
   questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}

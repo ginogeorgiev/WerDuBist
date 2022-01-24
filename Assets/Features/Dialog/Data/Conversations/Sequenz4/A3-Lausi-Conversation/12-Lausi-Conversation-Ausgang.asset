@@ -16,6 +16,6 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 75ce139d6fc7f1c4c9976825681b1c9a, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 75ce139d6fc7f1c4c9976825681b1c9a, type: 2}
-    text: "Bei dem Wetter kann man echt gut drau\xDFen schalfen."
+    text: "Bei dem Wetter kann man echt gut drau\xDFen schlafen."
   advanceConvAutomatically: 0
   dialogQuestion: {fileID: 0}

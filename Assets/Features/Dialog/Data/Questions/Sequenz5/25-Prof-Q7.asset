@@ -14,10 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choices:
   - text: "\xC4h, aber ich bin doch nur f\xFCr einen Tag da."
+    ingameQuestion: {fileID: 0}
+    value: 0
     dialogConversation: {fileID: 11400000, guid: 0258772baccb727468c606b58bd8a8d5, type: 2}
-    choiceEvent: {fileID: 0}
-    quest: {fileID: 0}
+    choiceEvents: []
+    quest: {fileID: 11400000, guid: 3a07c4f6e51f95942a256f36628c3f83, type: 2}
   - text: "Eigentlich will ich gar nicht f\xFCr Sie arbeiten."
+    ingameQuestion: {fileID: 0}
+    value: 0
     dialogConversation: {fileID: 11400000, guid: 0258772baccb727468c606b58bd8a8d5, type: 2}
-    choiceEvent: {fileID: 0}
-    quest: {fileID: 0}
+    choiceEvents: []
+    quest: {fileID: 11400000, guid: 3a07c4f6e51f95942a256f36628c3f83, type: 2}

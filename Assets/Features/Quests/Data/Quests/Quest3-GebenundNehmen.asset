@@ -24,10 +24,19 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 7cd0a61d2994d27498bacd7de514c7fc, type: 2}
     - {fileID: 11400000, guid: db7db85b763276949a93b3e13fd166d7, type: 2}
     - {fileID: 11400000, guid: d50d7b03fc85125418d663da3e7d531c, type: 2}
+    - {fileID: 11400000, guid: db7db85b763276949a93b3e13fd166d7, type: 2}
+    - {fileID: 11400000, guid: 9f289d93b2ec9f448a1c455872c5ed0b, type: 2}
     - {fileID: 11400000, guid: 24bb4f95e1885374a8bead21d2b26a68, type: 2}
+    - {fileID: 11400000, guid: c40aacd538eac604e8b8e9e807b3e783, type: 2}
+    - {fileID: 11400000, guid: 0afb65ae756f5ae489b597b41accda83, type: 2}
+    - {fileID: 11400000, guid: ecc97338a8abd6349a4cea6f772df687, type: 2}
+    - {fileID: 11400000, guid: a79e140305a9dd045a475c8e324c2365, type: 2}
+    - {fileID: 11400000, guid: f9a323680c87a1e4895803310a5d7fe1, type: 2}
+    - {fileID: 11400000, guid: 09a601f57a6e09f47a7e46dfe7da4b4e, type: 2}
+    - {fileID: 11400000, guid: 3a07c4f6e51f95942a256f36628c3f83, type: 2}
     npc: {fileID: 0}
     current: {fileID: 0}
-    required: 1
+    required: 13
   startPosition: {x: 34.24, y: 2.49}
   endPosition: {x: 34.6, y: 3.62}
   questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}

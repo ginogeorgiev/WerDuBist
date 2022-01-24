@@ -16,18 +16,18 @@ MonoBehaviour:
   - text: "Nein, ich hab kein Geld f\xFCr dich."
     ingameQuestion: {fileID: 11400000, guid: 5e6ec3b44c554ce489a7132b9d1a23b0, type: 2}
     value: 1
-    dialogConversation: {fileID: 0}
-    choiceEvent: {fileID: 0}
-    quest: {fileID: 0}
+    dialogConversation: {fileID: 11400000, guid: 98882da55e7c8e3429b87b53ae4652e4, type: 2}
+    choiceEvents: []
+    quest: {fileID: 11400000, guid: 09a601f57a6e09f47a7e46dfe7da4b4e, type: 2}
   - text: "Hier ist eine M\xFCnze f\xFCr dich."
     ingameQuestion: {fileID: 11400000, guid: 5e6ec3b44c554ce489a7132b9d1a23b0, type: 2}
     value: 2
-    dialogConversation: {fileID: 0}
-    choiceEvent: {fileID: 0}
-    quest: {fileID: 0}
+    dialogConversation: {fileID: 11400000, guid: d5e10b76c624e9f4e8882daf3338126f, type: 2}
+    choiceEvents: []
+    quest: {fileID: 11400000, guid: 09a601f57a6e09f47a7e46dfe7da4b4e, type: 2}
   - text: "Hier sind 30 M\xFCnzen f\xFCr dich."
     ingameQuestion: {fileID: 11400000, guid: 5e6ec3b44c554ce489a7132b9d1a23b0, type: 2}
     value: 3
-    dialogConversation: {fileID: 0}
-    choiceEvent: {fileID: 0}
-    quest: {fileID: 0}
+    dialogConversation: {fileID: 11400000, guid: 8c810b26a77111e4a89a7ddc67893502, type: 2}
+    choiceEvents: []
+    quest: {fileID: 11400000, guid: 09a601f57a6e09f47a7e46dfe7da4b4e, type: 2}

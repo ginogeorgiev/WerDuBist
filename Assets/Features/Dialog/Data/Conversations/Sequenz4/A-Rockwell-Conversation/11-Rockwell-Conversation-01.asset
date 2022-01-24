@@ -21,5 +21,5 @@ MonoBehaviour:
       hast m\xF6chte ich dir 100 M\xFCnzen geben und dir einen Kaffee spendieren."
   - npcData: {fileID: 11400000, guid: 45ab7c007ca723a4e92d1b2d82e59d25, type: 2}
     text: "*Spieler hat 100 M\xFCnzen erhalten*"
-  advanceConvAutomatically: 1
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 11400000, guid: 0d9230bed99b4cd4e8a40e82ebab1e52, type: 2}
