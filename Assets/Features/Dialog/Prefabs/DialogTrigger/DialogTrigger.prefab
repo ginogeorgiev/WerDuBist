@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2601827281488085390}
   - component: {fileID: 4797820088105340157}
-  - component: {fileID: 7802108990569889765}
+  - component: {fileID: 7888789362627006884}
   m_Layer: 0
   m_Name: DialogTrigger
   m_TagString: DialogTrigger
@@ -44,31 +44,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb8e9a8e53d2b714ab34dae5192b45e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcForDialog: {fileID: 0}
   onStartConversation: {fileID: 11400000, guid: ff678a493c75a3e4faba7dd04ac16e29, type: 2}
---- !u!61 &7802108990569889765
-BoxCollider2D:
+  teleportPlayerForTrigger: 0
+  teleportFocus: {fileID: 11400000, guid: c2ea0f8c43f777649a245790e1a64367, type: 2}
+--- !u!114 &7888789362627006884
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7157295581248768026}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: 4a437490879a84641b7a38d47b4dc696, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4797820088105340157}
+        m_TargetAssemblyTypeName: Features.Dialog.Logic.DialogTrigger, Assembly-CSharp
+        m_MethodName: OnConversationOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

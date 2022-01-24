@@ -1,27 +1,41 @@
 using DataStructures.Event;
 using Features.NPCs.Logic;
+using Features.Player.Logic;
 using UnityEngine;
 
 namespace Features.Dialog.Logic
 {
     public class DialogTrigger : MonoBehaviour
     {
-        [SerializeField] private NpcBehaviour npcForDialog;
         [SerializeField] private GameEvent_SO onStartConversation;
+        [SerializeField] private bool teleportPlayerForTrigger = false;
+        [SerializeField] private PlayerTeleportFocus_SO teleportFocus;
+
+        public bool TeleportPlayerForTrigger => teleportPlayerForTrigger;
+
+        public PlayerTeleportFocus_SO TeleportFocus => teleportFocus;
+
+        public GameEvent_SO OnStartConversation => onStartConversation;
+
+        private bool convStarted;
+
+        public void SetTeleportFocus()
+        {
+            teleportFocus.Set(transform);
+        }
 
         public void StartConversation()
         {
-            if (npcForDialog == null || onStartConversation == null) return;
+            if (onStartConversation == null) return;
             
-            npcForDialog.OnCheckForNextConversationPart();
-            npcForDialog.SetNpcFocus();
             onStartConversation.Raise();
+            
+            convStarted = true;
         }
 
-        public void AfterTriggerConversation()
+        public void OnConversationOver()
         {
-            npcForDialog.RemoveNpcFocus();
-            this.gameObject.SetActive(false);
+            if(convStarted) gameObject.SetActive(false);
         }
     }
 }

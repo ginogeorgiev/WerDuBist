@@ -164,7 +164,17 @@ namespace Features.Player.Logic
 
             if (other.CompareTag("DialogTrigger"))
             {
-                other.GetComponent<DialogTrigger>().StartConversation();
+                other.GetComponentInParent<NpcBehaviour>().SetNpcFocus();
+                DialogTrigger dialogTrigger = other.GetComponent<DialogTrigger>();
+                if (dialogTrigger.TeleportPlayerForTrigger)
+                {
+                    dialogTrigger.SetTeleportFocus();
+                    StartCoroutine(TeleportPlayerSequence(dialogTrigger.TeleportFocus, dialogTrigger));
+                }
+                else
+                {
+                    dialogTrigger.StartConversation();
+                }
                 tutorialData.OnDeActivateInteractInfo.Raise();
             }
         }
@@ -180,7 +190,10 @@ namespace Features.Player.Logic
             if (other.CompareTag("DialogTrigger"))
             {
                 tutorialData.OnDeActivateInteractInfo.Raise();
-                other.GetComponent<DialogTrigger>().AfterTriggerConversation();
+
+                if (other.GetComponent<DialogTrigger>().TeleportPlayerForTrigger) return;
+                other.GetComponentInParent<NpcBehaviour>().RemoveNpcFocus();
+                other.gameObject.SetActive(false);
             }
         }
 
@@ -217,13 +230,18 @@ namespace Features.Player.Logic
             StartCoroutine(TeleportPlayerSequence(teleportFocus));
         }
 
-        private IEnumerator TeleportPlayerSequence(PlayerTeleportFocus_SO teleportFocus)
+        private IEnumerator TeleportPlayerSequence(PlayerTeleportFocus_SO teleportFocus, DialogTrigger dialogTrigger=null)
         {
             transitionData.OnStart.Raise();
             
             yield return new WaitForSeconds(transitionData.FadeInTime);
-            
             transform.position = teleportFocus.Get().position;
+            if (dialogTrigger != null)
+            {
+                dialogTrigger.StartConversation();
+                dialogTrigger.OnConversationOver();
+            }
+            
             yield return new WaitForSeconds(1f);
             
             transitionData.OnEnd.Raise();
