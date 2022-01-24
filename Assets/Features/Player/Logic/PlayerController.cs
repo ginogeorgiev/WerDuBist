@@ -35,6 +35,8 @@ namespace Features.Player.Logic
         
         [SerializeField] private BoolVariable isGamePaused;
 
+        private bool isPlayerTeleporting=false;
+
         private new Rigidbody2D rigidbody2D;
 
         private PlayerControls playerControls;
@@ -91,7 +93,7 @@ namespace Features.Player.Logic
             Vector2 movementInput = movementInputAction.ReadValue<Vector2>();
             float sprintInput = sprintInputAction.ReadValue<float>();
 
-            if (movementInput.x != 0 || movementInput.y != 0)
+            if ((movementInput.x != 0 || movementInput.y != 0) && !isPlayerTeleporting)
             {
                 if (stateMachine.CurrentState != walkingState && stateMachine.CurrentState != sprintingState)
                 {
@@ -232,6 +234,7 @@ namespace Features.Player.Logic
 
         private IEnumerator TeleportPlayerSequence(PlayerTeleportFocus_SO teleportFocus, DialogTrigger dialogTrigger=null)
         {
+            isPlayerTeleporting = true;
             transitionData.OnStart.Raise();
             
             yield return new WaitForSeconds(transitionData.FadeInTime);
@@ -243,7 +246,7 @@ namespace Features.Player.Logic
             }
             
             yield return new WaitForSeconds(1f);
-            
+            isPlayerTeleporting = false;
             transitionData.OnEnd.Raise();
         }
     }
