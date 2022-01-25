@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4116837940552249483}
   - component: {fileID: 2957556224975841204}
+  - component: {fileID: 5391149650307730231}
   m_Layer: 0
   m_Name: Rock-1
   m_TagString: Untagged
@@ -68,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1014489307
-  m_SortingLayer: 6
+  m_SortingLayerID: 2029698573
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 765c6cc79ff5842e1a7d2e5b2ee3cd57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -82,3 +83,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!68 &5391149650307730231
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2779134501042818949}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.19}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.8569879, y: -0.04081559}
+  - {x: -0.918808, y: -0.4452629}
+  - {x: -0.09189606, y: -0.6512413}
+  - {x: 0.64868164, y: -0.49408722}
+  - {x: 0.9454498, y: -0.18582916}
+  - {x: 0.9479523, y: -0.05031967}
+  - {x: -0.29390717, y: -0.14084625}
+  - {x: -0.84277254, y: -0.045969248}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
