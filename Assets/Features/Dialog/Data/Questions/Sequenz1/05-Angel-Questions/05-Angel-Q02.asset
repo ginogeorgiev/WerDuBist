@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choices:
   - text: "Nat\xFCrlich. Ich will drei Fische. Weiter fischen."
-    ingameQuestion: {fileID: 0}
+    ingameQuestion: {fileID: 11400000, guid: 2cee13890759e2f4e8b9255e6126a172, type: 2}
     value: 0
     dialogConversation: {fileID: 11400000, guid: 3c8b352bba4ae3040873b2837301eeb3, type: 2}
     choiceEvents: []

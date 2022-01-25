@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choices:
   - text: Ich kann immer noch weitermachen. So stur bin ich nun mal.
-    ingameQuestion: {fileID: 0}
+    ingameQuestion: {fileID: 11400000, guid: 2cee13890759e2f4e8b9255e6126a172, type: 2}
     value: 0
     dialogConversation: {fileID: 11400000, guid: 93e970c2f34537e4e9c6216f69d3d263, type: 2}
     choiceEvents: []

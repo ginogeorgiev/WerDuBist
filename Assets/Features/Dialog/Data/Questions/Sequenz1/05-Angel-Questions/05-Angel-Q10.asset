@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choices:
   - text: Das ist mir egal. Lass uns weitermachen.
-    ingameQuestion: {fileID: 0}
+    ingameQuestion: {fileID: 11400000, guid: 2cee13890759e2f4e8b9255e6126a172, type: 2}
     value: 0
     dialogConversation: {fileID: 11400000, guid: 5a3c48f47c843d8419627296163773a7, type: 2}
     choiceEvents: []

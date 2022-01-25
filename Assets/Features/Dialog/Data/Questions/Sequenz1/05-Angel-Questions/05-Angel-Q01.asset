@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choices:
   - text: Ich habe doch gerade erst angefangen. Weiter machen.
-    ingameQuestion: {fileID: 0}
+    ingameQuestion: {fileID: 11400000, guid: 2cee13890759e2f4e8b9255e6126a172, type: 2}
     value: 0
     dialogConversation: {fileID: 11400000, guid: e26e2930684517b4b976bd5ff2085f8b, type: 2}
     choiceEvents: []

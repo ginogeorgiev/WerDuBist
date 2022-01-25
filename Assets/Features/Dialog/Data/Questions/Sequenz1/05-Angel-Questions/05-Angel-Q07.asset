@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choices:
   - text: Du magst recht haben, aber ich kann trotzdem weitermachen. Lass uns weitermachen.
-    ingameQuestion: {fileID: 0}
+    ingameQuestion: {fileID: 11400000, guid: 2cee13890759e2f4e8b9255e6126a172, type: 2}
     value: 0
     dialogConversation: {fileID: 11400000, guid: 554cdbb2c8fc5bf4cb82550a033b66fd, type: 2}
     choiceEvents: []
