@@ -16,10 +16,14 @@ MonoBehaviour:
   - text: 'Nein, alles gut, ihr seid alle echt nett
 
 '
+    ingameQuestion: {fileID: 11400000, guid: 21ec782ba547d0746971fb43beb0387d, type: 2}
+    value: 1
     dialogConversation: {fileID: 0}
-    choiceEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}
   - text: "... -nichts sagen und weitergehen\r-"
+    ingameQuestion: {fileID: 11400000, guid: 21ec782ba547d0746971fb43beb0387d, type: 2}
+    value: 0
     dialogConversation: {fileID: 0}
-    choiceEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}

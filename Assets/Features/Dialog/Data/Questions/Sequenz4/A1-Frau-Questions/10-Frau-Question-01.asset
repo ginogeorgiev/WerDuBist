@@ -14,21 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choices:
   - text: Tut mir leid, ich hab ein Termin.
-    ingameQuestion: {fileID: 11400000, guid: c00cd8a31c7eeba43862ff94383fc709, type: 2}
-    value: 0.5
+    ingameQuestion: {fileID: 11400000, guid: 6a82ab6dd258d2349a9d2e992dd41468, type: 2}
+    value: 1
     dialogConversation: {fileID: 11400000, guid: 5b963c92f84146e4c82d15a228a24765, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
   - text: Fragen Sie doch in der Nachbarschaft, vielleicht hat jemand dort Ihr Kind
       gesehen.
-    ingameQuestion: {fileID: 11400000, guid: c00cd8a31c7eeba43862ff94383fc709, type: 2}
-    value: 1
+    ingameQuestion: {fileID: 11400000, guid: 6a82ab6dd258d2349a9d2e992dd41468, type: 2}
+    value: 2
     dialogConversation: {fileID: 11400000, guid: 5b963c92f84146e4c82d15a228a24765, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
   - text: Beruhigen Sie sich, ich werde Ihnen helfen ihr Kind zu finden!
-    ingameQuestion: {fileID: 11400000, guid: c00cd8a31c7eeba43862ff94383fc709, type: 2}
-    value: 1.5
+    ingameQuestion: {fileID: 11400000, guid: 6a82ab6dd258d2349a9d2e992dd41468, type: 2}
+    value: 3
     dialogConversation: {fileID: 0}
     choiceEvents: []
     quest: {fileID: 11400000, guid: 7fba00d3e6cd31d4b9b3d94d651ab8de, type: 2}

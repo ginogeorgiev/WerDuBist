@@ -14,20 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choices:
   - text: "Sie gr\xFCndlich belehren."
-    ingameQuestion: {fileID: 0}
-    value: 0
+    ingameQuestion: {fileID: 11400000, guid: bd62fd2ac4c53124d89a59b24aa1b61b, type: 2}
+    value: 1
     dialogConversation: {fileID: 11400000, guid: 6f3fb45ba43ced7498d2335b0eaf1bfa, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
   - text: Sie bedrohen.
-    ingameQuestion: {fileID: 0}
-    value: 0
+    ingameQuestion: {fileID: 11400000, guid: bd62fd2ac4c53124d89a59b24aa1b61b, type: 2}
+    value: 2
     dialogConversation: {fileID: 11400000, guid: 26a58d8d141f3854ea3092c677bbcaa4, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
   - text: "Sie verpr\xFCgeln."
-    ingameQuestion: {fileID: 0}
-    value: 0
+    ingameQuestion: {fileID: 11400000, guid: bd62fd2ac4c53124d89a59b24aa1b61b, type: 2}
+    value: 3
     dialogConversation: {fileID: 11400000, guid: 43c7178a787412f43b37fb3681f3c0df, type: 2}
     choiceEvents: []
     quest: {fileID: 0}

@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choices:
   - text: "Das ist eine l\xE4cherliche Idee. Aber, lass uns weitermachen."
-    ingameQuestion: {fileID: 0}
+    ingameQuestion: {fileID: 11400000, guid: 2cee13890759e2f4e8b9255e6126a172, type: 2}
     value: 0
     dialogConversation: {fileID: 11400000, guid: 7f53be043b4c7c04a82acdf7649d1443, type: 2}
-    choiceEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}
   - text: "Ich gebe auf. An diesem Punkt k\xF6nnte ich mich genauso gut ertr\xE4nken,
       um diesen Qualen zu entkommen. Ich gebe auf."
-    ingameQuestion: {fileID: 11400000, guid: c11fd5265bab6f94eb8313827c7cf094, type: 2}
+    ingameQuestion: {fileID: 11400000, guid: 2cee13890759e2f4e8b9255e6126a172, type: 2}
     value: 2
     dialogConversation: {fileID: 11400000, guid: 53859e52e947bc348956ddececad2c2d, type: 2}
-    choiceEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}
