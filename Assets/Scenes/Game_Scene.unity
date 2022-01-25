@@ -456,7 +456,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -782,7 +782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5506266131864378915, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 717
+      value: 1910
       objectReference: {fileID: 0}
     - target: {fileID: 5506266131864378915, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -842,11 +842,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8432286848697763842, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 386
       objectReference: {fileID: 0}
     - target: {fileID: 8432286848697763842, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 207
+      value: 393
       objectReference: {fileID: 0}
     - target: {fileID: 8432286848697763842, guid: db1f19836d7d24d408c3143503e305bf, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1255,10 +1255,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tutorial_Island
       objectReference: {fileID: 0}
-    - target: {fileID: 1493908843815739326, guid: c44470a01e26543488c2bd445367ca75, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c44470a01e26543488c2bd445367ca75, type: 3}
 --- !u!1001 &3510862551183063022
@@ -1315,10 +1311,6 @@ PrefabInstance:
     - target: {fileID: 312983164850798073, guid: 7b86bce7a961e5e40968a1558aa18f8a, type: 3}
       propertyPath: m_Name
       value: Main_Island
-      objectReference: {fileID: 0}
-    - target: {fileID: 312983164850798073, guid: 7b86bce7a961e5e40968a1558aa18f8a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b86bce7a961e5e40968a1558aa18f8a, type: 3}
