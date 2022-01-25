@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8579456910410432940}
   - component: {fileID: 3944314757498918371}
-  - component: {fileID: 8624611171013131810}
   m_Layer: 0
   m_Name: chair
   m_TagString: Untagged
@@ -83,19 +82,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!70 &8624611171013131810
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9193671178555485826}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.01814689, y: 1.400468}
-  m_Size: {x: 2.633721, y: 2.800936}
-  m_Direction: 0
