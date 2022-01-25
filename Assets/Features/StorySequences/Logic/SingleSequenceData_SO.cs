@@ -42,6 +42,12 @@ namespace Features.StorySequences.Logic
         [Header("Hoffentlich selbsterklärend (muss selbst erstellt werden)", order = 21)]
         [SerializeField] private GameEvent_SO sequenceCompletedEvent;
 
+        [SerializeField] private QuestSet_SO activeQuests;
+        [SerializeField] private Quest_SO luisArmaband;
+        [SerializeField] private NPCData_SO luis;
+        [SerializeField] private NPCData_SO luisEnd;
+        
+
         public List<NPCData_SO> NpcsToAdvanceConversationsList => npcsToAdvanceConversationsList;
 
         public List<Quest_SO> Quests => quests;
@@ -111,6 +117,21 @@ namespace Features.StorySequences.Logic
                 foreach (Quest_SO quest in questsToUnlockList)
                 {
                     onQuestUnlocked.Raise(quest);
+                }
+            }
+
+            if (luis == null || luisEnd == null || activeQuests == null || luisArmaband == null) return;
+            {
+                Debug.Log(!activeQuests.Items.Contains(luisArmaband));
+                if (!activeQuests.Items.Contains(luisArmaband)) return;
+                foreach (NpcBehaviour npcBehaviour in behaviourRuntimeSet.GetItems().Where(npcBehaviour => npcBehaviour.Data.ID == luis.ID))
+                {
+                    npcBehaviour.gameObject.SetActive(false);
+                }
+
+                foreach (NpcBehaviour npcBehaviour in behaviourRuntimeSet.GetItems().Where(npcBehaviour => npcBehaviour.Data.ID == luisEnd.ID))
+                {
+                    npcBehaviour.gameObject.SetActive(true);
                 }
             }
         }

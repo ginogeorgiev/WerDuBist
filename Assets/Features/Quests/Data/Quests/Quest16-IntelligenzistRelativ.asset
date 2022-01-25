@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a54c835cd434817add4d3fdde868665, type: 3}
-  m_Name: Quest15-Lausi 2
+  m_Name: Quest16-IntelligenzistRelativ
   m_EditorClassIdentifier: 
-  id: 15
+  id: 16
   npcsToAdvanceConversationsList: []
-  title: Lausi der Obdachlose
-  description: Guck was Lausi von dir will.
+  title: Intelligenz ist relativ
+  description: Sprich mit dem Wissenschaftler.
   visible: 1
   goals:
   - goalType: 1
-    sprite: {fileID: 21300000, guid: a874834868140214dbd97d3f6534ad49, type: 3}
+    sprite: {fileID: 21300000, guid: 5c8394fb9f0df3a408b9693fa8b99c61, type: 3}
     otherQuests: []
-    npc: {fileID: 11400000, guid: 75ce139d6fc7f1c4c9976825681b1c9a, type: 2}
+    npc: {fileID: 11400000, guid: 45b90c809fb05b849beb7e650799119b, type: 2}
     current: {fileID: 11400000, guid: aabf314d0209c27499eb41f91dc89215, type: 2}
-    required: 0
-  startPosition: {x: 30.75, y: 21.92}
-  endPosition: {x: 38.94, y: 23.77}
+    required: 1
+  startPosition: {x: 35.58, y: 22.05}
+  endPosition: {x: 57.08, y: 71.29}
   questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}

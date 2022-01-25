@@ -16,12 +16,12 @@ MonoBehaviour:
   - text: Boar, vielen Dank!
     ingameQuestion: {fileID: 0}
     value: 0
-    dialogConversation: {fileID: 0}
+    dialogConversation: {fileID: 11400000, guid: 12a78dc9ab74e69439a96d2865f5ce60, type: 2}
     choiceEvents: []
     quest: {fileID: 11400000, guid: a79e140305a9dd045a475c8e324c2365, type: 2}
   - text: "Endlich jemand der meine Arbeit zu sch\xE4tzen wei\xDF..."
     ingameQuestion: {fileID: 0}
     value: 0
-    dialogConversation: {fileID: 0}
+    dialogConversation: {fileID: 11400000, guid: 12a78dc9ab74e69439a96d2865f5ce60, type: 2}
     choiceEvents: []
     quest: {fileID: 11400000, guid: a79e140305a9dd045a475c8e324c2365, type: 2}

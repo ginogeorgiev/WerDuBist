@@ -18,12 +18,12 @@ MonoBehaviour:
   description: "Gib Luis am Ende des Tages das Armband zur\xFCck."
   visible: 0
   goals:
-  - goalType: 0
+  - goalType: 1
     sprite: {fileID: 21300000, guid: 43e221860d46c42abab1fea3b4b3e7e9, type: 3}
     otherQuests: []
-    npc: {fileID: 0}
+    npc: {fileID: 11400000, guid: 8f69c373751b5984f9ff2ce18a81ad26, type: 2}
     current: {fileID: 11400000, guid: 8ce660b6c02272749980efc2e80a79f6, type: 2}
     required: 7
   startPosition: {x: 42.5, y: 18.5}
-  endPosition: {x: 0, y: 0}
+  endPosition: {x: 42.5, y: 18.5}
   questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}

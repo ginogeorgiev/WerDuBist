@@ -17,5 +17,5 @@ MonoBehaviour:
   lines:
   - npcData: {fileID: 11400000, guid: 45ab7c007ca723a4e92d1b2d82e59d25, type: 2}
     text: Gib nicht alles auf einmal aus.
-  advanceConvAutomatically: 0
+  advanceConvAutomatically: 1
   dialogQuestion: {fileID: 0}

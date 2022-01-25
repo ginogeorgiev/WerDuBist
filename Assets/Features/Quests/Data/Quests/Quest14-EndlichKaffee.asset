@@ -24,7 +24,7 @@ MonoBehaviour:
     otherQuests: []
     npc: {fileID: 11400000, guid: 3c53c2b9f69fb5e429cec0b123401cc2, type: 2}
     current: {fileID: 11400000, guid: aabf314d0209c27499eb41f91dc89215, type: 2}
-    required: 0
-  startPosition: {x: 34.69, y: 21.16}
-  endPosition: {x: 30.75, y: 21.92}
+    required: 1
+  startPosition: {x: 32.73, y: 20.79}
+  endPosition: {x: 29.98, y: 21.55}
   questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}

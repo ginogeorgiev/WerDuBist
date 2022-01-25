@@ -111,7 +111,7 @@ namespace Features.Dialog.Logic
             speakerUIControllerRight.Speaker = dialogConversation.SpeakerRight;
         }
 
-        private void AdvanceLine()
+        public void AdvanceLine()
         {
             if (isGamePaused.Get()) return;
             
