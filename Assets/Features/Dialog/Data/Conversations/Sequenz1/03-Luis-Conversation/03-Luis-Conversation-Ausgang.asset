@@ -16,6 +16,6 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 3c37acb8af748d141affedf4bf99b425, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 3c37acb8af748d141affedf4bf99b425, type: 2}
-    text: "Bring mir dann sp\xE4ter mein Armband zur\xFCck."
+    text: "Die Sonne scheint heute so sch\xF6n."
   advanceConvAutomatically: 0
   dialogQuestion: {fileID: 0}

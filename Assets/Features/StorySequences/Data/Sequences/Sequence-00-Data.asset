@@ -24,6 +24,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3286d80512a5b6c49a0946274b3abb63, type: 2}
   npcsToDeactivateList:
   - {fileID: 11400000, guid: 2a6489c87cf46f14db3526c2ede3d338, type: 2}
+  - {fileID: 11400000, guid: 8f69c373751b5984f9ff2ce18a81ad26, type: 2}
   questsToUnlockList:
   - {fileID: 11400000, guid: 64d67580bff265e41ae674871fb00f8b, type: 2}
   - {fileID: 11400000, guid: 9ec1ef8e3ab31a840bb549d99dc183af, type: 2}
@@ -33,3 +34,7 @@ MonoBehaviour:
   onQuestUnlocked: {fileID: 11400000, guid: 8f5648f89cd5125409176c7fad3a91df, type: 2}
   behaviourRuntimeSet: {fileID: 11400000, guid: 9d553a0a1058f1b4fa6ea1634cc00b10, type: 2}
   sequenceCompletedEvent: {fileID: 11400000, guid: e8303b8678ef6aa4992df7d7f0322dc4, type: 2}
+  activeQuests: {fileID: 0}
+  luisArmaband: {fileID: 0}
+  luis: {fileID: 0}
+  luisEnd: {fileID: 0}
