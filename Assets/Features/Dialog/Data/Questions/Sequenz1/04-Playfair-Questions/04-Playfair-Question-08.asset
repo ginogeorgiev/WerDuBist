@@ -12,20 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
   m_Name: 04-Playfair-Question-08
   m_EditorClassIdentifier: 
-  text: 
   choices:
   - text: "Keine Sorge, ich bin nicht b\xF6se. Wir werden einfach nochmal spielen."
+    ingameQuestion: {fileID: 11400000, guid: 6c61a5a2f75984246a898eb9b185fe60, type: 2}
+    value: 0.2
     dialogConversation: {fileID: 11400000, guid: 2f8cb556900edc442af619cfecd587b5, type: 2}
-    choiceEvent: {fileID: 0}
-    questEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}
   - text: Dann spielen wir noch einmal. Diesmal wird nicht geschummelt.
+    ingameQuestion: {fileID: 11400000, guid: 6c61a5a2f75984246a898eb9b185fe60, type: 2}
+    value: 0.4
     dialogConversation: {fileID: 11400000, guid: 2f8cb556900edc442af619cfecd587b5, type: 2}
-    choiceEvent: {fileID: 0}
-    questEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}
   - text: Diesmal werde ich dich endlich schlagen. KEIN SCHUMMELN DIESMAL!
+    ingameQuestion: {fileID: 11400000, guid: 6c61a5a2f75984246a898eb9b185fe60, type: 2}
+    value: 0.6
     dialogConversation: {fileID: 11400000, guid: 2f8cb556900edc442af619cfecd587b5, type: 2}
-    choiceEvent: {fileID: 0}
-    questEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}

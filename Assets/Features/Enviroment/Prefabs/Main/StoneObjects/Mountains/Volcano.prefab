@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1640168171223327471}
   - component: {fileID: 2933270586292441696}
+  - component: {fileID: 3070502312127445819}
   m_Layer: 0
   m_Name: Volcano
   m_TagString: Untagged
@@ -82,3 +83,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!68 &3070502312127445819
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8700132701439136075}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -7.669572, y: -1.0541372}
+  - {x: -7.806259, y: -1.5301437}
+  - {x: -6.973839, y: -2.7769203}
+  - {x: -5.49263, y: -3.73629}
+  - {x: -4.538246, y: -3.2006607}
+  - {x: -3.324459, y: -3.5778122}
+  - {x: -2.883686, y: -4.386776}
+  - {x: -1.3597794, y: -3.8526878}
+  - {x: -0.72738266, y: -4.769184}
+  - {x: 1.9503059, y: -4.895466}
+  - {x: 2.691143, y: -3.9234428}
+  - {x: 3.8182487, y: -3.3976822}
+  - {x: 4.8040047, y: -3.7175827}
+  - {x: 6.6323357, y: -2.8757668}
+  - {x: 6.3123207, y: -1.9574738}
+  - {x: 6.743679, y: -1.5199051}
+  - {x: 7.4186096, y: -1.4766121}
+  - {x: 7.8302383, y: -1.240757}
+  - {x: 8.062759, y: -0.87073517}
+  - {x: 7.6685905, y: -0.12623215}
+  - {x: 7.0111275, y: 0.72481537}
+  - {x: 4.491375, y: 2.1345482}
+  - {x: 2.786377, y: 3.0951805}
+  - {x: -1.5414848, y: 3.1889114}
+  - {x: -4.224308, y: 2.1629257}
+  - {x: -5.2300987, y: 0.66324615}
+  - {x: -5.475548, y: 0.65527725}
+  - {x: -6.489113, y: 0.3056183}
+  - {x: -6.75502, y: 0.14568329}
+  - {x: -7.26511, y: -0.24713898}
+  - {x: -7.6509237, y: -1.0407782}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

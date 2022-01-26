@@ -14,20 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choices:
   - text: Ich bin bereit, eine Entscheidung zu treffen.
-    ingameQuestion: {fileID: 0}
-    value: 0
+    ingameQuestion: {fileID: 11400000, guid: 187490294717ea94c9ef75875b300fd2, type: 2}
+    value: 1
     dialogConversation: {fileID: 11400000, guid: 2573d164fc3e5694bab1d33bb28d9f1f, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
   - text: "Geben Sie mir eine Sekunde Zeit, dar\xFCber nachzudenken."
-    ingameQuestion: {fileID: 0}
-    value: 0
+    ingameQuestion: {fileID: 11400000, guid: 187490294717ea94c9ef75875b300fd2, type: 2}
+    value: 2
     dialogConversation: {fileID: 11400000, guid: 7098b048638a0924cbf19b4c8ead4a2b, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
   - text: "Ich brauche etwas Zeit, um ernsthaft dar\xFCber nachzudenken."
-    ingameQuestion: {fileID: 0}
-    value: 0
+    ingameQuestion: {fileID: 11400000, guid: 187490294717ea94c9ef75875b300fd2, type: 2}
+    value: 3
     dialogConversation: {fileID: 11400000, guid: 7098b048638a0924cbf19b4c8ead4a2b, type: 2}
     choiceEvents: []
     quest: {fileID: 0}

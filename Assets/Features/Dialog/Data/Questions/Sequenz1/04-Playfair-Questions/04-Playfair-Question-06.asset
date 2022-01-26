@@ -12,20 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
   m_Name: 04-Playfair-Question-06
   m_EditorClassIdentifier: 
-  text: 
   choices:
   - text: So langsam habe ich den Dreh raus. Los geht's.
+    ingameQuestion: {fileID: 11400000, guid: 6c61a5a2f75984246a898eb9b185fe60, type: 2}
+    value: 0.2
     dialogConversation: {fileID: 11400000, guid: ba69b92cba6087c44b11c1db97ed0551, type: 2}
-    choiceEvent: {fileID: 0}
-    questEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}
   - text: Ich kann noch spielen.
+    ingameQuestion: {fileID: 11400000, guid: 6c61a5a2f75984246a898eb9b185fe60, type: 2}
+    value: 0.4
     dialogConversation: {fileID: 11400000, guid: ba69b92cba6087c44b11c1db97ed0551, type: 2}
-    choiceEvent: {fileID: 0}
-    questEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}
   - text: Diesmal schlage ich dich ganz sicher.
+    ingameQuestion: {fileID: 11400000, guid: 6c61a5a2f75984246a898eb9b185fe60, type: 2}
+    value: 0.6
     dialogConversation: {fileID: 11400000, guid: ba69b92cba6087c44b11c1db97ed0551, type: 2}
-    choiceEvent: {fileID: 0}
-    questEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}

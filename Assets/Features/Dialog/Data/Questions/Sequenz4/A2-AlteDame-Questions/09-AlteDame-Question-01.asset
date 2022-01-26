@@ -14,20 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choices:
   - text: "Ignorieren, da ich ein Termin hab und p\xFCnktlich sein m\xF6chte."
-    ingameQuestion: {fileID: 11400000, guid: c00cd8a31c7eeba43862ff94383fc709, type: 2}
+    ingameQuestion: {fileID: 11400000, guid: 6c65a220e528f1f4f9ee4954a036452f, type: 2}
     value: 1
     dialogConversation: {fileID: 11400000, guid: 5bd7da31b5bc7624d990638f44e1fbc9, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
   - text: "Die alte Dame ansprechen und darauf hinweisen, das Ihr \xC4pfel aus den
       Weidenkorb gefallen sind."
-    ingameQuestion: {fileID: 11400000, guid: c00cd8a31c7eeba43862ff94383fc709, type: 2}
+    ingameQuestion: {fileID: 11400000, guid: 6c65a220e528f1f4f9ee4954a036452f, type: 2}
     value: 2
     dialogConversation: {fileID: 11400000, guid: 5bd7da31b5bc7624d990638f44e1fbc9, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
   - text: "\xC4pfel aufsammeln und wieder in den Korb tun. "
-    ingameQuestion: {fileID: 11400000, guid: c00cd8a31c7eeba43862ff94383fc709, type: 2}
+    ingameQuestion: {fileID: 11400000, guid: 6c65a220e528f1f4f9ee4954a036452f, type: 2}
     value: 3
     dialogConversation: {fileID: 0}
     choiceEvents: []
