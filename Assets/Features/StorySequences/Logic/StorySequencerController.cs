@@ -32,6 +32,15 @@ namespace Features.StorySequences.Logic
                     npcBehaviour.gameObject.SetActive(false);
                     // Debug.Log(npcBehaviour.Data.name + " deactivated ");
                 }
+
+                if (sequence.LuisEnd == null) continue;
+                {
+                    foreach (NpcBehaviour npcBehaviour in npcBehaviourRuntimeSet.GetItems()
+                        .Where(npcBehaviour => sequence.LuisEnd.ID == npcBehaviour.Data.ID))
+                    {
+                        npcBehaviour.gameObject.SetActive(false);
+                    }
+                }
             }
         }
 

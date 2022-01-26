@@ -46,7 +46,8 @@ namespace Features.StorySequences.Logic
         [SerializeField] private Quest_SO luisArmaband;
         [SerializeField] private NPCData_SO luis;
         [SerializeField] private NPCData_SO luisEnd;
-        
+
+        public NPCData_SO LuisEnd => luisEnd;
 
         public List<NPCData_SO> NpcsToAdvanceConversationsList => npcsToAdvanceConversationsList;
 
