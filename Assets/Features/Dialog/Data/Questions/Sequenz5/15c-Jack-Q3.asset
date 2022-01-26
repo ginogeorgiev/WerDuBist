@@ -16,20 +16,20 @@ MonoBehaviour:
   - text: "Ja, sehr gut, Ihr seid ein lustiges V\xF6lkchen - du bleibst noch eine
       Weile und unterh\xE4ltst dich-\n"
     ingameQuestion: {fileID: 11400000, guid: 8c2a2b9af5a6c5d45943d5e080990a6f, type: 2}
-    value: 2
+    value: 3
     dialogConversation: {fileID: 11400000, guid: 84223c4d2a9f42d48957d64e8e3015c9, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
   - text: "Es geht, mir ist weder Wohl noch Unwohl. - du bleibst noch eine Weile
-      und unterh\xE4ltst dich-\n\n"
+      und unterh\xE4ltst dich -\n\n"
     ingameQuestion: {fileID: 11400000, guid: 8c2a2b9af5a6c5d45943d5e080990a6f, type: 2}
-    value: 1
+    value: 2
     dialogConversation: {fileID: 11400000, guid: 84223c4d2a9f42d48957d64e8e3015c9, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
   - text: "Ich f\xFChl mich eigentlich recht unwohl."
     ingameQuestion: {fileID: 11400000, guid: 8c2a2b9af5a6c5d45943d5e080990a6f, type: 2}
-    value: 0
+    value: 1
     dialogConversation: {fileID: 11400000, guid: 84223c4d2a9f42d48957d64e8e3015c9, type: 2}
     choiceEvents: []
     quest: {fileID: 0}

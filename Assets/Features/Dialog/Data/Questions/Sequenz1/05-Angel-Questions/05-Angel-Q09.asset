@@ -21,7 +21,7 @@ MonoBehaviour:
     quest: {fileID: 0}
   - text: Du hast recht, ich gebe auf.
     ingameQuestion: {fileID: 11400000, guid: 2cee13890759e2f4e8b9255e6126a172, type: 2}
-    value: 1
+    value: 2
     dialogConversation: {fileID: 11400000, guid: 53859e52e947bc348956ddececad2c2d, type: 2}
     choiceEvents: []
     quest: {fileID: 0}

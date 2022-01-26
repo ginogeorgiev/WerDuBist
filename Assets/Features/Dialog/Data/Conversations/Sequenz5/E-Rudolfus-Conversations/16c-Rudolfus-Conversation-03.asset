@@ -18,11 +18,11 @@ MonoBehaviour:
   - npcData: {fileID: 11400000, guid: bd0d59590010c974b8ccdf063165baca, type: 2}
     text: 'Nun lass ihn doch doch erst mal ankommen. Ich bin Rudolfus. '
   - npcData: {fileID: 11400000, guid: bd0d59590010c974b8ccdf063165baca, type: 2}
-    text: Nun lass ihn doch doch erst mal ankommen. Ich bin Rudolfus.Rand unseren
-      Zirkus aufbauen und die Weltbeste Show vom besten geben. Wir sind die Weltbesten
-      musst du wissen.
+    text: Nun lass ihn doch doch erst mal ankommen. Ich bin Rudolfus. Wir werden
+      die Welt beste Show vom besten geben. Wir sind die Weltbesten musst du wissen.
   - npcData: {fileID: 11400000, guid: bd0d59590010c974b8ccdf063165baca, type: 2}
     text: "Wir waren schon \xFCberall auf der Welt, nur diese abgelegene Insel und
       Ihre Bewohner ist uns entgangen, darum sind wir hier.\u201D\nDu wirkst etwas
       angespannt. Ich hoffe du f\xFChlst du dich wohl bei uns?\r\n"
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 11400000, guid: 77d9150ab565a4c459339991788e4bad, type: 2}

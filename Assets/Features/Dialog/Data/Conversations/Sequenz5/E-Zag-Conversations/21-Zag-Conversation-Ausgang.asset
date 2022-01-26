@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 266c97da10218e94ab464a1f7e833e73, type: 3}
-  m_Name: 24-Zwillinge-Conversation-01
+  m_Name: 21-Zag-Conversation-Ausgang
   m_EditorClassIdentifier: 
   speakerLeft: {fileID: 11400000, guid: a5d20b15f28ea8143b6531e8889a2eaf, type: 2}
-  speakerRight: {fileID: 11400000, guid: 121a450bdd4f9c246b39d8795fc5360d, type: 2}
+  speakerRight: {fileID: 11400000, guid: 556851574fa031344a88b70bd17aec21, type: 2}
   lines:
-  - npcData: {fileID: 11400000, guid: 121a450bdd4f9c246b39d8795fc5360d, type: 2}
-    text: "Du musst NAME sein, wir hoffen die anderen haben dich nicht zu sehr bel\xE4stigt"
-  dialogQuestion: {fileID: 11400000, guid: 13fa23e7cb4450f49b7bea25cac31d38, type: 2}
+  - npcData: {fileID: 11400000, guid: 553b82f98a90b7a4eb757a65982fe67d, type: 2}
+    text: Ich liebe Partys.
+  advanceConvAutomatically: 0
+  dialogQuestion: {fileID: 0}

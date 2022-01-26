@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39cba5f168530e44290b1e01ed7f0468, type: 3}
   m_Name: Sequence-03-Data
   m_EditorClassIdentifier: 
-  npcsToAdvanceConversationsList:
-  - {fileID: 11400000, guid: e61bf57c6592a0640833d6fdc499629b, type: 2}
+  npcsToAdvanceConversationsList: []
   quests:
   - {fileID: 11400000, guid: 0afb65ae756f5ae489b597b41accda83, type: 2}
   npcsToActivateList:
@@ -22,8 +21,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 47df417dc16681147bb9ad57ab229b65, type: 2}
   - {fileID: 11400000, guid: 51f59b3b6d0ae1c43a6d410b4d40576b, type: 2}
   - {fileID: 11400000, guid: 4795dcd0de5559f4aac8664fb8a289a3, type: 2}
+  - {fileID: 11400000, guid: 7a29ac58998afde43818e850e0746461, type: 2}
   npcsToDeactivateList:
   - {fileID: 11400000, guid: 41ade48c0f6a52a4f80cd74d816d111d, type: 2}
+  - {fileID: 11400000, guid: e61bf57c6592a0640833d6fdc499629b, type: 2}
   questsToUnlockList:
   - {fileID: 11400000, guid: ecc97338a8abd6349a4cea6f772df687, type: 2}
   - {fileID: 11400000, guid: 8d4ba0823450ab5469ad0340d0e49c62, type: 2}
@@ -31,3 +32,7 @@ MonoBehaviour:
   onQuestUnlocked: {fileID: 11400000, guid: 8f5648f89cd5125409176c7fad3a91df, type: 2}
   behaviourRuntimeSet: {fileID: 11400000, guid: 9d553a0a1058f1b4fa6ea1634cc00b10, type: 2}
   sequenceCompletedEvent: {fileID: 11400000, guid: 0fa176a3807778c4fb58c1b317f104c8, type: 2}
+  activeQuests: {fileID: 0}
+  luisArmaband: {fileID: 0}
+  luis: {fileID: 0}
+  luisEnd: {fileID: 0}

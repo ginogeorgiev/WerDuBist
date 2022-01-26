@@ -15,4 +15,4 @@ MonoBehaviour:
   question: Ich bringe eine Party in Schwung.
   gameAspectValue: {fileID: 11400000, guid: d32d609c12f72a7459eda28e2c6f03da, type: 2}
   surveyAspectValue: {fileID: 11400000, guid: aabf314d0209c27499eb41f91dc89215, type: 2}
-  key: 1
+  key: 0

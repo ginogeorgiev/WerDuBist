@@ -15,4 +15,4 @@ MonoBehaviour:
   question: Ich habe eine lebhafte Vorstellungskraft.
   gameAspectValue: {fileID: 11400000, guid: bbafa928eba7a8440a25dc6995b4d445, type: 2}
   surveyAspectValue: {fileID: 11400000, guid: 6b1a307e876bc8d4fa25810b6db81e4e, type: 2}
-  key: 1
+  key: 0
