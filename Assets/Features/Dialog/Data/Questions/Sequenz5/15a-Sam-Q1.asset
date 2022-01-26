@@ -15,13 +15,7 @@ MonoBehaviour:
   choices:
   - text: "Sehr gerne (-Getr\xE4nk nehmen-)"
     ingameQuestion: {fileID: 11400000, guid: 21ec782ba547d0746971fb43beb0387d, type: 2}
-    value: 1
-    dialogConversation: {fileID: 11400000, guid: 680c8b744c6f87b45af6e47699f94b7c, type: 2}
-    choiceEvents: []
-    quest: {fileID: 0}
-  - text: " - Getr\xE4nk nehmen ohne etwas zu sagen-"
-    ingameQuestion: {fileID: 11400000, guid: 21ec782ba547d0746971fb43beb0387d, type: 2}
-    value: 0
+    value: 1.5
     dialogConversation: {fileID: 11400000, guid: 680c8b744c6f87b45af6e47699f94b7c, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
@@ -31,9 +25,9 @@ MonoBehaviour:
     dialogConversation: {fileID: 0}
     choiceEvents: []
     quest: {fileID: 0}
-  - text: "- Getr\xE4nk nicht nehmen ohne etwas zu sagen-"
+  - text: " - Getr\xE4nk nehmen ohne etwas zu sagen-"
     ingameQuestion: {fileID: 11400000, guid: 21ec782ba547d0746971fb43beb0387d, type: 2}
-    value: 0
-    dialogConversation: {fileID: 0}
+    value: 0.5
+    dialogConversation: {fileID: 11400000, guid: 680c8b744c6f87b45af6e47699f94b7c, type: 2}
     choiceEvents: []
     quest: {fileID: 0}

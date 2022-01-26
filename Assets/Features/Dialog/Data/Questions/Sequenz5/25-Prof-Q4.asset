@@ -14,19 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choices:
   - text: "Beschreibt die Auff\xE4lligkeit einer gewissen Variable in ihrem Wirkungsgrad."
-    ingameQuestion: {fileID: 11400000, guid: 07c119146e724bf48b229c315202b25d, type: 2}
+    ingameQuestion: {fileID: 11400000, guid: 10a33dd267dd78a41b93c577159880c4, type: 2}
     value: 0
     dialogConversation: {fileID: 11400000, guid: 5a1383871aea203428f62e90bbf4b757, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
   - text: Beschreibt die Beziehung zwischen der Ursache und Wirkung eines Ereignisses.
-    ingameQuestion: {fileID: 11400000, guid: 07c119146e724bf48b229c315202b25d, type: 2}
+    ingameQuestion: {fileID: 11400000, guid: 10a33dd267dd78a41b93c577159880c4, type: 2}
     value: 1
     dialogConversation: {fileID: 11400000, guid: 5a1383871aea203428f62e90bbf4b757, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
   - text: "Ganz ehrlich\u2026ich hab keine Ahnung."
-    ingameQuestion: {fileID: 11400000, guid: 07c119146e724bf48b229c315202b25d, type: 2}
+    ingameQuestion: {fileID: 11400000, guid: 10a33dd267dd78a41b93c577159880c4, type: 2}
     value: 0
     dialogConversation: {fileID: 11400000, guid: 5a1383871aea203428f62e90bbf4b757, type: 2}
     choiceEvents: []

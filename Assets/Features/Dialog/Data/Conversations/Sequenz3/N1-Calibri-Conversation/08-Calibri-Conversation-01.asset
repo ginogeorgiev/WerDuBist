@@ -17,5 +17,6 @@ MonoBehaviour:
   lines:
   - npcData: {fileID: 11400000, guid: dc02e58ae4ca8374ba152d8fe1b52038, type: 2}
     text: Sieh mal an, wer da ist, der gestrandete Fremde. Jungs, schaut euch diesen
-      Narren an.
+      Idioten an.
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 11400000, guid: 7d11512c368e0f1408858ad901d1ecbe, type: 2}

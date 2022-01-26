@@ -15,13 +15,21 @@ MonoBehaviour:
   npcsToAdvanceConversationsList:
   - {fileID: 11400000, guid: 45b90c809fb05b849beb7e650799119b, type: 2}
   - {fileID: 11400000, guid: b6a843983c19eb04988ea931127f6849, type: 2}
-  - {fileID: 11400000, guid: e61bf57c6592a0640833d6fdc499629b, type: 2}
+  - {fileID: 11400000, guid: 553b82f98a90b7a4eb757a65982fe67d, type: 2}
+  - {fileID: 11400000, guid: 5d62d31a5b119c240a58c168c7830515, type: 2}
+  - {fileID: 11400000, guid: 556851574fa031344a88b70bd17aec21, type: 2}
+  - {fileID: 11400000, guid: 121a450bdd4f9c246b39d8795fc5360d, type: 2}
+  - {fileID: 11400000, guid: 3c7e364e2300aa74fbb6310f6e6ce1d6, type: 2}
+  - {fileID: 11400000, guid: 81bd6697801436545b914809129b4a56, type: 2}
+  - {fileID: 11400000, guid: bd0d59590010c974b8ccdf063165baca, type: 2}
   quests:
   - {fileID: 11400000, guid: ecc97338a8abd6349a4cea6f772df687, type: 2}
   - {fileID: 11400000, guid: a79e140305a9dd045a475c8e324c2365, type: 2}
   - {fileID: 11400000, guid: f9a323680c87a1e4895803310a5d7fe1, type: 2}
-  npcsToActivateList: []
-  npcsToDeactivateList: []
+  npcsToActivateList:
+  - {fileID: 11400000, guid: 37fd20dd15d55d4499415bc1fe98a5e9, type: 2}
+  npcsToDeactivateList:
+  - {fileID: 11400000, guid: 7a29ac58998afde43818e850e0746461, type: 2}
   questsToUnlockList: []
   onQuestUnlocked: {fileID: 11400000, guid: 8f5648f89cd5125409176c7fad3a91df, type: 2}
   behaviourRuntimeSet: {fileID: 11400000, guid: 9d553a0a1058f1b4fa6ea1634cc00b10, type: 2}

@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choices:
   - text: Holz nachlegen.
-    ingameQuestion: {fileID: 11400000, guid: 1c809b081a24e2546b2fbfc83a9fc28c, type: 2}
+    ingameQuestion: {fileID: 11400000, guid: ae50219cd12406044801db60b0f1d96a, type: 2}
     value: 1
     dialogConversation: {fileID: 11400000, guid: 143f765f68997854f827fe68fa2da77d, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
   - text: Weg gehen.
-    ingameQuestion: {fileID: 11400000, guid: 1c809b081a24e2546b2fbfc83a9fc28c, type: 2}
-    value: 1
+    ingameQuestion: {fileID: 11400000, guid: ae50219cd12406044801db60b0f1d96a, type: 2}
+    value: 0
     dialogConversation: {fileID: 0}
     choiceEvents: []
     quest: {fileID: 0}

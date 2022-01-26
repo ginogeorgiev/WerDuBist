@@ -10,20 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
-  m_Name: 24-Zwillinge-Q1
+  m_Name: E4-VielGlueck-Q1
   m_EditorClassIdentifier: 
   choices:
-  - text: 'Nein, alles gut, ihr seid alle echt nett
-
-'
-    ingameQuestion: {fileID: 11400000, guid: 21ec782ba547d0746971fb43beb0387d, type: 2}
-    value: 1
-    dialogConversation: {fileID: 0}
-    choiceEvents: []
-    quest: {fileID: 0}
-  - text: "... -nichts sagen und weitergehen\r-"
-    ingameQuestion: {fileID: 11400000, guid: 21ec782ba547d0746971fb43beb0387d, type: 2}
-    value: 0
+  - text: "Viel Spa\xDF noch."
+    ingameQuestion: {fileID: 11400000, guid: 4029ac32ba5838b45a9d83c405886e8a, type: 2}
+    value: 0.5
     dialogConversation: {fileID: 0}
     choiceEvents: []
     quest: {fileID: 0}

@@ -23,7 +23,6 @@ MonoBehaviour:
     otherQuests:
     - {fileID: 11400000, guid: 7cd0a61d2994d27498bacd7de514c7fc, type: 2}
     - {fileID: 11400000, guid: db7db85b763276949a93b3e13fd166d7, type: 2}
-    - {fileID: 11400000, guid: d50d7b03fc85125418d663da3e7d531c, type: 2}
     - {fileID: 11400000, guid: db7db85b763276949a93b3e13fd166d7, type: 2}
     - {fileID: 11400000, guid: 9f289d93b2ec9f448a1c455872c5ed0b, type: 2}
     - {fileID: 11400000, guid: 24bb4f95e1885374a8bead21d2b26a68, type: 2}
