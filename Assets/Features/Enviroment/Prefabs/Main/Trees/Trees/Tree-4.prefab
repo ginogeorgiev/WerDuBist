@@ -110,7 +110,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4285265548172100529}
   - component: {fileID: 8471609149323258714}
-  - component: {fileID: 8957496467660826279}
   m_Layer: 0
   m_Name: Tree-4
   m_TagString: Untagged
@@ -126,7 +125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9194282209968798704}
   m_LocalRotation: {x: -0, y: -0, z: 0.49298623, w: 0.87003714}
-  m_LocalPosition: {x: 0.46, y: 0, z: 0}
+  m_LocalPosition: {x: 0.32, y: 0.1, z: 0}
   m_LocalScale: {x: 0.81042, y: 0.5346002, z: 1}
   m_Children: []
   m_Father: {fileID: 4148001396414717282}
@@ -183,19 +182,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!70 &8957496467660826279
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9194282209968798704}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.7738433, y: 0.17}
-  m_Size: {x: 0.79236615, y: 0.36000004}
-  m_Direction: 1
