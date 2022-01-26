@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6400885559916105771
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1805056867452798616, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 1805056867452798616, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 11400000, guid: f7814036158a52a499b3659e115050fa, type: 2}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204690260697107186, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: conversationElements.Array.data[0].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: c1a124f06b716554f929a5cc6a799fe4, type: 2}
+    - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 38.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 35.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204690260697107187, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204690260697107190, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_Name
+      value: BA_Dorfbewohner_M_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835833018944873319, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_Size.x
+      value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835833018944873319, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2341cd78c39b1fb4b85b03798b7d9e09, type: 3}
+    - target: {fileID: 4835833018944873319, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990918384910721265, guid: c223c124cfdae254e9a67092022165bd, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 61aeff1dbfc3ec146a74f577f59b40a3, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c223c124cfdae254e9a67092022165bd, type: 3}
