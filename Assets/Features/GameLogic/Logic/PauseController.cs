@@ -10,9 +10,10 @@ namespace Features.GameLogic.Logic
     public class PauseController : MonoBehaviour
     {
         [SerializeField] private GameEvent_SO pauseGame, unpauseGame;
+        [SerializeField] private GameEvent_SO togglePause;
         [SerializeField] private BoolVariable isGamePaused;
 
-        private bool inGame;
+        [SerializeField] private BoolVariable inGame;
 
         private StateMachine stateMachine;
         private PauseState pauseState;
@@ -30,7 +31,7 @@ namespace Features.GameLogic.Logic
 
         private void Awake()
         {
-            inGame = false;
+            inGame.SetFalse();
             
             stateMachine = new StateMachine();
             pauseState = new PauseState(isGamePaused);
@@ -43,8 +44,13 @@ namespace Features.GameLogic.Logic
         {
             playerControls.Player.PauseOrResume.started += _ =>
             {
-                if (inGame) ChangeGamePauseState();
+                togglePause.Raise();
             };
+        }
+
+        public void TogglePause()
+        {
+            if (inGame.Get()) ChangeGamePauseState();
         }
 
         private void ChangeGamePauseState()
@@ -57,12 +63,12 @@ namespace Features.GameLogic.Logic
 
         public void EnablePauseUIActivation()
         {
-            inGame = true;
+            inGame.SetTrue();
         }
         
         public void DisablePauseUIActivation()
         {
-            inGame = false;
+            inGame.SetFalse();
         }
         
         #region Input related

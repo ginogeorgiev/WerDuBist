@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using DataStructures.Event;
 using UnityEngine;
 using Features.Quests.Logic;
 using DataStructures.Focus;
@@ -12,6 +13,9 @@ namespace Features.Map.Logic
     {
         [SerializeField] private GameObject mapUI;
         [SerializeField] private BoolVariable isGamePaused;
+        [SerializeField] private GameEvent_SO toggleMap;
+        [SerializeField] private BoolVariable isPlayerInConversation;
+
 
         [SerializeField] private GameObject mapBG;
         [SerializeField] private Sprite mainIsland;
@@ -50,8 +54,13 @@ namespace Features.Map.Logic
 
         public void Start()
         {
-            playerControls.Player.Map.started += _ => ToggleMapUI();
+            playerControls.Player.Map.started += _ => toggleMap.Raise();
             mapCamera.transform.localPosition = new Vector3(-521.6f, -207.95f, -1.5f);
+        }
+
+        public void ToggleMap()
+        {
+            ToggleMapUI();
         }
         
         #region Input related
@@ -70,10 +79,12 @@ namespace Features.Map.Logic
         
         #endregion
 
-        public void ToggleMapUI()
+        private void ToggleMapUI()
         {
             if (isGamePaused.Get()) return;
             
+            if (isPlayerInConversation.Get()) return;
+
             mapUI.SetActive(!mapUI.activeSelf);
         }
         
