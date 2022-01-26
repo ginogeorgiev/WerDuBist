@@ -3627,6 +3627,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: 06_Yolanda
       objectReference: {fileID: 0}
+    - target: {fileID: 853635049625608468, guid: 95b02a8623070964697fbe17c6dbe5fb, type: 3}
+      propertyPath: conversationElements.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 853635049625608468, guid: 95b02a8623070964697fbe17c6dbe5fb, type: 3}
+      propertyPath: conversationElements.Array.data[3].quest
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 853635049625608468, guid: 95b02a8623070964697fbe17c6dbe5fb, type: 3}
+      propertyPath: conversationElements.Array.data[3].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 7836758f0cd5037408bd091a07cc5abb, type: 2}
+    - target: {fileID: 853635049625608468, guid: 95b02a8623070964697fbe17c6dbe5fb, type: 3}
+      propertyPath: conversationElements.Array.data[3].dialogConversationRight
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 853635049625608469, guid: 95b02a8623070964697fbe17c6dbe5fb, type: 3}
       propertyPath: m_RootOrder
       value: 6

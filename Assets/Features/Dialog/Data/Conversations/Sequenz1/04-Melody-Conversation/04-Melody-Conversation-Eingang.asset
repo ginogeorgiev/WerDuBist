@@ -16,5 +16,6 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 3286d80512a5b6c49a0946274b3abb63, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 3286d80512a5b6c49a0946274b3abb63, type: 2}
-    text: ...
+    text: "Schl\xFCrf."
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 0}
