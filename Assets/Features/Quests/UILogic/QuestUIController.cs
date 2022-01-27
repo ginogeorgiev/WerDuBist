@@ -70,16 +70,14 @@ namespace Features.Quests.UILogic
             // connect correct Quest_SO to UI Element
             questUI.GetComponent<QuestFocusController>().Quest = quest;
             
-            // if only active quest, set it as focus
-            if (focus.Get()==null)
+            // if other in Focus already, collapse current focus 
+            if (focus.Get() != null)
             {
-                focus.Set(quest);
+                 SetQuestUI(focus.Get(), false);
             }
-            // else collapse UI
-            else
-            {
-                SetQuestUI(quest, false);
-            }
+            // set newly accepted Quest as new Focus
+            focus.Set(quest);
+
 
             RebuildLayout();
         }
