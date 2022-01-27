@@ -57,6 +57,11 @@ namespace Features.GameLogic.Logic
         [Tooltip("GameObjectRef")] [SerializeField] private Slider gameAgreeablenessBar;
         [Tooltip("GameObjectRef")] [SerializeField] private Slider gameNeuroticismBar;
 
+        public void OnOpenRepoURL()
+        {
+            Application.OpenURL("https://github.com/ginogeorgiev/WerDuBist");
+        }
+
         private void OnEnable()
         {
             // Apply runtime values of each answered question by the player to their respective IntVariables (Aspects)

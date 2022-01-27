@@ -1311,6 +1311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6435697882811768903}
   - component: {fileID: 340336348342086744}
+  - component: {fileID: 2575894220699755531}
   m_Layer: 5
   m_Name: GameEventListener
   m_TagString: Untagged
@@ -1357,6 +1358,34 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: Features.GameLogic.Logic.HelpBehaviour, Assembly-CSharp
         m_MethodName: ToggleHelp
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2575894220699755531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5578936401606317833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: 4a437490879a84641b7a38d47b4dc696, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7627583586823795660}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
