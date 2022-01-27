@@ -17,19 +17,25 @@ namespace Features.Quests.Logic
         [SerializeField] private List<NPCData_SO> npcsToAdvanceConversationsList;
         [Space (10, order = 3)]
         
+        [Header("Hier kommen alle NPC rein, bei denen die Conversation ", order = 4)]
+        [Space (-10, order = 5)]
+        [Header("jetzt weiter geht wenn diese Quest angenommen wird.", order = 6)]
+        [SerializeField] private List<NPCData_SO> npcsToAdvanceConversationsListForTalkQuest;
+        [Space (10, order = 7)]
+        
         [SerializeField] private string title;
         [SerializeField] private string description;
-        [Header("Der Harken muss hier gesetzt werden, wenn die Quests", order = 4)]
-        [Space (-10, order = 5)]
-        [Header("im QuestUI und auf der Map angezeigt werden soll", order = 6)]
+        [Header("Der Harken muss hier gesetzt werden, wenn die Quests", order = 8)]
+        [Space (-10, order = 9)]
+        [Header("im QuestUI und auf der Map angezeigt werden soll", order = 10)]
         [SerializeField] private bool visible;
-        [Header("Durch das + können hier Goals erstellt werden", order = 7)]
+        [Header("Durch das + können hier Goals erstellt werden", order = 11)]
         [SerializeField] private List<Goal> goals;
         [SerializeField] private Vector2 startPosition;
         [SerializeField] private Vector2 endPosition;
-        [Header("Hier muss einfach das _QuestSet mit rein", order = 8)]
-        [Space (-10, order = 9)]
-        [Header("(das erste, wenn man auf den Kreis klickt)", order = 10)]
+        [Header("Hier muss einfach das _QuestSet mit rein", order = 12)]
+        [Space (-10, order = 13)]
+        [Header("(das erste, wenn man auf den Kreis klickt)", order = 14)]
         [SerializeField] private QuestSet_SO questSet;
         
         public int QuestID => id;
@@ -37,6 +43,7 @@ namespace Features.Quests.Logic
         public SingleSequenceData_SO SingleSequenceData { get; set; }
 
         public List<NPCData_SO> NpcsToAdvanceConversationsList => npcsToAdvanceConversationsList;
+        public List<NPCData_SO> NpcsToAdvanceConversationsListForTalkQuest => npcsToAdvanceConversationsListForTalkQuest;
         public string QuestTitle => title;
         public string QuestDescription => description;
         public List<Goal> GoalList => goals;

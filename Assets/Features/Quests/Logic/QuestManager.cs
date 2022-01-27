@@ -84,9 +84,9 @@ namespace Features.Quests.Logic
            quest.IsActive = true;
            
            // advance certain conversations after quest is accepted if necessary
-           if (quest.NpcsToAdvanceConversationsList.Count != 0)
+           if (quest.NpcsToAdvanceConversationsListForTalkQuest.Count != 0)
            {
-               foreach (NpcBehaviour npcBehaviour in quest.NpcsToAdvanceConversationsList.SelectMany(
+               foreach (NpcBehaviour npcBehaviour in quest.NpcsToAdvanceConversationsListForTalkQuest.SelectMany(
                    npcData => behaviourRuntimeSet.GetItems().Where(npcBehaviour => npcData.ID == npcBehaviour.Data.ID)))
                {
                    npcBehaviour.AdvanceConvIndex();
@@ -104,6 +104,15 @@ namespace Features.Quests.Logic
             
             quest.IsActive = false;
             quest.IsCompleted = true;
+            
+            if (quest.NpcsToAdvanceConversationsList.Count != 0)
+            {
+                foreach (NpcBehaviour npcBehaviour in quest.NpcsToAdvanceConversationsList.SelectMany(
+                    npcData => behaviourRuntimeSet.GetItems().Where(npcBehaviour => npcData.ID == npcBehaviour.Data.ID)))
+                {
+                    npcBehaviour.AdvanceConvIndex();
+                }
+            }
 
             // check after each quest completion if sequence is completed
             if (quest.SingleSequenceData != null)
