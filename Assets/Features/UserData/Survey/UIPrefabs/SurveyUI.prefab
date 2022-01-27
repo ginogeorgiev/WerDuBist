@@ -464,6 +464,7 @@ MonoBehaviour:
   openness: {fileID: 11400000, guid: 6b1a307e876bc8d4fa25810b6db81e4e, type: 2}
   submitResult_Button: {fileID: 3659002597985263835}
   info_Text: {fileID: 8819461076919648817}
+  dataDisclaimer_Text: {fileID: 3044660068129216568}
 --- !u!223 &6223636772432124554
 Canvas:
   m_ObjectHideFlags: 0
@@ -992,6 +993,11 @@ RectTransform:
 --- !u!1 &8819461076919648817 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5246810641223089441, guid: cde5c2166472efe4cb07c1f25481fc6d, type: 3}
+  m_PrefabInstance: {fileID: 3653949154444017424}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3044660068129216568 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1798521020690327336, guid: cde5c2166472efe4cb07c1f25481fc6d, type: 3}
   m_PrefabInstance: {fileID: 3653949154444017424}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &3659002597985263835 stripped

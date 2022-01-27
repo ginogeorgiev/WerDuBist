@@ -41,6 +41,7 @@ namespace Features.UserData.Survey.UILogic
         [Header("ResultItem References")]
         [Tooltip("Ref")] [SerializeField] private Button submitResult_Button;
         [Tooltip("Ref")] [SerializeField] private GameObject info_Text;
+        [Tooltip("Ref")] [SerializeField] private GameObject dataDisclaimer_Text;
         
         private void Awake()
         {
@@ -191,11 +192,14 @@ namespace Features.UserData.Survey.UILogic
                 
                 submitResult_Button.interactable = false;
                 info_Text.SetActive(true);
+                dataDisclaimer_Text.SetActive(false);
                 return;
             }
             
             submitResult_Button.interactable = true;
             info_Text.SetActive(false);
+            dataDisclaimer_Text.SetActive(true);
+
         }
 
         public void OnSubmitSurveyResult()
