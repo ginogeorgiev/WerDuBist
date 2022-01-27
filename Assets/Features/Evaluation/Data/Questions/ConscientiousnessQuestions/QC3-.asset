@@ -15,4 +15,4 @@ MonoBehaviour:
   question: "Ich vergesse oft, Dinge an ihren Platz zur\xFCckzulegen."
   gameAspectValue: {fileID: 11400000, guid: bd36ab91d9ff87049a63fdc3e58f27ce, type: 2}
   surveyAspectValue: {fileID: 11400000, guid: 6160081856212984bb5691604221317f, type: 2}
-  key: 1
+  key: 0

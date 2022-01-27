@@ -1769,6 +1769,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 164299969304360259, guid: 86f9014f704a6a84bb69dfc5378ba40f, type: 3}
+      propertyPath: conversationElements.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 164299969304360259, guid: 86f9014f704a6a84bb69dfc5378ba40f, type: 3}
+      propertyPath: conversationElements.Array.data[1].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: b2af0db64e7c5ba47969bf6c92875627, type: 2}
     - target: {fileID: 164299969304360263, guid: 86f9014f704a6a84bb69dfc5378ba40f, type: 3}
       propertyPath: m_Name
       value: 11_Pantai_Member_2
@@ -3911,6 +3919,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 164299969304360259, guid: 06c27ffa8e6cb254283ae772445fd92d, type: 3}
+      propertyPath: conversationElements.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 164299969304360259, guid: 06c27ffa8e6cb254283ae772445fd92d, type: 3}
+      propertyPath: conversationElements.Array.data[1].dialogConversationLeft
+      value: 
+      objectReference: {fileID: 11400000, guid: 4b6812675506a954aa9de50911315666, type: 2}
     - target: {fileID: 164299969304360263, guid: 06c27ffa8e6cb254283ae772445fd92d, type: 3}
       propertyPath: m_Name
       value: 12_Pantai_Member_3

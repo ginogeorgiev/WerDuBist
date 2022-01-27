@@ -14,14 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcsToAdvanceConversationsList:
   - {fileID: 11400000, guid: 45b90c809fb05b849beb7e650799119b, type: 2}
-  - {fileID: 11400000, guid: b6a843983c19eb04988ea931127f6849, type: 2}
-  - {fileID: 11400000, guid: 553b82f98a90b7a4eb757a65982fe67d, type: 2}
-  - {fileID: 11400000, guid: 5d62d31a5b119c240a58c168c7830515, type: 2}
-  - {fileID: 11400000, guid: 556851574fa031344a88b70bd17aec21, type: 2}
-  - {fileID: 11400000, guid: 121a450bdd4f9c246b39d8795fc5360d, type: 2}
-  - {fileID: 11400000, guid: 3c7e364e2300aa74fbb6310f6e6ce1d6, type: 2}
-  - {fileID: 11400000, guid: 81bd6697801436545b914809129b4a56, type: 2}
-  - {fileID: 11400000, guid: bd0d59590010c974b8ccdf063165baca, type: 2}
   quests:
   - {fileID: 11400000, guid: ecc97338a8abd6349a4cea6f772df687, type: 2}
   - {fileID: 11400000, guid: a79e140305a9dd045a475c8e324c2365, type: 2}
