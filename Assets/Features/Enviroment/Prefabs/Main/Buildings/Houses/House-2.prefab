@@ -121,7 +121,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4083960695720825892}
   - component: {fileID: 8151406232158774958}
-  - component: {fileID: 7413757354835751940}
   m_Layer: 0
   m_Name: House-2
   m_TagString: Untagged
@@ -194,30 +193,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!68 &7413757354835751940
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6506374905529614109}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.06328297, y: 0.6496446}
-  - {x: -2.2339993, y: 0.005783081}
-  - {x: -2.2349396, y: -0.10956192}
-  - {x: -0.033971786, y: -0.91700363}
-  - {x: 2.2185593, y: -0.021812439}
-  - {x: 2.2195835, y: 0.12747955}
-  - {x: -0.06519413, y: 0.6471689}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0

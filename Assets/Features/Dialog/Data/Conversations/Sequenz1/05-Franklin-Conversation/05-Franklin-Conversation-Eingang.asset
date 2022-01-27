@@ -16,5 +16,6 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 4f891f84b1917194891d42dda3cb1e27, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 4f891f84b1917194891d42dda3cb1e27, type: 2}
-    text: ...
+    text: Fischen ist schon was feines, nicht wahr?
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 0}

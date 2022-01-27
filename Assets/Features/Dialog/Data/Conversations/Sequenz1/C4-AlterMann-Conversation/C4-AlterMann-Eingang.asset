@@ -16,5 +16,6 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 32d1739201eb0be4294ca226f10e823d, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 32d1739201eb0be4294ca226f10e823d, type: 2}
-    text: ...
+    text: "Lasst sie alle brennen... \xE4h- die Scheite mein ich nat\xFCrlich."
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 0}

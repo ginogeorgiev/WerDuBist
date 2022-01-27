@@ -207,6 +207,17 @@ namespace Features.Input
                 },
                 {
                     ""name"": """",
+                    ""id"": ""447689ce-ad35-4a39-bd99-bacc558f015e"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""9ae8c111-0704-4cbf-bcff-4ac57881d490"",
                     ""path"": ""<Keyboard>/m"",
                     ""interactions"": """",

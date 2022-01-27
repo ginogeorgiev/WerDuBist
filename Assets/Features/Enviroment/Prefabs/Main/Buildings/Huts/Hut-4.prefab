@@ -121,7 +121,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7441206830925221722}
   - component: {fileID: 3452092198225709390}
-  - component: {fileID: 3707984632463776139}
   m_Layer: 0
   m_Name: Hut-4
   m_TagString: Untagged
@@ -194,30 +193,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!68 &3707984632463776139
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3513881906473817072}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.25827754, y: 0.4270563}
-  - {x: -1.4505835, y: 0.12384415}
-  - {x: -1.4511786, y: -0.0015602112}
-  - {x: 0.28387928, y: -0.45619392}
-  - {x: 1.4082909, y: -0.000831604}
-  - {x: 1.4091234, y: 0.12957573}
-  - {x: 0.26341188, y: 0.43026257}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0

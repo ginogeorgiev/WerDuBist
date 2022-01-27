@@ -46,6 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapUI: {fileID: 6854141941167865341}
   isGamePaused: {fileID: 11400000, guid: 5a5fdbce983558e4782244fb314ff9b9, type: 2}
+  toggleMap: {fileID: 11400000, guid: 840062c367416f24884cc007de013680, type: 2}
+  isPlayerInConversation: {fileID: 11400000, guid: 6ee1d4b71ec0ddc4b90a223589dd8f27, type: 2}
   mapBG: {fileID: 6854141941360313188}
   mainIsland: {fileID: 21300000, guid: ddaeaf3ba2b104442a3d83d545fa2c67, type: 3}
   mapCamera: {fileID: 6854141941640970545}
@@ -313,9 +315,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6854141941179856850}
-  - component: {fileID: 6854141941179856849}
   - component: {fileID: 6854141941179856854}
   - component: {fileID: 2049180449}
+  - component: {fileID: 3668578093092481602}
   m_Layer: 5
   m_Name: EventListener
   m_TagString: Untagged
@@ -337,34 +339,6 @@ Transform:
   m_Father: {fileID: 6854141941538888695}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6854141941179856849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6854141941179856845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  event: {fileID: 11400000, guid: c8b4f780943e2ab4eb8e4ceb6be75178, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6854141939821812640}
-        m_TargetAssemblyTypeName: Features.Map.Logic.BigMapController, Assembly-CSharp
-        m_MethodName: ToggleMapUI
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &6854141941179856854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -412,6 +386,34 @@ MonoBehaviour:
       - m_Target: {fileID: 6854141939821812640}
         m_TargetAssemblyTypeName: Features.Map.Logic.BigMapController, Assembly-CSharp
         m_MethodName: SwitchIslands
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3668578093092481602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6854141941179856845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14879ae99a78a24aac937a0d1317c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: 840062c367416f24884cc007de013680, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6854141939821812640}
+        m_TargetAssemblyTypeName: Features.Map.Logic.BigMapController, Assembly-CSharp
+        m_MethodName: ToggleMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
