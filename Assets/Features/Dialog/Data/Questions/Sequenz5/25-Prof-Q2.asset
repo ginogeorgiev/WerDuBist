@@ -26,7 +26,7 @@ MonoBehaviour:
     choiceEvents: []
     quest: {fileID: 0}
   - text: Mir doch egal.
-    ingameQuestion: {fileID: 11400000, guid: 10a33dd267dd78a41b93c577159880c4, type: 2}
+    ingameQuestion: {fileID: 11400000, guid: 7e55ce66aa34a8b45b82bbfdf0bc25a8, type: 2}
     value: 1
     dialogConversation: {fileID: 11400000, guid: 964ad34fab727e645b1d8dbd932a6013, type: 2}
     choiceEvents: []
