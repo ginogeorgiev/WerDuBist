@@ -153,6 +153,7 @@ namespace Features.GameLogic.Logic
         
         private IEnumerator LerpBarAndValue(float targetValue, Slider bar, TMP_Text text, float barMultiplier, float textMultiplier)
         {
+            targetValue = Mathf.Clamp(targetValue, 0, 100);
             float startTime = Time.time;
             while (Time.time < startTime + fillTime)
             {
