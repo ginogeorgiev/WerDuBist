@@ -13,6 +13,15 @@ namespace Features.GameLogic.Logic
         [SerializeField][Range(0,5)] private float fillTime = 3f;
         [SerializeField][Range(0,5)] private float waitForTransitionTime = 3f;
 
+        [SerializeField] private Image postCardImage;
+        [SerializeField] private Sprite postCardStay;
+        [SerializeField] private Sprite postCardLeave;
+
+        [SerializeField] private float surveyBarMultiplier = 0.02f;
+        [SerializeField] private float surveyTextMultiplier = 2f;
+        [SerializeField] private float gameBarMultiplier = 1f / 12f;
+        [SerializeField] private float gameTextMultiplier = 100f / 12f;
+
         [SerializeField] private Questions_SO questions;
         
         [Header("The 5 Survey Aspects")]
@@ -62,6 +71,24 @@ namespace Features.GameLogic.Logic
             Application.OpenURL("https://github.com/ginogeorgiev/WerDuBist");
         }
 
+        public void OnPlayerStays()
+        {
+            // Set correct Sprite for EndScreen according to player decision
+            if (postCardStay != null)
+            {
+                postCardImage.sprite = postCardStay;
+            }
+        }
+
+        public void OnPlayerLeaves()
+        {
+            // Set correct Sprite for EndScreen according to player decision
+            if (postCardLeave != null)
+            {
+                postCardImage.sprite = postCardLeave;
+            }
+        }
+
         private void OnEnable()
         {
             // Apply runtime values of each answered question by the player to their respective IntVariables (Aspects)
@@ -100,7 +127,7 @@ namespace Features.GameLogic.Logic
             surveyExtraversionBar.value = 0;
             surveyAgreeablenessBar.value = 0;
             surveyNeuroticismBar.value = 0;
-            
+
             gameOpennessBar.value = 0;
             gameConscientiousnessBar.value = 0;
             gameExtraversionBar.value = 0;
@@ -110,45 +137,38 @@ namespace Features.GameLogic.Logic
             yield return new WaitForSeconds(waitForTransitionTime);
             
             // Lerp values for Survey and update UI accordingly
-            StartCoroutine(LerpBarAndValue(surveyOpenness.Get(), surveyOpennessBar, surveyOpennessText));
-            StartCoroutine(LerpBarAndValue(surveyConscientiousness.Get(), surveyConscientiousnessBar, surveyConscientiousnessText));
-            StartCoroutine(LerpBarAndValue(surveyExtraversion.Get(), surveyExtraversionBar, surveyExtraversionText));
-            StartCoroutine(LerpBarAndValue(surveyAgreeableness.Get(), surveyAgreeablenessBar, surveyAgreeablenessText));
-            StartCoroutine(LerpBarAndValue(surveyNeuroticism.Get(), surveyNeuroticismBar, surveyNeuroticismText));
+            StartCoroutine(LerpBarAndValue(surveyOpenness.Get(), surveyOpennessBar, surveyOpennessText, surveyBarMultiplier, surveyTextMultiplier));
+            StartCoroutine(LerpBarAndValue(surveyConscientiousness.Get(), surveyConscientiousnessBar, surveyConscientiousnessText, surveyBarMultiplier, surveyTextMultiplier));
+            StartCoroutine(LerpBarAndValue(surveyExtraversion.Get(), surveyExtraversionBar, surveyExtraversionText, surveyBarMultiplier, surveyTextMultiplier));
+            StartCoroutine(LerpBarAndValue(surveyAgreeableness.Get(), surveyAgreeablenessBar, surveyAgreeablenessText, surveyBarMultiplier, surveyTextMultiplier));
+            StartCoroutine(LerpBarAndValue(surveyNeuroticism.Get(), surveyNeuroticismBar, surveyNeuroticismText, surveyBarMultiplier, surveyTextMultiplier));
             
             // Lerp values for Game and update UI accordingly
-            StartCoroutine(LerpBarAndValue(gameOpenness.Get(), gameOpennessBar, gameOpennessText));
-            StartCoroutine(LerpBarAndValue(gameConscientiousness.Get(), gameConscientiousnessBar, gameConscientiousnessText));
-            StartCoroutine(LerpBarAndValue(gameExtraversion.Get(), gameExtraversionBar, gameExtraversionText));
-            StartCoroutine(LerpBarAndValue(gameAgreeableness.Get(), gameAgreeablenessBar, gameAgreeablenessText));
-            StartCoroutine(LerpBarAndValue(gameNeuroticism.Get(), gameNeuroticismBar, gameNeuroticismText));
+            StartCoroutine(LerpBarAndValue(gameOpenness.Get(), gameOpennessBar, gameOpennessText, gameBarMultiplier, gameTextMultiplier));
+            StartCoroutine(LerpBarAndValue(gameConscientiousness.Get(), gameConscientiousnessBar, gameConscientiousnessText, gameBarMultiplier, gameTextMultiplier));
+            StartCoroutine(LerpBarAndValue(gameExtraversion.Get(), gameExtraversionBar, gameExtraversionText, gameBarMultiplier, gameTextMultiplier));
+            StartCoroutine(LerpBarAndValue(gameAgreeableness.Get(), gameAgreeablenessBar, gameAgreeablenessText, gameBarMultiplier, gameTextMultiplier));
+            StartCoroutine(LerpBarAndValue(gameNeuroticism.Get(), gameNeuroticismBar, gameNeuroticismText, gameBarMultiplier, gameTextMultiplier));
         }
         
-        private IEnumerator LerpBarAndValue(float targetValue, Slider bar, TMP_Text text)
+        private IEnumerator LerpBarAndValue(float targetValue, Slider bar, TMP_Text text, float barMultiplier, float textMultiplier)
         {
             float startTime = Time.time;
             while (Time.time < startTime + fillTime)
             {
-                bar.value = Mathf.Lerp(0, NormalizeForBar(targetValue), (Time.time - startTime)/fillTime);
-                text.text = (int)Mathf.Lerp(0, NormalizeForText(targetValue), (Time.time - startTime)/fillTime) + " %";
+                bar.value = Mathf.Lerp(0, Normalize(targetValue, barMultiplier), (Time.time - startTime)/fillTime);
+                text.text = (int)Mathf.Lerp(0, Normalize(targetValue, textMultiplier), (Time.time - startTime)/fillTime) + " %";
                 yield return null;
             }
             
-            bar.value = NormalizeForBar(targetValue);
-            text.text = (int)NormalizeForText(targetValue) + " %";
+            bar.value = Normalize(targetValue, barMultiplier);
+            text.text = (int)Normalize(targetValue, textMultiplier) + " %";
         }
 
-        private static float NormalizeForBar(float value)
+        private static float Normalize(float value, float multiplier)
         {
             // Hard coded for a max value of 50
-            value *= 0.02f;
-            return value;
-        }
-
-        private static float NormalizeForText(float value)
-        {
-            // Hard coded for a max value of 50
-            value *= 2f;
+            value *= multiplier;
             return value;
         }
     }
