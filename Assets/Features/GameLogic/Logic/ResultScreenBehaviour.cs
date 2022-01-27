@@ -17,10 +17,10 @@ namespace Features.GameLogic.Logic
         [SerializeField] private Sprite postCardStay;
         [SerializeField] private Sprite postCardLeave;
 
-        [SerializeField] private float surveyBarMultiplier = 0.02f;
-        [SerializeField] private float surveyTextMultiplier = 2f;
-        [SerializeField] private float gameBarMultiplier = 1f / 12f;
-        [SerializeField] private float gameTextMultiplier = 100f / 12f;
+        [SerializeField] private float surveyBarMultiplier = 0.025f;
+        [SerializeField] private float surveyTextMultiplier = 2.5f;
+        [SerializeField] private float gameBarMultiplier = 1f / 8f;
+        [SerializeField] private float gameTextMultiplier = 100f / 8f;
 
         [SerializeField] private Questions_SO questions;
         
@@ -137,18 +137,18 @@ namespace Features.GameLogic.Logic
             yield return new WaitForSeconds(waitForTransitionTime);
             
             // Lerp values for Survey and update UI accordingly
-            StartCoroutine(LerpBarAndValue(surveyOpenness.Get(), surveyOpennessBar, surveyOpennessText, surveyBarMultiplier, surveyTextMultiplier));
-            StartCoroutine(LerpBarAndValue(surveyConscientiousness.Get(), surveyConscientiousnessBar, surveyConscientiousnessText, surveyBarMultiplier, surveyTextMultiplier));
-            StartCoroutine(LerpBarAndValue(surveyExtraversion.Get(), surveyExtraversionBar, surveyExtraversionText, surveyBarMultiplier, surveyTextMultiplier));
-            StartCoroutine(LerpBarAndValue(surveyAgreeableness.Get(), surveyAgreeablenessBar, surveyAgreeablenessText, surveyBarMultiplier, surveyTextMultiplier));
-            StartCoroutine(LerpBarAndValue(surveyNeuroticism.Get(), surveyNeuroticismBar, surveyNeuroticismText, surveyBarMultiplier, surveyTextMultiplier));
+            StartCoroutine(LerpBarAndValue(surveyOpenness.Get()-10, surveyOpennessBar, surveyOpennessText, surveyBarMultiplier, surveyTextMultiplier));
+            StartCoroutine(LerpBarAndValue(surveyConscientiousness.Get()-10, surveyConscientiousnessBar, surveyConscientiousnessText, surveyBarMultiplier, surveyTextMultiplier));
+            StartCoroutine(LerpBarAndValue(surveyExtraversion.Get()-10, surveyExtraversionBar, surveyExtraversionText, surveyBarMultiplier, surveyTextMultiplier));
+            StartCoroutine(LerpBarAndValue(surveyAgreeableness.Get()-10, surveyAgreeablenessBar, surveyAgreeablenessText, surveyBarMultiplier, surveyTextMultiplier));
+            StartCoroutine(LerpBarAndValue(surveyNeuroticism.Get()-10, surveyNeuroticismBar, surveyNeuroticismText, surveyBarMultiplier, surveyTextMultiplier));
             
             // Lerp values for Game and update UI accordingly
-            StartCoroutine(LerpBarAndValue(gameOpenness.Get(), gameOpennessBar, gameOpennessText, gameBarMultiplier, gameTextMultiplier));
-            StartCoroutine(LerpBarAndValue(gameConscientiousness.Get(), gameConscientiousnessBar, gameConscientiousnessText, gameBarMultiplier, gameTextMultiplier));
-            StartCoroutine(LerpBarAndValue(gameExtraversion.Get(), gameExtraversionBar, gameExtraversionText, gameBarMultiplier, gameTextMultiplier));
-            StartCoroutine(LerpBarAndValue(gameAgreeableness.Get(), gameAgreeablenessBar, gameAgreeablenessText, gameBarMultiplier, gameTextMultiplier));
-            StartCoroutine(LerpBarAndValue(gameNeuroticism.Get(), gameNeuroticismBar, gameNeuroticismText, gameBarMultiplier, gameTextMultiplier));
+            StartCoroutine(LerpBarAndValue(gameOpenness.Get()-4, gameOpennessBar, gameOpennessText, gameBarMultiplier, gameTextMultiplier));
+            StartCoroutine(LerpBarAndValue(gameConscientiousness.Get()-4, gameConscientiousnessBar, gameConscientiousnessText, gameBarMultiplier, gameTextMultiplier));
+            StartCoroutine(LerpBarAndValue(gameExtraversion.Get()-4, gameExtraversionBar, gameExtraversionText, gameBarMultiplier, gameTextMultiplier));
+            StartCoroutine(LerpBarAndValue(gameAgreeableness.Get()-4, gameAgreeablenessBar, gameAgreeablenessText, gameBarMultiplier, gameTextMultiplier));
+            StartCoroutine(LerpBarAndValue(gameNeuroticism.Get()-4, gameNeuroticismBar, gameNeuroticismText, gameBarMultiplier, gameTextMultiplier));
         }
         
         private IEnumerator LerpBarAndValue(float targetValue, Slider bar, TMP_Text text, float barMultiplier, float textMultiplier)
