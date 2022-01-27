@@ -24,6 +24,6 @@ MonoBehaviour:
     npc: {fileID: 0}
     current: {fileID: 11400000, guid: 15be0257408b7f545868f4fa436c151e, type: 2}
     required: 5
-  startPosition: {x: -27.61, y: -1.76}
-  endPosition: {x: -27.61, y: -1.76}
+  startPosition: {x: -44.18, y: 5.6499996}
+  endPosition: {x: -44.18, y: 5.65}
   questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}

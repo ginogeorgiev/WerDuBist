@@ -69,6 +69,11 @@ namespace Features.Quests.Logic
                     required = otherQuests.Count;
                     break;
             }
+
+            if (required == 0)
+            {
+                required = 1;
+            }
         }
 
         public void Evaluate(NpcFocus_So npcFocus)
