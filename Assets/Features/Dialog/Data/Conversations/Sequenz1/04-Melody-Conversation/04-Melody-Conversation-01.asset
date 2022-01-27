@@ -16,5 +16,6 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 3286d80512a5b6c49a0946274b3abb63, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 3286d80512a5b6c49a0946274b3abb63, type: 2}
-    text: Oh, du bist es, wie ist es dir ergangen?
+    text: Oh, du bist es, wie lief es?
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 11400000, guid: 9b499d2d807551d49813a5e613df12ec, type: 2}

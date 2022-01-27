@@ -16,6 +16,6 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: b6a843983c19eb04988ea931127f6849, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: b6a843983c19eb04988ea931127f6849, type: 2}
-    text: ...
+    text: "Wir bereiten hier gerade eine Party vor. Komm sp\xE4ter wieder."
   advanceConvAutomatically: 0
   dialogQuestion: {fileID: 0}

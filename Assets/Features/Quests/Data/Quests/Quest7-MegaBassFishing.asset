@@ -13,18 +13,19 @@ MonoBehaviour:
   m_Name: Quest7-MegaBassFishing
   m_EditorClassIdentifier: 
   id: 7
-  npcsToAdvanceConversationsList:
+  npcsToAdvanceConversationsList: []
+  npcsToAdvanceConversationsListForTalkQuest:
   - {fileID: 11400000, guid: 3ae66e805df3d5d42b1329d19a09f1ac, type: 2}
   title: Mega Bass Fishing
   description: Fange 3 Fische
   visible: 1
   goals:
   - goalType: 1
-    sprite: {fileID: 21300000, guid: af59ea05bcba0574a9b9112dcdc02f19, type: 3}
+    sprite: {fileID: 21300000, guid: b511061f26471cd46960db0a512c674d, type: 3}
     otherQuests: []
     npc: {fileID: 11400000, guid: 3ae66e805df3d5d42b1329d19a09f1ac, type: 2}
     current: {fileID: 11400000, guid: 8ce660b6c02272749980efc2e80a79f6, type: 2}
     required: 3
-  startPosition: {x: 0, y: 0}
-  endPosition: {x: 43.47, y: 3.62}
+  startPosition: {x: 42.412, y: 2.625}
+  endPosition: {x: 48.131, y: 2.437}
   questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choices:
   - text: Beschreibt die Vorbestimmtheit eines Ereignisses
-    ingameQuestion: {fileID: 11400000, guid: 07c119146e724bf48b229c315202b25d, type: 2}
+    ingameQuestion: {fileID: 11400000, guid: 10a33dd267dd78a41b93c577159880c4, type: 2}
     value: 1
     dialogConversation: {fileID: 11400000, guid: e115de64e759a6d4d8a811b15e1a58a5, type: 2}
     choiceEvents: []

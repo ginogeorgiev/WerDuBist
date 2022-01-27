@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Quest14-EndlichKaffee
   m_EditorClassIdentifier: 
   id: 14
-  npcsToAdvanceConversationsList: []
+  npcsToAdvanceConversationsList:
+  - {fileID: 11400000, guid: 75ce139d6fc7f1c4c9976825681b1c9a, type: 2}
   title: Endlich Kaffee
   description: "Rockwell hat etwas f\xFCr dich bestellt. Hol dein Getr\xE4nk beim
     Kellner ab."

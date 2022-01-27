@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
   m_Name: 02-Captain-Q03
   m_EditorClassIdentifier: 
-  text: 
   choices:
   - text: Bitte! Ich schick Ihnen Geld zu sobald ich wieder Zuhause bin.
+    ingameQuestion: {fileID: 0}
+    value: 0
     dialogConversation: {fileID: 11400000, guid: 0b455818bfb4d9445b4bb7a4dfea83df, type: 2}
-    choiceEvent: {fileID: 0}
-    questEvent: {fileID: 11400000, guid: d3ded01f8c8bb7b43ab7640a65b29a4a, type: 2}
+    choiceEvents: []
     quest: {fileID: 11400000, guid: 64d67580bff265e41ae674871fb00f8b, type: 2}
   - text: Kann ich das vielleicht irgendwie abarbeiten?
+    ingameQuestion: {fileID: 0}
+    value: 0
     dialogConversation: {fileID: 11400000, guid: 0b455818bfb4d9445b4bb7a4dfea83df, type: 2}
-    choiceEvent: {fileID: 0}
-    questEvent: {fileID: 11400000, guid: d3ded01f8c8bb7b43ab7640a65b29a4a, type: 2}
+    choiceEvents: []
     quest: {fileID: 11400000, guid: 64d67580bff265e41ae674871fb00f8b, type: 2}

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Quest5-FindePlayfair
   m_EditorClassIdentifier: 
   id: 5
-  npcsToAdvanceConversationsList:
+  npcsToAdvanceConversationsList: []
+  npcsToAdvanceConversationsListForTalkQuest:
   - {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
   title: Finde Playfair
   description: "Sorg daf\xFCr, dass Playfair wieder arbeitet."
@@ -26,5 +27,5 @@ MonoBehaviour:
     current: {fileID: 0}
     required: 1
   startPosition: {x: 23.94, y: 19.72}
-  endPosition: {x: 55.27, y: 44.4}
+  endPosition: {x: 55.54, y: 44.35}
   questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}

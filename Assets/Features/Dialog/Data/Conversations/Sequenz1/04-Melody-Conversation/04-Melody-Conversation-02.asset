@@ -16,9 +16,8 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 3286d80512a5b6c49a0946274b3abb63, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 3286d80512a5b6c49a0946274b3abb63, type: 2}
-    text: "Na dann viel Gl\xFCck damit. \xDCbrigens, hast du Playfair irgendwo gesehen?
-      Er ist schon eine Weile weg, und seine Pausenzeit ist um. Wenn du ihn siehst,
-      kannst du ihm sagen, dass er zur\xFCckkommen soll? Er tr\xE4gt sehr bunte Kleidung
-      und hat Dreadlocks."
+    text: "\xDCbrigens, hast du Playfair irgendwo gesehen? Er ist schon eine Weile
+      weg, und seine Pausenzeit ist um. Wenn du ihn siehst, kannst du ihm sagen,
+      dass er zur\xFCckkommen soll? Er tr\xE4gt sehr bunte Kleidung und hat Dreadlocks."
   advanceConvAutomatically: 1
   dialogQuestion: {fileID: 11400000, guid: 525baac34a321644da7461fd28753b4c, type: 2}

@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 11
   npcsToAdvanceConversationsList:
-  - {fileID: 11400000, guid: 75ce139d6fc7f1c4c9976825681b1c9a, type: 2}
   - {fileID: 11400000, guid: 3c53c2b9f69fb5e429cec0b123401cc2, type: 2}
   title: Zeit ist Geld
   description: Hol dir dein Belohnung bei Rockwell ab.
@@ -26,6 +25,6 @@ MonoBehaviour:
     npc: {fileID: 11400000, guid: 45ab7c007ca723a4e92d1b2d82e59d25, type: 2}
     current: {fileID: 0}
     required: 1
-  startPosition: {x: 2.67, y: 78.24}
+  startPosition: {x: 9.1, y: 82.57}
   endPosition: {x: 32.73, y: 20.79}
   questSet: {fileID: 11400000, guid: eb1b0f6fc684e8e47ac1c3712f0558bd, type: 2}
