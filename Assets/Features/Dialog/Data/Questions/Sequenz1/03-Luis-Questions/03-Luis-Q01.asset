@@ -18,7 +18,7 @@ MonoBehaviour:
     value: 1
     dialogConversation: {fileID: 11400000, guid: 0f64f17f0272a7b45b1a5912b5b07dd4, type: 2}
     choiceEvents: []
-    quest: {fileID: 0}
+    quest: {fileID: 11400000, guid: 9ec1ef8e3ab31a840bb549d99dc183af, type: 2}
   - text: Ich bin manchmal vergesslich. Lieber nicht.
     ingameQuestion: {fileID: 11400000, guid: 29c249e253a3ffb4598d0e5852327e1c, type: 2}
     value: 2
