@@ -16,6 +16,6 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 5d62d31a5b119c240a58c168c7830515, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 5d62d31a5b119c240a58c168c7830515, type: 2}
-    text: Ich liebe Partys.
+    text: Ich liebe diese Bande.
   advanceConvAutomatically: 1
   dialogQuestion: {fileID: 11400000, guid: 847e59270b956c448b8bd3168721c2c7, type: 2}

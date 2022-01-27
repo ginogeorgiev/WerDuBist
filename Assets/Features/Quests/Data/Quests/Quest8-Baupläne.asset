@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: "Quest8-Baupl\xE4ne"
   m_EditorClassIdentifier: 
   id: 8
-  npcsToAdvanceConversationsList:
+  npcsToAdvanceConversationsList: []
+  npcsToAdvanceConversationsListForTalkQuest:
   - {fileID: 11400000, guid: 929b028d2515e874187beebef2c8cd5d, type: 2}
   title: "\xDCbermittlung der Baupl\xE4ne"
   description: "Bringe Terry seine Baupl\xE4ne."

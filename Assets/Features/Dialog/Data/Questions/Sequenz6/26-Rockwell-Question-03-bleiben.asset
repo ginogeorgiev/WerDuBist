@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 26-Rockwell-Question-03-bleiben
   m_EditorClassIdentifier: 
   choices:
-  - text: Ich freu mich bei euch zu sein
+  - text: Ich freu mich bei euch zu sein.
     ingameQuestion: {fileID: 0}
     value: 0
     dialogConversation: {fileID: 0}

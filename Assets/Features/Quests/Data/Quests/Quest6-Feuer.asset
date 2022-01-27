@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Quest6-Feuer
   m_EditorClassIdentifier: 
   id: 6
-  npcsToAdvanceConversationsList:
+  npcsToAdvanceConversationsList: []
+  npcsToAdvanceConversationsListForTalkQuest:
   - {fileID: 11400000, guid: e61bf57c6592a0640833d6fdc499629b, type: 2}
   title: Das unendlich Feuer
   description: "Bef\xFClle das Feuer von Zeit zu Zeit."

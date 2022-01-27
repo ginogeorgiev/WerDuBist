@@ -16,6 +16,6 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 556851574fa031344a88b70bd17aec21, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 553b82f98a90b7a4eb757a65982fe67d, type: 2}
-    text: Ich liebe Partys.
+    text: Morgen werde ich das hier bereuen...
   advanceConvAutomatically: 1
   dialogQuestion: {fileID: 11400000, guid: 847e59270b956c448b8bd3168721c2c7, type: 2}
