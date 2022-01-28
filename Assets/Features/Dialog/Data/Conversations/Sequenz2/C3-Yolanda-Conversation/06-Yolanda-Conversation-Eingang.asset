@@ -16,7 +16,7 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 2143337a184d4b84081f036419253b81, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 2143337a184d4b84081f036419253b81, type: 2}
-    text: "Das kommt da hin ... und dies kommt dort hin..\nTut mir Leid S\xF6hnchen,
-      aber wie du siehst bin ich besch\xE4ftigt."
+    text: "Das kommt da hin ... und dies kommt dort hin..\nTut mir Leid, aber wie
+      du siehst bin ich besch\xE4ftigt."
   advanceConvAutomatically: 0
   dialogQuestion: {fileID: 0}

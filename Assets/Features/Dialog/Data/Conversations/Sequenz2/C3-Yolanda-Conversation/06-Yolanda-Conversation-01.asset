@@ -16,6 +16,7 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 2143337a184d4b84081f036419253b81, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 2143337a184d4b84081f036419253b81, type: 2}
-    text: Huch?! Wer bist du denn? Ich kenne dich ja nicht.. Du siehst gerade nicht
-      wirklich ordentlich aus.
+    text: "Huch, was bist du denn f\xFCr ein Schmuddelfing. Tret blo\xDF nicht auf
+      die Bl\xE4tter."
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 11400000, guid: 2da895ea627a51b4680d0070b11d6555, type: 2}

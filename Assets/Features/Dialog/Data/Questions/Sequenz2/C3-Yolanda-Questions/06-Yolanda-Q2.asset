@@ -13,20 +13,21 @@ MonoBehaviour:
   m_Name: 06-Yolanda-Q2
   m_EditorClassIdentifier: 
   choices:
-  - text: "So schnell wie ich eigentlich kann, will nichts anh\xE4ufen"
+  - text: "Ich erledige alles so schnell wie ich eigentlich kann und will nichts
+      anh\xE4ufen."
     ingameQuestion: {fileID: 11400000, guid: 523a0e5972f26dd49860255a8dba0c11, type: 2}
     value: 3
     dialogConversation: {fileID: 11400000, guid: 2af527de49911644abd5cd5aa9d36d50, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
-  - text: Wenn ich hier oder da mal Zeit habe, aber nicht wirklich sicher.
+  - text: Wenn ich hier oder da mal Zeit habe, aber nicht wirklich immer.
     ingameQuestion: {fileID: 11400000, guid: 523a0e5972f26dd49860255a8dba0c11, type: 2}
     value: 2
     dialogConversation: {fileID: 11400000, guid: 2af527de49911644abd5cd5aa9d36d50, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
-  - text: "Ich erledige alles auf den letzten Dr\xFCcker, auch wenn es chaotisch
-      wird."
+  - text: "Ich erledige alles auf den letzten Dr\xFCcker. Ich brauche einfach den
+      Druck."
     ingameQuestion: {fileID: 11400000, guid: 523a0e5972f26dd49860255a8dba0c11, type: 2}
     value: 1
     dialogConversation: {fileID: 11400000, guid: 2af527de49911644abd5cd5aa9d36d50, type: 2}
