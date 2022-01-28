@@ -1,6 +1,6 @@
 # OCEAN
 
-![Unity: 2020.3](https://img.shields.io/badge/unity-2020.3-yellow)
+![End_of_Readme](./Assets/Readme_Resources/END_Foto.png)
 
 An isometric, colorful Role Playing Game with scientific value made in Unity for
 practical project course at The University of Applied Sciences (HTW) Berlin in Germany,
@@ -16,6 +16,7 @@ Your initial goal is getting home, but that might depend on what you call home.
 
 ![WerDuBist_Preview](./Assets/Readme_Resources/ocean_beach.gif)
 
+<hr/>
 
 ## Scientific Value
 This game was made as a gamification of personality tests, aiming to make
@@ -37,6 +38,8 @@ By adding all the points from the questions in the questionnaire or the quests i
 respectively, you get a range of points which you can normalize and compare
 (detailed [scoring instructions](https://ipip.ori.org/newScoringInstructions.htm)).
 
+<hr/>
+
 ## How to Play (controls)
 ### Keyboard and Mouse
 * Move with the WASD keys
@@ -47,12 +50,16 @@ respectively, you get a range of points which you can normalize and compare
   
 ![WerDuBist_Preview](./Assets/Readme_Resources/controlscheme.png)
 
+<hr/>
+
 ## Built With
 Software
 * [Unity](https://unity3d.com/unity/whats-new/2020.3.21) - Unity Version 2020.3.21f1
 
 Operating system
 * Windows 10 64-Bit
+
+<hr/>
 
 ## License
 *Student's project for the module Practical Project as part of 
@@ -61,6 +68,23 @@ at [HTW Berlin](https://www.htw-berlin.de/).*
 
 This Game has been distributed with Unity, 
 [PlayFab](https://playfab.com/) and LeanTween.
+
+<hr/>
+
+## Team
+
+![Team_Picture](./Assets/Readme_Resources/Group_Foto.png)
+
+* Abdulrahman Kassem
+* Batul Iraki
+* Billy Julian Lesmana
+* Gino Georgiev
+* Janik Schönberg
+* Liz Kintzel
+* Nico Mania
+* Quynh Vi Trinh
+
+<hr/>
 
 ## References
 * [Unite Austin 2017 - Game Architecture with Scriptable Objects](https://www.youtube.com/watch?v=raQ3iHhE_Kk)
@@ -79,24 +103,11 @@ This Game has been distributed with Unity,
 5. Unity Technologies: [TMP](https://docs.unity3d.com/Manual/com.unity.textmeshpro.html)
 
 #### Other Music & Sound contents
-1. Universal UI Soundpack - 
-Created and distributed by Nathan Gibson (https://nathangibson.myportfolio.com)
-2. 
+1. Universal UI Soundpack -
+   Created and distributed by Nathan Gibson (https://nathangibson.myportfolio.com)
+2.
 
 
 #### Other content
 1. Microsoft: [PlayFab SDK](https://github.com/PlayFab/UnitySDK)
 2. Tom Kail: [Displays the fields of a ScriptableObject in the inspector](https://gist.github.com/tomkail/ba4136e6aa990f4dc94e0d39ec6a058c)
-
-## Team
-
-![Team_Picture]()
-
-* Abdulrahman Kassem
-* Batul Iraki
-* Billy Julian Lesmana
-* Gino Georgiev
-* Janik Schönberg
-* Liz Kintzel
-* Nico Mania
-* Quynh Vi Trinh
