@@ -35,6 +35,8 @@ namespace Features.Player.Logic
         
         [SerializeField] private BoolVariable isGamePaused;
 
+        [SerializeField] private AudioSource footstepSound, collectSound;
+
         private bool isPlayerTeleporting=false;
 
         private new Rigidbody2D rigidbody2D;
@@ -60,8 +62,8 @@ namespace Features.Player.Logic
             sprintInputAction = playerControls.Player.Sprint;
 
             idleState = new IdleState(animator, playerMovementSpeed, rigidbody2D, tutorialData);
-            walkingState = new WalkingState(animator, playerMovementSpeed, movementInputAction, transform, rigidbody2D);
-            sprintingState = new SprintingState(animator, playerMovementSpeed, movementInputAction, transform, rigidbody2D);
+            walkingState = new WalkingState(animator, playerMovementSpeed, movementInputAction, transform, rigidbody2D, footstepSound);
+            sprintingState = new SprintingState(animator, playerMovementSpeed, movementInputAction, transform, rigidbody2D, footstepSound);
             conversationState = new ConversationState(animator, playerMovementSpeed, rigidbody2D);
             
             stateMachine.Initialize(idleState);
@@ -126,6 +128,7 @@ namespace Features.Player.Logic
             {
                 other.gameObject.SetActive(false);
                 playerInventory.Wood.Add(1);
+                collectSound.Play();
             }
             if (other.CompareTag("Stone"))
             {
@@ -136,11 +139,13 @@ namespace Features.Player.Logic
             {
                 other.gameObject.SetActive(false);
                 playerInventory.AppleRed.Add(1);
+                collectSound.Play();
             }
             if (other.CompareTag("Tube"))
             {
                 other.gameObject.SetActive(false);
                 playerInventory.Tube.Add(1);
+                collectSound.Play();
             }
             if (other.CompareTag("MetalPlate1"))
             {
