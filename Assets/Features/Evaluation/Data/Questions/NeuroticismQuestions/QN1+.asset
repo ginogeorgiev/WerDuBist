@@ -15,4 +15,4 @@ MonoBehaviour:
   question: Ich bin die meiste Zeit entspannt.
   gameAspectValue: {fileID: 11400000, guid: ef25e890f4d85824e94d1040b35aa741, type: 2}
   surveyAspectValue: {fileID: 11400000, guid: e1f7793b5f5bb0247a0e26c30508cb58, type: 2}
-  key: 0
+  key: 1
