@@ -1,4 +1,5 @@
 using DataStructures.Variables;
+using Features.Evaluation.Logic;
 using Features.NPCs.Logic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,7 +11,14 @@ namespace Features.GameLogic.Logic
         [SerializeField] private BoolVariable isPlayerInConversation;
         [SerializeField] private NpcFocus_So npcFocus;
         
+        [SerializeField] private Question_SO question;
+        
         [SerializeField] private Image helpImage;
+        
+        private void Awake()
+        {
+            question.AddToInGameRuntimeValue(3f);
+        }
         
         public void ToggleHelp()
         {

@@ -29,7 +29,7 @@ namespace Features.Evaluation.Logic
         public void AddToInGameRuntimeValue(float value)
         {
             IngameRuntimeValue += value;
-            IngameRuntimeValue = Mathf.Clamp(IngameRuntimeValue, 0, 3);
+            IngameRuntimeValue = Mathf.Clamp(IngameRuntimeValue, 1, 3);
         }
     }
 }
