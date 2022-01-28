@@ -5613,11 +5613,10 @@ MonoBehaviour:
   postCardImage: {fileID: 2926688002317122200}
   postCardStay: {fileID: 21300000, guid: 221f74ae96516472fab4ae2ba7e959d7, type: 3}
   postCardLeave: {fileID: 21300000, guid: 0c1fc2d7abfd04245bb5c4a1f5e377a9, type: 3}
-  isPlayerStaying: {fileID: 11400000, guid: 39d862cf4dedf7042be7061424a76616, type: 2}
-  surveyBarMultiplier: 0.02
-  surveyTextMultiplier: 2
-  gameBarMultiplier: 0.083333336
-  gameTextMultiplier: 8.333333
+  surveyBarMultiplier: 0.025
+  surveyTextMultiplier: 2.5
+  gameBarMultiplier: 0.125
+  gameTextMultiplier: 12.5
   questions: {fileID: 11400000, guid: bf0f9f6b5d75c4743873f6ad01558cc9, type: 2}
   surveyOpenness: {fileID: 11400000, guid: 6b1a307e876bc8d4fa25810b6db81e4e, type: 2}
   surveyConscientiousness: {fileID: 11400000, guid: 6160081856212984bb5691604221317f, type: 2}
