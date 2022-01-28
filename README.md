@@ -22,7 +22,7 @@ This game was made as a gamification of personality tests, aiming to make
 the process of these tests fun and context-rich, yet accurate. 
 
 The point distribution and results are based on the Big Five Personality Markers
-by Lewis R. Goldberg (more [information](https://ipip.ori.org/)). These Five Markers are:
+by Lewis R. Goldberg. These Five Markers are:
 * **Openness:** how a person is open to new ideas
 * **Conscientiousness:** self control, act dutifully
 * **Extroversion:** energy creation from external means, being comfortable in public
@@ -30,10 +30,12 @@ by Lewis R. Goldberg (more [information](https://ipip.ori.org/)). These Five Mar
 * **Neuroticism:** tendency to experience negative emotions
 
 and they describe the base markers at which the human personality can be measured at.
+(See [Wikipedia](https://en.wikipedia.org/wiki/Big_Five_personality_traits) or
+[Goldberg's site](https://ipip.ori.org/) for more detailed information).
 
 By adding all the points from the questions in the questionnaire or the quests in the game
 respectively, you get a range of points which you can normalize and compare
-(more [information](https://ipip.ori.org/newScoringInstructions.htm)).
+(detailed [scoring instructions](https://ipip.ori.org/newScoringInstructions.htm)).
 
 ## How to Play (controls)
 ### Keyboard and Mouse
