@@ -15,4 +15,4 @@ MonoBehaviour:
   question: "Ich nehme mir Zeit f\xFCr andere."
   gameAspectValue: {fileID: 11400000, guid: e6ee05576047f0a47bdaf761992bbee9, type: 2}
   surveyAspectValue: {fileID: 11400000, guid: 0e384512a9e3e1b47b62759e9250fa64, type: 2}
-  key: 0
+  key: 1

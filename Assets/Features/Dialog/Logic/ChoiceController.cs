@@ -60,12 +60,6 @@ namespace Features.Dialog.Logic
 
             if (choice.IngameQuestion != null)
             {
-                //check if this is correct related to partly answered questions
-                if (choice.IngameQuestion.IngameRuntimeValue > 1)
-                {
-                    choice.IngameQuestion.GameAspectValue.Add((int)choice.IngameQuestion.IngameRuntimeValue);
-                }
-                
                 choice.EvaluationData = evaluationData;
                 button.onClick.AddListener(choice.OnAddToEvaluation);
             }

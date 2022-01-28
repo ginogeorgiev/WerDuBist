@@ -64,8 +64,8 @@ namespace Features.Dialog.Logic
 
         public void OnAddToEvaluation()
         {
-            ingameQuestion.IngameRuntimeValue += value;
-            evaluationData.Add(ingameQuestion.GameAspectValue.name + "_" + ingameQuestion.Question, Mathf.Min(ingameQuestion.IngameRuntimeValue, 3).ToString());
+            ingameQuestion.AddToInGameRuntimeValue(value);
+            evaluationData.Add(ingameQuestion.GameAspectValue.name + "_" + ingameQuestion.Question, ingameQuestion.IngameRuntimeValue.ToString());
             // Debug.Log(ingameQuestion.GameAspectValue.name + " " + value + " ergibt " + ingameQuestion.IngameRuntimeValue);
         }
 

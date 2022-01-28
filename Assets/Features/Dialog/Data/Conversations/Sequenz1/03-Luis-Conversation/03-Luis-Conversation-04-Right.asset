@@ -18,4 +18,4 @@ MonoBehaviour:
   - npcData: {fileID: 11400000, guid: 3c37acb8af748d141affedf4bf99b425, type: 2}
     text: Du hast wirklich dran gedacht. Danke.
   advanceConvAutomatically: 1
-  dialogQuestion: {fileID: 0}
+  dialogQuestion: {fileID: 11400000, guid: 47eff49c72d74ef4ca6d49fb4c44523c, type: 2}
