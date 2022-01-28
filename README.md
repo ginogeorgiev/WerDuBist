@@ -1,6 +1,6 @@
 # OCEAN
 
-![End_of_Readme](./Assets/Readme_Resources/END_Foto.png)
+![Introductory_Image_Logo](./Assets/Readme_Resources/END_Foto.png)
 
 An isometric, colorful Role Playing Game with scientific value made in Unity for
 practical project course at The University of Applied Sciences (HTW) Berlin in Germany,
@@ -14,7 +14,7 @@ so go and see what the island inhabitants have in store for you!
 
 Your initial goal is getting home, but that might depend on what you call home.
 
-![WerDuBist_Preview](./Assets/Readme_Resources/ocean_beach.gif)
+<img alt="OCEAN_Preview" src="./Assets/Readme_Resources/ocean_beach.gif" width="100%"/>
 
 <hr/>
 
@@ -105,7 +105,7 @@ This Game has been distributed with Unity,
 #### Other Music & Sound contents
 1. Universal UI Soundpack -
    Created and distributed by Nathan Gibson (https://nathangibson.myportfolio.com)
-2.
+2. Stefan Kartenberg - Four Seasons (http://dig.ccmixter.org/files/JeffSpeed68/64153)
 
 
 #### Other content
