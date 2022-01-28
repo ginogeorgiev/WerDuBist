@@ -1,23 +1,23 @@
-# Game: OCEAN
+# OCEAN
 
 ![Unity: 2020.3](https://img.shields.io/badge/unity-2020.3-yellow)
 
-A top-down, colorful Role Playing Game with scientific value made in Unity for
-practical project course at The University of Applied Sciences (HTW) Berlin, Germany.
+An isometric, colorful Role Playing Game with scientific value made in Unity for
+practical project course at The University of Applied Sciences (HTW) Berlin in Germany,
+*thus the game is in german*.
 
 After a shipwreck you find yourself on a tiny island surrounded by water. Luckily
 someone from a nearby, bigger island noticed you floating there in your bright
-life vest. They would like to bring you to main island, as there is a ship
-which might bring you home. But, without any money or other goods to trade with
-how are you going to pay the fare. Maybe there is another way for you to earn
-the boat trip, so go and see what the island inhabitants have in store for you!
+life vest. They would like to bring you to the main island, as there is a ship
+which might bring you home. You need to **earn** your spot on the boat,
+so go and see what the island inhabitants have in store for you!
 
 Your initial goal is getting home, but that might depend on what you call home.
 
-![WerDuBist_Preview](./Assets/Readme_Resources/werdubist_preview.gif)
+![WerDuBist_Preview](./Assets/Readme_Resources/ocean_beach.gif)
 
 
-## Scientific value
+## Scientific Value
 This game was made as a gamification of personality tests, aiming to make
 the process of these tests fun and context-rich, yet accurate. 
 
@@ -62,31 +62,41 @@ at [HTW Berlin](https://www.htw-berlin.de/).*
 This Game has been distributed with Unity, 
 [PlayFab](https://playfab.com/) and LeanTween.
 
-## References //TODO
+## References
 * [Unite Austin 2017 - Game Architecture with Scriptable Objects](https://www.youtube.com/watch?v=raQ3iHhE_Kk)
+* [16Personalities - Personality Test](https://www.16personalities.com/free-personality-test)
+* [Restful Coder - Dialogue System](https://www.youtube.com/c/RestfulCoder)
+* [Unity Shader Graph - Cartoon Water & Foam Shader Tutorial](https://youtu.be/jBmBb-je4Lg)
+* [Quest Goal | Making a Simple RPG - Unity 2017](https://youtu.be/up6HcYph_bo)
+* [How to make a Simple Minimap](https://youtu.be/kWhOMJMihC0)
 
-
-## Resources //TODO
+## Resources
 #### Asset Store and Packages contents
 1. Dented Pixel: [LeanTween](https://assetstore.unity.com/packages/tools/animation/leantween-3595)
 2. Unity Technologies: [Cinemachine](https://unity.com/unity/features/editor/art-and-design/cinemachine)
 3. Unity Technologies: [Universal RP](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@11.0/manual/)
 4. Unity Technologies: [InputSystem](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/manual/Interactions.html#default-interaction)
 5. Unity Technologies: [TMP](https://docs.unity3d.com/Manual/com.unity.textmeshpro.html)
-6. Microsoft: [PlayFab](https://github.com/PlayFab/UnitySDK)
 
-#### Other Music & Sound contents //TODO
-1.
+#### Other Music & Sound contents
+1. Universal UI Soundpack - 
+Created and distributed by Nathan Gibson (https://nathangibson.myportfolio.com)
+2. 
 
 
-#### Other content //TODO
+#### Other content
+1. Microsoft: [PlayFab SDK](https://github.com/PlayFab/UnitySDK)
+2. Tom Kail: [Displays the fields of a ScriptableObject in the inspector](https://gist.github.com/tomkail/ba4136e6aa990f4dc94e0d39ec6a058c)
 
-## Authors (sorted alphabetically)
+## Team
+
+![Team_Picture]()
+
 * Abdulrahman Kassem
 * Batul Iraki
 * Billy Julian Lesmana
-* Elisabeth Kintzel
 * Gino Georgiev
 * Janik Schönberg
+* Liz Kintzel
 * Nico Mania
 * Quynh Vi Trinh
