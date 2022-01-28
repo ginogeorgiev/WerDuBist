@@ -48,7 +48,7 @@ MonoBehaviour:
   audioSource: {fileID: 1384267970413390892}
   minDistance: 3
   maxDistance: 15
-  audioVolume: 0.75
+  audioVolume: 0.6
 --- !u!82 &1384267970413390892
 AudioSource:
   m_ObjectHideFlags: 0
@@ -193,7 +193,7 @@ MonoBehaviour:
   audioSource: {fileID: 1384267970844098409}
   minDistance: 3
   maxDistance: 15
-  audioVolume: 0.75
+  audioVolume: 0.6
 --- !u!82 &1384267970844098409
 AudioSource:
   m_ObjectHideFlags: 0
@@ -338,7 +338,7 @@ MonoBehaviour:
   audioSource: {fileID: 1384267970923861768}
   minDistance: 3
   maxDistance: 15
-  audioVolume: 0.75
+  audioVolume: 0.6
 --- !u!82 &1384267970923861768
 AudioSource:
   m_ObjectHideFlags: 0
@@ -483,7 +483,7 @@ MonoBehaviour:
   audioSource: {fileID: 1384267971064156844}
   minDistance: 3
   maxDistance: 15
-  audioVolume: 0.75
+  audioVolume: 0.6
 --- !u!82 &1384267971064156844
 AudioSource:
   m_ObjectHideFlags: 0
@@ -628,7 +628,7 @@ MonoBehaviour:
   audioSource: {fileID: 1384267971221000682}
   minDistance: 3
   maxDistance: 15
-  audioVolume: 0.75
+  audioVolume: 0.6
 --- !u!82 &1384267971221000682
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1099,7 +1099,7 @@ MonoBehaviour:
   audioSource: {fileID: 684480429964253945}
   minDistance: 3
   maxDistance: 15
-  audioVolume: 0.75
+  audioVolume: 0.6
 --- !u!82 &684480429964253945
 AudioSource:
   m_ObjectHideFlags: 0
