@@ -25,5 +25,11 @@ namespace Features.Evaluation.Logic
         public IntVariable SurveyAspectValue => surveyAspectValue;
 
         public bool Key => key;
+
+        public void AddToInGameRuntimeValue(float value)
+        {
+            IngameRuntimeValue += value;
+            IngameRuntimeValue = Mathf.Clamp(IngameRuntimeValue, 0, 3);
+        }
     }
 }

@@ -20,6 +20,9 @@ namespace Features.Quests.Logic
         [SerializeField] private QuestFocus_SO questFocus;
         [SerializeField] private NpcFocus_So npcFocus;
         [SerializeField] private NpcBehaviourRuntimeSet behaviourRuntimeSet;
+
+        [SerializeField] private AudioSource onQuestAcceptedSound;
+        [SerializeField] private AudioSource onQuestCompletedSound;
         
         [Header(" des Games direkt unlocked werden sollen")]
         [Space(-10)]
@@ -83,6 +86,11 @@ namespace Features.Quests.Logic
            activeQuests.Items.Add(quest);
            quest.IsActive = true;
            
+           if (onQuestAcceptedSound != null)
+           {
+               onQuestAcceptedSound.Play();
+           }
+           
            // advance certain conversations after quest is accepted if necessary
            if (quest.NpcsToAdvanceConversationsListForTalkQuest.Count != 0)
            {
@@ -104,6 +112,11 @@ namespace Features.Quests.Logic
             
             quest.IsActive = false;
             quest.IsCompleted = true;
+
+            if (onQuestCompletedSound != null)
+            {
+               onQuestCompletedSound.Play(); 
+            }
             
             if (quest.NpcsToAdvanceConversationsList.Count != 0)
             {
