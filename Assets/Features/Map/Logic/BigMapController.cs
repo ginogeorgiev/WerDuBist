@@ -95,8 +95,8 @@ namespace Features.Map.Logic
             mapCamera.GetComponent<Camera>().orthographicSize = 55f;
             mapCamera.transform.localPosition = new Vector3(-420, -170, -1.5f);
 
-            mapOverlay.localPosition = new Vector3(-2.2f, 0.2f, 0);
-            mapOverlay.localScale = new Vector3(0.6534686f, 0.6534686f, 0.6534686f);
+            mapOverlay.localPosition = new Vector3(0f, 63f, 0);
+            mapOverlay.localScale = new Vector3(0.65f, 0.66f, 0.6534686f);
 
             mapBorder.sizeDelta = new Vector2(885, 618);
 
