@@ -170,7 +170,14 @@ namespace Features.GameLogic.Logic
         {
             // Hard coded for a max value of 50
             value *= multiplier;
-            return value;
+            if (multiplier < 1f)
+            {
+                return Mathf.Clamp(value,0,1);
+            }
+            else
+            {
+                return Mathf.Clamp(value,0,100);
+            }
         }
     }
 }
