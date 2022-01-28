@@ -168,7 +168,6 @@ namespace Features.GameLogic.Logic
 
         private static float Normalize(float value, float multiplier)
         {
-            // Hard coded for a max value of 50
             value *= multiplier;
             if (multiplier < 1f)
             {
