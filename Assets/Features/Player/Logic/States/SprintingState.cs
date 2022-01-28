@@ -12,21 +12,25 @@ namespace Features.Player.Logic.States
         private InputAction movementInputAction;
         private Transform playerTransform;
         private Rigidbody2D playerRigidbody;
+        private AudioSource audioSource;
 
         public SprintingState(Animator animator, FloatVariable movementSpeed, InputAction movementInputAction,
-            Transform playerTransform, Rigidbody2D playerRigidbody)
+            Transform playerTransform, Rigidbody2D playerRigidbody, AudioSource audioSource)
         {
             this.movementSpeed = movementSpeed;
             this.movementInputAction = movementInputAction;
             this.playerTransform = playerTransform;
             this.playerRigidbody = playerRigidbody;
             this.playerAnimator = animator;
+            this.audioSource = audioSource;
         }
         
         //initialization to the beginning
         public void Enter()
         {
             playerAnimator.SetBool("isWalking", true);
+            audioSource.Play();
+            audioSource.pitch = 1.5f;
         }
 
         // doing stuff continuously
@@ -42,6 +46,8 @@ namespace Features.Player.Logic.States
         // what to do if machine kicks it out
         public void Exit()
         {
+            audioSource.pitch = 1f;
+            audioSource.Stop();
         }
     }
 }
