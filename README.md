@@ -75,14 +75,14 @@ This Game has been distributed with Unity,
 
 ![Team_Picture](./Assets/Readme_Resources/Group_Foto.png)
 
-* Abdulrahman Kassem
-* Batul Iraki
-* Billy Julian Lesmana
-* Gino Georgiev
-* Janik Schönberg
-* Liz Kintzel
-* Nico Mania
-* Quynh Vi Trinh
+* [Abdulrahman Kassem](https://github.com/abdool-bot)
+* [Batul Iraki](https://github.com/batulir)
+* [Billy Julian Lesmana](https://github.com/OblivionSword)
+* [Gino Georgiev](https://github.com/ginogeorgiev)
+* [Janik Schönberg](https://github.com/kinasch)
+* [Liz Kintzel](https://github.com/chaotic-pan)
+* [Nico Mania](https://github.com/nico-mania)
+* [Quynh Vi Trinh](https://github.com/quynhvi)
 
 <hr/>
 
