@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: 06-Yolanda-Q1
   m_EditorClassIdentifier: 
   choices:
-  - text: Alles ok. Was machst du da?
+  - text: Was machst du denn da?
+    ingameQuestion: {fileID: 0}
+    value: 0
     dialogConversation: {fileID: 11400000, guid: 912f12b730acce940b4cadc5079e10e6, type: 2}
-    choiceEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}
   - text: Das sieht nach viel Organisation aus, was du da machen musst.
+    ingameQuestion: {fileID: 0}
+    value: 0
     dialogConversation: {fileID: 11400000, guid: 912f12b730acce940b4cadc5079e10e6, type: 2}
-    choiceEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}

@@ -16,7 +16,7 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: dc02e58ae4ca8374ba152d8fe1b52038, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: dc02e58ae4ca8374ba152d8fe1b52038, type: 2}
-    text: "Schon gut, schon gut, wir h\xF6ren auf, kein Grund, uns so voll zu labern.
-      Wir werden aufh\xF6ren. ALSO GUT, JUNGS, ENTSCHULDIGEN WIR UNS BEI ROCKWELL!"
+    text: "Man, eigentlich hast du ja recht man. Das sind unsere Leute und wir sorgen
+      nur f\xFCr Probleme. Wir werden uns entschuldigen."
   advanceConvAutomatically: 1
   dialogQuestion: {fileID: 0}

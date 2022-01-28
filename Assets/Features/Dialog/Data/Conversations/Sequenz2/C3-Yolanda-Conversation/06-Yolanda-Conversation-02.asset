@@ -17,13 +17,14 @@ MonoBehaviour:
   lines:
   - npcData: {fileID: 11400000, guid: 2143337a184d4b84081f036419253b81, type: 2}
     text: "Naja, seit dem ich auf der Insel bin, versuche ich f\xFCr die Leute hier
-      die Aufgaben zu organisieren, damit alles f\xFCr uns gut l\xE4uft. Es ist an
-      sich schwer aber ich denke ich bekomme das hin."
+      die Aufgaben zu organisieren, damit alles f\xFCr uns gut l\xE4uft. Es ist nicht
+      leicht, aber ich denke ich bekomme das hin."
   - npcData: {fileID: 11400000, guid: 2143337a184d4b84081f036419253b81, type: 2}
-    text: "Ich bin \xFCbrigens Yolanda. Wie du siehst auch bin ich nicht wirklich
-      die idealste Person daf\xFCr aber versuche mein Bestes immer zu geben. Ich
-      bin gerade dabei, die Aufgaben f\xFCr Terry fertig zu schreiben. "
+    text: "Ich bin \xFCbrigens Yolanda. Wie du siehst bin auch ich nicht wirklich
+      die idealste Person daf\xFCr, aber ich versuche immer mein Bestes zu geben.
+      Ich bin gerade dabei, die Baupl\xE4ne f\xFCr Terry zu suchen. "
   - npcData: {fileID: 11400000, guid: 2143337a184d4b84081f036419253b81, type: 2}
-    text: " Sag mal, f\xE4llt es dir vielleicht auch schwer Aufgaben, die nicht viel
+    text: "Sag mal, f\xE4llt es dir vielleicht auch schwer Aufgaben, die nicht viel
       Zeit brauchen direkt zu erledigen?"
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 11400000, guid: aff9b15da4545294fa0aa212d296e8df, type: 2}

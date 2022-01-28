@@ -16,6 +16,6 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 2143337a184d4b84081f036419253b81, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 2143337a184d4b84081f036419253b81, type: 2}
-    text: "Vielen dank f\xFCr deine Hilfe noch mal, Terry ist begeistert."
+    text: "Vielen dank f\xFCr deine Hilfe nochmal, Terry ist begeistert."
   advanceConvAutomatically: 0
   dialogQuestion: {fileID: 0}
