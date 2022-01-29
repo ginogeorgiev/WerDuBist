@@ -50,10 +50,14 @@ namespace Features.Evaluation.Logic
             
             value = value.Remove(value.Length - 1);
             
-            Debug.Log(key + " : " + value);
             UserDataDictionary[key] = value;
             
             if (evaluationDictionaryChanged != null) evaluationDictionaryChanged.Raise();
+        }
+        
+        public void LogUserData()
+        {
+            Debug.Log(key + " : " + value);
         }
 
         public void GiveEvaDicLength()
