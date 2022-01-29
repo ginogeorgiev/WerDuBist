@@ -22,7 +22,7 @@ MonoBehaviour:
   - text: "Nein danke. (Getr\xE4nk nicht nehmen)"
     ingameQuestion: {fileID: 11400000, guid: 21ec782ba547d0746971fb43beb0387d, type: 2}
     value: 1
-    dialogConversation: {fileID: 0}
+    dialogConversation: {fileID: 11400000, guid: 680c8b744c6f87b45af6e47699f94b7c, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
   - text: "(Getr\xE4nk nehmen ohne etwas zu sagen)"
