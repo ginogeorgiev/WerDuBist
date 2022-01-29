@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: 25-Prof-Q2
   m_EditorClassIdentifier: 
   choices:
-  - text: "wirklich \xE4u\xDFerst gutaussehender Mann."
+  - text: "Wirklich, \xC4u\xDFerst, Gutaussehender Mann."
     ingameQuestion: {fileID: 11400000, guid: 7e55ce66aa34a8b45b82bbfdf0bc25a8, type: 2}
     value: 3
     dialogConversation: {fileID: 11400000, guid: b15d5f6a0d1add04e95fd45ce6a189b6, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
-  - text: "wirklich, \xE4u\xDFerst, intelligenter, Mann und \xE4u\xDFerst gutaussehend. "
+  - text: "Wirklich, \xC4u\xDFerst, Intelligenter, Mann und \xC4u\xDFerst Gutaussehend. "
     ingameQuestion: {fileID: 11400000, guid: 10a33dd267dd78a41b93c577159880c4, type: 2}
     value: 2
     dialogConversation: {fileID: 11400000, guid: b15d5f6a0d1add04e95fd45ce6a189b6, type: 2}

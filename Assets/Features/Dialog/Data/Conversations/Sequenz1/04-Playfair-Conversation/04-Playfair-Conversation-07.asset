@@ -16,8 +16,8 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
-    text: 'Du verlierst
+    text: '(Du verlierst...)
 
 '
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 0}
-  nextDialogConversationStep: {fileID: 11400000, guid: 9693b1636e8073243bf543267e7cfe9e, type: 2}

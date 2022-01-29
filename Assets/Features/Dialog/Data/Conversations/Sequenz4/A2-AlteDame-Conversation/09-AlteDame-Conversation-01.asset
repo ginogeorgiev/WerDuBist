@@ -16,10 +16,10 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 47df417dc16681147bb9ad57ab229b65, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 47df417dc16681147bb9ad57ab229b65, type: 2}
-    text: "Auf dem Weg zum Kaffeehaus l\xE4sst eine alte Dame, ohne es zu bemerken,
-      ein Korb voller \xC4pfel fallen. \r\n"
+    text: "(Auf dem Weg zum Kaffeehaus l\xE4sst eine alte Dame, ohne es zu bemerken,
+      ein Korb voller \xC4pfel fallen.)\n"
   - npcData: {fileID: 11400000, guid: 47df417dc16681147bb9ad57ab229b65, type: 2}
-    text: ' Wie willst du hier handeln?
+    text: '(Wie willst du hier handeln?)
 
 '
   advanceConvAutomatically: 1

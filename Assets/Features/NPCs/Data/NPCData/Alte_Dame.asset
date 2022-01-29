@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Alte_Dame
   m_EditorClassIdentifier: 
   id: 14
-  fullName: Alte_Dame
+  fullName: Alte Dame
   portrait: {fileID: 21300000, guid: 084367d087c7ab3408cb107d8f7f8226, type: 3}
   icon: {fileID: 21300000, guid: 010e7886bdffef04290705fa8ab1d3f1, type: 3}

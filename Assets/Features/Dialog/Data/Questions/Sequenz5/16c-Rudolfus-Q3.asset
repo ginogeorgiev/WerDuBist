@@ -13,21 +13,21 @@ MonoBehaviour:
   m_Name: 16c-Rudolfus-Q3
   m_EditorClassIdentifier: 
   choices:
-  - text: "Ja, sehr gut, Ihr seid ein lustiges V\xF6lkchen - du bleibst noch eine
-      Weile und unterh\xE4ltst dich-\r"
+  - text: "Ja, sehr gut, Ihr seid ein lustiges V\xF6lkchen. (Du bleibst noch eine
+      Weile und unterh\xE4ltst dich)"
     ingameQuestion: {fileID: 11400000, guid: 8c2a2b9af5a6c5d45943d5e080990a6f, type: 2}
     value: 3
     dialogConversation: {fileID: 11400000, guid: 44e671eea64e5f7418b84271a147c8a6, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
-  - text: "Ich f\xFChl mich eigentlich recht unwohl"
+  - text: "Ich f\xFChl mich eigentlich recht unwohl."
     ingameQuestion: {fileID: 11400000, guid: 8c2a2b9af5a6c5d45943d5e080990a6f, type: 2}
     value: 2
     dialogConversation: {fileID: 11400000, guid: 44e671eea64e5f7418b84271a147c8a6, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
-  - text: "Es geht, mir ist weder Wohl noch Unwohl. - du bleibst noch eine Weile
-      und unterh\xE4ltst dich -"
+  - text: "Es geht, mir ist weder Wohl noch Unwohl. (Du bleibst noch eine Weile und
+      unterh\xE4ltst dich)"
     ingameQuestion: {fileID: 11400000, guid: 8c2a2b9af5a6c5d45943d5e080990a6f, type: 2}
     value: 1
     dialogConversation: {fileID: 11400000, guid: 44e671eea64e5f7418b84271a147c8a6, type: 2}

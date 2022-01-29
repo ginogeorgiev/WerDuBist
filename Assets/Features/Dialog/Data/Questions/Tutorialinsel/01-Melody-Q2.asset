@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 01-Melody-Q2
   m_EditorClassIdentifier: 
   choices:
-  - text: Na dann mal los.
+  - text: Na dann mal los!
     ingameQuestion: {fileID: 0}
     value: 0
     dialogConversation: {fileID: 0}

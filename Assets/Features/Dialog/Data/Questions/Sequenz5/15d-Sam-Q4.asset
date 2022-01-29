@@ -13,23 +13,23 @@ MonoBehaviour:
   m_Name: 15d-Sam-Q4
   m_EditorClassIdentifier: 
   choices:
-  - text: "- Du h\xF6rst dir den Rest seines Monologs an, bedankst dich f\xFCr das
-      nette Gespr\xE4ch und guckst was die anderen so treiben.-"
+  - text: "(Du h\xF6rst dir den Rest seines Monologs an, bedankst dich f\xFCr das
+      nette Gespr\xE4ch und guckst was die anderen so treiben)"
     ingameQuestion: {fileID: 11400000, guid: 50b5d8d9a43e4d1439323138a19bfb86, type: 2}
     value: 1
     dialogConversation: {fileID: 0}
     choiceEvents: []
     quest: {fileID: 0}
-  - text: "- Du h\xF6rst dir den rest seines Monologs an und stimmst dann ein Lied
-      passend zur Musik an und bleibst noch eine Weile.-"
+  - text: "(Du h\xF6rst dir den Rest seines Monologs an und stimmst dann ein Lied
+      passend zur Musik an und bleibst noch eine Weile)"
     ingameQuestion: {fileID: 11400000, guid: 50b5d8d9a43e4d1439323138a19bfb86, type: 2}
     value: 2
     dialogConversation: {fileID: 0}
     choiceEvents: []
     quest: {fileID: 0}
-  - text: "- Du unterbrichst ihn irgendwann - Ich h\xE4tte jetzt Lust zu tanzen ihr
-      auch? - du ermutigst alle zum tanzen bis alle um das Feuer und die Musik herum
-      tanzen.\r"
+  - text: "(Du unterbrichst ihn irgendwann) - Ich h\xE4tte jetzt Lust zu tanzen ihr
+      auch? - (Du ermutigst alle zum Tanzen bis alle um das Feuer und die Musik herum
+      tanzen)"
     ingameQuestion: {fileID: 11400000, guid: 50b5d8d9a43e4d1439323138a19bfb86, type: 2}
     value: 3
     dialogConversation: {fileID: 0}

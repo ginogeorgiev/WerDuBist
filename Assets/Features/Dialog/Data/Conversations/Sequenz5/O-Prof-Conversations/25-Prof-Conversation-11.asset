@@ -16,7 +16,7 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 45b90c809fb05b849beb7e650799119b, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 45b90c809fb05b849beb7e650799119b, type: 2}
-    text: "Was soll das hei\xDFen!? Sie haben meinen Zeit verschwendet\u2026 Verlassen
+    text: "Was soll das hei\xDFen!? Sie haben meine Zeit verschwendet\u2026 Verlassen
       Sie unverz\xFCglich mein Grundst\xFCck!"
   advanceConvAutomatically: 1
   dialogQuestion: {fileID: 0}

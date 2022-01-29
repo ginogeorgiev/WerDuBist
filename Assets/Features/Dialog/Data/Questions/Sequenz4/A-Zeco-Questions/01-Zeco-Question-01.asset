@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 01-Zeco-Question-01
   m_EditorClassIdentifier: 
   choices:
-  - text: Ich mach mich sofort auf dem Weg.
+  - text: Ich mache mich sofort auf dem Weg.
     ingameQuestion: {fileID: 0}
     value: 0
     dialogConversation: {fileID: 0}

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 04-Melody-Q02
   m_EditorClassIdentifier: 
   choices:
-  - text: Ich guck mal ob ich finde.
+  - text: Ich gucke mal ob ich ihn finde.
     ingameQuestion: {fileID: 0}
     value: 0
     dialogConversation: {fileID: 0}
-    choiceEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 11400000, guid: 7cd0a61d2994d27498bacd7de514c7fc, type: 2}
