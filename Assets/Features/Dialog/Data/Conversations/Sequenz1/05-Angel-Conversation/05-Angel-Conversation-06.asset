@@ -16,8 +16,8 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 3ae66e805df3d5d42b1329d19a09f1ac, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 3ae66e805df3d5d42b1329d19a09f1ac, type: 2}
-    text: "Schon wieder ins Leere getroffen. Wie ging nochmal dieser Spruch nochmal
-      \u201Ces gibt eine Menge anderer Fische im Meer\u201D. Ich vermute, dass keiner
-      von ihnen von dir gefangen werden will. Willst du weitermachen?"
+    text: "Schon wieder ins Leere getroffen. Wie ging dieser Spruch nochmal \u201Ces
+      gibt eine Menge anderer Fische im Meer\u201D. Ich vermute, dass keiner von
+      ihnen von dir gefangen werden will. Willst du weitermachen?"
   advanceConvAutomatically: 0
   dialogQuestion: {fileID: 11400000, guid: c2c6b1b1f56ebd34fa35b5ff2fe04a86, type: 2}

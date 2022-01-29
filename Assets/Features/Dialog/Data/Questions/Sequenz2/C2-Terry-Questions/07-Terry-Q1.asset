@@ -17,11 +17,11 @@ MonoBehaviour:
     ingameQuestion: {fileID: 0}
     value: 0
     dialogConversation: {fileID: 11400000, guid: 9f8ecd2777ba8444b8ff94ddbf6856b4, type: 2}
-    choiceEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}
-  - text: "Du \xFCbergibst ihm direkt die Baupl\xE4ne."
+  - text: "(Du \xFCbergibst ihm direkt die Baupl\xE4ne)"
     ingameQuestion: {fileID: 0}
     value: 0
     dialogConversation: {fileID: 11400000, guid: 9f8ecd2777ba8444b8ff94ddbf6856b4, type: 2}
-    choiceEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}

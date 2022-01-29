@@ -16,7 +16,7 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 3ae66e805df3d5d42b1329d19a09f1ac, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 3ae66e805df3d5d42b1329d19a09f1ac, type: 2}
-    text: Hmm, es seh da kein Fisch am haken. Du brauchst vielleicht mehr Geduld
-      als du dachtest. Willst du weitermachen?
+    text: Hmm, noch kein Fisch am Haken. Du brauchst vielleicht mehr Geduld als du
+      dachtest. Willst du weitermachen?
   advanceConvAutomatically: 0
   dialogQuestion: {fileID: 11400000, guid: 0f048888bb3da7845a5fb9c64ad4489c, type: 2}

@@ -19,7 +19,7 @@ MonoBehaviour:
     dialogConversation: {fileID: 11400000, guid: 06f85fb792bced64ba71ee170f87c6d5, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
-  - text: '"Ich gebe auf. Ich gebe auf. Ich bin fertig mit dem Angeln. FERTIG!'
+  - text: Ich gebe auf. Ich gebe auf. Ich bin fertig mit dem Angeln. FERTIG!
     ingameQuestion: {fileID: 11400000, guid: 2cee13890759e2f4e8b9255e6126a172, type: 2}
     value: 2
     dialogConversation: {fileID: 11400000, guid: 53859e52e947bc348956ddececad2c2d, type: 2}

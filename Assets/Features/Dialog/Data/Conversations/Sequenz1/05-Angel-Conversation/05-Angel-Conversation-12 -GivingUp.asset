@@ -18,6 +18,6 @@ MonoBehaviour:
   - npcData: {fileID: 11400000, guid: 3ae66e805df3d5d42b1329d19a09f1ac, type: 2}
     text: "Du hast also aufgegeben. Wie ich mir schon dachte, hast du nicht die Geduld
       f\xFCr so etwas. Es ist in Ordnung, nicht jeder ist von Geburt an ein Talent
-      f\xFCrs Angeln.  Du solltest dich trotz deines Misserfolgs  bei Franklin melden."
+      f\xFCrs Angeln.  Du solltest dich trotz deines Misserfolgs bei Franklin melden."
   advanceConvAutomatically: 1
   dialogQuestion: {fileID: 0}

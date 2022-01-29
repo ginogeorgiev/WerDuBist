@@ -20,6 +20,7 @@ MonoBehaviour:
       Kopf. Ihre Referenzen sind mir egal. Ich habe ein R\xE4tsel f\xFCr Sie:\r"
   - npcData: {fileID: 11400000, guid: 45b90c809fb05b849beb7e650799119b, type: 2}
     text: "KEPLER war ein Wirklich, \xC4u\xDFerst, Intelligenter, Mann und \xC4u\xDFerst
-      Gutaussehend. Viel nannten ihn noch einen echten Kerl. Ein echter KERL ist
+      Gutaussehend. Viele nannten ihn noch einen echten Kerl. Ein echter KERL ist
       ein:\r\n"
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 11400000, guid: 7bdc9fa6d8667c14aab65bb460506a56, type: 2}

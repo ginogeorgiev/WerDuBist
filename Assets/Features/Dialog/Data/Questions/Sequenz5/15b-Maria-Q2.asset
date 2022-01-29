@@ -26,7 +26,7 @@ MonoBehaviour:
     dialogConversation: {fileID: 11400000, guid: 52a0932050f83d24386cf35f76b23a51, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
-  - text: '- nicht antworten -'
+  - text: (Nicht antworten)
     ingameQuestion: {fileID: 11400000, guid: 21ec782ba547d0746971fb43beb0387d, type: 2}
     value: 0.5
     dialogConversation: {fileID: 11400000, guid: 52a0932050f83d24386cf35f76b23a51, type: 2}

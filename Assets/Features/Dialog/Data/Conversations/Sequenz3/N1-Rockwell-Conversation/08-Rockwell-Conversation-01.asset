@@ -24,5 +24,6 @@ MonoBehaviour:
       und die Nachbarschaft st\xF6rt. Wir haben vergeblich versucht, sie dazu zu
       bringen, ihre Aktivit\xE4ten einzustellen. "
   - npcData: {fileID: 11400000, guid: 41ade48c0f6a52a4f80cd74d816d111d, type: 2}
-    text: "Vielleicht kannst du versuchen, sie davon zu \xFCberzeugen, damit aufzuh\xF6ren.\"\r"
+    text: "Vielleicht kannst du versuchen, sie davon zu \xFCberzeugen, damit aufzuh\xF6ren."
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 11400000, guid: 2f26e3e64eb1a2443831d6c475842d91, type: 2}

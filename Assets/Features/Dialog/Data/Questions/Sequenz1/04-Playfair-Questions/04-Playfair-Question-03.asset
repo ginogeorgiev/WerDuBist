@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
   m_Name: 04-Playfair-Question-03
   m_EditorClassIdentifier: 
-  text: 
   choices:
-  - text: Sei behutsam. Beobachte seine Taktik.
+  - text: (Sei behutsam. Beobachte seine Taktik)
+    ingameQuestion: {fileID: 0}
+    value: 0
     dialogConversation: {fileID: 11400000, guid: 9693b1636e8073243bf543267e7cfe9e, type: 2}
-    choiceEvent: {fileID: 0}
-    questEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}
-  - text: "Vergiss die Vorsicht. Folge deinem Bauchgef\xFChl."
+  - text: "(Vergiss die Vorsicht. Folge deinem Bauchgef\xFChl)"
+    ingameQuestion: {fileID: 0}
+    value: 0
     dialogConversation: {fileID: 11400000, guid: 9693b1636e8073243bf543267e7cfe9e, type: 2}
-    choiceEvent: {fileID: 0}
-    questEvent: {fileID: 0}
+    choiceEvents: []
     quest: {fileID: 0}

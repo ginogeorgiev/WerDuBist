@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3653a8da38ef294aafd199f39cb1641, type: 3}
   m_Name: 01-Melody-Q1
   m_EditorClassIdentifier: 
-  text: 
   choices:
-  - text: Ich mach mich sofort auf die Suche.
+  - text: Ich mache mich sofort auf die Suche.
+    ingameQuestion: {fileID: 0}
+    value: 0
     dialogConversation: {fileID: 0}
-    choiceEvent: {fileID: 0}
-    questEvent: {fileID: 11400000, guid: d3ded01f8c8bb7b43ab7640a65b29a4a, type: 2}
+    choiceEvents: []
     quest: {fileID: 11400000, guid: 176559f37d56ba74ca9fc4bf4febde95, type: 2}

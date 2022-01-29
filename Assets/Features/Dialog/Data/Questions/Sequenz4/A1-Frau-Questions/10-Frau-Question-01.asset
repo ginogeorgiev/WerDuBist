@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 10-Frau-Question-01
   m_EditorClassIdentifier: 
   choices:
-  - text: Tut mir leid, ich hab ein Termin.
+  - text: Tut mir leid, ich habe einen Termin.
     ingameQuestion: {fileID: 11400000, guid: 6a82ab6dd258d2349a9d2e992dd41468, type: 2}
     value: 1
     dialogConversation: {fileID: 11400000, guid: 5b963c92f84146e4c82d15a228a24765, type: 2}

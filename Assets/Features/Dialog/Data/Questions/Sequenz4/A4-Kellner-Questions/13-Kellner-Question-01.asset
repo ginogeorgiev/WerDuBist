@@ -20,7 +20,7 @@ MonoBehaviour:
     dialogConversation: {fileID: 0}
     choiceEvents: []
     quest: {fileID: 11400000, guid: f9a323680c87a1e4895803310a5d7fe1, type: 2}
-  - text: Nichts sagen.
+  - text: (Nichts sagen)
     ingameQuestion: {fileID: 11400000, guid: bc5a1d4b819414d44b0c66828a82687f, type: 2}
     value: 1
     dialogConversation: {fileID: 0}
