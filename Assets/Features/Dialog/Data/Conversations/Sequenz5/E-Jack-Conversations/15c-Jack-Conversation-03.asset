@@ -16,7 +16,7 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 81bd6697801436545b914809129b4a56, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 81bd6697801436545b914809129b4a56, type: 2}
-    text: 'Nun lass ihn doch doch erst mal ankommen. Ich bin Jack. '
+    text: 'Nun lass ihn doch erst mal ankommen. Ich bin Jack. '
   - npcData: {fileID: 11400000, guid: 81bd6697801436545b914809129b4a56, type: 2}
     text: ' Wir sind auf dem Weg in die Stadt und werden am Rand unseren Zirkus aufbauen
       und die Weltbeste Show vom besten geben. Wir sind die Weltbesten musst du wissen.
@@ -26,4 +26,5 @@ MonoBehaviour:
     text: "Wir waren schon \xFCberall auf der Welt, nur diese abgelegene Insel und
       Ihre Bewohner ist uns entgangen, darum sind wir hier.\nDu wirkst etwas angespannt.
       Ich hoffe du f\xFChlst du dich wohl bei uns?\r\n"
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 11400000, guid: fa1b4bdbe3403104896e7010d393cfe5, type: 2}

@@ -21,13 +21,13 @@ MonoBehaviour:
     quest: {fileID: 0}
   - text: "Beschreibt die Rechtm\xE4\xDFigkeit einer wissenschaftlichen Aussage."
     ingameQuestion: {fileID: 11400000, guid: 10a33dd267dd78a41b93c577159880c4, type: 2}
-    value: 0
+    value: 0.334
     dialogConversation: {fileID: 11400000, guid: e115de64e759a6d4d8a811b15e1a58a5, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
   - text: Wie soll man sich das alles merken?
     ingameQuestion: {fileID: 11400000, guid: 10a33dd267dd78a41b93c577159880c4, type: 2}
-    value: 0
+    value: 0.334
     dialogConversation: {fileID: 11400000, guid: e115de64e759a6d4d8a811b15e1a58a5, type: 2}
     choiceEvents: []
     quest: {fileID: 0}

@@ -23,6 +23,6 @@ MonoBehaviour:
     text: "Ich bin \xFCbrigens Terry, ich glaube das hast du wahrscheinlich von Yolanda
       rausgeh\xF6rt. Lass uns aber sp\xE4ter Zeit nehmen miteinander zu reden, ich
       will dich jetzt nicht weiter aufhalten. Hier ist eine Liste mit den Materialien,
-      die ich noch brauche:\r\n\n"
+      die ich noch brauche:\r\n"
   advanceConvAutomatically: 1
   dialogQuestion: {fileID: 0}

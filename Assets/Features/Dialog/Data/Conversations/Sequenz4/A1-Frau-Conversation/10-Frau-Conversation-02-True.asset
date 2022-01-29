@@ -16,6 +16,6 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 51f59b3b6d0ae1c43a6d410b4d40576b, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 51f59b3b6d0ae1c43a6d410b4d40576b, type: 2}
-    text: Du hast ihn gefuden. Ich danke dir.
+    text: Du hast ihn gefunden. Ich danke dir.
   advanceConvAutomatically: 1
   dialogQuestion: {fileID: 0}

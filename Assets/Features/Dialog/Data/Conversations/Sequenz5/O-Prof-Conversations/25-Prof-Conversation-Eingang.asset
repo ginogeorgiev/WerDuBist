@@ -16,6 +16,6 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 45b90c809fb05b849beb7e650799119b, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: 45b90c809fb05b849beb7e650799119b, type: 2}
-    text: ...
+    text: Ich hab gerade keine Zeit.
   advanceConvAutomatically: 0
   dialogQuestion: {fileID: 0}

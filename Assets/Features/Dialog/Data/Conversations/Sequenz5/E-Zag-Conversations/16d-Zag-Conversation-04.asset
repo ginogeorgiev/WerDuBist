@@ -19,4 +19,5 @@ MonoBehaviour:
     text: "Wie findest du unsere Musik? Wir haben den weltbesten Musiker. Er ist
       weltbekannt, wenn du verstehst was ich meine.\r\nHaben wir dir eigentlich schon
       vom Rest der Truppe erz\xE4hlt ...\r"
+  advanceConvAutomatically: 1
   dialogQuestion: {fileID: 11400000, guid: cba9668728ac74041b1b5e187b607f02, type: 2}

@@ -20,7 +20,7 @@ namespace Features.Evaluation.Logic.Editor
             if (GUILayout.Button("GiveEvaDicLength"))
                 e.GiveEvaDicLength();
                 
-            if (GUILayout.Button("LogUsaData"))
+            if (GUILayout.Button("LogUserData"))
                 e.LogUserData();
         }
     }

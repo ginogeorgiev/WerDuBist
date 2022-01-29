@@ -25,7 +25,7 @@ MonoBehaviour:
     dialogConversation: {fileID: 11400000, guid: 6979309d2232bac4498407585284ad93, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
-  - text: Entspannt dich.
+  - text: Entspann dich.
     ingameQuestion: {fileID: 11400000, guid: bc5a1d4b819414d44b0c66828a82687f, type: 2}
     value: 1.5
     dialogConversation: {fileID: 11400000, guid: 6979309d2232bac4498407585284ad93, type: 2}

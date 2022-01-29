@@ -16,6 +16,6 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: dc02e58ae4ca8374ba152d8fe1b52038, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: dc02e58ae4ca8374ba152d8fe1b52038, type: 2}
-    text: Ich flex dich weg Junge!
+    text: Was willst du hier!?
   advanceConvAutomatically: 0
   dialogQuestion: {fileID: 0}

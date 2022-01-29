@@ -17,16 +17,12 @@ MonoBehaviour:
   lines:
   - npcData: {fileID: 11400000, guid: b6a843983c19eb04988ea931127f6849, type: 2}
     text: "Sch\xF6n, wir sind ne Zirkustruppe und die best- *...* beste im Land,
-      musst du wissen.\n"
+      musst du wissen."
   - npcData: {fileID: 11400000, guid: b6a843983c19eb04988ea931127f6849, type: 2}
-    text: 'Wo bleiben meine Manieren, ich bin Samuel, aber du kannst mich auch Sam
+    text: Wo bleiben meine Manieren, ich bin Samuel, aber du kannst mich auch Sam
       nennen *hicks*.
-
-
-'
   - npcData: {fileID: 11400000, guid: b6a843983c19eb04988ea931127f6849, type: 2}
-    text: 'Entweder du setzt dich ans Feuer zu Annie, Zag und Rudolfus unsere Akrobaten,
+    text: Entweder du setzt dich ans Feuer zu Annie, Zag und Rudolfus unsere Akrobaten,
       oder du kommst mit mir zu Jack und Maria
-
-'
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 11400000, guid: c394c3e2bb70b774f9e0847b87284503, type: 2}

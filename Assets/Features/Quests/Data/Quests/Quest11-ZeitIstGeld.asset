@@ -15,8 +15,9 @@ MonoBehaviour:
   id: 11
   npcsToAdvanceConversationsList:
   - {fileID: 11400000, guid: 3c53c2b9f69fb5e429cec0b123401cc2, type: 2}
+  npcsToAdvanceConversationsListForTalkQuest: []
   title: Zeit ist Geld
-  description: Hol dir dein Belohnung bei Rockwell ab.
+  description: Hole dir deine Belohnung bei Rockwell ab.
   visible: 1
   goals:
   - goalType: 1

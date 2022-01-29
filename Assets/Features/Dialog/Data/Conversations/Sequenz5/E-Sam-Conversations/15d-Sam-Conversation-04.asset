@@ -18,6 +18,6 @@ MonoBehaviour:
   - npcData: {fileID: 11400000, guid: b6a843983c19eb04988ea931127f6849, type: 2}
     text: "Wie findest du unsere Musik? Wir haben den weltbesten Musiker. Er ist
       weltbekannt, wenn du verstehst was ich meine.\r\nHaben wir dir eigentlich schon
-      vom Rest der Truppe erz\xE4hlt ...\r\n"
+      vom Rest der Truppe erz\xE4hlt ...\r"
   advanceConvAutomatically: 1
   dialogQuestion: {fileID: 11400000, guid: b15dc55df4db55b47895916619f96d28, type: 2}

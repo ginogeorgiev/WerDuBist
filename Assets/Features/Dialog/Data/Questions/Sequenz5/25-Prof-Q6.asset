@@ -15,7 +15,7 @@ MonoBehaviour:
   choices:
   - text: "Beschreibt die Wechselseitigkeit eines Ph\xE4nomens."
     ingameQuestion: {fileID: 11400000, guid: 10a33dd267dd78a41b93c577159880c4, type: 2}
-    value: 0
+    value: 0.334
     dialogConversation: {fileID: 11400000, guid: 1e9d6b1260cbe0e4a81941b3fdc1d7b7, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
@@ -27,7 +27,7 @@ MonoBehaviour:
     quest: {fileID: 0}
   - text: Beschreibt das ich Irre werde wenn ich noch eine Frage beantworten muss.
     ingameQuestion: {fileID: 11400000, guid: 10a33dd267dd78a41b93c577159880c4, type: 2}
-    value: 0
+    value: 0.334
     dialogConversation: {fileID: 11400000, guid: 1e9d6b1260cbe0e4a81941b3fdc1d7b7, type: 2}
     choiceEvents: []
     quest: {fileID: 0}
