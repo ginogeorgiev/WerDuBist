@@ -34,6 +34,7 @@ namespace Features.Quests.UILogic
             // Instantiate Quest UI Prefab
             var questUI= Instantiate(questPrefab, new Vector3 (0,0,0), Quaternion.identity);
             questUI.transform.SetParent(contentUI.transform);
+            questUI.transform.localScale = Vector3.one;
 
             // write Quest Info
             questUI.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = quest.QuestTitle;
@@ -44,6 +45,7 @@ namespace Features.Quests.UILogic
                 // Instantiate new Goal UI Prefab
                 var goalUI = Instantiate(goalPrefab, new Vector3 (0,0,0), Quaternion.identity);
                 goalUI.transform.SetParent(questUI.transform);
+                goalUI.transform.localScale = Vector3.one;
 
                 // write Goal Info
                 var goalText = goalUI.transform.GetChild(0).gameObject.transform.GetChild(1).GetComponent<TMP_Text>();
