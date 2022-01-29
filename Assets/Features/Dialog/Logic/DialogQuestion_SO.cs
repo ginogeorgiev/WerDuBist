@@ -46,7 +46,6 @@ namespace Features.Dialog.Logic
         [SerializeField] private Quest_SO quest;
 
         private QuestEvent questEvent;
-        private EvaluationData evaluationData;
 
         public void OnQuestAccepted()
         {
@@ -65,17 +64,9 @@ namespace Features.Dialog.Logic
         public void OnAddToEvaluation()
         {
             ingameQuestion.AddToInGameRuntimeValue(value);
-            evaluationData.Add(ingameQuestion.GameAspectValue.name + "_" + ingameQuestion.Question, ingameQuestion.IngameRuntimeValue.ToString());
-            // Debug.Log(ingameQuestion.GameAspectValue.name + " " + value + " ergibt " + ingameQuestion.IngameRuntimeValue);
         }
 
         public Question_SO IngameQuestion => ingameQuestion;
-
-        public EvaluationData EvaluationData
-        {
-            get => evaluationData;
-            set => evaluationData = value;
-        }
 
         public QuestEvent QuestEvent
         {

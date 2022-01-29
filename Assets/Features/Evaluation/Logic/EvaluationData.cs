@@ -7,7 +7,7 @@ namespace Features.Evaluation.Logic
     [CreateAssetMenu(fileName = "newEvaluationDictionary", menuName = "Feature/Evaluation/EvaluationDictionary")]
     public class EvaluationData : ScriptableObject
     {
-        public Dictionary<string, string> EvaluationDictionary { get; set; }
+        public Dictionary<string, string> EvaluationDictionary { get; private set; }
 
         [SerializeField] private GameEvent_SO evaluationDictionaryChanged;
         private void OnEnable()
@@ -18,7 +18,7 @@ namespace Features.Evaluation.Logic
         public void Add(string key, string value)
         {
              if (value == "" + -1) return;
-            
+             
             if (EvaluationDictionary.ContainsKey(key))
             {
                 EvaluationDictionary[key] = value;

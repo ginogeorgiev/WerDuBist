@@ -1,4 +1,3 @@
-using Features.Evaluation.Logic;
 using Features.Quests.Logic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -15,19 +14,15 @@ namespace Features.Dialog.Logic
         [SerializeField] private ConversationChangeEvent conversationChangeEvent;
         [SerializeField] [Range(-100, -10)] private int serializedButtonSpacing = -100;
 
-        [SerializeField] private EvaluationData serializedEvaluationData;
-        
         [SerializeField] private QuestEvent serializedQuestEvent;
 
         private static int buttonSpacing;
         private static QuestEvent questEvent;
-        private static EvaluationData evaluationData;
         
         private void Awake()
         {
             buttonSpacing = serializedButtonSpacing;
             questEvent = serializedQuestEvent;
-            evaluationData = serializedEvaluationData;
         }
 
         private void Start()
@@ -60,7 +55,6 @@ namespace Features.Dialog.Logic
 
             if (choice.IngameQuestion != null)
             {
-                choice.EvaluationData = evaluationData;
                 button.onClick.AddListener(choice.OnAddToEvaluation);
             }
 

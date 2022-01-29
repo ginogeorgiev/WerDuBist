@@ -16,7 +16,7 @@ MonoBehaviour:
   - text: "Du Vollidiot! Jetzt bin ich ganz klebrig. Bist du zu bl\xF6d, um dein
       Job richtig zu  machen!"
     ingameQuestion: {fileID: 11400000, guid: bc5a1d4b819414d44b0c66828a82687f, type: 2}
-    value: 1.5
+    value: 0.5
     dialogConversation: {fileID: 0}
     choiceEvents: []
     quest: {fileID: 11400000, guid: f9a323680c87a1e4895803310a5d7fe1, type: 2}
@@ -28,7 +28,7 @@ MonoBehaviour:
     quest: {fileID: 11400000, guid: f9a323680c87a1e4895803310a5d7fe1, type: 2}
   - text: Schon gut, das kann man wegwischen.
     ingameQuestion: {fileID: 11400000, guid: bc5a1d4b819414d44b0c66828a82687f, type: 2}
-    value: 0.5
+    value: 1.5
     dialogConversation: {fileID: 0}
     choiceEvents: []
     quest: {fileID: 11400000, guid: f9a323680c87a1e4895803310a5d7fe1, type: 2}

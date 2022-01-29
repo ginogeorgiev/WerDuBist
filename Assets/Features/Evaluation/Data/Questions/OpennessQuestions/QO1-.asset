@@ -16,3 +16,4 @@ MonoBehaviour:
   gameAspectValue: {fileID: 11400000, guid: bbafa928eba7a8440a25dc6995b4d445, type: 2}
   surveyAspectValue: {fileID: 11400000, guid: 6b1a307e876bc8d4fa25810b6db81e4e, type: 2}
   key: 0
+  evaluationData: {fileID: 11400000, guid: a58b3433114e9ff4495382a1d69c02aa, type: 2}

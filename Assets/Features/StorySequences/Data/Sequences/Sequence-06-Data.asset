@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39cba5f168530e44290b1e01ed7f0468, type: 3}
-  m_Name: Sequence-05-Data
+  m_Name: Sequence-06-Data
   m_EditorClassIdentifier: 
   npcsToAdvanceConversationsList:
   - {fileID: 11400000, guid: 4f891f84b1917194891d42dda3cb1e27, type: 2}
   quests:
-  - {fileID: 11400000, guid: 3a07c4f6e51f95942a256f36628c3f83, type: 2}
-  - {fileID: 11400000, guid: 09a601f57a6e09f47a7e46dfe7da4b4e, type: 2}
-  npcsToActivateList: []
+  - {fileID: 11400000, guid: 64d67580bff265e41ae674871fb00f8b, type: 2}
+  npcsToActivateList:
+  - {fileID: 11400000, guid: c67f44f5bb5202b45a2f3f07ee2a93cb, type: 2}
   npcsToDeactivateList: []
   questsToUnlockList: []
   onQuestUnlocked: {fileID: 11400000, guid: 8f5648f89cd5125409176c7fad3a91df, type: 2}
   behaviourRuntimeSet: {fileID: 11400000, guid: 9d553a0a1058f1b4fa6ea1634cc00b10, type: 2}
-  sequenceCompletedEvent: {fileID: 11400000, guid: b3fa7d3d5ebea9e49839bf3e06a8a9e5, type: 2}
-  activeQuests: {fileID: 11400000, guid: 2e87e53019d0da74b98d373e3a509430, type: 2}
-  luisArmaband: {fileID: 11400000, guid: 9ec1ef8e3ab31a840bb549d99dc183af, type: 2}
-  luis: {fileID: 11400000, guid: 3c37acb8af748d141affedf4bf99b425, type: 2}
-  luisEnd: {fileID: 11400000, guid: 8f69c373751b5984f9ff2ce18a81ad26, type: 2}
+  sequenceCompletedEvent: {fileID: 11400000, guid: 02208e1ddc2b6724f8ccf3b3bb375043, type: 2}
+  activeQuests: {fileID: 0}
+  luisArmaband: {fileID: 0}
+  luis: {fileID: 0}
+  luisEnd: {fileID: 0}

@@ -22,11 +22,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 37fd20dd15d55d4499415bc1fe98a5e9, type: 2}
   npcsToDeactivateList:
   - {fileID: 11400000, guid: 7a29ac58998afde43818e850e0746461, type: 2}
-  questsToUnlockList: []
+  questsToUnlockList:
+  - {fileID: 11400000, guid: 3a07c4f6e51f95942a256f36628c3f83, type: 2}
+  - {fileID: 11400000, guid: 09a601f57a6e09f47a7e46dfe7da4b4e, type: 2}
   onQuestUnlocked: {fileID: 11400000, guid: 8f5648f89cd5125409176c7fad3a91df, type: 2}
   behaviourRuntimeSet: {fileID: 11400000, guid: 9d553a0a1058f1b4fa6ea1634cc00b10, type: 2}
   sequenceCompletedEvent: {fileID: 11400000, guid: 797bf6c0456266c4f9f034a8b3fe1eec, type: 2}
-  activeQuests: {fileID: 11400000, guid: 2e87e53019d0da74b98d373e3a509430, type: 2}
-  luisArmaband: {fileID: 11400000, guid: 9ec1ef8e3ab31a840bb549d99dc183af, type: 2}
-  luis: {fileID: 11400000, guid: 3c37acb8af748d141affedf4bf99b425, type: 2}
-  luisEnd: {fileID: 11400000, guid: 8f69c373751b5984f9ff2ce18a81ad26, type: 2}
+  activeQuests: {fileID: 0}
+  luisArmaband: {fileID: 0}
+  luis: {fileID: 0}
+  luisEnd: {fileID: 0}

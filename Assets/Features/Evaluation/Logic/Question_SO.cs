@@ -11,6 +11,8 @@ namespace Features.Evaluation.Logic
         [SerializeField] private IntVariable surveyAspectValue;
         [Tooltip("false means - (negative) and true means + (positive)")]
         [SerializeField] private bool key;
+
+        [SerializeField] private EvaluationData evaluationData;
         
         public float IngameRuntimeValue { get; set; }
 
@@ -29,7 +31,9 @@ namespace Features.Evaluation.Logic
         public void AddToInGameRuntimeValue(float value)
         {
             IngameRuntimeValue += value;
-            IngameRuntimeValue = Mathf.Clamp(IngameRuntimeValue, 1, 3);
+            IngameRuntimeValue = Mathf.Clamp(IngameRuntimeValue, 0, 3);
+            evaluationData.Add(GameAspectValue.name + "_" + Question, (Mathf.Round(IngameRuntimeValue)).ToString());
+            // Debug.Log(GameAspectValue.name + " " + value + " ergibt " + IngameRuntimeValue);
         }
     }
 }

@@ -78,7 +78,7 @@ namespace Features.StorySequences.Logic
 
             if (allComplete)
             {
-                Debug.Log(sequenceCompletedEvent.name);
+                // Debug.Log(sequenceCompletedEvent.name);
                 sequenceCompletedEvent.Raise();
                 OnSequenceCompleted();
             }
@@ -123,7 +123,7 @@ namespace Features.StorySequences.Logic
 
             if (luis == null || luisEnd == null || activeQuests == null || luisArmaband == null) return;
             {
-                Debug.Log(!activeQuests.Items.Contains(luisArmaband));
+                // Debug.Log(!activeQuests.Items.Contains(luisArmaband));
                 if (!activeQuests.Items.Contains(luisArmaband)) return;
                 foreach (NpcBehaviour npcBehaviour in behaviourRuntimeSet.GetItems().Where(npcBehaviour => npcBehaviour.Data.ID == luis.ID))
                 {
