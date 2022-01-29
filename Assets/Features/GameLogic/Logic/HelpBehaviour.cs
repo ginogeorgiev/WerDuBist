@@ -15,7 +15,7 @@ namespace Features.GameLogic.Logic
         
         [SerializeField] private Image helpImage;
         
-        private void Awake()
+        private void Start()
         {
             question.AddToInGameRuntimeValue(3f);
         }

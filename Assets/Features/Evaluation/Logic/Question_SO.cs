@@ -31,7 +31,9 @@ namespace Features.Evaluation.Logic
         public void AddToInGameRuntimeValue(float value)
         {
             IngameRuntimeValue += value;
-            IngameRuntimeValue = Mathf.Clamp(IngameRuntimeValue, 0, 3);
+
+            IngameRuntimeValue = Mathf.Clamp(IngameRuntimeValue, value < 0 ? 1 : 0, 3);
+            
             evaluationData.Add(GameAspectValue.name + "_" + Question, (Mathf.Round(IngameRuntimeValue)).ToString());
             // Debug.Log(GameAspectValue.name + " " + value + " ergibt " + IngameRuntimeValue);
         }

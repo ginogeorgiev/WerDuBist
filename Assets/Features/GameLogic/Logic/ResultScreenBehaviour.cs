@@ -1,4 +1,5 @@
 using System.Collections;
+using DataStructures.Event;
 using DataStructures.Variables;
 using Features.Evaluation.Logic;
 using Features.UserData.Survey.Logic;
@@ -24,6 +25,7 @@ namespace Features.GameLogic.Logic
 
         [SerializeField] private Questions_SO questions;
         [SerializeField] private EvaluationData evaluationData;
+        [SerializeField] private GameEvent_SO sendUserData;
         
         [Header("The 5 Survey Aspects")]
         [Tooltip("SO")] [SerializeField] private IntVariable surveyOpenness;
@@ -162,6 +164,10 @@ namespace Features.GameLogic.Logic
             StartCoroutine(LerpBarAndValue(gameExtraversion, gameExtraversionBar, gameExtraversionText, gameBarMultiplier, gameTextMultiplier));
             StartCoroutine(LerpBarAndValue(gameAgreeableness, gameAgreeablenessBar, gameAgreeablenessText, gameBarMultiplier, gameTextMultiplier));
             StartCoroutine(LerpBarAndValue(gameNeuroticism, gameNeuroticismBar, gameNeuroticismText, gameBarMultiplier, gameTextMultiplier));
+            
+            yield return new WaitForSeconds(fillTime + 1f);
+            
+            evaluationData.GenerateUserDataDictionary();
         }
         
         private IEnumerator LerpBarAndValue(IntVariable targetValue, Slider bar, TMP_Text text, float barMultiplier, float textMultiplier)
@@ -178,7 +184,7 @@ namespace Features.GameLogic.Logic
             bar.value = Normalize(targetValue.Get(), barMultiplier);
             text.text = (int)Normalize(targetValue.Get(), textMultiplier) + " %";
             
-            evaluationData.Add(targetValue.name, ((int)Normalize(targetValue.Get(), textMultiplier)).ToString());
+            evaluationData.Add(targetValue.name, ((int)Normalize(targetValue.Get(), textMultiplier)).ToString(), false);
         }
 
         private static float Normalize(float value, float multiplier)

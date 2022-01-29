@@ -50,11 +50,14 @@ namespace Features.PlayFab.Logic
         }
         
         public void SetUserData() {
-            if(evalData == null || evalData.EvaluationDictionary == null || disableSendData || disableAccountCreation) { return; }
+            if(evalData == null || evalData.UserDataDictionary == null || disableSendData || disableAccountCreation) { return; }
+            
+            StopAllCoroutines();
+            coroutineRunning = false;
             
             PlayFabClientAPI.UpdateUserData(
                 new UpdateUserDataRequest() {
-                    Data = evalData.EvaluationDictionary
+                    Data = evalData.UserDataDictionary
                 },
                 result =>
                 {
