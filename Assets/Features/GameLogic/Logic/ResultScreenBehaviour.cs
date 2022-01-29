@@ -25,7 +25,6 @@ namespace Features.GameLogic.Logic
 
         [SerializeField] private Questions_SO questions;
         [SerializeField] private EvaluationData evaluationData;
-        [SerializeField] private GameEvent_SO sendUserData;
         
         [Header("The 5 Survey Aspects")]
         [Tooltip("SO")] [SerializeField] private IntVariable surveyOpenness;
