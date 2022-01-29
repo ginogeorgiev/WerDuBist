@@ -16,7 +16,7 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
   lines:
   - npcData: {fileID: 11400000, guid: b75bc9709ae225841951ef024d8c390b, type: 2}
-    text: "W\xE4hrend Playfair laut lachte, fielen ihm eine Handvoll Karten aus dem
-      \xC4rmel. Es ist v\xF6llig klar, dass er betr\xFCgt.\n"
+    text: "(W\xE4hrend Playfair laut lachte, fielen ihm eine Handvoll Karten aus
+      dem \xC4rmel. Es ist v\xF6llig klar, dass er betr\xFCgt)\n"
+  advanceConvAutomatically: 0
   dialogQuestion: {fileID: 11400000, guid: ac569cb5faf63984dbc344f6684eaec5, type: 2}
-  nextDialogConversationStep: {fileID: 0}

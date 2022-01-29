@@ -19,7 +19,7 @@ MonoBehaviour:
     text: "Kein Stress, ich war nur neugierig haha. Na gut, hier habe ich es endlich
       fertig. Das sind die Pl\xE4ne f\xFCr Terry."
   - npcData: {fileID: 11400000, guid: 2143337a184d4b84081f036419253b81, type: 2}
-    text: " K\xF6nntest du mir ein Gefallen tun und diese Pl\xE4ne an ihn weitergeben?
+    text: "K\xF6nntest du mir ein Gefallen tun und diese Pl\xE4ne an ihn weitergeben?
       Ich muss noch hier einiges an Pl\xE4nen aufholen, das w\xE4re sehr nett von
       dir."
   advanceConvAutomatically: 1
