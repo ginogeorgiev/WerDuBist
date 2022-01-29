@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   npcsToAdvanceConversationsList: []
+  npcsToAdvanceConversationsListForTalkQuest: []
   title: "Baue ein Flo\xDF"
-  description: Sammel Holz
+  description: Sammle Holz
   visible: 1
   goals:
   - goalType: 0
