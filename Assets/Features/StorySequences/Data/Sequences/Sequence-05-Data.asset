@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39cba5f168530e44290b1e01ed7f0468, type: 3}
   m_Name: Sequence-05-Data
   m_EditorClassIdentifier: 
-  npcsToAdvanceConversationsList:
-  - {fileID: 11400000, guid: 4f891f84b1917194891d42dda3cb1e27, type: 2}
+  npcsToAdvanceConversationsList: []
   quests:
   - {fileID: 11400000, guid: 3a07c4f6e51f95942a256f36628c3f83, type: 2}
   - {fileID: 11400000, guid: 09a601f57a6e09f47a7e46dfe7da4b4e, type: 2}
