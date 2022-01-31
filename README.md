@@ -14,6 +14,8 @@ so go and see what the island inhabitants have in store for you!
 
 Your initial goal is getting home, but that might depend on what you call home.
 
+**Play the game [here](https://ocean-interactive.itch.io/ocean)**
+
 <img alt="OCEAN_Preview" src="./Assets/Readme_Resources/ocean_beach.gif" width="100%"/>
 
 <hr/>
